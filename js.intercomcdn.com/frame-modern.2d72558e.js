@@ -193,98 +193,72 @@
             secondaryAccessibilityTheme: v(t, p.L, 2, "light"),
           });
       },
-      94679: (e, t, r) => {
+      59680: (e, t, r) => {
         "use strict";
         r.d(t, {
-          eA: () => j,
-          ZP: () => $,
-          uY: () => V,
-          jD: () => E,
-          B_: () => D,
-          XN: () => L,
-          gm: () => P,
-          sC: () => M,
-          mW: () => N,
-          kC: () => A,
-          PJ: () => I,
-          NY: () => H,
+          B_: () => S,
+          NY: () => k,
+          PJ: () => m,
+          XN: () => E,
+          ZP: () => T,
+          eA: () => y,
+          gm: () => b,
+          jD: () => g,
+          kC: () => w,
+          mW: () => I,
+          sC: () => O,
+          uY: () => P,
         });
         var n = r(24293),
           i = r(82459),
           o = r(81036),
-          s = r(53106),
-          a = r(17653);
-        const c = (0, r(42279).createSelector)(
-          (e) => (0, a.Z)(e.conversations.byId),
-          (e) => e.filter((e) => !e.read && e.dismissed),
-        );
-        var l = r(56937),
-          u = r(74668),
-          d = r(50025),
-          p = r(38733),
-          h = r(6435),
-          v = r(12325),
-          f = r(66494),
-          g = r(89853),
-          m = r(11353);
-        const b = "delivered",
-          y = "renotifying",
-          w = "opened";
-        var _ = r(45504),
-          O = r(38049);
-        const { assign: C } = Object,
-          S = 100;
-        function E() {
+          s = r(50025),
+          a = r(38733),
+          c = r(6435),
+          l = r(12325),
+          u = r(66494),
+          d = r(89853),
+          p = (r(11353), r(45504)),
+          h = r(38049);
+        const { assign: v } = Object,
+          f = 100;
+        function g() {
           return (e, t) => {
             const {
               launcherDiscoveryMode: { isLauncherDiscoveryModeOpening: r },
             } = t();
             r
               ? (e((0, i.tj)()),
-                setTimeout(() => e(I()), S),
-                setTimeout(() => e((0, i.NF)()), S))
-              : e(I());
+                setTimeout(() => e(m()), f),
+                setTimeout(() => e((0, i.NF)()), f))
+              : e(m());
           };
         }
-        function I() {
+        function m() {
           return (e, t) => {
             const r = t(),
               {
-                conversations: n,
-                borderless: { conversationId: i },
-              } = r,
-              o = (0, d.c0)(r),
-              s = n.byId[i];
-            i && !o
-              ? (e(L(i)),
-                (function (e) {
-                  return e && -1 !== [b, y].indexOf(e.notificationStatus);
-                })(s) && e((0, v.XZ)(p.ZP, i, [w])))
-              : e((e, t) => {
-                  const r = t(),
-                    {
-                      app: { isMessengerOpen: n },
-                    } = r;
-                  e(
-                    n
-                      ? j()
-                      : (e) => {
-                          e(B()), e(P()), e((0, f.YG)());
-                        },
-                  );
-                });
+                app: { isMessengerOpen: n },
+              } = r;
+            e(
+              n
+                ? y()
+                : (e) => {
+                    e(j()), e(b()), e((0, u.YG)());
+                  },
+            );
           };
         }
-        function P(e = !1) {
-          return { type: _.ddI, hideLightweightAppMessenger: e };
+        function b(e = !1) {
+          return { type: p.ddI, hideLightweightAppMessenger: e };
         }
-        function j(e = !1) {
-          return { type: _.UH6, fromCloseButton: e };
+        function y(e = !1) {
+          return { type: p.UH6, fromCloseButton: e };
         }
-        function A(e = "", t = !1, r = null, n = null, i = !1) {
+        function w(e = "", t = !1, r = null, n = null, i = !1) {
           return (s) => {
             s({
-              type: _.DB8,
+              type: p.DB8,
               defaultMessage: e,
               replaceCurrentView: t,
               articleUrl: r,
@@ -298,167 +272,101 @@
             );
           };
         }
-        function k() {
-          return { type: _.BbA };
-        }
-        function T() {
-          return { type: _.na9 };
-        }
-        function R(e = !1) {
+        function _(e = !1) {
           return (t) => {
-            t({ type: _.g53, replaceCurrentView: e });
+            t({ type: p.g53, replaceCurrentView: e });
             t((e ? o.gx : o.VF)("/messages/conversation/trigger-screen"));
           };
         }
-        function M() {
+        function O() {
           return (e) => {
-            e(R(!0)), e(P());
+            e(_(!0)), e(b());
           };
         }
-        function x() {
-          return { type: _.w6X };
+        function C() {
+          return { type: p.w6X };
         }
-        function D(e) {
+        function S(e) {
           return (t) => {
-            t((0, g.az)(e)), t(P());
+            t((0, d.a)(e)), t(b());
           };
         }
-        function L(e) {
+        function E(e) {
           return (t) => {
-            t((0, f.YG)()), t(D(e)), t((0, v.cc)(p.ZP, e));
+            t((0, u.YG)()), t(S(e)), t((0, l.cc)(a.ZP, e));
           };
         }
-        function N(e) {
+        function I(e) {
           return (t, r) => {
-            r().app.inboundConversationsDisabled || t(A(e)), t(P());
+            r().app.inboundConversationsDisabled || t(w(e)), t(b());
           };
         }
-        function z(e) {
-          return (t) => {
-            t((0, g.az)(e)), t((0, v.cc)(p.ZP, e));
-          };
+        function P(e) {
+          return (t) => t((0, l.cc)(a.ZP, e)).then(() => t(S(e)));
         }
-        function V(e) {
-          return (t) => t((0, v.cc)(p.ZP, e)).then(() => t(D(e)));
-        }
-        function U(e, t) {
-          const { app: r, user: n, message: i } = t,
-            { features: a, inboundConversationsDisabled: d, viewStack: p } = r,
-            { hasConversations: h, articleConversationId: v } = n,
-            g = (0, l.qu)(t),
-            m = (0, u.$Q)(t),
-            b = (0, s.Z)(t),
-            y = c(t),
-            w = (function (e, t) {
-              return (
-                ("user" === e.role && t.inboundMessages) ||
-                ("user" !== e.role && t.anonymousInboundMessages)
-              );
-            })(n, a),
-            _ = (function (e) {
-              return !!e.newsfeedId && e.unreadNewsItemsCount > 0;
-            })(n);
-          w
-            ? g > 1
-              ? (e(x()), Z(n, "homescreen"))
-              : i && i.conversationId
-              ? (e(z(i.conversationId)),
-                e((0, f.YG)()),
-                Z(n, "conversation-from-auto-message"))
-              : 1 === b.length
-              ? (e(z(b[0].id)), Z(n, "conversation-from-notification"))
-              : 1 === y.length
-              ? (e(z(y[0].id)), Z(n, "conversation-from-dismissed"))
-              : v
-              ? (e(z(v)), Z(n, "conversation-from-article"))
-              : _
-              ? (e(
-                  (function (e) {
-                    return (t) => {
-                      1 === e.unreadNewsItemsCount &&
-                      e.lastUnreadNewsItemId &&
-                      e.newsfeedLastVisit
-                        ? t(
-                            (0, o.VF)(
-                              `/news/details/${e.lastUnreadNewsItemId}`,
-                            ),
-                          )
-                        : t((0, o.VF)("/news/feed")),
-                        t(x());
-                    };
-                  })(n),
-                ),
-                Z(n, "news-screen"))
-              : p.length ||
-                (m || h
-                  ? (e(x()), Z(n, "homescreen"))
-                  : d
-                  ? m
-                    ? (e(x()), Z(n, "homescreen"))
-                    : (e(T()), Z(n, "empty-screen"))
-                  : (e(A()), Z(n, "new-conversation")))
-            : (e(T()), Z(n, "empty-screen"));
-        }
-        function B() {
+        function j() {
           return (e, t) => {
-            const r = t();
-            if (r.app.isBooting) return;
-            if (!(0, d.c0)(r)) return void U(e, r);
-            const n = (0, h.Fy)(r);
+            const r = t(),
+              n = (0, c.Fy)(r);
             if (!n || "/" === n) {
-              const t = (0, d.DW)(r)
+              const t = (0, s.DW)(r)
                 ? "/messages/conversation/trigger-screen"
-                : (0, d.CF)(r);
+                : (0, s.CF)(r);
               e((0, o.VF)(t));
             }
           };
         }
-        function Z(e, t = "homescreen") {
-          (0, m.Dw)(e, t, "initial-screen", "messenger", "from_launcher");
-        }
-        function F(e, t) {
+        function A(e, t) {
           const r = t(),
             i = (function (e) {
-              return C({}, e, { viewStack: e.viewStack.slice(0, -1) });
+              return v({}, e, { viewStack: e.viewStack.slice(0, -1) });
             })(r.app);
           (0, n.r0)(r) && "messenger-trigger" === (0, n.R1)(i)
-            ? e(x())
+            ? e(C())
             : (0, n.r0)(r)
-            ? e({ type: _.Z2$ })
-            : e(x());
+            ? e({ type: p.Z2$ })
+            : e(C());
         }
-        function H() {
-          return { type: _.pIc };
+        function k() {
+          return { type: p.pIc };
         }
-        const $ = {
-          closeMessenger: j,
-          getAndOpenConversation: V,
+        const T = {
+          closeMessenger: y,
+          getAndOpenConversation: P,
           navigateBack: function () {
-            return F;
+            return A;
           },
-          onLauncherClick: E,
-          openConversation: D,
-          openConversationInMessenger: L,
+          onLauncherClick: g,
+          openConversation: S,
+          openConversationInMessenger: E,
           openConversations: function () {
-            return (e, t) => {
-              e((0, d.c0)(t()) ? (0, o.VF)(O.Yu.path) : k()), e(P());
+            return (e) => {
+              e((0, o.VF)(h.Yu.path)), e(b());
             };
           },
-          openMessenger: P,
-          openNewConversation: N,
-          showAndGetConversation: z,
-          showConversation: g.az,
-          showConversations: k,
-          showEmptyScreen: T,
-          showMessengerTriggerScreen: R,
-          showInitialScreen: B,
-          showNewConversation: A,
-          toggleMessenger: I,
-          toggleUpfrontEmailCollectorState: H,
-          openMessengerLoadingView: M,
+          openMessenger: b,
+          openNewConversation: I,
+          showAndGetConversation: function (e) {
+            return (t) => {
+              t((0, d.a)(e)), t((0, l.cc)(a.ZP, e));
+            };
+          },
+          showConversation: d.a,
+          showConversations: function () {
+            return { type: p.BbA };
+          },
+          showEmptyScreen: function () {
+            return { type: p.na9 };
+          },
+          showMessengerTriggerScreen: _,
+          showInitialScreen: j,
+          showNewConversation: w,
+          toggleMessenger: m,
+          toggleUpfrontEmailCollectorState: k,
+          openMessengerLoadingView: O,
           updateResolutionBotStateFromOpen: function (e, t, r, n, i) {
             return {
-              type: _.S1A,
+              type: p.S1A,
               accessToTeammateEnabled: e,
               selfServeSuggestionsMatch: t,
               activeAdmins: r,
@@ -471,17 +379,17 @@
       77011: (e, t, r) => {
         "use strict";
         r.d(t, {
-          Xn: () => I,
-          XT: () => A,
-          Hb: () => P,
-          Cf: () => j,
-          Nl: () => C,
-          Me: () => _,
-          V8: () => O,
-          N_: () => y,
-          pP: () => S,
-          oW: () => E,
-          GU: () => w,
+          Xn: () => E,
+          XT: () => j,
+          Hb: () => I,
+          Cf: () => P,
+          Nl: () => O,
+          Me: () => w,
+          V8: () => _,
+          N_: () => b,
+          pP: () => C,
+          oW: () => S,
+          GU: () => y,
         });
         var n = r(45504);
         function i(e, t) {
@@ -526,16 +434,15 @@
           l = r(62017),
           u = r(12304),
           d = r(81036),
-          p = r(50025),
-          h = r(38049),
-          v = r(58187),
-          f = r(59534),
-          g = r(47652),
-          m = r(81705);
-        function b(e) {
+          p = r(38049),
+          h = r(58187),
+          v = r(59534),
+          f = r(47652),
+          g = r(81705);
+        function m(e) {
           return { type: n.bOW, article: e };
         }
-        function y(e, t, r = !1, i = !1, o = null, s = "", a) {
+        function b(e, t, r = !1, i = !1, o = null, s = "", a) {
           return (c) => {
             c({
               type: n.Vcf,
@@ -549,68 +456,66 @@
               i && c((0, u.ST)());
           };
         }
-        function w(e, t, r) {
+        function y(e, t, r) {
           return (i) => {
-            i({ type: n.yI9 }), i(y(e, t, !1, !0, null, "", r));
+            i({ type: n.yI9 }), i(b(e, t, !1, !0, null, "", r));
           };
         }
-        function _(e, t, r = !1, i = !1, s = "", a = null) {
+        function w(e, t, r = !1, i = !1, s = "", a = null) {
           return async (c, l) => {
             const u = l(),
               {
-                session: f,
-                article: { viewStack: g },
-                articles: m,
+                session: v,
+                article: { viewStack: f },
+                articles: g,
               } = u;
-            let w;
-            if (e === g[g.length - 1]) w = (0, v.NK)(u);
-            else if (m && m[e])
-              (w = m[e]),
+            let y;
+            if (e === f[f.length - 1]) y = (0, h.NK)(u);
+            else if (g && g[e])
+              (y = g[e]),
                 c({ type: n.yI9 }),
-                (0, p.c0)(u) &&
-                  c(
-                    (0, d.VF)(
-                      `/${h.jg.id}/article-standalone${
-                        i ? "?hideReactions=true" : ""
-                      }`,
-                    ),
+                c(
+                  (0, d.VF)(
+                    `/${p.jg.id}/article-standalone${
+                      i ? "?hideReactions=true" : ""
+                    }`,
                   ),
-                c(b(w));
+                ),
+                c(m(y));
             else {
-              if (((w = await o.ZP.getArticle(f, e, null, !1, a)), !w)) return;
-              c(b(w)),
+              if (((y = await o.ZP.getArticle(v, e, null, !1, a)), !y)) return;
+              c(m(y)),
                 c({ type: n.yI9 }),
-                (0, p.c0)(u) &&
-                  c(
-                    (0, d.VF)(
-                      `/${h.jg.id}/article-standalone${
-                        i ? "?hideReactions=true" : ""
-                      }`,
-                    ),
-                  );
+                c(
+                  (0, d.VF)(
+                    `/${p.jg.id}/article-standalone${
+                      i ? "?hideReactions=true" : ""
+                    }`,
+                  ),
+                );
             }
-            w && c(y(e, t, !1, !0, null, s, r));
+            y && c(b(e, t, !1, !0, null, s, r));
           };
         }
-        function O(e, t, r = !1, n = null) {
+        function _(e, t, r = !1, n = null) {
           return async (t, i) => {
             const { session: s, app: a } = i(),
               { conversationId: c } = a;
-            return t(b(await o.ZP.getArticle(s, e, c, r, n)));
+            return t(m(await o.ZP.getArticle(s, e, c, r, n)));
           };
         }
-        function C(e, t, r = !1, n = !1, i = !1) {
+        function O(e, t, r = !1, n = !1, i = !1) {
           return async (o, s) => {
             const { app: a } = s(),
               { conversationId: c } = a;
-            o(y(e, t, r, n, c, "", i)), o(O(e, 0, r));
+            o(b(e, t, r, n, c, "", i)), o(_(e, 0, r));
           };
         }
-        function S(e) {
+        function C(e) {
           return async (t, r) => {
             const { session: n } = r(),
               i = await o.ZP.getArticleByURL(n, e.url);
-            await t(b(i)),
+            await t(m(i)),
               await t({
                 type: "CHANGE_ARTICLE_LOCALE",
                 articleId: i.id,
@@ -618,13 +523,13 @@
               });
           };
         }
-        function E(e, t = !0, r) {
+        function S(e, t = !0, r) {
           return (n, i) => {
             const { session: s } = i(),
               a = e.split("#")[1] || "";
             return o.ZP.getArticleByURL(s, e, r)
               .then((e) => {
-                if ((n(b(e)), t)) n(y(e.id, null, !0, !0, null, a));
+                if ((n(m(e)), t)) n(b(e.id, null, !0, !0, null, a));
                 else {
                   const { Intercom: t } = window.parent;
                   t("showArticle", e.id, r);
@@ -636,20 +541,19 @@
               });
           };
         }
-        function I() {
+        function E() {
           return (e, t) => {
             var r;
             const i = t();
             e({ type: n.NqY }),
-              (0, p.c0)(i) &&
-                null !== (r = (0, v.JQ)(i)) &&
+              null !== (r = (0, h.JQ)(i)) &&
                 void 0 !== r &&
                 r.isStandalone &&
                 e((0, d.Hm)()),
-              (0, p.c0)(i) && (0, g.u$)(i) && e((0, f.E)());
+              (0, f.u$)(i) && e((0, v.E)());
           };
         }
-        function P(e) {
+        function I(e) {
           return (t, r) => {
             const o = r(),
               l = (0, c.zl)(o);
@@ -668,10 +572,10 @@
                     payload: { conversationId: u },
                   }),
                 );
-            t((0, m.Nn)());
+            t((0, g.Nn)());
           };
         }
-        function j(e, t, r, i, o) {
+        function P(e, t, r, i, o) {
           return (c, l) => {
             const { user: u } = l();
             return (
@@ -691,7 +595,7 @@
             );
           };
         }
-        function A() {
+        function j() {
           return { type: n.EBG };
         }
       },
@@ -738,7 +642,8 @@
             const { session: o } = i();
             r({ type: a.uV2 }), n.ZP.dismissBanner(o, e, t);
             const s = [];
-            for (const t of i().banners) t.banner_id !== e && s.push(t);
+            for (const t of i().banners)
+              String(t.banner_id) !== String(e) && s.push(t);
             r(c(s));
           };
         }
@@ -783,21 +688,20 @@
           return { type: n.gk$, botIntro: e };
         }
       },
-      25304: (e, t, r) => {
+      87846: (e, t, r) => {
         "use strict";
         r.d(t, {
-          gM: () => g,
-          MF: () => C,
-          hU: () => b,
-          S0: () => y,
-          A9: () => w,
-          oe: () => S,
-          LJ: () => E,
-          oU: () => I,
-          H9: () => f,
-          VH: () => _,
-          jb: () => O,
-          vf: () => v,
+          gM: () => f,
+          MF: () => _,
+          hU: () => m,
+          S0: () => b,
+          A9: () => y,
+          oe: () => O,
+          LJ: () => C,
+          oU: () => S,
+          H9: () => v,
+          jb: () => w,
+          vf: () => h,
         });
         var n = r(23279),
           i = r.n(n),
@@ -805,28 +709,26 @@
           s = r(11353),
           a = r(4389),
           c = r(45504),
-          l = r(50025),
-          u = r(59534);
-        function d(e, t = !0) {
+          l = r(59534);
+        function u(e, t = !0) {
           return (r, n) => {
             const i = n(),
-              { session: d } = i;
+              { session: u } = i;
             return (
               (function (e, t) {
                 const { user: r } = e,
-                  n = (0, l.c0)(e),
-                  i = n ? "searched" : "submitted",
-                  o = n ? a.J4 : a.PB,
-                  c = n ? a._v : a.nF,
-                  u = n ? a.EE : a.cw;
-                (0, s.Dw)(r, i, o, c, u, { phrase: t });
+                  n = "searched",
+                  i = a.J4,
+                  o = a._v,
+                  c = a.EE;
+                (0, s.Dw)(r, n, i, o, c, { phrase: t });
               })(i, e),
               r(
                 (function (e, t) {
                   return { type: c.jEY, phrase: e, immediate: t };
                 })(e, t),
               ),
-              o.ZP.searchArticles(d, e)
+              o.ZP.searchArticles(u, e)
                 .then((t) => {
                   r(
                     (function (e, t) {
@@ -846,41 +748,41 @@
                   );
                 })
                 .finally(() => {
-                  r((0, u.E)());
+                  r((0, l.E)());
                 })
             );
           };
         }
-        const p = i()((e, t) => e(d(t, !1)), 500, {
+        const d = i()((e, t) => e(u(t, !1)), 500, {
           leading: !1,
           trailing: !0,
         });
-        var h = r(30200);
-        function v(e, t) {
+        var p = r(30200);
+        function h(e, t) {
           return (r) => {
             "" !== e &&
               r(
                 (function (e) {
                   return (t) => {
-                    p(t, e);
+                    d(t, e);
                   };
                 })(e),
               ),
               r({ type: c.ZIG, phrase: e, hideResultsWithDelay: t });
           };
         }
-        function f(e) {
+        function v(e) {
           return (t, r) => {
             const n = r(),
               { user: i } = n,
-              o = (0, l.c0)(n) ? a.EE : a.cw,
-              u = (0, l.c0)(n) ? a.h_ : a.nF;
-            (0, s.Dw)(i, "clicked", a.w9, u, o, { collection_id: e }),
+              o = a.EE,
+              l = a.h_;
+            (0, s.Dw)(i, "clicked", a.w9, l, o, { collection_id: e }),
               t({ type: c.CnJ, collectionId: e });
           };
         }
-        function g({ object: e, place: t, context: r, metadata: n = {} }) {
-          return m({
+        function f({ object: e, place: t, context: r, metadata: n = {} }) {
+          return g({
             action: "clicked",
             object: e,
             place: t,
@@ -888,7 +790,7 @@
             metadata: n,
           });
         }
-        function m({
+        function g({
           action: e,
           object: t,
           place: r,
@@ -901,143 +803,137 @@
             (0, s.Dw)(l, e, t, r, n, i);
           };
         }
-        function b() {
+        function m() {
           return (e, t) => {
             const r = t(),
-              { session: n } = r,
-              i = (0, l.c0)(r);
-            (0, o._k)(n).then(
-              ({
-                articleCollections: t,
-                articleSuggestions: r,
-                helpCenterSession: n,
-              }) => {
+              { session: n } = r;
+            return (0, o._k)(n).then(
+              ({ articleCollections: t, helpCenterSession: r }) => {
                 e(
                   (function (e) {
                     return { type: c.QSn, articleCollections: e };
                   })(t),
                 ),
-                  e((0, h.eq)(n)),
-                  !i && r && e(y(r));
+                  e((0, p.eq)(r));
               },
             );
           };
         }
-        function y(e) {
+        function b(e) {
           return { type: c.Wu3, articleSuggestions: e };
         }
-        function w(e) {
+        function y(e) {
           return { type: c.mnY, mixedSuggestions: e };
         }
-        function _(e = !1) {
-          return { type: c.xcd, skipOpenAnimation: e };
-        }
-        function O() {
+        function w() {
           return { type: c.KAD };
         }
-        function C() {
+        function _() {
           return { type: c.rfn };
         }
-        function S() {
-          return (e, t) => {
-            const r = t(),
-              n = (0, l.c0)(r),
-              { articleCollections: i } = r;
-            n || 1 !== i.length ? e({ type: c.m84 }) : e({ type: c.uxv });
-          };
+        function O() {
+          return { type: c.m84 };
         }
-        function E() {
+        function C() {
           return { type: c.D5g };
         }
-        function I(e) {
+        function S(e) {
           return { type: c.nL$, value: e };
         }
       },
       81705: (e, t, r) => {
         "use strict";
         r.d(t, {
-          $0: () => C,
-          Mt: () => R,
-          Nn: () => D,
-          Rq: () => V,
-          UQ: () => L,
-          Uf: () => k,
-          Wl: () => z,
-          Wt: () => Z,
-          _r: () => j,
-          aY: () => P,
-          dA: () => x,
+          $0: () => O,
+          Mt: () => T,
+          Nn: () => x,
+          Rq: () => z,
+          UQ: () => D,
+          Uf: () => A,
+          Wl: () => N,
+          Wt: () => V,
+          _r: () => P,
+          aY: () => E,
+          dA: () => M,
           kj: () => U,
-          oE: () => O,
-          qA: () => A,
-          qb: () => I,
-          rW: () => T,
-          x5: () => M,
+          oE: () => _,
+          qA: () => j,
+          qf: () => I,
+          rW: () => k,
+          x5: () => R,
         });
         var n = r(41609),
           i = r.n(n),
           o = r(45504),
-          s = r(28750),
-          a = r(38733),
-          c = r(22706),
-          l = r(89853),
-          u = r(94679),
+          s = r(81036),
+          a = r(28750),
+          c = r(38733),
+          l = r(22706),
+          u = r(59680),
           d = r(25570),
-          p = r(81036),
-          h = r(45809),
-          v = r(54930),
-          f = r(31202),
-          g = r(37656),
-          m = r(6435);
-        const b = (e, t) => Boolean((0, s.dT)(e)(t()));
-        let y, w;
-        const _ = (e) => ({ type: o.sR6, checklists: e }),
-          O = (e) => ({ type: o.iqB, checklistProgressId: e }),
-          C =
+          p = r(45809),
+          h = r(54930),
+          v = r(31202),
+          f = r(37656),
+          g = r(6435);
+        const m = (e, t) => Boolean((0, a.dT)(e)(t()));
+        let b, y;
+        const w = (e) => ({ type: o.sR6, checklists: e }),
+          _ = (e) => ({ type: o.iqB, checklistProgressId: e }),
+          O =
             (e, t = !0) =>
             (r) => {
-              r(_(e)), t && r(N());
+              r(w(e)), t && r(L());
             },
-          S = (e, t, r) => ({
+          C = (e, t, r) => ({
             type: o.fJ8,
             checklistProgressId: t,
             checklistId: e,
             taskId: r,
           }),
-          E = (e) => ({ type: o.Igv }),
-          I = (e) => ({ type: o.Vq2, checklistProgressId: e }),
-          P = () => ({ type: o.smh }),
-          j = (e, t, r) => (n, i) => {
-            if (!b(t, i)) return;
-            const { article: s, tour: a, checklists: d } = i();
-            if (((e) => Boolean((0, g.g)()(e())))(i))
+          S = (e) => ({ type: o.Igv }),
+          E = () => ({ type: o.smh }),
+          I =
+            (e, t = !1) =>
+            (r) => {
+              (0, l.aA)(`Showing checklist progress: ${e}`);
+              const n = t ? s.gx : s.VF;
               return (
-                (0, c.aA)(
+                r(((e) => ({ type: o.Vq2, checklistProgressId: e }))(e)),
+                r(n(`/tasks/${p.g8.checklistDetails(e.toString())}`))
+              );
+            },
+          P = (e, t, r) => (n, i) => {
+            if (!m(t, i)) return;
+            const { article: s, tour: a, checklists: c } = i();
+            if (((e) => Boolean((0, f.g)()(e())))(i))
+              return (
+                (0, l.aA)(
                   `Task already resolving. Resolving taskId ${r} in the background. checklistId: ${e}. checklistProgressId: ${t}`,
                 ),
-                void n(S(e, t, r))
+                void n(C(e, t, r))
               );
             if (
               (null != s && s.activeArticleId) ||
               (null != a && a.activeTour) ||
               (null != a && a.isFetching)
             ) {
-              (0, c.aA)(
+              (0, l.aA)(
                 `Article/tour open. Attempting to queue resolve of task ${r}`,
               );
-              const e = d.find((e) => e.queuedTaskId);
+              const e = c.find((e) => e.queuedTaskId);
               return (
                 e &&
                   e.queuedTaskId &&
-                  ((0, c.aA)(
+                  ((0, l.aA)(
                     `Task already enqueued, marking queued task ${e.queuedTaskId} as resolved. progress: ${e.checklistProgressId}`,
                   ),
-                  n(S(e.id, e.checklistProgressId, e.queuedTaskId)),
-                  (0, c.aA)(
+                  n(C(e.id, e.checklistProgressId, e.queuedTaskId)),
+                  (0, l.aA)(
                     `Dequeueing task: ${e.queuedTaskId} progress: ${e.checklistProgressId}`,
                   ),
-                  n(E(e.checklistProgressId))),
-                (0, c.aA)(`Queueing resolve of task ${r} | progress: ${t}`),
+                  n(S(e.checklistProgressId))),
+                (0, l.aA)(`Queueing resolve of task ${r} | progress: ${t}`),
                 void n(
                   ((e, t) => ({
                     type: o.IuP,
@@ -1048,88 +944,88 @@
               );
             }
             n((0, u.gm)()),
-              n((0, l.qf)(t)),
+              n(I(t)),
               n(((e) => ({ type: o.XC7, taskId: e }))(r)),
+              b && clearTimeout(b),
               y && clearTimeout(y),
-              w && clearTimeout(w),
-              (y = setTimeout(() => {
-                n(S(e, t, r)),
-                  (w = setTimeout(() => {
+              (b = setTimeout(() => {
+                n(C(e, t, r)),
+                  (y = setTimeout(() => {
                     n({ type: o.EL$ });
                   }, 800));
               }, 1200));
           },
-          A = (e, t) => (r, n) => {
+          j = (e, t) => (r, n) => {
             const { session: i } = n();
-            i && a.ZP.recordViewedStat(i, e, t);
+            i && c.ZP.recordViewedStat(i, e, t);
+          },
+          A = (e, t, r) => (n, i) => {
+            if (!e || !t || !r) return;
+            const { session: o } = i();
+            o && c.ZP.recordTaskView(o, e, t, r);
           },
           k = (e, t, r) => (n, i) => {
             if (!e || !t || !r) return;
             const { session: o } = i();
-            o && a.ZP.recordTaskView(o, e, t, r);
+            o && c.ZP.recordActionClick(o, e, t, r);
           },
-          T = (e, t, r) => (n, i) => {
-            if (!e || !t || !r) return;
-            const { session: o } = i();
-            o && a.ZP.recordActionClick(o, e, t, r);
-          },
-          R = (e, t, r) => async (n, i) => {
-            const o = b(t, i),
+          T = (e, t, r) => async (n, i) => {
+            const o = m(t, i),
               { session: s } = i();
             if (s && o) {
-              n(S(e, t, r));
+              n(C(e, t, r));
               try {
-                await a.ZP.completeChecklistTask({
+                await c.ZP.completeChecklistTask({
                   checklistId: e,
                   checklistProgressId: t,
                   taskId: r,
                   session: s,
                 });
               } catch (t) {
-                (0, c.aA)(
+                (0, l.aA)(
                   `Checklist task with id ${r} for checklist id ${e} could not be processed`,
                 );
               }
             }
           },
-          M = (e, t) => async (r, n) => {
-            const i = b(t, n),
+          R = (e, t) => async (r, n) => {
+            const i = m(t, n),
               { session: s } = n();
             if (s && i) {
               r(((e) => ({ type: o.SEG, checklistProgressId: e }))(t));
               try {
-                await a.ZP.updateChecklistNotificationDetails(s, e, t);
+                await c.ZP.updateChecklistNotificationDetails(s, e, t);
               } catch (r) {
-                (0, c.aA)(
+                (0, l.aA)(
                   `Checklist notification details could not be updated for ${e} with progress ${t}`,
                 );
               }
             }
           },
-          x = (e, t) => async (r, n) => {
-            const i = b(t, n),
+          M = (e, t) => async (r, n) => {
+            const i = m(t, n),
               { session: o } = n();
             if (o && i) {
-              r(O(t));
+              r(_(t));
               try {
-                await a.ZP.dismissChecklistNotification(o, e, t);
+                await c.ZP.dismissChecklistNotification(o, e, t);
               } catch (r) {
-                (0, c.aA)(
+                (0, l.aA)(
                   `Checklist ${e} with progress ${t} could not be dismissed`,
                 );
               }
             }
           },
-          D = () => async (e, t) => {
+          x = () => async (e, t) => {
             var r;
-            const { session: n, checklists: o, article: s, tour: l } = t();
+            const { session: n, checklists: o, article: s, tour: a } = t();
             if (!n) return;
             if (i()(o)) return;
             if (
               (null != s && s.activeArticleId) ||
-              (null != l && l.activeTour) ||
+              (null != a && a.activeTour) ||
               ((u =
-                null == l || null === (r = l.activeTour) || void 0 === r
+                null == a || null === (r = a.activeTour) || void 0 === r
                   ? void 0
                   : r.id) &&
                 (
@@ -1148,80 +1044,80 @@
             const h = o.find((e) => e.queuedTaskId);
             h &&
               h.queuedTaskId &&
-              (e(j(h.id, h.checklistProgressId, h.queuedTaskId)),
-              e(E(h.checklistProgressId)));
+              (e(P(h.id, h.checklistProgressId, h.queuedTaskId)),
+              e(S(h.checklistProgressId)));
             const v = o.map((e) => e.checklistProgressId);
             try {
-              await a.ZP.resolveChecklists({
+              await c.ZP.resolveChecklists({
                 checklistProgressIds: v,
                 session: n,
               });
             } catch (e) {
-              (0, c.aA)("Checklists could not be resolved");
+              (0, l.aA)("Checklists could not be resolved");
             }
           },
-          L = () => (e) => {
-            const t = JSON.parse(f.X.get("lastChecklistsBackgroundResolve")),
+          D = () => (e) => {
+            const t = JSON.parse(v.X.get("lastChecklistsBackgroundResolve")),
               r = new Date().getTime();
-            t && t > r - h.kO
-              ? (0, c.aA)(
+            t && t > r - p.kO
+              ? (0, l.aA)(
                   "Checklists have already been resolved in the background in the last 24 hours. Returning early.",
                 )
-              : ((0, c.aA)(
+              : ((0, l.aA)(
                   "Checklists have not been resolved in the background in the last 24 hours. Checking again.",
                 ),
-                e(D()),
-                f.X.set("lastChecklistsBackgroundResolve", r));
+                e(x()),
+                v.X.set("lastChecklistsBackgroundResolve", r));
           },
-          N = () => (e, t) => {
-            const r = (0, s.MF)()(t());
+          L = () => (e, t) => {
+            const r = (0, a.MF)()(t());
             if (!r) return;
             const n = r.checklistProgressId,
-              i = (0, m.Fy)(t()).endsWith(
-                `/tasks/${h.g8.checklistDetails(n.toString())}`,
+              i = (0, g.Fy)(t()).endsWith(
+                `/tasks/${p.g8.checklistDetails(n.toString())}`,
               );
             i
-              ? (0, c.aA)(
+              ? (0, l.aA)(
                   `Already viewing progress ${n}, replacing current stack entry`,
                 )
-              : (0, c.aA)(`Opening unseen checklist progress ${n}`),
+              : (0, l.aA)(`Opening unseen checklist progress ${n}`),
               e((0, u.gm)()),
-              e((0, l.qf)(n, i));
+              e(I(n, i));
           },
-          z = () => async (e, t) => {
+          N = () => async (e, t) => {
             const { session: r } = t();
             try {
               if (!r) return;
-              const { checklists: t } = await a.ZP.loadChecklists(r);
+              const { checklists: t } = await c.ZP.loadChecklists(r);
               if (i()(t)) return;
-              e(C(a.ZP.buildChecklists(t), !1));
+              e(O(c.ZP.buildChecklists(t), !1));
             } catch (e) {
-              (0, c.aA)("Checklists could not be loaded");
+              (0, l.aA)("Checklists could not be loaded");
             }
           },
-          V =
+          z =
             (e, t, r = !1) =>
             async (n, i) => {
-              (0, c.aA)(`Will attempt to fetch checklist ruleset with id ${e}`);
+              (0, l.aA)(`Will attempt to fetch checklist ruleset with id ${e}`);
               const { session: o } = i(),
-                s = await a.ZP.fetchChecklist({
+                s = await c.ZP.fetchChecklist({
                   session: o,
                   rulesetId: e,
                   triggerMethod: t,
                 });
               if (!s) return;
-              const d = [];
-              r && n(z());
-              const { checklists: p } = i();
-              p && d.concat(p),
-                -1 === d.indexOf(s) && d.push(s),
-                n(_(d)),
+              const a = [];
+              r && n(N());
+              const { checklists: d } = i();
+              d && a.concat(d),
+                -1 === a.indexOf(s) && a.push(s),
+                n(w(a)),
                 n((0, u.gm)()),
-                n((0, l.qf)(s.checklistProgressId));
+                n(I(s.checklistProgressId));
             },
           U = () => async (e) => {
             var t;
-            (0, c.aA)("Checking for checklist ID in URL");
+            (0, l.aA)("Checking for checklist ID in URL");
             const r = B(
               null === (t = window) ||
                 void 0 === t ||
@@ -1231,9 +1127,9 @@
                 : t.location,
             );
             r
-              ? ((0, c.aA)(`Checklist ruleset id ${r} attached in the url`),
-                e(V(r, v.f.shareable_url)))
-              : (0, c.aA)("No attached checklist found in the URL");
+              ? ((0, l.aA)(`Checklist ruleset id ${r} attached in the url`),
+                e(z(r, h.f.shareable_url)))
+              : (0, l.aA)("No attached checklist found in the URL");
           },
           B = (e) => {
             if (!e) return;
@@ -1246,13 +1142,13 @@
             }
             return t;
           },
-          Z = (e) => (t) => {
-            (0, c.aA)(
+          V = (e) => (t) => {
+            (0, l.aA)(
               `Navigating to completion screen for checklist progress: ${e}`,
             ),
               t(
-                (0, p.VF)(
-                  `/tasks/${h.g8.checklistCompletionScreen(JSON.stringify(e))}`,
+                (0, s.VF)(
+                  `/tasks/${p.g8.checklistCompletionScreen(JSON.stringify(e))}`,
                 ),
               );
           };
@@ -1289,7 +1185,13 @@
       },
       99179: (e, t, r) => {
         "use strict";
-        r.d(t, { TE: () => O, WD: () => w, je: () => y, jr: () => m });
+        r.d(t, {
+          TE: () => _,
+          WD: () => y,
+          je: () => b,
+          jr: () => g,
+          qe: () => O,
+        });
         var n = r(23279),
           i = r.n(n),
           o = r(38733),
@@ -1299,32 +1201,41 @@
           l = r(11353),
           u = r(15178),
           d = r(89853),
-          p = r(50025),
-          h = r(45504);
-        let v = 0,
-          f = "",
-          g = !1;
-        function m(e, t) {
+          p = r(45504);
+        let h = 0,
+          v = "",
+          f = !1;
+        function g(e, t) {
           return (r, n) => {
             const i = n(),
-              { composerSuggestions: o } = (0, u.mA)(i);
-            if (!o || !o.isDismissed) return (f = e), b(r, n, t);
+              o = (0, u.mA)(i);
+            if (
+              !(
+                o &&
+                "composerSuggestions" in o &&
+                null != o &&
+                o.composerSuggestions &&
+                null != o &&
+                o.composerSuggestions.isDismissed
+              )
+            )
+              return (v = e), m(r, n, t);
           };
         }
-        const b = i()(
+        const m = i()(
           function e(t, r, n) {
-            const i = ++v,
-              s = f,
+            const i = ++h,
+              s = v,
               a = r(),
               { session: c } = a,
               { composerSuggestions: d } = (0, u.mA)(a);
             if (!d || !d.loading)
               return (
-                (g = !1),
-                t(_(!0, n)),
+                (f = !1),
+                t(w(!0, n)),
                 (0, o.zi)(c, s, 3).then((o) => {
-                  if ((t(_(!1, n)), t(w(o, n, i)), g && f !== s))
-                    return b.cancel(), void e(t, r, n);
+                  if ((t(w(!1, n)), t(y(o, n, i)), f && v !== s))
+                    return m.cancel(), void e(t, r, n);
                   const a = Object.assign(
                     {},
                     { query: s, conversation_id: n },
@@ -1339,90 +1250,93 @@
                   );
                 })
               );
-            g = !0;
+            f = !0;
           },
           150,
           { leading: !1, trailing: !0 },
         );
-        function y(e, t, r, n = !1, i, o) {
+        function b(e, t, r, n = !1, i, o) {
           return async (l, u) => {
-            var h;
-            const v = u(),
-              f = (null == t ? void 0 : t.id) || null,
+            var p;
+            const h = u(),
+              v = (null == t ? void 0 : t.id) || null,
               {
-                session: g,
-                newConversation: m,
-                user: b,
-                inboundSuggestions: y,
-              } = v,
-              _ =
-                null == y ||
-                null === (h = y.serverSideSuggestions) ||
-                void 0 === h
+                session: f,
+                newConversation: g,
+                user: m,
+                inboundSuggestions: b,
+              } = h,
+              w =
+                null == b ||
+                null === (p = b.serverSideSuggestions) ||
+                void 0 === p
                   ? void 0
-                  : h.snapshotId,
-              O = (0, a.D)(),
-              C = new Date();
-            if ((l(w(null, f)), f)) {
+                  : p.snapshotId,
+              _ = (0, a.D)(),
+              O = new Date();
+            if ((l(y(null, v)), v)) {
               const a = {
-                conversationId: f,
-                clientId: O,
-                createdAt: C,
+                conversationId: v,
+                clientId: _,
+                createdAt: O,
                 body: (0, c.Q8)(r.text),
                 composerSuggestionItem: r,
               };
               try {
-                l((0, s.Th)(f, a, n)),
-                  await e.fireComposerSuggestion(g, {
-                    conversationId: f,
+                l((0, s.Th)(v, a, n)),
+                  await e.fireComposerSuggestion(f, {
+                    conversationId: v,
                     suggestion: r,
-                    clientId: O,
+                    clientId: _,
                   }),
-                  l((0, s.pk)(f, a, i, t.lastParticipatingAdmin, o, !1, C, !0));
+                  l((0, s.pk)(v, a, i, t.lastParticipatingAdmin, o, !1, O, !0));
               } catch (e) {
-                l((0, s.Ix)(f, a, e));
+                l((0, s.Ix)(v, a, e));
               }
             } else {
               const t = {
-                clientId: O,
+                clientId: _,
                 body: (0, c.Q8)(r.text),
-                createdAt: C,
+                createdAt: O,
                 composerSuggestionItem: r,
               };
               try {
                 l((0, s.vg)(t, n));
-                const i = await e.fireComposerSuggestion(g, {
-                  conversationId: f,
+                const i = await e.fireComposerSuggestion(f, {
+                  conversationId: v,
                   suggestion: r,
-                  clientId: O,
-                  botIntro: m ? m.botIntroId : null,
-                  articleUrl: m ? m.articleUrl : null,
-                  resolutionBotBehaviorVersionId: b
-                    ? b.resolutionBotBehaviorVersionId
+                  clientId: _,
+                  botIntro: g ? g.botIntroId : null,
+                  articleUrl: g ? g.articleUrl : null,
+                  resolutionBotBehaviorVersionId: m
+                    ? m.resolutionBotBehaviorVersionId
                     : null,
-                  snapshotId: _,
+                  snapshotId: w,
                 });
-                l((0, s.eZ)(i, null, null, C, "resolution_bot_auto_suggest"));
-                (0, p.c0)(v) && l((0, d.az)(i.id, !0));
+                l((0, s.eZ)(i, null, null, O, "resolution_bot_auto_suggest")),
+                  l((0, d.a)(i.id, !0));
               } catch (e) {
                 l((0, s.Q2)(null));
               }
             }
           };
         }
-        function w(e, t, r = ++v) {
+        function y(e, t, r = ++h) {
           return {
-            type: h.Qe$,
+            type: p.Qe$,
             conversationId: t,
             composerSuggestions: e,
             priority: r,
           };
         }
-        function _(e, t) {
-          return { type: h.KDy, conversationId: t, loadingStatus: e };
+        function w(e, t) {
+          return { type: p.KDy, conversationId: t, loadingStatus: e };
+        }
+        function _(e) {
+          return { type: p.J9G, conversationId: e };
         }
         function O(e) {
-          return { type: h.J9G, conversationId: e };
+          return { type: p.WBK, suggestionParts: e, createdAt: new Date() };
         }
       },
       72226: (e, t, r) => {
@@ -1432,7 +1346,7 @@
           i = r(52539),
           o = r(49539),
           s = r(12325),
-          a = r(94679),
+          a = r(59680),
           c = r(8255),
           l = r(12818);
         function u(e, t, r, n, i = null, o = !1, u = !1, d, p) {
@@ -1489,29 +1403,28 @@
       12325: (e, t, r) => {
         "use strict";
         r.d(t, {
-          $o: () => X,
-          C3: () => W,
-          Cv: () => M,
-          Ix: () => V,
-          Kj: () => Y,
-          Q2: () => L,
-          Q8: () => H,
-          R7: () => A,
-          Th: () => N,
+          $o: () => Q,
+          C3: () => q,
+          Cv: () => R,
+          Ix: () => z,
+          Kj: () => G,
+          Q2: () => D,
+          Q8: () => F,
+          R7: () => j,
+          Th: () => L,
           Ud: () => J,
-          XA: () => k,
-          XZ: () => K,
-          cc: () => P,
-          eZ: () => D,
-          hB: () => G,
+          XA: () => A,
+          cc: () => I,
+          eZ: () => x,
+          hB: () => W,
           iP: () => B,
-          mt: () => q,
-          pk: () => z,
-          rI: () => $,
-          vg: () => x,
-          wC: () => R,
-          x4: () => T,
-          xf: () => j,
+          mt: () => $,
+          pk: () => N,
+          rI: () => H,
+          vg: () => M,
+          wC: () => T,
+          x4: () => k,
+          xf: () => P,
           z_: () => U,
         });
         var n = r(16315),
@@ -1529,16 +1442,15 @@
           f = r(24293),
           g = r(52239),
           m = r(89853),
-          b = r(50025),
-          y = r(94679),
-          w = r(76680),
-          _ = r(13169),
-          O = r(90371),
-          C = r(56783),
-          S = r(45504),
-          E = r(15178),
-          I = r(41254);
-        function P(
+          b = r(59680),
+          y = r(76680),
+          w = r(13169),
+          _ = r(90371),
+          O = r(56783),
+          C = r(45504),
+          S = r(15178),
+          E = r(41254);
+        function I(
           e,
           t,
           r = !1,
@@ -1551,19 +1463,19 @@
           return (l, v) => {
             l(
               (function (e, t = !1) {
-                return { type: S.qBE, conversationId: e, isUpdating: t };
+                return { type: C.qBE, conversationId: e, isUpdating: t };
               })(t, r),
             );
             const {
                 session: g,
                 operator: b,
-                app: y,
+                app: w,
                 user: _,
                 conversations: O,
               } = v(),
-              C = Date.now();
+              S = Date.now();
             return e
-              .getConversation(g, t, y.selfServeSuggestionsMatch, i)
+              .getConversation(g, t, w.selfServeSuggestionsMatch, i)
               .then((r) => {
                 var v;
                 const g = O ? O.byId[t] : null;
@@ -1571,19 +1483,19 @@
                   (i &&
                     ((0, u.cb)("fetch_conversation_durations", {
                       client_assigned_uuid: i,
-                      time_to_fetch_conv_ms: Date.now() - C,
+                      time_to_fetch_conv_ms: Date.now() - S,
                       is_operator_part: c,
                     }),
                     null != a && "quick_reply_finished" === a
                       ? (0, u.cb)("bot_reply", {
                           client_assigned_uuid: i,
-                          time_to_fetch_conv_ms: Date.now() - C,
+                          time_to_fetch_conv_ms: Date.now() - S,
                         })
                       : s &&
                         (0, u.cb)("inbox_to_messenger", {
                           client_assigned_uuid: i,
                           web_socket_enqueued_at: s,
-                          time_to_fetch_conv_ms: Date.now() - C,
+                          time_to_fetch_conv_ms: Date.now() - S,
                           user_is_present:
                             (null == _ ? void 0 : _.isPresent) || !1,
                         })),
@@ -1606,13 +1518,13 @@
                         try {
                           (0, o.FC)(e).clientId === (0, o.FC)(i).clientId &&
                             "conversation" !== s &&
-                            (t(D(e, null, null, Date.now(), "custom_bot")),
-                            t((0, m.az)(e.id, !0)));
+                            (t(x(e, null, null, Date.now(), "custom_bot")),
+                            t((0, m.a)(e.id, !0)));
                         } catch (e) {}
                       };
                     })(r),
                   ),
-                  l(j(e, r, !1, Date.now())),
+                  l(P(e, r, !1, Date.now())),
                   b)
                 ) {
                   const {
@@ -1629,7 +1541,7 @@
                     g &&
                     (function (e, t) {
                       const r = e.parts ? e.parts.slice(-1) : null;
-                      if (!(r && r[0] && (0, w.kh)(r[0])))
+                      if (!(r && r[0] && (0, y.kh)(r[0])))
                         try {
                           e.updatedAt.getTime() === t.updatedAt.getTime() &&
                             (0, u.cb)(
@@ -1647,19 +1559,19 @@
               .catch((e) =>
                 l(
                   (function (e, t) {
-                    return { type: S.eaZ, conversationId: e, error: t };
+                    return { type: C.eaZ, conversationId: e, error: t };
                   })(t, e),
                 ),
               );
           };
         }
-        function j(e, t, r, n) {
+        function P(e, t, r, n) {
           return (s) => {
             (0, o.NX)(t).forEach((t) => s((0, i.YS)(e, t, !1))),
               s(
                 (function (e, t = !1, r) {
                   return {
-                    type: S.OFq,
+                    type: C.OFq,
                     conversation: e,
                     skipNotification: t,
                     createdAt: r,
@@ -1668,11 +1580,11 @@
               );
           };
         }
-        function A(e, t) {
+        function j(e, t) {
           return (r, n) => {
             r(
               (function (e) {
-                return { type: S.vtD, conversationId: e };
+                return { type: C.vtD, conversationId: e };
               })(t),
             );
             const { session: i } = n();
@@ -1682,12 +1594,12 @@
                 var n, i;
                 (r(
                   (function (e) {
-                    return { type: S.Tpu, conversationId: e };
+                    return { type: C.Tpu, conversationId: e };
                   })(t),
                 ),
                 null != e && null !== (n = e.ticket) && void 0 !== n && n.id) &&
                   r(
-                    (0, O.Aw)(
+                    (0, _.Aw)(
                       null == e || null === (i = e.ticket) || void 0 === i
                         ? void 0
                         : i.id,
@@ -1697,24 +1609,24 @@
               .catch((e) =>
                 r(
                   (function (e, t) {
-                    return { type: S.KvC, conversationId: e, error: t };
+                    return { type: C.KvC, conversationId: e, error: t };
                   })(t, e),
                 ),
               );
           };
         }
+        function A(e) {
+          return { type: C.wtf, conversationId: e };
+        }
         function k(e) {
-          return { type: S.wtf, conversationId: e };
+          return { type: C.ZGX, conversationId: e };
         }
-        function T(e) {
-          return { type: S.ZGX, conversationId: e };
-        }
-        function R(e, t, r, n) {
+        function T(e, t, r, n) {
           return (i, o) => {
             i(
               (function (e, t, r) {
                 return {
-                  type: S.ooI,
+                  type: C.ooI,
                   conversationId: e,
                   reactionIndex: t,
                   isFromConversation: !!r,
@@ -1727,7 +1639,7 @@
               .then(() =>
                 i(
                   (function (e, t) {
-                    return { type: S.Z7g, conversationId: e, reactionIndex: t };
+                    return { type: C.Z7g, conversationId: e, reactionIndex: t };
                   })(t, r),
                 ),
               )
@@ -1735,7 +1647,7 @@
                 i(
                   (function (e, t, r) {
                     return {
-                      type: S.BTV,
+                      type: C.BTV,
                       conversationId: e,
                       reactionIndex: t,
                       error: r,
@@ -1745,7 +1657,7 @@
               );
           };
         }
-        function M(e, t, r, n = !1, i = !1, s = null, a = null, c = !1, l) {
+        function R(e, t, r, n = !1, i = !1, s = null, a = null, c = !1, l) {
           return void 0 === t
             ? (function (e, t, r = !1, n, i, o) {
                 return (s, a) => {
@@ -1755,18 +1667,18 @@
                     f = p ? p.botIntroId : null,
                     b = p ? p.fromArticleId : null,
                     y = !!p && p.fromStandaloneArticle;
-                  s(x(t, r, o, Date.now())), o && s(Q());
-                  let w = null;
+                  s(M(t, r, o, Date.now())), o && s(Y());
+                  let _ = null;
                   return (
-                    o || f || (w = (0, g.N)(c)),
-                    Z(e, l, t, (e) => s(F(t, e)))
+                    o || f || (_ = (0, g.N)(c)),
+                    V(e, l, t, (e) => s(Z(t, e)))
                       .then((t) => {
                         const r = {
                           blocks: h,
                           createdAt: v,
                           upload: t,
                           email: o,
-                          composerSuggestions: w,
+                          composerSuggestions: _,
                           selfServeSuggestionsMatch:
                             u.selfServeSuggestionsMatch,
                           botIntro: f,
@@ -1784,29 +1696,29 @@
                       })
                       .then(
                         (e) => (
-                          s(D(e, n, i, Date.now())),
+                          s(x(e, n, i, Date.now())),
                           (function (e) {
-                            _.Z.saveDraft(e, _.Z.loadDraft("new_conversation")),
-                              _.Z.removeDraft("new_conversation");
+                            w.Z.saveDraft(e, w.Z.loadDraft("new_conversation")),
+                              w.Z.removeDraft("new_conversation");
                           })(e.id),
-                          s((0, m.J_)(e.id, !0, b, y)),
+                          s((0, m.J)(e.id, !0, b, y)),
                           e
                         ),
                       )
-                      .catch((e) => s(L(e)))
+                      .catch((e) => s(D(e)))
                   );
                 };
               })(e, r, n, a, c, l)
             : (function (e, t, r, n = !1, i = !1, s, a, c, l) {
                 return (u, d) => {
                   const { session: p } = d(),
-                    h = (0, E.jo)(t)(d()),
+                    h = (0, S.jo)(t)(d()),
                     v = h ? (0, o.Qz)(h) : null,
                     { body: f, createdAt: g, clientId: m } = r;
                   return (
-                    u(N(t, r, n, l)),
-                    l && u(Q()),
-                    Z(e, p, r, (e) => u(F(r, e, t)))
+                    u(L(t, r, n, l)),
+                    l && u(Y()),
+                    V(e, p, r, (e) => u(Z(r, e, t)))
                       .then((r) => {
                         var n;
                         return e.createComment(
@@ -1822,23 +1734,23 @@
                             void 0 === n
                             ? void 0
                             : n.toISOString(),
-                          (0, C.w)(d()),
+                          (0, O.w)(d()),
                         );
                       })
                       .then((e) => {
-                        u(z(t, e, i, s, a, c, Date.now()));
+                        u(N(t, e, i, s, a, c, Date.now()));
                       })
-                      .catch((e) => u(V(t, r, e)))
+                      .catch((e) => u(z(t, r, e)))
                   );
                 };
               })(e, t, r, n, i, s, a, c, l);
         }
-        function x(e, t, r = void 0, n = Date.now()) {
-          return { type: S.xx1, part: e, isRetry: t, timestamp: n, email: r };
+        function M(e, t, r = void 0, n = Date.now()) {
+          return { type: C.xx1, part: e, isRetry: t, timestamp: n, email: r };
         }
-        function D(e, t, r, n, i) {
+        function x(e, t, r, n, i) {
           return {
-            type: S.In$,
+            type: C.In$,
             conversation: e,
             officeHoursResponse: t,
             isAnnotatedImage: r,
@@ -1846,21 +1758,21 @@
             conversationTriggerType: i,
           };
         }
-        function L(e) {
-          return { type: S.V0l, reason: e };
+        function D(e) {
+          return { type: C.V0l, reason: e };
         }
-        function N(e, t, r, n) {
+        function L(e, t, r, n) {
           return {
-            type: S.bec,
+            type: C.bec,
             conversationId: e,
             part: t,
             isRetry: r,
             email: n,
           };
         }
-        function z(e, t, r, n, i, o, s, a = !1) {
+        function N(e, t, r, n, i, o, s, a = !1) {
           return {
-            type: S.xjQ,
+            type: C.xjQ,
             conversationId: e,
             part: t,
             isBorderless: r,
@@ -1871,8 +1783,8 @@
             fromMessengerSuggestedContent: a,
           };
         }
-        function V(e, t, r) {
-          return { type: S.xDT, conversationId: e, part: t, reason: r };
+        function z(e, t, r) {
+          return { type: C.xDT, conversationId: e, part: t, reason: r };
         }
         function U(e, t, r) {
           const { id: n } = t;
@@ -1887,27 +1799,27 @@
                 i((0, v.Z)(e, t, n, !0, o))
               );
             }
-            return i(M(e, n, r, !0));
+            return i(R(e, n, r, !0));
           };
         }
         function B(e, t, r, n, i = []) {
-          return r.size > I.z0
+          return r.size > E.z0
             ? Promise.reject("file_size")
             : e
                 .createUploadPolicy(t, r, ...i)
                 .then((t) => e.createUpload(t, r, n));
         }
-        function Z(e, t, r, n) {
+        function V(e, t, r, n) {
           const { file: i, body: o } = r,
             { width: s, height: a } = o[0];
           return i ? B(e, t, i, n, [s, a]) : Promise.resolve();
         }
-        function F(e, t, r) {
-          return { type: S.REJ, conversationId: r, part: e, progress: t };
+        function Z(e, t, r) {
+          return { type: C.REJ, conversationId: r, part: e, progress: t };
         }
-        function H(e, t, r, n, i = !1, o = new Date()) {
+        function F(e, t, r, n, i = !1, o = new Date()) {
           return {
-            type: S.Y4j,
+            type: C.Y4j,
             conversationId: e,
             adminId: t,
             firstName: r,
@@ -1916,30 +1828,30 @@
             lastActiveAt: o,
           };
         }
-        function $({ conversationId: e, part: t }) {
-          return { type: S.itv, conversationId: e, part: t };
+        function H({ conversationId: e, part: t }) {
+          return { type: C.itv, conversationId: e, part: t };
         }
-        function q(e) {
-          return { type: S.g9c, conversationId: e };
+        function $(e) {
+          return { type: C.g9c, conversationId: e };
         }
-        function W(e, t, r = new Date()) {
+        function q(e, t, r = new Date()) {
           return {
-            type: S.SqP,
+            type: C.SqP,
             conversationId: e,
             composerContent: t,
             lastActiveAt: r,
           };
         }
-        function G(e, t, r, n, i, o, s, a, c) {
+        function W(e, t, r, n, i, o, s, a, c) {
           return (u, d) => {
             const p = d(),
               { session: h, user: v, borderless: f } = p;
             return (
-              (0, b.c0)(p) && null != f && f.conversationId && u((0, y.B_)(t)),
+              null != f && f.conversationId && u((0, b.B_)(t)),
               u(
                 (function (e, t, r, n, i, o, s) {
                   return {
-                    type: S.qBt,
+                    type: C.qBt,
                     conversationId: e,
                     partId: t,
                     identifier: r,
@@ -1956,7 +1868,7 @@
                   u(
                     (function (e, t, r, n) {
                       return {
-                        type: S.ees,
+                        type: C.ees,
                         conversation: e,
                         partId: t,
                         identifier: r,
@@ -1970,7 +1882,7 @@
                   u(
                     (function (e, t, r, n) {
                       return {
-                        type: S.i1I,
+                        type: C.i1I,
                         conversationId: e,
                         partId: t,
                         identifier: r,
@@ -1982,7 +1894,7 @@
             );
           };
         }
-        function Y(e) {
+        function G(e) {
           return (t, r) => {
             const { session: i } = r();
             let o = (0, a.JE)();
@@ -1990,35 +1902,29 @@
               (0, s.Py)(o, (0, c.rx)(i, { conversation_id: e }));
           };
         }
-        function Q() {
-          return { type: S.Elv };
+        function Y() {
+          return { type: C.Elv };
         }
         function J(e) {
-          return { type: S.Ecv, composerState: e };
+          return { type: C.Ecv, composerState: e };
         }
-        function K(e, t, r) {
-          return (n, i) => {
-            const { session: o } = i();
-            return e.recordInteractions(o, t, r);
-          };
-        }
-        function X(e, t) {
+        function Q(e, t) {
           return (r, n) => {
             r(
               (function (e) {
-                return { type: S.lnT, conversationId: e };
+                return { type: C.lnT, conversationId: e };
               })(t),
             );
             const { session: i } = n();
             return e
               .joinConversation(i, t)
               .then((t) => {
-                r(j(e, t, !0, Date.now()));
+                r(P(e, t, !0, Date.now()));
               })
               .catch((e) =>
                 r(
                   (function (e, t) {
-                    return { type: S.zFR, conversationId: e, error: t };
+                    return { type: C.zFR, conversationId: e, error: t };
                   })(t, e),
                 ),
               );
@@ -2028,36 +1934,33 @@
       65394: (e, t, r) => {
         "use strict";
         r.d(t, {
-          A_: () => w,
-          Gp: () => y,
-          HW: () => v,
-          SV: () => _,
-          hk: () => b,
-          lP: () => m,
-          rc: () => l,
-          uv: () => u,
+          Gp: () => b,
+          HW: () => h,
+          SV: () => y,
+          hk: () => m,
+          lP: () => g,
+          rc: () => c,
+          uv: () => l,
         });
         var n = r(28680),
           i = r(4354),
           o = r(25995),
           s = r(45504),
-          a = r(38733),
-          c = r(50025);
-        function l() {
-          return u(a.ZP, "messengerPrefetchSpaceData");
+          a = r(38733);
+        function c() {
+          return l(a.ZP, "messengerPrefetchSpaceData");
         }
-        function u(e, t = "unknown", r = 1, o = 10) {
+        function l(e, t = "unknown", r = 1, o = 10) {
           return (s, a) => {
-            s(d());
-            const l = a(),
-              { session: u, app: v } = l,
-              f = (0, c.c0)(l);
+            s(u());
+            const c = a(),
+              { session: l, app: h } = c;
             return e
-              .getConversations(u, {
+              .getConversations(l, {
                 source: t,
                 page: r,
                 perPage: o,
-                selfServeSuggestionsMatch: v.selfServeSuggestionsMatch,
+                selfServeSuggestionsMatch: h.selfServeSuggestionsMatch,
               })
               .then((t) => {
                 t.conversations.forEach((t) => {
@@ -2065,43 +1968,43 @@
                     s((0, n.YS)(e, t));
                   });
                 }),
-                  s(y(t)),
-                  s(p(t, f));
+                  s(b(t)),
+                  s(d(t));
               })
               .catch(() => {
-                s(h());
+                s(p());
               });
           };
         }
-        function d() {
+        function u() {
           return { type: s.OPG };
         }
-        function p(e, t) {
-          return { type: s.FH3, conversations: e, m5Enabled: t };
+        function d(e) {
+          return { type: s.FH3, conversations: e };
         }
-        function h(e) {
+        function p(e) {
           return { type: s.Mti, error: e };
         }
-        function v(e, t) {
+        function h(e, t) {
           return (r, n) => {
-            r(f(t));
+            r(v(t));
             const { session: i } = n();
-            return e.dismissNotifications(i, t).then(() => r(g(t)));
+            return e.dismissNotifications(i, t).then(() => r(f(t)));
           };
         }
-        function f(e) {
+        function v(e) {
           return { type: s.Pgx, conversationIds: e };
         }
-        function g(e) {
+        function f(e) {
           return { type: s.CB6, conversationIds: e };
         }
-        function m(e) {
+        function g(e) {
           return { type: s.yYg, scrollPosition: e };
         }
-        function b(e) {
+        function m(e) {
           return { type: s.LjG, conversationId: e };
         }
-        function y(e) {
+        function b(e) {
           return (t) => {
             const r = e.conversations;
             r &&
@@ -2110,10 +2013,7 @@
               });
           };
         }
-        function w(e) {
-          return { type: s.XXb, partId: e };
-        }
-        function _(e) {
+        function y(e) {
           return { type: s.a80, openInboundConversationIds: e };
         }
       },
@@ -2137,11 +2037,11 @@
       49539: (e, t, r) => {
         "use strict";
         r.d(t, {
-          Ij: () => g,
-          PH: () => h,
-          r2: () => v,
-          u7: () => m,
-          vd: () => f,
+          Ij: () => f,
+          PH: () => p,
+          r2: () => h,
+          u7: () => g,
+          vd: () => v,
         });
         var n = r(11227),
           i = r.n(n),
@@ -2150,26 +2050,25 @@
           a = r(8255),
           c = r(11353),
           l = r(89853),
-          u = r(50025),
-          d = r(45504);
-        const p = i()("intercom.actions.inbound-triggers");
-        function h(e, t, r = !1) {
+          u = r(45504);
+        const d = i()("intercom.actions.inbound-triggers");
+        function p(e, t, r = !1) {
           return async (n, i) => {
             try {
-              var d;
-              const p = i(),
-                { app: h, session: v, newConversation: f } = p,
-                g = (0, s.D)(),
-                m = {
-                  clientId: g,
+              var u;
+              const d = i(),
+                { app: p, session: h, newConversation: v } = d,
+                f = (0, s.D)(),
+                g = {
+                  clientId: f,
                   body: (0, a.Q8)(t.text),
                   createdAt: new Date(),
                   composerSuggestionItem: t,
                 },
-                b =
-                  null == f || null === (d = f.composerState) || void 0 === d
+                m =
+                  null == v || null === (u = v.composerState) || void 0 === u
                     ? void 0
-                    : d.visible;
+                    : u.visible;
               n(
                 (function (e) {
                   if ("close-composer" === e.preAction)
@@ -2177,40 +2076,40 @@
                   throw `Invalid PRE ACTION type for suggestion=${e.preAction}`;
                 })(t),
               ),
-                n((0, o.vg)(m, r)),
-                (0, c.Yw)("inboundSuggestionConversationCreation", g, {
+                n((0, o.vg)(g, r)),
+                (0, c.Yw)("inboundSuggestionConversationCreation", f, {
                   custom_bot_control_id: null == t ? void 0 : t.uuid,
                 });
-              const y = await e.startConversationFromSuggestion(v, {
+              const b = await e.startConversationFromSuggestion(h, {
                 suggestionUuid: t.uuid,
-                clientAssignedUUID: g,
-                selfServeSuggestionsMatch: h.selfServeSuggestionsMatch,
-                articleUrl: f.articleUrl,
+                clientAssignedUUID: f,
+                selfServeSuggestionsMatch: p.selfServeSuggestionsMatch,
+                articleUrl: v.articleUrl,
               });
-              (0, c.n4)("inboundSuggestionConversationCreation", g, {
+              (0, c.n4)("inboundSuggestionConversationCreation", f, {
                 origin: "conversation_created",
-                conversation_id: null == y ? void 0 : y.id,
+                conversation_id: null == b ? void 0 : b.id,
               }),
-                n((0, o.eZ)(y, null, null, Date.now(), "custom_bot")),
-                b && n((0, o.Ud)({ visible: !0 }));
-              (0, u.c0)(p) && n((0, l.az)(y.id, !0));
+                n((0, o.eZ)(b, null, null, Date.now(), "custom_bot")),
+                m && n((0, o.Ud)({ visible: !0 })),
+                n((0, l.a)(b.id, !0));
             } catch (e) {
               n((0, o.Q2)(null)),
-                p(`Couldnt start conversation from suggestion due to e=${e}`);
+                d(`Couldnt start conversation from suggestion due to e=${e}`);
             }
           };
         }
+        function h(e) {
+          return { type: u.E15, composerSuggestions: e };
+        }
         function v(e) {
-          return { type: d.E15, composerSuggestions: e };
+          return { type: u.qP7, composerSuggestions: e };
         }
         function f(e) {
-          return { type: d.qP7, composerSuggestions: e };
+          return { type: u.rY3, composerSuggestions: e };
         }
         function g(e) {
-          return { type: d.rY3, composerSuggestions: e };
-        }
-        function m(e) {
-          return { type: d.hFe, rulesetId: e };
+          return { type: u.hFe, rulesetId: e };
         }
       },
       71120: (e, t, r) => {
@@ -2402,14 +2301,14 @@
       62644: (e, t, r) => {
         "use strict";
         r.d(t, {
-          uc: () => _,
-          $y: () => y,
-          M2: () => S,
-          Rz: () => b,
-          J1: () => E,
-          iu: () => O,
-          g8: () => C,
-          cs: () => w,
+          uc: () => w,
+          $y: () => b,
+          M2: () => C,
+          Rz: () => m,
+          J1: () => S,
+          iu: () => _,
+          g8: () => O,
+          cs: () => y,
         });
         var n = r(53602),
           i = r(28680),
@@ -2417,16 +2316,15 @@
           s = r(54103);
         const a = "sheet-loaded";
         var c = r(41750),
-          l = r(94679),
+          l = r(59680),
           u = r(24293),
           d = r(11353),
           p = r(26713),
           h = r(66494),
-          v = r(50025),
-          f = r(81036),
-          g = r(45504),
-          m = r(38049);
-        function b(e, t) {
+          v = r(81036),
+          f = r(45504),
+          g = r(38049);
+        function m(e, t) {
           return (r, n) => {
             const { intercomSheet: i } = t.data || {},
               o = n(),
@@ -2434,28 +2332,28 @@
             if (!i) return null;
             switch (i.type) {
               case a:
-                r(S());
-                break;
-              case s.H0:
                 r(C());
                 break;
+              case s.H0:
+                r(O());
+                break;
               case s.E4:
-                r(S());
+                r(C());
                 break;
               case s.F$:
-                r(_("sheet_api_close"));
+                r(w("sheet_api_close"));
                 break;
               case s.V$:
                 if (!i.payload) return;
-                r(O(i.payload.title));
+                r(_(i.payload.title));
                 break;
               case s.$p:
                 if (!l) return null;
-                r(C()), r(w(e, i.payload));
+                r(O()), r(y(e, i.payload));
             }
           };
         }
-        function y(e, t, r, n, i) {
+        function b(e, t, r, n, i) {
           return (o, s) => {
             const {
               app: { isMessengerOpen: a },
@@ -2465,26 +2363,26 @@
               a || o((0, l.PJ)()),
               o(
                 (function (e, t, r) {
-                  return (n, i) => {
-                    (0, v.c0)(i()) && n((0, f.VF)(`/${m.y7.id}/sheet`)),
-                      n({ type: g.iuk, url: e, cardUri: t, componentId: r });
+                  return (n) => {
+                    n((0, v.VF)(`/${g.y7.id}/sheet`)),
+                      n({ type: f.iuk, url: e, cardUri: t, componentId: r });
                   };
                 })(n, t, r),
               ),
-              o(I()),
+              o(E()),
               o((0, h.YG)()),
               e
                 .fetchMessengerSheetData(c, t, r, i)
                 .then((e) => {
-                  o(P(e));
+                  o(I(e));
                 })
                 .catch(() => {
-                  o(j());
+                  o(P());
                 })
             );
           };
         }
-        function w(e, t) {
+        function y(e, t) {
           return (r, s) => {
             const a = s(),
               { cardUri: l } = (0, c.i3)(a),
@@ -2496,14 +2394,14 @@
               })
               .then(() => new Promise((e) => setTimeout(e, 2 * o.R)))
               .then(() => {
-                r(S()), r(_("sheet_api_submit"));
+                r(C()), r(w("sheet_api_submit"));
               })
               .catch(() => {
                 r((0, p.w)("MessengerSheetSubmitError", { sheetValues: t }));
               });
           };
         }
-        function _(e) {
+        function w(e) {
           return (t, r) => {
             var n;
             const i = r(),
@@ -2544,24 +2442,24 @@
                 n,
               );
             }
-            t({ type: g.Mpv }), (0, v.c0)(i) && t((0, f.Hm)());
+            t({ type: f.Mpv }), t((0, v.Hm)());
           };
         }
-        function O(e) {
-          return { type: g.Pm4, sheetTitle: e };
+        function _(e) {
+          return { type: f.Pm4, sheetTitle: e };
+        }
+        function O() {
+          return { type: f.qMC };
         }
         function C() {
-          return { type: g.qMC };
+          return { type: f.rq7 };
         }
-        function S() {
-          return { type: g.rq7 };
+        function S(e = !1) {
+          return { type: f.Cc_, isLoaded: e };
         }
-        function E(e = !1) {
-          return { type: g.Cc_, isLoaded: e };
-        }
-        const I = () => ({ type: g.jx5 }),
-          P = (e) => ({ type: g.YbZ, data: e }),
-          j = () => ({ type: g.l5E });
+        const E = () => ({ type: f.jx5 }),
+          I = (e) => ({ type: f.YbZ, data: e }),
+          P = () => ({ type: f.l5E });
       },
       99948: (e, t, r) => {
         "use strict";
@@ -2573,7 +2471,7 @@
         function a() {
           return (e, t) => {
             const r = t();
-            if (!(0, s.e2)(r)) return;
+            if (!(0, s.e2)(r)) return Promise.resolve();
             const { session: o } = r;
             e({ type: i.mXv });
             const a = (0, s.LO)(r);
@@ -2697,124 +2595,110 @@
       },
       52539: (e, t, r) => {
         "use strict";
-        r.d(t, { F: () => h, Z: () => p });
+        r.d(t, { F: () => p, Z: () => d });
         var n = r(11227),
           i = r.n(n),
           o = r(12325),
           s = r(12818),
           a = r(8255),
           c = r(45504),
-          l = r(89853),
-          u = r(50025);
-        const d = i()("intercom.actions.predictive-answers");
-        function p(e, t, r = !1) {
+          l = r(89853);
+        const u = i()("intercom.actions.predictive-answers");
+        function d(e, t, r = !1) {
           return async (n, i) => {
             try {
               var c;
-              const d = void 0,
-                p = i(),
+              const u = void 0,
+                d = i(),
                 {
-                  session: v,
-                  newConversation: f,
-                  user: g,
-                  inboundSuggestions: m,
-                } = p,
-                b =
-                  null == m ||
-                  null === (c = m.serverSideSuggestions) ||
+                  session: h,
+                  newConversation: v,
+                  user: f,
+                  inboundSuggestions: g,
+                } = d,
+                m =
+                  null == g ||
+                  null === (c = g.serverSideSuggestions) ||
                   void 0 === c
                     ? void 0
                     : c.snapshotId,
-                y = (0, s.D)(),
-                w = {
-                  clientId: y,
+                b = (0, s.D)(),
+                y = {
+                  clientId: b,
                   body: (0, a.Q8)(t.text),
                   createdAt: new Date(),
                   composerSuggestionItem: t,
                 };
-              n(h(null)), n((0, o.vg)(w, r));
-              const _ = await e.fireComposerSuggestion(v, {
-                conversationId: d,
+              n(p(null)), n((0, o.vg)(y, r));
+              const w = await e.fireComposerSuggestion(h, {
+                conversationId: u,
                 suggestion: t,
-                clientId: y,
-                botIntro: f ? f.botIntroId : null,
-                articleUrl: f ? f.articleUrl : null,
-                resolutionBotBehaviorVersionId: g
-                  ? g.resolutionBotBehaviorVersionId
+                clientId: b,
+                botIntro: v ? v.botIntroId : null,
+                articleUrl: v ? v.articleUrl : null,
+                resolutionBotBehaviorVersionId: f
+                  ? f.resolutionBotBehaviorVersionId
                   : null,
-                snapshotId: b,
+                snapshotId: m,
               });
-              n((0, o.eZ)(_, null, null, Date.now(), "predictive_answer"));
-              (0, u.c0)(p) && n((0, l.az)(_.id, !0));
+              n((0, o.eZ)(w, null, null, Date.now(), "predictive_answer")),
+                n((0, l.a)(w.id, !0));
             } catch (e) {
               n((0, o.Q2)(null)),
-                d(`Couldnt start conversation from suggestion due to e=${e}`);
+                u(`Couldnt start conversation from suggestion due to e=${e}`);
             }
           };
         }
-        function h(e) {
+        function p(e) {
           return { type: c.wac, predictiveAnswersSuggestions: e };
         }
       },
       89853: (e, t, r) => {
         "use strict";
-        r.d(t, { J_: () => p, az: () => h, qf: () => v });
+        r.d(t, { J: () => l, a: () => u });
         var n = r(45504),
           i = r(81036),
-          o = r(45809),
-          s = r(6435),
-          a = r(59685),
-          c = r(38049),
-          l = r(81705),
-          u = r(22706);
-        const d = (e, t = !1) => {
+          o = r(6435),
+          s = r(59685),
+          a = r(38049);
+        const c = (e, t = !1) => {
             const r = { type: n._IE, conversationId: e };
             return t && (r.replaceCurrentView = t), r;
           },
-          p = (e, t = !1, r = null, n = !1) =>
+          l = (e, t = !1, r = null, n = !1) =>
             (t ? i.gx : i.VF)(
               "/messages/conversation/" +
                 e +
                 `?fromStandaloneArticle=${n}` +
                 (r ? `&fromArticleID=${r}` : ""),
             );
-        function h(e, t = !1) {
+        function u(e, t = !1) {
           return (r, n) => {
-            var o, l;
-            const u = n(),
-              h = (0, s.Fy)(u),
-              v = (0, a.matchPath)(
-                `/${c.Yu.id}/conversation/:conversationId`,
+            var u, d;
+            const p = n(),
+              h = (0, o.Fy)(p),
+              v = (0, s.matchPath)(
+                `/${a.Yu.id}/conversation/:conversationId`,
                 h,
               );
-            r(d(e, t));
+            r(c(e, t));
             const f =
-                (null === (o = u.router) ||
-                void 0 === o ||
-                null === (o = o.previousLocations) ||
-                void 0 === o
+                (null === (u = p.router) ||
+                void 0 === u ||
+                null === (u = u.previousLocations) ||
+                void 0 === u
                   ? void 0
-                  : o.length) || 0,
+                  : u.length) || 0,
               g = (!t && 0 === f) || (t && f <= 1);
             if (g) {
               r((t ? i.gx : i.VF)("/messages"));
             }
             e.toString() !==
-              (null == v || null === (l = v.params) || void 0 === l
+              (null == v || null === (d = v.params) || void 0 === d
                 ? void 0
-                : l.conversationId) && r(p(e, t && !g));
+                : d.conversationId) && r(l(e, t && !g));
           };
         }
-        const v =
-          (e, t = !1) =>
-          (r) => {
-            (0, u.aA)(`Showing checklist progress: ${e}`);
-            const n = t ? i.gx : i.VF;
-            return (
-              r((0, l.qb)(e)),
-              r(n(`/tasks/${o.g8.checklistDetails(e.toString())}`))
-            );
-          };
       },
       60260: (e, t, r) => {
         "use strict";
@@ -3255,12 +3139,13 @@
       90371: (e, t, r) => {
         "use strict";
         r.d(t, {
-          Aw: () => l,
+          Aw: () => u,
           Ci: () => a,
           ax: () => o,
-          hr: () => c,
-          i7: () => u,
+          hr: () => l,
+          i7: () => d,
           is: () => s,
+          yD: () => c,
         });
         var n = r(45504),
           i = r(85566);
@@ -3310,9 +3195,10 @@
           };
         }
         const a = (e, t) => ({ type: n.e7o, tickets: e, nextPage: t }),
-          c = (e) => ({ type: n.Id8, ticket: e }),
-          l = (e) => ({ type: n.KgQ, id: e }),
-          u = (e) => ({ type: n.zv5, id: e });
+          c = (e) => ({ type: n.AiZ, ticketsPortalUrl: e }),
+          l = (e) => ({ type: n.Id8, ticket: e }),
+          u = (e) => ({ type: n.KgQ, id: e }),
+          d = (e) => ({ type: n.zv5, id: e });
       },
       66283: (e, t, r) => {
         "use strict";
@@ -3328,7 +3214,7 @@
         var n = r(45504),
           i = r(38733);
         function o({ session: e, customAttributes: t }) {
-          return async (r, n) => {
+          return async (r) => {
             try {
               const n = await i.ZP.fetchTooltips({
                 session: e,
@@ -3398,7 +3284,7 @@
           o = r(14293),
           s = r.n(o),
           a = r(30843),
-          c = r(94679),
+          c = r(59680),
           l = r(44919),
           u = r(25570),
           d = r(11353),
@@ -3767,7 +3653,7 @@
         var n = r(23279),
           i = r.n(n),
           o = r(97273),
-          s = r(94679),
+          s = r(59680),
           a = r(89853),
           c = r(12325),
           l = r(24293);
@@ -3786,7 +3672,7 @@
             "show-conversation": function (e, t) {
               return async (r, n) => {
                 if ("conversation" !== (0, l.WP)(n()))
-                  return await r((0, c.cc)(e, t.id)), r((0, a.az)(t.id, !0));
+                  return await r((0, c.cc)(e, t.id)), r((0, a.a)(t.id, !0));
               };
             },
           },
@@ -4040,7 +3926,7 @@
         var n = r(41609),
           i = r.n(n),
           o = r(82459),
-          s = r(94679),
+          s = r(59680),
           a = r(33872),
           c = r(60260),
           l = r(66283),
@@ -4103,9 +3989,9 @@
           L = r(81705),
           N = r(45504),
           z = r(99948),
-          V = r(38768),
-          U = r(28750),
-          B = r(22706);
+          U = r(38768),
+          B = r(28750),
+          V = r(22706);
         const Z = M()("intercom.actions.user"),
           F = 30,
           H = 18e5;
@@ -4176,7 +4062,7 @@
                 (0, A.Df)(
                   "The App ID in your code snippet is incorrect. Change it to your App ID found in settings to complete installation: http://app.intercom.com/a/apps/_/settings/web",
                 );
-              M(J(e, ue(e)));
+              M(Q(e, ue(e)));
               const r = (0, S.jw)(e);
               return r && M((0, f.bg)(r)), null;
             }
@@ -4195,8 +4081,8 @@
             if (
               (le(ne, oe, de),
               ce(ne),
-              M(Q(ne)),
-              M((0, V.Ep)(ne.app.home.header)),
+              M(J(ne)),
+              M((0, U.Ep)(ne.app.home.header)),
               M((0, z.XP)(ne.newsfeedId)),
               ne.newConversationComposerState &&
                 M((0, p.Ud)(ne.newConversationComposerState)),
@@ -4302,18 +4188,18 @@
             if (!i()(ye)) {
               M((0, L.$0)(ye, i()(we)));
               const e = x(),
-                t = (0, U.Mv)(e);
+                t = (0, B.Mv)(e);
               (null == t ? void 0 : t.length) > 0
-                ? (0, B.Ep)(e.checklists)
-                  ? ((0, B.aA)(
+                ? (0, V.Ep)(e.checklists)
+                  ? ((0, V.aA)(
                       "Checklists received from ping are recently active - resolving as normal.",
                     ),
                     M((0, L.Nn)()))
-                  : ((0, B.aA)(
+                  : ((0, V.aA)(
                       "Checklists received from ping are not recently active - resolving with throttling.",
                     ),
                     M((0, L.UQ)()))
-                : (0, B.aA)(
+                : (0, V.aA)(
                     "Checklists received from ping do not contain auto-resolve rules that require background resolving.",
                   );
             }
@@ -4333,10 +4219,10 @@
             isIntersectionBooted: a,
           };
         }
-        function Q(e) {
+        function J(e) {
           return { type: N.gWb, user: e };
         }
-        function J(e, t = !1) {
+        function Q(e, t = !1) {
           return { type: N.Sap, error: e, isIdentityVerificationError: t };
         }
         function K() {
@@ -4431,8 +4317,8 @@
         const de = {
           createOrUpdateUser: G,
           createOrUpdateUserRequest: Y,
-          createOrUpdateUserSuccess: Q,
-          createOrUpdateUserFailure: J,
+          createOrUpdateUserSuccess: J,
+          createOrUpdateUserFailure: Q,
           sendMessengerOpen: function (e, t) {
             return async (r, n) => {
               const i = n(),
@@ -4714,10 +4600,10 @@
         r.d(t, {
           AZ: () => C,
           Ah: () => I,
-          Ar: () => J,
+          Ar: () => Q,
           DV: () => _,
           Gs: () => D,
-          Hi: () => B,
+          Hi: () => V,
           KT: () => q,
           N1: () => K,
           Od: () => S,
@@ -4727,7 +4613,7 @@
           TH: () => w,
           To: () => $,
           Uc: () => W,
-          Wf: () => V,
+          Wf: () => U,
           YQ: () => H,
           YS: () => O,
           ZP: () => j,
@@ -4736,7 +4622,7 @@
           gs: () => L,
           h$: () => y,
           iA: () => z,
-          ib: () => Q,
+          ib: () => J,
           ig: () => re,
           nR: () => x,
           nZ: () => P,
@@ -4966,6 +4852,7 @@
               ticketTypeName: e.ticket_type_name,
               statusUpdatedAt: (0, u.Ft)(parseInt(e.latest_status_updated_at)),
               read: e.read,
+              inlineStatusHeaderText: e.inline_status_header_text,
             };
           var n;
           return (
@@ -5091,11 +4978,11 @@
               }
             : void 0;
         }
-        function V(e) {
+        function U(e) {
           return {
-            admins: e.authors ? e.authors.map(U) : [],
+            admins: e.authors ? e.authors.map(B) : [],
             avatar: se(e.avatar),
-            firstName: B(e.first_name),
+            firstName: V(e.first_name),
             id: e.id,
             initial: e.initial,
             isAdmin: e.is_admin,
@@ -5104,10 +4991,10 @@
             type: e.type.toLowerCase(),
           };
         }
-        function U(e) {
-          return { avatar: se(e.avatar), firstName: B(e.first_name) };
-        }
         function B(e) {
+          return { avatar: se(e.avatar), firstName: V(e.first_name) };
+        }
+        function V(e) {
           return e || "";
         }
         function Z(e = []) {
@@ -5195,13 +5082,13 @@
             actionTitle: e.action_title,
           };
         }
-        function Q(e) {
+        function J(e) {
           return {
             slotType: e.slot_type,
             messengerCardId: e.messenger_card_id,
           };
         }
-        function J(e) {
+        function Q(e) {
           return {
             id: e.id,
             event: e.event,
@@ -5215,7 +5102,7 @@
               {
                 id: e.id.toString(),
                 activeStepId: e.active_step_id.toString(),
-                author: e.author ? V(e.author) : null,
+                author: e.author ? U(e.author) : null,
                 steps: ((t = e.steps), s()(t, ["order"], ["asc"])).map((e) => {
                   return {
                     id: (t = e).id.toString(),
@@ -5254,7 +5141,7 @@
             ? {
                 avatar: se(e.avatar),
                 calendarUrl: ne(e.calendar_url),
-                firstName: B(e.first_name),
+                firstName: V(e.first_name),
                 initial: e.initial || e.avatar.initials,
                 intro: ne(e.intro),
                 isActive: e.is_active,
@@ -5333,13 +5220,13 @@
       38733: (e, t, r) => {
         "use strict";
         r.d(t, {
-          jK: () => L,
-          CC: () => M,
+          jK: () => z,
+          CC: () => D,
           Uc: () => g.Uc,
-          ZP: () => te,
-          zi: () => j,
-          JE: () => X,
-          _k: () => P,
+          ZP: () => ne,
+          zi: () => k,
+          JE: () => te,
+          _k: () => A,
         });
         var n = r(41609),
           i = r.n(n),
@@ -5365,37 +5252,7 @@
             );
           });
         var g = r(72745);
-        function m({
-          text: e,
-          subtitle: t,
-          icon: r,
-          home_subtitle: n,
-          home_avatar_group: i,
-        }) {
-          return {
-            text: e,
-            subtitle: t,
-            icon: y(r),
-            homeSubtitle: n,
-            homeAvatarGroup: b(i),
-          };
-        }
-        function b(e) {
-          if (e) return { type: e.avatar_type, avatars: e.avatars.map(g.Q2) };
-        }
-        function y(e) {
-          return "bot_question_bubble" === e ? "AskQuestion" : "ComposerSend";
-        }
-        function w(e) {
-          if (null != e && e.new_conversation_prompt)
-            return { newConversationPrompt: m(e.new_conversation_prompt) };
-        }
-        const _ = [
-          "custom_bot",
-          "composer_suggestions",
-          "predictive_answers_suggestions",
-        ];
-        function O(e, t) {
+        function m(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
             var n = Object.getOwnPropertySymbols(e);
@@ -5407,26 +5264,7 @@
           }
           return r;
         }
-        function C(e) {
-          for (var t = 1; t < arguments.length; t++) {
-            var r = null != arguments[t] ? arguments[t] : {};
-            t % 2
-              ? O(Object(r), !0).forEach(function (t) {
-                  S(e, t, r[t]);
-                })
-              : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : O(Object(r)).forEach(function (t) {
-                  Object.defineProperty(
-                    e,
-                    t,
-                    Object.getOwnPropertyDescriptor(r, t),
-                  );
-                });
-          }
-          return e;
-        }
-        function S(e, t, r) {
+        function b(e, t, r) {
           return (
             (t = (function (e) {
               var t = (function (e, t) {
@@ -5453,7 +5291,109 @@
             e
           );
         }
-        function E(e, t) {
+        function y({ text: e, subtitle: t, icon: r, avatar_details: n }) {
+          return (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+              var r = null != arguments[t] ? arguments[t] : {};
+              t % 2
+                ? m(Object(r), !0).forEach(function (t) {
+                    b(e, t, r[t]);
+                  })
+                : Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(
+                    e,
+                    Object.getOwnPropertyDescriptors(r),
+                  )
+                : m(Object(r)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(r, t),
+                    );
+                  });
+            }
+            return e;
+          })({ text: e, subtitle: t, icon: _(r) }, n && { avatarGroup: w(n) });
+        }
+        function w(e) {
+          if (e) return { type: e.avatar_type, avatars: e.avatars.map(g.Q2) };
+        }
+        function _(e) {
+          return "question_bubble" === e ? "AskQuestion" : "ComposerSend";
+        }
+        function O(e) {
+          if (e)
+            return {
+              newConversationPrompt: {
+                homeCard: y(e.home_card),
+                cta: y(e.cta),
+              },
+            };
+        }
+        const C = [
+          "custom_bot",
+          "composer_suggestions",
+          "predictive_answers_suggestions",
+        ];
+        function S(e, t) {
+          var r = Object.keys(e);
+          if (Object.getOwnPropertySymbols) {
+            var n = Object.getOwnPropertySymbols(e);
+            t &&
+              (n = n.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+              })),
+              r.push.apply(r, n);
+          }
+          return r;
+        }
+        function E(e) {
+          for (var t = 1; t < arguments.length; t++) {
+            var r = null != arguments[t] ? arguments[t] : {};
+            t % 2
+              ? S(Object(r), !0).forEach(function (t) {
+                  I(e, t, r[t]);
+                })
+              : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : S(Object(r)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
+          }
+          return e;
+        }
+        function I(e, t, r) {
+          return (
+            (t = (function (e) {
+              var t = (function (e, t) {
+                if ("object" != typeof e || null === e) return e;
+                var r = e[Symbol.toPrimitive];
+                if (void 0 !== r) {
+                  var n = r.call(e, t || "default");
+                  if ("object" != typeof n) return n;
+                  throw new TypeError(
+                    "@@toPrimitive must return a primitive value.",
+                  );
+                }
+                return ("string" === t ? String : Number)(e);
+              })(e, "string");
+              return "symbol" == typeof t ? t : String(t);
+            })(t)) in e
+              ? Object.defineProperty(e, t, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+                })
+              : (e[t] = r),
+            e
+          );
+        }
+        function P(e, t) {
           if (null == e) return {};
           var r,
             n,
@@ -5477,8 +5417,8 @@
           }
           return i;
         }
-        const { assign: I } = Object;
-        function P(e) {
+        const { assign: j } = Object;
+        function A(e) {
           const t = `${(0, o.iE)().api_base}/messenger/web/help_center_content`;
           return s.ZP.post({ url: t, session: e }).then(
             ({
@@ -5494,17 +5434,17 @@
             }),
           );
         }
-        function j(e, t, r) {
+        function k(e, t, r) {
           const n = `${
               (0, o.iE)().api_base
             }/messenger/web/self_serve_suggestions`,
             i = { query: t, answers_limit: r };
           return s.ZP.post({ url: n, session: e, params: i });
         }
-        function A(e) {
-          return { conversations: e.conversations.map(M), pages: T(e.pages) };
+        function T(e) {
+          return { conversations: e.conversations.map(D), pages: M(e.pages) };
         }
-        function k(e) {
+        function R(e) {
           return {
             unreadConversationIds: (e.unread_conversation_ids || []).map((e) =>
               e.toString(),
@@ -5514,22 +5454,22 @@
             ).map((e) => e.toString()),
           };
         }
-        function T(e) {
+        function M(e) {
           return {
             page: e.page,
             perPage: e.per_page,
             totalPages: e.total_pages,
           };
         }
-        function R(e) {
+        function x(e) {
           return {
             workflowInstanceId: e.workflow_instance_id,
             resolutionBotBehaviorVersionId:
               e.resolution_bot_behavior_version_id,
-            botIntro: Q(e.bot_intro),
+            botIntro: K(e.bot_intro),
           };
         }
-        function M(e) {
+        function D(e) {
           return {
             composerState: (0, g.nR)(e.composer_state),
             dismissed: e.dismissed,
@@ -5538,7 +5478,7 @@
             lastPartCreatedAt: (0, c.Ft)(e.updated_at),
             lastParticipatingAdmin: (0, g.ZP)(e),
             participants: e.participants || [],
-            parts: [x(e), ...D(e)],
+            parts: [L(e), ...N(e)],
             preventEndUserReplies: e.prevent_end_user_replies,
             preventEndUserRepliesTimestamp:
               e.prevent_end_user_replies_timestamp,
@@ -5562,12 +5502,12 @@
             ownerId: e.owner_id,
           };
         }
-        function x(e) {
+        function L(e) {
           var t;
           const r = e.conversation_message;
           return {
             author: (0, g.Wf)(r.author),
-            body: F(r.blocks || [], r.attachments || []),
+            body: $(r.blocks || [], r.attachments || []),
             clientId: r.client_assigned_uuid,
             createdAt: (0, c.Ft)(r.created_at),
             eventData: {},
@@ -5588,7 +5528,7 @@
               : void 0,
             replyOptions: r.reply_options || [],
             replyType: r.reply_type,
-            seenState: B(r.seen_by_admin),
+            seenState: F(r.seen_by_admin),
             sentAt: (0, c.Ft)(r.sent_at),
             showCreatedAt: r.show_created_at,
             teamAuthor: (0, g.iA)(e),
@@ -5596,7 +5536,7 @@
           };
           var n;
         }
-        function D(e) {
+        function N(e) {
           let t = [];
           return (
             e.conversation_parts &&
@@ -5605,10 +5545,10 @@
                 e.conversation_parts),
             t
               .filter((e) => "lightweight_reply_user_response" !== e.part_type)
-              .map(L)
+              .map(z)
           );
         }
-        function L(e) {
+        function z(e) {
           return {
             author: e.author
               ? {
@@ -5622,9 +5562,9 @@
                   type: e.author.is_admin ? "admin" : "user",
                 }
               : void 0,
-            body: F(e.blocks || [], e.attachments || []),
+            body: $(e.blocks || [], e.attachments || []),
             clientId: e.client_assigned_uuid,
-            conversationRating: H(e),
+            conversationRating: q(e),
             createdAt: (0, c.Ft)(e.created_at),
             eventData: (0, g.qO)(e.event_data, e.part_type),
             form: e.form,
@@ -5633,13 +5573,13 @@
             messageType: V(e),
             partType: e.part_type,
             replyOptions: e.reply_options || [],
-            seenState: B(e.seen_by_admin),
+            seenState: F(e.seen_by_admin),
             showCreatedAt: !0,
             sources: e.sources,
             tokenSequenceIndex: e.token_sequence_index,
           };
         }
-        function N(e) {
+        function U(e) {
           const t = e.install_mode;
           if (t) {
             const e = t.active_subscription,
@@ -5655,7 +5595,7 @@
             };
           }
         }
-        function z(e) {
+        function B(e) {
           var t, r, n, i, o, s, a, c, l;
           const { app: u } = e,
             d = (function (e) {
@@ -5802,7 +5742,7 @@
               ? "finAnswer"
               : "attribute_collector" === e.part_type
               ? "attributeCollector"
-              : U(e, "link") ||
+              : Z(e, "link") ||
                 (function (e, t) {
                   let r = !0;
                   return (
@@ -5813,30 +5753,30 @@
                   );
                 })(e, "link")
               ? "link"
-              : U(e, "notificationChannelsCard")
+              : Z(e, "notificationChannelsCard")
               ? "notificationChannels"
-              : U(e, "conversationRating")
+              : Z(e, "conversationRating")
               ? "conversationRating"
-              : U(e, "ticket")
+              : Z(e, "ticket")
               ? "ticketCard"
               : void 0)
           );
         }
-        function U(e, t) {
+        function Z(e, t) {
           const r = e.blocks && 1 === e.blocks.length && e.blocks[0];
           return r && r.type === t;
         }
-        function B(e) {
+        function F(e) {
           return { unseen: "not-seen-yet", seen: "seen" }[e] || "not-seen-yet";
         }
-        function Z(e) {
+        function H(e) {
           return {
             contact_role: "lead",
             user_role: "user",
             visitor_role: "visitor",
           }[e];
         }
-        function F(e, t) {
+        function $(e, t) {
           if (
             (function (e) {
               return 1 === e.length && "videoReply" === e[0].type;
@@ -5898,22 +5838,22 @@
             e.concat(r)
           );
         }
-        function H(e) {
+        function q(e) {
           if ("conversationRating" !== V(e)) return {};
           const { remark: t, uuid: r } = e.blocks[0];
           return { chosenRating: e.blocks[0].rating_index, remark: t, uuid: r };
         }
-        function $(e) {
+        function W(e) {
           return {
             cards: e.cards,
             cardsSuccess: e.cards_success,
-            conversations: e.conversations.map(M),
+            conversations: e.conversations.map(D),
             hasMoreConversations: e.has_more_conversations,
             openInboundConversationIds: e.open_inbound_conversation_ids,
-            ticketTypes: q(e.ticket_types),
+            ticketTypes: G(e.ticket_types),
           };
         }
-        function q(e) {
+        function G(e) {
           return e.map((e) => {
             return {
               id: e.id,
@@ -5935,14 +5875,14 @@
             var t;
           });
         }
-        function W(e) {
+        function Y(e) {
           return e
             ? e.map((e) =>
-                C(
-                  C({}, e),
+                E(
+                  E({}, e),
                   {},
                   {
-                    serialized_object: G(
+                    serialized_object: J(
                       e.ruleset_link_object_type,
                       e.serialized_object,
                     ),
@@ -5951,11 +5891,11 @@
               )
             : [];
         }
-        function G(e, t) {
+        function J(e, t) {
           switch (e) {
             case "inbound_trigger":
             case "inbound_custom_bot":
-              return Y(t);
+              return Q(t);
             case "messenger_trigger":
             case "button_custom_bot":
               return (0, g.Ar)(t);
@@ -5963,10 +5903,10 @@
               return t;
           }
         }
-        function Y(e) {
+        function Q(e) {
           return e
             ? {
-                suggestionParts: J(e),
+                suggestionParts: X(e),
                 composerDisabled: e.composer_disabled,
                 prompt: e.prompt,
                 rulesetId: e.ruleset_id,
@@ -5985,24 +5925,24 @@
               }
             : null;
         }
-        function Q(e) {
+        function K(e) {
           return e
             ? { id: e.id, parts: e.parts, operator: (0, g.Wf)(e.operator) }
             : null;
         }
-        function J({ parts: e, operator: t }) {
+        function X({ parts: e, operator: t }) {
           return e && t ? { parts: e, operator: (0, g.Wf)(t) } : void 0;
         }
-        function K(e) {
+        function ee(e) {
           const t = (0, p.nv)(window);
           t && (e.sdk_webview_platform = t);
         }
-        function X() {
+        function te() {
           return `${
             (0, o.iE)().api_base
           }/messenger/web/conversations/transcript`;
         }
-        function ee(e) {
+        function re(e) {
           return {
             cards: e.cards.map((e) =>
               "messenger_app" === e.type
@@ -6019,13 +5959,13 @@
                     type: e.type,
                     card_title: e.card_title,
                     limit: e.limit,
-                    conversations: e.conversations.map(M),
+                    conversations: e.conversations.map(D),
                   }
                 : e,
             ),
           };
         }
-        const te = {
+        const ne = {
           addConversationRatingRemark: function (e, t, r, n) {
             const i = `${
                 (0, o.iE)().api_base
@@ -6034,9 +5974,9 @@
             return s.ZP.post({ url: i, session: e, params: a }).then(() => {});
           },
           buildBanner: g.Os,
-          buildComment: L,
-          buildComposerSuggestions: Y,
-          buildBotIntro: Q,
+          buildComment: z,
+          buildComposerSuggestions: Q,
+          buildBotIntro: K,
           buildTour: g.N1,
           changeConversationRatingIndex: function (e, t, r, n) {
             const i = `${
@@ -6095,7 +6035,7 @@
                   nexus_connection_status: JSON.stringify(u),
                 })),
               s.ZP.post({ url: d, session: e, params: p }).then((e) =>
-                Object.assign({}, L(e), { clientId: r }),
+                Object.assign({}, z(e), { clientId: r }),
               )
             );
           },
@@ -6119,7 +6059,7 @@
               session: e,
               params: (0, g.TH)(t, r, n, null, i, a, c, u, l, p),
             };
-            return d && (h.currentUrl = d), s.ZP.post(h).then(M);
+            return d && (h.currentUrl = d), s.ZP.post(h).then(D);
           },
           createEvent: function (e, t, r) {
             const n = `${(0, o.iE)().api_base}/messenger/web/events`,
@@ -6137,8 +6077,8 @@
                   } = e[0];
                   return {
                     banner: t ? (0, g.Os)(t) : t,
-                    customBot: r ? M(r) : r,
-                    clientsideRulesetConditions: W(n || []),
+                    customBot: r ? D(r) : r,
+                    clientsideRulesetConditions: Y(n || []),
                     tour: i ? (0, g.N1)(i) : i,
                     survey: o ? (0, g.KT)(o) : o,
                   };
@@ -6164,7 +6104,7 @@
             });
           },
           createOrUpdateUser: function (e, t = {}, r, n, i, a, l = !1, u = !1) {
-            (t = I({}, t)), void 0 !== r && (t.anonymous_email = r);
+            (t = j({}, t)), void 0 !== r && (t.anonymous_email = r);
             const p = { source: i, sampling: u };
             void 0 !== n && (p._intercomEncryptedPayload = n);
             const h = `${(0, o.iE)().api_base}/messenger/web/ping`;
@@ -6193,14 +6133,14 @@
                       activeTour: (0, g.N1)(e.active_tour),
                       anonymousId: i.anonymous_id,
                       anonymousSession: e.anonymous_session,
-                      app: z(e),
+                      app: B(e),
                       articleConversationId: JSON.stringify(
                         e.article_conversation_id,
                       ),
                       banners: (0, g.rO)(e.banners),
                       cdasBreachingLimit: e.cdas_breaching_limit || [],
                       checklists: f(e.checklists),
-                      clientsideRulesetConditions: W(e.client_matches),
+                      clientsideRulesetConditions: Y(e.client_matches),
                       requiresCookieConsent: i.requires_cookie_consent,
                       countryCode: i.country_code,
                       hasConversations: !1 !== i.has_conversations,
@@ -6210,14 +6150,14 @@
                           : t.map(g.ib)) || [],
                       identityVerificationReady: e.identity_verification_ready,
                       identityVerified: e.identity_verified,
-                      installModeConfig: N(e),
+                      installModeConfig: U(e),
                       lastContactedAt: i.last_contacted_at,
                       locale: i.locale,
                       newConversationComposerState: (0, g.nR)(e.composer_state),
                       notificationLinkConversationId:
                         e.notification_link_conversation_id,
                       phoneNumber: i.phone_number,
-                      role: Z(i.role),
+                      role: H(i.role),
                       unreadConversationIds:
                         null === (r = e.unread_conversation_ids) || void 0 === r
                           ? void 0
@@ -6261,9 +6201,9 @@
               return t
                 ? { errors: t }
                 : {
-                    composerSuggestions: Y(e.composer_suggestions),
-                    botIntro: Q(e.bot_intro),
-                    clientsideRulesetConditions: W(e.client_matches),
+                    composerSuggestions: Q(e.composer_suggestions),
+                    botIntro: K(e.bot_intro),
+                    clientsideRulesetConditions: Y(e.client_matches),
                     testAssignments: e.user_assignments,
                     resolutionBotBehaviorVersionId:
                       e.resolution_bot_behavior_version_id,
@@ -6276,7 +6216,7 @@
                     selfServeSuggestionsMatch: e.self_serve_suggestions_match,
                     composerState: (0, g.nR)(e.composer_state),
                     openToNewConversation: e.open_to_new_conversation,
-                    expectationSetting: w(e.expectation_settings),
+                    expectationSetting: O(e.new_conversation),
                     openInboundConversationIds: e.open_inbound_conversation_ids,
                   };
               var r;
@@ -6563,7 +6503,7 @@
               c && (d.search_browse = !0),
               l && (d.snapshot_id = l),
               s.ZP.post({ url: u, session: e, params: d, currentUrl: c }).then(
-                t ? L : M,
+                t ? z : D,
               )
             );
           },
@@ -6612,9 +6552,9 @@
                 (0, o.iE)().api_base
               }/messenger/web/conversations/${t}`,
               a = { self_serve_suggestions_match: r, client_assigned_uuid: n };
-            return s.ZP.post({ url: i, session: e, params: a }).then(M);
+            return s.ZP.post({ url: i, session: e, params: a }).then(D);
           },
-          getConversationTranscriptURL: X,
+          getConversationTranscriptURL: te,
           getConversations: function (
             e,
             { source: t, page: r, perPage: n, selfServeSuggestionsMatch: i },
@@ -6626,7 +6566,7 @@
                 source: t,
                 self_serve_suggestions_match: i,
               };
-            return s.ZP.post({ url: a, session: e, params: c }).then(A);
+            return s.ZP.post({ url: a, session: e, params: c }).then(T);
           },
           getHomeScreenCards: function (
             e,
@@ -6637,11 +6577,11 @@
                 slot_card_ids: t.map((e) => e.messengerCardId),
                 self_serve_suggestions_match: r,
               };
-            return s.ZP.post({ url: n, session: e, params: i }).then($);
+            return s.ZP.post({ url: n, session: e, params: i }).then(W);
           },
           getHomeData: function (e) {
             const t = `${(0, o.iE)().api_base}/messenger/web/home`;
-            return s.ZP.post({ url: t, session: e }).then(ee);
+            return s.ZP.post({ url: t, session: e }).then(re);
           },
           getMessengerCanvasContentWithToken: function (e, t) {
             const r = `${
@@ -6658,7 +6598,7 @@
               }/messenger/web/messenger_cards/content`,
               i = { canvas_id: t, uri: r };
             return (
-              K(i),
+              ee(i),
               s.ZP.post({ url: n, session: e, params: i }).then((e) =>
                 Object.assign(e, { id: t }),
               )
@@ -6668,13 +6608,13 @@
             const t = `${
               (0, o.iE)().api_base
             }/messenger/web/conversations/unread`;
-            return s.ZP.post({ url: t, session: e }).then(k);
+            return s.ZP.post({ url: t, session: e }).then(R);
           },
           markConversationAsRead: function (e, t) {
             const r = `${
               (0, o.iE)().api_base
             }/messenger/web/conversations/${t}/read`;
-            return s.ZP.post({ url: r, session: e }).then(M);
+            return s.ZP.post({ url: r, session: e }).then(D);
           },
           outboundPreview: function (e, t) {
             const r = `${
@@ -6686,7 +6626,7 @@
             const r = `${
               (0, o.iE)().api_base
             }/messenger/web/workflows/${t}/build_preview`;
-            return s.ZP.post({ url: r, session: e }).then(R);
+            return s.ZP.post({ url: r, session: e }).then(x);
           },
           progressTour: function (e, t, r, n) {
             const i = Object.assign({ step_id: r }, (0, g.Ah)(n));
@@ -6702,7 +6642,7 @@
                 (0, o.iE)().api_base
               }/messenger/web/conversations/${t}/quick_reply`,
               c = (0, g.DV)(r, n, i);
-            return s.ZP.post({ url: a, session: e, params: c }).then(L);
+            return s.ZP.post({ url: a, session: e, params: c }).then(z);
           },
           reactToBanner: function (e, t, r, n) {
             const i = `${
@@ -6758,12 +6698,12 @@
                   composer_suggestions: r,
                   predictive_answers_suggestions: n,
                 } = e;
-                return C(
-                  C({}, E(e, _)),
+                return E(
+                  E({}, P(e, C)),
                   {},
                   {
                     customBot: t,
-                    composerSuggestions: Y(r),
+                    composerSuggestions: Q(r),
                     answerbotPredictiveContexts: n,
                   },
                 );
@@ -6808,7 +6748,7 @@
             return (
               i && (c.search_browse = !0),
               s.ZP.post({ url: a, session: e, params: c, currentUrl: i }).then(
-                M,
+                D,
               )
             );
           },
@@ -6875,7 +6815,7 @@
           submitMessengerCardAction: function (e, t, r, n) {
             const i = `${(0, o.iE)().api_base}/messenger/web/messenger_cards`,
               a = { action_id: r, uri: t, values: JSON.stringify(n) };
-            return K(a), s.ZP.post({ url: i, session: e, params: a });
+            return ee(a), s.ZP.post({ url: i, session: e, params: a });
           },
           submitMessengerCardActionWithToken: function (e, t, r) {
             const n = `${
@@ -6899,7 +6839,7 @@
           triggerTransitions: function (e, t, r) {
             const n = `${(0, o.iE)().api_base}/messenger/web/operator/trigger`,
               i = (0, g.nZ)(t, r);
-            return s.ZP.post({ url: n, session: e, params: i }).then(M);
+            return s.ZP.post({ url: n, session: e, params: i }).then(D);
           },
           updateConversationForm: function (e, t, r, n, i, a) {
             const c = a
@@ -6914,7 +6854,7 @@
                 (0, o.iE)().api_base
               }/messenger/web/conversations/${t}/form`,
               u = { form_params: JSON.stringify(c) };
-            return s.ZP.post({ url: l, session: e, params: u }).then(M);
+            return s.ZP.post({ url: l, session: e, params: u }).then(D);
           },
           updatePhoneNumber: function (e, t) {
             const r = `${(0, o.iE)().api_base}/apps/${
@@ -6929,7 +6869,7 @@
               }/match`,
               n = { predicates: JSON.stringify(t.predicates) };
             return s.ZP.post({ url: r, session: e, params: n }).then((e) => {
-              if (!i()(e)) return M(e);
+              if (!i()(e)) return D(e);
             });
           },
           generateArticleCard: function (e, t) {
@@ -6991,7 +6931,7 @@
           },
           getTicketTypes: function (e) {
             const t = `${(0, o.iE)().api_base}/messenger/web/tickets/types`;
-            return s.ZP.post({ url: t, session: e }).then(q);
+            return s.ZP.post({ url: t, session: e }).then(G);
           },
           getTickets: function (e, t) {
             const r = `${(0, o.iE)().api_base}/messenger/web/tickets`,
@@ -6999,6 +6939,12 @@
             return (
               t && (n.page = t),
               s.ZP.post({ url: r, session: e, params: n }).then(g.oN)
+            );
+          },
+          getTicketsContent: function (e) {
+            const t = `${(0, o.iE)().api_base}/messenger/web/tickets_content`;
+            return s.ZP.post({ url: t, session: e }).then(
+              ({ tickets_portal_url: e }) => ({ ticketsPortalUrl: e || null }),
             );
           },
           getTicketDetails: function (e, t) {
@@ -7045,7 +6991,7 @@
             const r = `${
               (0, o.iE)().api_base
             }/messenger/web/conversations/${t}/join`;
-            return s.ZP.post({ url: r, session: e }).then(M);
+            return s.ZP.post({ url: r, session: e }).then(D);
           },
         };
       },
@@ -7220,7 +7166,7 @@
             E = {
               app_id: b,
               v: w,
-              g: "c7e724a7ea17f840b4a85d16491574b6c6aabe59",
+              g: "91fe5435eab0d9038cc28ab1e13210b782141488",
               s: O,
               r: s,
               platform: _(),
@@ -7684,7 +7630,7 @@
             App: () => An,
             Article: () => g,
             ArticleFeedback: () => Ye,
-            ArticleIcon: () => Be,
+            ArticleIcon: () => Ve,
             ArticleOpenBook: () => He,
             AskQuestion: () => u,
             AskQuestionSquare: () => p,
@@ -7693,7 +7639,7 @@
             Bell: () => on,
             Bio: () => w,
             Bounced: () => Dn,
-            ButtonPill: () => Vn,
+            ButtonPill: () => Un,
             ButtonSubmit: () => _.Z,
             ButtonSuccess: () => O.Z,
             Calendar: () => dt,
@@ -7709,14 +7655,14 @@
             CloseM5: () => Ar,
             Collapse: () => R.Z,
             Company: () => $n,
-            ComposerAttachment: () => Br,
+            ComposerAttachment: () => Vr,
             ComposerEmoji: () => zr,
             ComposerEmojiActive: () => Yr,
             ComposerGif: () => Mr,
             ComposerGifActive: () => Hr,
             ComposerSend: () => Kr,
             ContactBook: () => Gn,
-            Coupon: () => Jn,
+            Coupon: () => Qn,
             CreditCard: () => ti,
             DescriptionIcon: () => _e,
             Download: () => M.Z,
@@ -7727,9 +7673,9 @@
             Event: () => ci,
             Expand: () => Le,
             Expander: () => z.Z,
-            ExternalLink: () => U,
+            ExternalLink: () => B,
             GifPicker: () => Z,
-            GifPickerActive: () => B,
+            GifPickerActive: () => V,
             GreyInfoIcon: () => Pe,
             Help: () => St,
             HelpActive: () => yt,
@@ -7745,15 +7691,15 @@
             LeftCaret: () => G.Z,
             LeftCaretM5: () => ke,
             LinkedInSocial: () => ot,
-            List: () => Q,
-            Location: () => J,
+            List: () => J,
+            Location: () => Q,
             Locked: () => mi,
             Messages: () => Ft,
             MessagesActive: () => zt,
             New: () => K,
             NewConversation: () => te,
             NewMessage: () => re.Z,
-            News: () => Jt,
+            News: () => Qt,
             NewsActive: () => qt,
             NotificationsIcon: () => s,
             OpenInNewWindow: () => ne.Z,
@@ -8020,9 +7966,9 @@
           L = r(27358),
           N = r(94661),
           z = r(95516);
-        function V() {
+        function U() {
           return (
-            (V = Object.assign
+            (U = Object.assign
               ? Object.assign.bind()
               : function (e) {
                   for (var t = 1; t < arguments.length; t++) {
@@ -8033,13 +7979,13 @@
                   }
                   return e;
                 }),
-            V.apply(this, arguments)
+            U.apply(this, arguments)
           );
         }
-        function U(e) {
+        function B(e) {
           return i.createElement(
             "svg",
-            V(
+            U(
               {
                 xmlns: "http://www.w3.org/2000/svg",
                 width: 16,
@@ -8058,7 +8004,7 @@
           );
         }
         r.p;
-        const B = () =>
+        const V = () =>
             i.createElement(
               "svg",
               {
@@ -8182,7 +8128,7 @@
           (0, m.rS)("errorText"),
           ";",
         );
-        function Q() {
+        function J() {
           return i.createElement(
             Y,
             { focusable: "false", "aria-hidden": "true", viewBox: "0 0 14 14" },
@@ -8194,7 +8140,7 @@
             }),
           );
         }
-        const J = () =>
+        const Q = () =>
           i.createElement(
             y,
             { focusable: "false", "aria-hidden": "true", viewBox: "0 0 18 18" },
@@ -8601,10 +8547,10 @@
               strokeWidth: "0",
             }),
           );
-        var ze, Ve;
-        function Ue() {
+        var ze, Ue;
+        function Be() {
           return (
-            (Ue = Object.assign
+            (Be = Object.assign
               ? Object.assign.bind()
               : function (e) {
                   for (var t = 1; t < arguments.length; t++) {
@@ -8615,13 +8561,13 @@
                   }
                   return e;
                 }),
-            Ue.apply(this, arguments)
+            Be.apply(this, arguments)
           );
         }
-        function Be(e) {
+        function Ve(e) {
           return i.createElement(
             "svg",
-            Ue(
+            Be(
               {
                 width: 18,
                 height: 18,
@@ -8635,8 +8581,8 @@
                 d: "M14.25 3.75v10.5H3.75V3.75h10.5zm0-1.5H3.75c-.825 0-1.5.675-1.5 1.5v10.5c0 .825.675 1.5 1.5 1.5h10.5c.825 0 1.5-.675 1.5-1.5V3.75c0-.825-.675-1.5-1.5-1.5z",
                 fill: "#3465F6",
               })),
-            Ve ||
-              (Ve = i.createElement("path", {
+            Ue ||
+              (Ue = i.createElement("path", {
                 d: "M10.5 12.75H5.25v-1.5h5.25v1.5zm2.25-3h-7.5v-1.5h7.5v1.5zm0-3h-7.5v-1.5h7.5v1.5z",
                 fill: "#3465F6",
               })),
@@ -8729,7 +8675,7 @@
           );
         }
         r.p;
-        var Qe, Je;
+        var Je, Qe;
         function Ke() {
           return (
             (Ke = Object.assign
@@ -8758,14 +8704,14 @@
               },
               e,
             ),
-            Qe ||
-              (Qe = i.createElement("circle", {
+            Je ||
+              (Je = i.createElement("circle", {
                 r: 2.955,
                 transform: "matrix(-1 0 0 1 8 3.955)",
                 fill: "#fff",
               })),
-            Je ||
-              (Je = i.createElement("path", {
+            Qe ||
+              (Qe = i.createElement("path", {
                 d: "M13.5 14c.552 0 1.002-.45.9-.993-.192-1.028-.729-2.497-2.155-3.61-.557-.464-2.186-1.306-4.245-1.306s-3.688.842-4.245 1.307c-1.427 1.112-1.963 2.58-2.155 3.609-.102.543.348.993.9.993h11z",
                 fill: "#fff",
               })),
@@ -9234,7 +9180,7 @@
           );
         }
         r.p;
-        var Vt, Ut, Bt;
+        var Ut, Bt, Vt;
         function Zt() {
           return (
             (Zt = Object.assign
@@ -9263,8 +9209,8 @@
               },
               e,
             ),
-            Vt ||
-              (Vt = i.createElement(
+            Ut ||
+              (Ut = i.createElement(
                 "mask",
                 { id: "messages_svg__a", fill: "#fff" },
                 i.createElement("path", {
@@ -9273,15 +9219,15 @@
                   d: "M19 2a3 3 0 013 3V20.806c0 1.335-1.613 2.005-2.559 1.062L15.56 18H5a3 3 0 01-3-3V5a3 3 0 013-3h14z",
                 }),
               )),
-            Ut ||
-              (Ut = i.createElement("path", {
+            Bt ||
+              (Bt = i.createElement("path", {
                 className: "messages_svg__fill",
                 d: "M19.441 21.868l1.2-1.204-1.2 1.204zM15.56 18v-1.7h.702l.498.496-1.2 1.204zM20.3 5A1.3 1.3 0 0019 3.7V.3A4.7 4.7 0 0123.7 5h-3.4zm0 8.956V5h3.4v8.956h-3.4zm0 2.544v-2.544h3.4V16.5h-3.4zm0 4.306V16.5h3.4v4.306h-3.4zm.341-.142a.23.23 0 00-.218-.043.228.228 0 00-.123.185h3.4c0 2.848-3.441 4.277-5.459 2.267l2.4-2.409zm-3.882-3.868l3.882 3.868-2.4 2.409-3.882-3.869 2.4-2.408zM5 16.3h10.559v3.4H5v-3.4zM3.7 15A1.3 1.3 0 005 16.3v3.4A4.7 4.7 0 01.3 15h3.4zm0-10v10H.3V5h3.4zM5 3.7A1.3 1.3 0 003.7 5H.3A4.7 4.7 0 015 .3v3.4zm14 0H5V.3h14v3.4z",
                 fill: "#1A1A1A",
                 mask: "url(#messages_svg__a)",
               })),
-            Bt ||
-              (Bt = i.createElement("path", {
+            Vt ||
+              (Vt = i.createElement("path", {
                 className: "messages_svg__fill",
                 fillRule: "evenodd",
                 clipRule: "evenodd",
@@ -9331,9 +9277,9 @@
         }
         r.p;
         var Wt, Gt, Yt;
-        function Qt() {
+        function Jt() {
           return (
-            (Qt = Object.assign
+            (Jt = Object.assign
               ? Object.assign.bind()
               : function (e) {
                   for (var t = 1; t < arguments.length; t++) {
@@ -9344,13 +9290,13 @@
                   }
                   return e;
                 }),
-            Qt.apply(this, arguments)
+            Jt.apply(this, arguments)
           );
         }
-        function Jt(e) {
+        function Qt(e) {
           return i.createElement(
             "svg",
-            Qt(
+            Jt(
               {
                 width: 24,
                 height: 24,
@@ -9892,10 +9838,10 @@
           );
         }
         r.p;
-        var Vr;
-        function Ur() {
+        var Ur;
+        function Br() {
           return (
-            (Ur = Object.assign
+            (Br = Object.assign
               ? Object.assign.bind()
               : function (e) {
                   for (var t = 1; t < arguments.length; t++) {
@@ -9906,13 +9852,13 @@
                   }
                   return e;
                 }),
-            Ur.apply(this, arguments)
+            Br.apply(this, arguments)
           );
         }
-        function Br(e) {
+        function Vr(e) {
           return i.createElement(
             "svg",
-            Ur(
+            Br(
               {
                 width: 16,
                 height: 16,
@@ -9921,8 +9867,8 @@
               },
               e,
             ),
-            Vr ||
-              (Vr = i.createElement("path", {
+            Ur ||
+              (Ur = i.createElement("path", {
                 d: "M5.27 9.512l5.882-5.882a1.685 1.685 0 012.383 2.384l-5.928 5.929A3.314 3.314 0 012.92 7.257l4.149-4.15",
                 stroke: "#757575",
                 strokeWidth: 1.3,
@@ -10026,10 +9972,10 @@
           );
         }
         r.p;
-        var Qr;
-        function Jr() {
+        var Jr;
+        function Qr() {
           return (
-            (Jr = Object.assign
+            (Qr = Object.assign
               ? Object.assign.bind()
               : function (e) {
                   for (var t = 1; t < arguments.length; t++) {
@@ -10040,13 +9986,13 @@
                   }
                   return e;
                 }),
-            Jr.apply(this, arguments)
+            Qr.apply(this, arguments)
           );
         }
         function Kr(e) {
           return i.createElement(
             "svg",
-            Jr(
+            Qr(
               {
                 width: 16,
                 height: 16,
@@ -10055,8 +10001,8 @@
               },
               e,
             ),
-            Qr ||
-              (Qr = i.createElement("path", {
+            Jr ||
+              (Jr = i.createElement("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d: "M4.394 14.7L13.75 9.3c1-.577 1-2.02 0-2.598L4.394 1.299a1.5 1.5 0 00-2.25 1.3v3.438l4.059 1.088c.494.132.494.833 0 .966l-4.06 1.087v4.224a1.5 1.5 0 002.25 1.299z",
@@ -10540,7 +10486,7 @@
             zn.apply(this, arguments)
           );
         }
-        function Vn(e) {
+        function Un(e) {
           return i.createElement(
             "svg",
             zn(
@@ -10565,10 +10511,10 @@
           );
         }
         r.p;
-        var Un;
-        function Bn() {
+        var Bn;
+        function Vn() {
           return (
-            (Bn = Object.assign
+            (Vn = Object.assign
               ? Object.assign.bind()
               : function (e) {
                   for (var t = 1; t < arguments.length; t++) {
@@ -10579,13 +10525,13 @@
                   }
                   return e;
                 }),
-            Bn.apply(this, arguments)
+            Vn.apply(this, arguments)
           );
         }
         function Zn(e) {
           return i.createElement(
             "svg",
-            Bn(
+            Vn(
               {
                 width: 16,
                 height: 16,
@@ -10594,8 +10540,8 @@
               },
               e,
             ),
-            Un ||
-              (Un = i.createElement("path", {
+            Bn ||
+              (Bn = i.createElement("path", {
                 d: "M9.205 1.663a.85.85 0 10-1.7 0v1.69a.85.85 0 101.7 0v-1.69zM4.476 2.918A.85.85 0 003.274 4.12l1.195 1.195A.85.85 0 005.67 4.113L4.476 2.918zM13.437 4.12a.85.85 0 00-1.202-1.202L11.04 4.113a.85.85 0 101.202 1.202l1.195-1.195zM2.019 7.15a.85.85 0 000 1.7h1.69a.85.85 0 000-1.7h-1.69zM13.002 7.15a.85.85 0 100 1.7h1.69a.85.85 0 000-1.7h-1.69zM5.67 11.887a.85.85 0 10-1.201-1.202l-1.195 1.194a.85.85 0 001.202 1.203l1.195-1.195zM12.152 9.802L8.156 6.449a.7.7 0 00-1.15.536v5.216a.7.7 0 00.995.635l1.228-.573 1.377 2.953a.85.85 0 101.54-.719l-1.376-2.952 1.228-.572a.7.7 0 00.154-1.171z",
                 fill: "#222",
               })),
@@ -10681,9 +10627,9 @@
         }
         r.p;
         var Yn;
-        function Qn() {
+        function Jn() {
           return (
-            (Qn = Object.assign
+            (Jn = Object.assign
               ? Object.assign.bind()
               : function (e) {
                   for (var t = 1; t < arguments.length; t++) {
@@ -10694,13 +10640,13 @@
                   }
                   return e;
                 }),
-            Qn.apply(this, arguments)
+            Jn.apply(this, arguments)
           );
         }
-        function Jn(e) {
+        function Qn(e) {
           return i.createElement(
             "svg",
-            Qn(
+            Jn(
               {
                 width: 16,
                 height: 16,
@@ -11951,22 +11897,16 @@
       38049: (e, t, r) => {
         "use strict";
         r.d(t, {
-          RV: () => y,
-          Yu: () => v,
-          cO: () => b,
-          eD: () => m,
-          jg: () => f,
-          vv: () => g,
-          y7: () => h,
+          RV: () => h,
+          Yu: () => c,
+          cO: () => p,
+          eD: () => d,
+          jg: () => l,
+          vv: () => u,
+          y7: () => a,
         });
-        var n = r(61495),
-          i = r(38768),
-          o = r(65394),
-          s = r(25304),
-          a = r(99948),
-          c = r(84213),
-          l = r(43156);
-        function u(e, t) {
+        var n = r(61495);
+        function i(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
             var n = Object.getOwnPropertySymbols(e);
@@ -11978,7 +11918,7 @@
           }
           return r;
         }
-        function d(e, t, r) {
+        function o(e, t, r) {
           return (
             (t = (function (e) {
               var t = (function (e, t) {
@@ -12005,20 +11945,20 @@
             e
           );
         }
-        function p(e) {
+        function s(e) {
           return (function (e) {
             for (var t = 1; t < arguments.length; t++) {
               var r = null != arguments[t] ? arguments[t] : {};
               t % 2
-                ? u(Object(r), !0).forEach(function (t) {
-                    d(e, t, r[t]);
+                ? i(Object(r), !0).forEach(function (t) {
+                    o(e, t, r[t]);
                   })
                 : Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(
                     e,
                     Object.getOwnPropertyDescriptors(r),
                   )
-                : u(Object(r)).forEach(function (t) {
+                : i(Object(r)).forEach(function (t) {
                     Object.defineProperty(
                       e,
                       t,
@@ -12027,39 +11967,33 @@
                   });
             }
             return e;
-          })({ path: `/${e.id}`, getContent() {} }, e);
+          })({ path: `/${e.id}` }, e);
         }
-        const h = p({
+        const a = s({
             id: "home",
             iconComponent: { active: n.HomeActive, default: n.Home },
-            getContent: i.ig,
           }),
-          v = p({
+          c = s({
             id: "messages",
             iconComponent: { active: n.MessagesActive, default: n.Messages },
-            getContent: o.rc,
           }),
-          f = p({
+          l = s({
             id: "help",
             iconComponent: { active: n.HelpActive, default: n.Help },
-            getContent: s.hU,
           }),
-          g = p({
+          u = s({
             id: "news",
             iconComponent: { active: n.NewsActive, default: n.News },
-            getContent: a.A5,
           }),
-          m = p({
+          d = s({
             id: "tasks",
             iconComponent: { active: n.TaskActive, default: n.Task },
-            getContent: c.x2,
           }),
-          b = p({
+          p = s({
             id: "tickets",
             iconComponent: { active: n.TicketsActive, default: n.Tickets },
-            getContent: l.St,
           }),
-          y = [h, v, f, g, m, b];
+          h = [a, c, l, u, d, p];
       },
       54930: (e, t, r) => {
         "use strict";
@@ -12072,11 +12006,6 @@
             e
           );
         })({});
-      },
-      16899: (e, t, r) => {
-        "use strict";
-        r.d(t, { Q: () => n });
-        const n = 50;
       },
       52567: (e, t, r) => {
         "use strict";
@@ -12266,7 +12195,7 @@
       52522: (e, t, r) => {
         "use strict";
         r(57658), r(82801), r(84633), r(61295), r(7994), r(46229), r(17330);
-        void 0 !== window && void 0 !== window.Object && r(22581);
+        void 0 !== window && void 0 !== window.Object && r(63147);
       },
       8255: (e, t, r) => {
         "use strict";
@@ -12415,9 +12344,9 @@
           if (!i()(e)) return e;
           const t = {};
           return (
-            Object.keys(e).forEach((r) => {
-              let n = a(e[r]);
-              Array.isArray(n) && (n = n.map((e) => a(e))), (t[s()(r)] = n);
+            Object.entries(e).forEach(([e, r]) => {
+              let n = a(r);
+              Array.isArray(n) && (n = n.map((e) => a(e))), (t[s()(e)] = n);
             }),
             t
           );
@@ -12495,7 +12424,7 @@
         r.d(t, {
           $o: () => F,
           CG: () => Y,
-          DK: () => U,
+          DK: () => B,
           Df: () => D,
           FC: () => N,
           GE: () => G,
@@ -12508,7 +12437,7 @@
           XC: () => j,
           _U: () => q,
           e$: () => W,
-          fW: () => V,
+          fW: () => U,
           jx: () => S,
           mc: () => R,
           og: () => L,
@@ -12603,12 +12532,12 @@
             return C({}, e.parts[0], { lastActiveAt: r, isActive: n });
           },
           z = (e) => e.messageType || "adminReply",
-          V = (e) =>
+          U = (e) =>
             !(
               !e.identifier.startsWith("custom_data.") &&
               !e.identifier.startsWith("company.custom_data.")
             ),
-          U = (e, t) => {
+          B = (e, t) => {
             const r = e.attributes.find((e) => e.identifier === t);
             if (r)
               return "string" === r.type && Array.isArray(r.options)
@@ -12619,12 +12548,12 @@
                 ? "phone"
                 : r.type;
           },
-          B = (e) => {
+          V = (e) => {
             const t = b()(e.parts, (e) => e.body);
             return g()(t, (e) => "messengerCard" === e.type);
           },
-          Z = (e) => b()(B(e), (e) => v()(e, "type")),
-          F = (e, t) => w()(B(e), { uri: t }),
+          Z = (e) => b()(V(e), (e) => v()(e, "type")),
+          F = (e, t) => w()(V(e), { uri: t }),
           H = (e) =>
             e.sort((e, t) => t.lastPartCreatedAt - e.lastPartCreatedAt),
           $ = (e) =>
@@ -12752,39 +12681,38 @@
       9688: (e, t, r) => {
         "use strict";
         r.d(t, {
-          $o: () => T,
+          $o: () => k,
           Eb: () => l,
-          IV: () => m,
-          Ny: () => _,
-          Og: () => h,
-          Oj: () => j,
-          Oo: () => b,
-          Py: () => P,
-          R2: () => w,
+          IV: () => g,
+          Ny: () => w,
+          Og: () => p,
+          Oj: () => P,
+          Oo: () => m,
+          Py: () => I,
+          R2: () => y,
           S2: () => u,
-          Sv: () => N,
-          XP: () => M,
-          YE: () => k,
-          ZF: () => L,
-          ZN: () => E,
-          Zf: () => S,
-          _S: () => R,
-          a9: () => p,
-          cn: () => g,
-          dS: () => D,
-          eB: () => v,
-          ff: () => O,
-          hR: () => I,
-          op: () => C,
+          Sv: () => L,
+          XP: () => R,
+          YE: () => A,
+          ZF: () => D,
+          ZN: () => S,
+          Zf: () => C,
+          _S: () => T,
+          cn: () => f,
+          dS: () => x,
+          eB: () => h,
+          ff: () => _,
+          hR: () => E,
+          op: () => O,
           p8: () => d,
           pv: () => c,
           rA: () => s,
           tW: () => o,
-          tc: () => x,
+          tc: () => M,
           wA: () => a,
-          wS: () => A,
-          xZ: () => f,
-          xg: () => y,
+          wS: () => j,
+          xZ: () => v,
+          xg: () => b,
         });
         var n = r(67592),
           i = r(16315);
@@ -12824,18 +12752,14 @@
           },
           p = (e) => {
             const { scrollHeight: t, clientHeight: r } = e;
-            return t > r;
+            e.scrollTop = t - r;
           },
           h = (e) => {
             const { scrollHeight: t, clientHeight: r } = e;
-            e.scrollTop = t - r;
-          },
-          v = (e) => {
-            const { scrollHeight: t, clientHeight: r } = e;
-            if (!e.scrollBy) return h(e);
+            if (!e.scrollBy) return p(e);
             e.scrollBy({ top: t - r, left: 0, behavior: "smooth" });
           },
-          f = (e, t) => {
+          v = (e, t) => {
             const { bottom: r, top: n, height: i } = e.getBoundingClientRect(),
               { bottom: o, top: s, height: a } = t.getBoundingClientRect();
             if (!(n < s) && !(r > o)) return;
@@ -12848,30 +12772,30 @@
             }
             t.scrollTop = c - Math.trunc(a / 2) + Math.trunc(i / 2);
           },
-          g = (e, t) => {
+          f = (e, t) => {
             const r = e.className.split(" ");
             r.some((e) => e === t) ||
               (r.push(t), (e.className = r.join(" ").trim()));
           },
-          m = (e, t) => {
+          g = (e, t) => {
             e.className = e.className
               .split(" ")
               .filter((e) => e !== t)
               .join(" ");
           },
-          b = (e, t, r, n = !1) => {
+          m = (e, t, r, n = !1) => {
             null != e &&
               (e.addEventListener
                 ? e.addEventListener(t, r, n)
                 : e.attachEvent && e.attachEvent(`on${t}`, r));
           },
-          y = (e, t, r) => {
+          b = (e, t, r) => {
             null != e &&
               (e.removeEventListener
                 ? e.removeEventListener(t, r)
                 : e.detachEvent && e.detachEvent(`on${t}`, r));
           },
-          w = (e) => {
+          y = (e) => {
             const t = e.currentTarget,
               { scrollTop: r, scrollHeight: n, clientHeight: i } = t,
               { deltaY: o } = e,
@@ -12882,16 +12806,16 @@
               ? (t.scrollTop = 0)
               : e.stopPropagation();
           },
-          _ = (e) => {
+          w = (e) => {
             if (e && "selectionEnd" in e) return e.selectionEnd;
           },
-          O = (e, t, r) => e.slice(0, r) + t + e.slice(r),
-          C = (e, t = -1) => {
+          _ = (e, t, r) => e.slice(0, r) + t + e.slice(r),
+          O = (e, t = -1) => {
             e &&
               (e.focus(),
               "setSelectionRange" in e && t >= 0 && e.setSelectionRange(t, t));
           };
-        function S(e, t, r) {
+        function C(e, t, r) {
           const n = e.document || e.ownerDocument;
           return (e) => {
             const i = [];
@@ -12906,7 +12830,7 @@
             }
           };
         }
-        const E = (e) =>
+        const S = (e) =>
             void 0 !== e.hidden
               ? !e.hidden
               : void 0 !== e.mozHidden
@@ -12914,7 +12838,7 @@
               : void 0 !== e.msHidden
               ? !e.msHidden
               : void 0 === e.webkitHidden || !e.webkitHidden,
-          I = () => {
+          E = () => {
             let e;
             return (
               void 0 !== document.hidden
@@ -12928,7 +12852,7 @@
               e
             );
           },
-          P = (e, t = {}) => {
+          I = (e, t = {}) => {
             const r = document.createElement("form");
             r.setAttribute("target", "_blank"),
               r.setAttribute("method", "post"),
@@ -12944,12 +12868,12 @@
               r.submit(),
               document.body.removeChild(r);
           },
-          j = (e) => (t) =>
+          P = (e) => (t) =>
             (t.keyCode === o.ENTER || t.keyCode === o.SPACE) && e(t),
-          A = (e) =>
+          j = (e) =>
             e.keyCode === o.TAB &&
             !(-1 !== ["INPUT", "TEXTAREA", "BUTTON"].indexOf(e.target.tagName)),
-          k = (e) => {
+          A = (e) => {
             if (e)
               return !!(
                 e.offsetWidth ||
@@ -12957,33 +12881,33 @@
                 e.getClientRects().length
               );
           },
-          T = (e) => e.keyCode === o.ESC,
-          R = (e) =>
+          k = (e) => e.keyCode === o.ESC,
+          T = (e) =>
             Array.from(
               e.querySelectorAll(
                 'button, [href], input:not([type="file"]):not([type="hidden"]), select, textarea, [tabindex]:not([tabindex="-1"])',
               ),
             ).filter((e) => !e.closest('[aria-hidden="true"]')),
-          M = (e) => ((0, n.jZ)(e) ? "rtl" : "ltr"),
-          x = (e, t, r) => {
+          R = (e) => ((0, n.jZ)(e) ? "rtl" : "ltr"),
+          M = (e, t, r) => {
             const n = e.document.getElementById(t);
-            return n || D(e, t, r);
+            return n || x(e, t, r);
           },
-          D = (e, t, r) => {
+          x = (e, t, r) => {
             const { document: n } = e,
               i = n.createElement("div");
             return (
               (i.id = t), r && i.classList.add(r), n.body.appendChild(i), i
             );
           },
-          L = (e) => {
+          D = (e) => {
             var t;
             null == e ||
               null === (t = e.parentNode) ||
               void 0 === t ||
               t.removeChild(e);
           },
-          N = (e, t = 500) => {
+          L = (e, t = 500) => {
             if (!i.gn)
               return setTimeout(() => {
                 e.focus();
@@ -13053,7 +12977,6 @@
             "image/gif",
             "image/jpeg",
             "image/png",
-            "image/webp",
             "image/bmp",
             "image/x-icon",
           ],
@@ -14445,7 +14368,7 @@
           g = (e) => -1 !== c.indexOf(e),
           m = () => "en" === d;
       },
-      22581: (e, t, r) => {
+      63147: (e, t, r) => {
         "use strict";
         r.r(t);
         var n = r(33791);
@@ -14644,15 +14567,15 @@
             path: "/",
             messages: {},
           };
-        function V(e, t) {
+        function U(e, t) {
           if (t === (0, a.R1)(e)) return N({}, e);
           const r = [].concat(e.viewStack, [t]);
           return N({}, e, { viewStack: r });
         }
-        function U(e) {
+        function B(e) {
           return N({}, e, { viewStack: [] });
         }
-        function B(e) {
+        function V(e) {
           return N({}, e, { viewStack: e.viewStack.slice(0, -1) });
         }
         var Z = r(31202);
@@ -14721,8 +14644,8 @@
           return !e || !!JSON.parse(e);
         }
         const { assign: Y } = Object,
-          Q = { isLauncherEnabled: !1, launcherEnabledOverride: "not-present" };
-        const { assign: J } = Object,
+          J = { isLauncherEnabled: !1, launcherEnabledOverride: "not-present" };
+        const { assign: Q } = Object,
           K = { isPresent: !1 };
         const { assign: X } = Object;
         function ee(e, t) {
@@ -15331,7 +15254,7 @@
               return e;
           }
         }
-        function Ve(e = {}, t) {
+        function Ue(e = {}, t) {
           if (t.type === C.Y4j) {
             const {
               lastActiveAt: e,
@@ -15350,8 +15273,8 @@
           }
           return e;
         }
-        var Ue = r(8612);
-        const Be = ["ticket"];
+        var Be = r(8612);
+        const Ve = ["ticket"];
         function Ze(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -15445,7 +15368,7 @@
             parts: [],
             participants: [],
             isEmailAttributeCollectorInserted: !1,
-            composerSuggestions: Ue.W2,
+            composerSuggestions: Be.W2,
           };
         function Ge(e, t) {
           return void 0 !== e ? e : t;
@@ -15471,7 +15394,7 @@
                 n = r.parts.some((e) => !e.author.isAdmin);
               (r.parts = (0, S.mc)(r, e)), (r.composerState = (0, S.PC)(r, e));
               const { ticket: i } = r,
-                o = $e(r, Be),
+                o = $e(r, Ve),
                 s = Fe(
                   Fe(Fe({}, e), o),
                   {},
@@ -15534,7 +15457,7 @@
                 : qe({}, e, { parts: ze(e.parts, t) });
             case C.Y4j:
               return qe({}, e, {
-                lastTypingAdmin: Ve(e.lastTypingAdmin, t),
+                lastTypingAdmin: Ue(e.lastTypingAdmin, t),
                 parts: ze(e.parts, t),
               });
             case C.LjG:
@@ -15549,15 +15472,15 @@
                     Fe({}, e),
                     {},
                     {
-                      composerSuggestions: (0, Ue.ZP)(e.composerSuggestions, t),
+                      composerSuggestions: (0, Be.ZP)(e.composerSuggestions, t),
                     },
                   );
             default:
               return e;
           }
         }
-        var Qe = r(76680);
-        const Je = ["ticket"];
+        var Je = r(76680);
+        const Qe = ["ticket"];
         function Ke(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -15702,7 +15625,7 @@
                     !(function (e, t, r) {
                       var n, i;
                       const o = je()(t, [e, "parts"]).filter(
-                          (e) => !(0, Qe.kh)(e),
+                          (e) => !(0, Je.kh)(e),
                         ),
                         s = je()(r, "parts");
                       return (
@@ -15717,7 +15640,7 @@
                     (r[i] = (function (e = {}) {
                       const { ticket: t } = e,
                         r = Xe(
-                          Xe({}, tt(e, Je)),
+                          Xe({}, tt(e, Qe)),
                           {},
                           {
                             fetchState: "summary",
@@ -15863,7 +15786,7 @@
             parts: [],
             participants: [],
             composerState: { visible: !0 },
-            composerSuggestions: Ue.W2,
+            composerSuggestions: Be.W2,
             botIntroId: null,
             articleUrl: null,
             fromArticleId: null,
@@ -16054,7 +15977,7 @@
             e
           );
         }
-        const Vt = {
+        const Ut = {
           isOpen: !1,
           isSheetsDataLoading: !1,
           isSheetsDataLoaded: !1,
@@ -16065,7 +15988,7 @@
           url: null,
           sheetTitle: "",
         };
-        function Ut(e, t) {
+        function Bt(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
             var n = Object.getOwnPropertySymbols(e);
@@ -16077,16 +16000,16 @@
           }
           return r;
         }
-        function Bt(e) {
+        function Vt(e) {
           for (var t = 1; t < arguments.length; t++) {
             var r = null != arguments[t] ? arguments[t] : {};
             t % 2
-              ? Ut(Object(r), !0).forEach(function (t) {
+              ? Bt(Object(r), !0).forEach(function (t) {
                   Zt(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : Ut(Object(r)).forEach(function (t) {
+              : Bt(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -16208,7 +16131,7 @@
             var r = null != arguments[t] ? arguments[t] : {};
             t % 2
               ? Gt(Object(r), !0).forEach(function (t) {
-                  Qt(e, t, r[t]);
+                  Jt(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -16222,7 +16145,7 @@
           }
           return e;
         }
-        function Qt(e, t, r) {
+        function Jt(e, t, r) {
           return (
             (t = (function (e) {
               var t = (function (e, t) {
@@ -16249,7 +16172,7 @@
             e
           );
         }
-        const Jt = {};
+        const Qt = {};
         function Kt(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -16828,9 +16751,9 @@
           isSearchFocused: !1,
           isFetchingSearchResults: !1,
         };
-        var Vr = r(38768);
-        const Ur = [];
-        function Br(e, t) {
+        var Ur = r(38768);
+        const Br = [];
+        function Vr(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
             var n = Object.getOwnPropertySymbols(e);
@@ -16846,12 +16769,12 @@
           for (var t = 1; t < arguments.length; t++) {
             var r = null != arguments[t] ? arguments[t] : {};
             t % 2
-              ? Br(Object(r), !0).forEach(function (t) {
+              ? Vr(Object(r), !0).forEach(function (t) {
                   Fr(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : Br(Object(r)).forEach(function (t) {
+              : Vr(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -16949,8 +16872,8 @@
         const Wr = [];
         var Gr = r(43156),
           Yr = r(85566),
-          Qr = r(76074);
-        function Jr(e, t) {
+          Jr = r(76074);
+        function Qr(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
             var n = Object.getOwnPropertySymbols(e);
@@ -16966,12 +16889,12 @@
           for (var t = 1; t < arguments.length; t++) {
             var r = null != arguments[t] ? arguments[t] : {};
             t % 2
-              ? Jr(Object(r), !0).forEach(function (t) {
+              ? Qr(Object(r), !0).forEach(function (t) {
                   Xr(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : Jr(Object(r)).forEach(function (t) {
+              : Qr(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -17069,7 +16992,7 @@
         }
         const on = {
             activeNewsItem: null,
-            detailsFetchingStatus: Qr.BC.notStarted,
+            detailsFetchingStatus: Jr.BC.notStarted,
           },
           { assign: sn } = Object;
         function an(e, t) {
@@ -17390,9 +17313,9 @@
                       upfrontEmailCollectionSetting: x,
                       useCacheFor: L,
                       userConversationAttachmentsEnabled: z,
-                      userConversationGifsEnabled: V,
-                      verticalPadding: U,
-                      openConfig: B,
+                      userConversationGifsEnabled: U,
+                      verticalPadding: B,
+                      openConfig: V,
                       localizedExpectedResponseDelayShortText: Z,
                       localizedExpectedResponseDelayLongText: F,
                       finMultilingualEnabled: H,
@@ -17446,14 +17369,14 @@
                     teamIntro: R,
                     temporaryExpectationsMessage: M,
                     userConversationAttachmentsEnabled: z,
-                    userConversationGifsEnabled: V,
-                    verticalPadding: U,
+                    userConversationGifsEnabled: U,
+                    verticalPadding: B,
                     upfrontEmailCollection: D(
                       D({}, e.upfrontEmailCollection),
                       {},
                       { upfrontEmailCollectionSetting: x },
                     ),
-                    openConfig: B,
+                    openConfig: V,
                     localizedExpectedResponseDelayShortText: Z,
                     localizedExpectedResponseDelayLongText: F,
                     finMultilingualEnabled: H,
@@ -17478,24 +17401,24 @@
                   return N({}, e, { isMessengerOpen: !1 });
                 case C.DB8:
                   return N(
-                    V(t.replaceCurrentView ? B(e) : e, "new-conversation"),
+                    U(t.replaceCurrentView ? V(e) : e, "new-conversation"),
                     { conversationId: null },
                   );
                 case C.xcd:
                   return N(e, { conversationId: null });
                 case C._IE:
-                  return N(V(t.replaceCurrentView ? B(e) : e, "conversation"), {
+                  return N(U(t.replaceCurrentView ? V(e) : e, "conversation"), {
                     conversationId: t.conversationId,
                   });
                 case C.BbA:
                   return t.resetNavigationHistory
-                    ? V(U(e), "conversations")
-                    : V(e, "conversations");
+                    ? U(B(e), "conversations")
+                    : U(e, "conversations");
                 case C.eaZ:
                   if (e.conversationId === t.conversationId) {
                     let t = N(e, { conversationId: null });
                     return (
-                      "conversation" === t.viewStack.slice(-1)[0] && (t = B(t)),
+                      "conversation" === t.viewStack.slice(-1)[0] && (t = V(t)),
                       (0, a.m0)(t) &&
                         (t = N(t, { viewStack: ["home-screen"] })),
                       t
@@ -17503,17 +17426,17 @@
                   }
                   return e;
                 case C.na9:
-                  return V(e, "empty-screen");
+                  return U(e, "empty-screen");
                 case C.g53:
-                  return V(
-                    t.replaceCurrentView ? B(e) : e,
+                  return U(
+                    t.replaceCurrentView ? V(e) : e,
                     "messenger-trigger",
                   );
                 case C.w6X:
-                  return N(V(e, "home-screen"), { conversationId: null });
+                  return N(U(e, "home-screen"), { conversationId: null });
                 case C.In$:
                   return "new-conversation" === (0, a.R1)(e)
-                    ? N({}, V(B(e), "conversation"), {
+                    ? N({}, U(V(e), "conversation"), {
                         conversationId: t.conversation.id,
                       })
                     : e;
@@ -17531,8 +17454,8 @@
                         "browse-mode",
                         "conversation",
                       ])
-                        ? V(U(e), "home-screen")
-                        : B(e);
+                        ? U(B(e), "home-screen")
+                        : V(e);
                     })(e),
                     { conversationId: null },
                   );
@@ -17627,7 +17550,7 @@
                   return e;
               }
             },
-            launcher: function (e = Q, t) {
+            launcher: function (e = J, t) {
               switch (t.type) {
                 case C.qYb: {
                   const r =
@@ -17674,7 +17597,7 @@
                     anonymousSessionDuration: i,
                     activeCompanyId: o,
                   } = t;
-                  return J({}, e, {
+                  return Q({}, e, {
                     url: r,
                     customAttributes: n,
                     anonymousSessionDuration: i,
@@ -17714,8 +17637,8 @@
                         : n.hasConversations) ||
                       ((null == l ? void 0 : l.length) || 0) > 0 ||
                       ((null == u ? void 0 : u.length) || 0) > 0,
-                    P = J({}, e.testAssignments, w);
-                  return J({}, e, {
+                    P = Q({}, e.testAssignments, w);
+                  return Q({}, e, {
                     id: r,
                     locale: i,
                     countryCode: o,
@@ -17743,26 +17666,26 @@
                 case C.xx1:
                 case C.XUb:
                 case C.OFq:
-                  return J({}, e, { hasConversations: !0 });
+                  return Q({}, e, { hasConversations: !0 });
                 case C.FH3: {
                   const { conversations: r } = t.conversations || {},
                     n = void 0 !== r && r.length > 0;
-                  return J({}, e, { hasConversations: n });
+                  return Q({}, e, { hasConversations: n });
                 }
                 case C.u_3: {
                   const { userSuppliedEmail: r } = t;
-                  return J({}, e, { userSuppliedEmail: r });
+                  return Q({}, e, { userSuppliedEmail: r });
                 }
                 case C.Sd2: {
                   const { phoneNumber: r } = t;
-                  return J({}, e, { phoneNumber: r });
+                  return Q({}, e, { phoneNumber: r });
                 }
                 case C.$dl:
-                  return J({}, e, { isPresent: !0 });
+                  return Q({}, e, { isPresent: !0 });
                 case C.r88:
-                  return J({}, e, { isPresent: !1 });
+                  return Q({}, e, { isPresent: !1 });
                 case C.I2_:
-                  return J(
+                  return Q(
                     {},
                     e,
                     null == t || null === (r = t.state) || void 0 === r
@@ -17771,14 +17694,14 @@
                   );
                 case C.JLv: {
                   var i, o;
-                  const r = J(
+                  const r = Q(
                     {},
                     e.testAssignments,
                     null == t || null === (i = t.response) || void 0 === i
                       ? void 0
                       : i.testAssignments,
                   );
-                  return J({}, e, {
+                  return Q({}, e, {
                     testAssignments: r,
                     resolutionBotBehaviorVersionId:
                       null == t || null === (o = t.response) || void 0 === o
@@ -17787,17 +17710,17 @@
                   });
                 }
                 case C.Jqy:
-                  return J({}, e, {
+                  return Q({}, e, {
                     newsfeedLastVisit: t.newsfeedLastVisit,
                     unreadNewsItemsCount: 0,
                   });
                 case C.KgQ: {
                   const { unreadTicketsCount: t } = e;
-                  return J({}, e, { unreadTicketsCount: t ? t - 1 : t });
+                  return Q({}, e, { unreadTicketsCount: t ? t - 1 : t });
                 }
                 case C.zv5: {
                   const { unreadTicketsCount: t } = e;
-                  return J({}, e, { unreadTicketsCount: t ? t + 1 : t });
+                  return Q({}, e, { unreadTicketsCount: t ? t + 1 : t });
                 }
                 default:
                   return e;
@@ -17967,8 +17890,8 @@
               switch (t.type) {
                 case C.DB8:
                 case C._IE:
-                  return Bt(
-                    Bt({}, e),
+                  return Vt(
+                    Vt({}, e),
                     {},
                     {
                       lastArticleClosedAt: null,
@@ -17976,8 +17899,8 @@
                     },
                   );
                 case C.SqP:
-                  return Bt(
-                    Bt({}, e),
+                  return Vt(
+                    Vt({}, e),
                     {},
                     {
                       lastComposerEvent: t.lastActiveAt.getTime(),
@@ -17985,14 +17908,14 @@
                     },
                   );
                 case C.xx1:
-                  return Bt(
-                    Bt({}, e),
+                  return Vt(
+                    Vt({}, e),
                     {},
                     { userCreatedConversationAt: t.timestamp },
                   );
                 case C.Vcf:
-                  return Bt(
-                    Bt({}, e),
+                  return Vt(
+                    Vt({}, e),
                     {},
                     {
                       lastArticleClosedAt: null,
@@ -18000,11 +17923,11 @@
                     },
                   );
                 case C._$g:
-                  return Bt(Bt({}, e), {}, { lastArticleClosedAt: t.closedAt });
+                  return Vt(Vt({}, e), {}, { lastArticleClosedAt: t.closedAt });
                 case C.gWb:
                 case C.u_3:
-                  return Bt(
-                    Bt({}, e),
+                  return Vt(
+                    Vt({}, e),
                     {},
                     {
                       clientsideRulesetConditions:
@@ -18012,13 +17935,13 @@
                     },
                   );
                 case C.VcU:
-                  return Bt(
-                    Bt({}, e),
+                  return Vt(
+                    Vt({}, e),
                     {},
                     { lastTriggerTransitionTimestamp: t.payload.timestamp },
                   );
                 case C.I2_:
-                  return Bt(Bt({}, e), t.state.operator);
+                  return Vt(Vt({}, e), t.state.operator);
                 default:
                   return e;
               }
@@ -18219,8 +18142,6 @@
                   return rt({}, e, { scrollPosition: t.scrollPosition });
                 case C.LjG:
                   return rt({}, e, { byId: ot(e.byId, t) });
-                case C.XXb:
-                  return rt({}, e, { animatingPartId: t.partId });
                 default:
                   return e;
               }
@@ -18270,7 +18191,7 @@
                     at({}, e),
                     {},
                     {
-                      composerSuggestions: (0, Ue.ZP)(e.composerSuggestions, t),
+                      composerSuggestions: (0, Be.ZP)(e.composerSuggestions, t),
                     },
                   );
                 case C.IxI:
@@ -18305,6 +18226,37 @@
                         (null == t || null === (n = t.botIntro) || void 0 === n
                           ? void 0
                           : n.id) || null,
+                    },
+                  );
+                case C.WBK:
+                  var i;
+                  return at(
+                    at({}, e),
+                    {},
+                    {
+                      parts:
+                        null != t && t.suggestionParts
+                          ? null == t ||
+                            null === (i = t.suggestionParts) ||
+                            void 0 === i
+                            ? void 0
+                            : i.parts.map((e, r) => {
+                                var n;
+                                return {
+                                  id: `suggestion-parts-${r}`,
+                                  author:
+                                    null == t ||
+                                    null === (n = t.suggestionParts) ||
+                                    void 0 === n
+                                      ? void 0
+                                      : n.operator,
+                                  createdAt: t.createdAt,
+                                  partType: "bot_intro",
+                                  body: e,
+                                  showCreatedAt: !0,
+                                };
+                              })
+                          : [],
                     },
                   );
                 case C.JCd:
@@ -18612,7 +18564,7 @@
                   return e;
               }
             },
-            messengerSheet: (e = Vt, t) => {
+            messengerSheet: (e = Ut, t) => {
               switch (t.type) {
                 case C.qMC:
                   return Nt(Nt({}, e), {}, { isNavigating: !0 });
@@ -18647,7 +18599,7 @@
                     },
                   );
                 case C.Mpv:
-                  return Vt;
+                  return Ut;
                 case C.Pm4:
                   return Nt(Nt({}, e), {}, { sheetTitle: t.sheetTitle });
                 case C.jx5:
@@ -18686,7 +18638,7 @@
                   return e;
               }
             },
-            customizationOverrides: function (e = Jt, t) {
+            customizationOverrides: function (e = Qt, t) {
               switch (t.type) {
                 case C.ffC:
                   return Yt(Yt({}, e), t.customizationAttributes);
@@ -19128,14 +19080,14 @@
               }
               return e;
             },
-            openInboundConversationIds: function (e = Ur, t) {
+            openInboundConversationIds: function (e = Br, t) {
               switch (t.type) {
                 case C.HKk:
                 case C.a80:
                   return (
                     (null == t ? void 0 : t.openInboundConversationIds) || []
                   );
-                case Vr.iO.type:
+                case Ur.iO.type:
                   if (!t.payload.cards) return [];
                   const r = t.payload.cards.find(
                     (e) => "new_conversation" === e.type,
@@ -19430,18 +19382,18 @@
                   return en({}, e, {
                     data: [],
                     nextPage: null,
-                    fetchingStatus: Qr.BC.inProgress,
+                    fetchingStatus: Jr.BC.inProgress,
                   });
                 case C.YJd:
                   return en({}, e, {
                     nextPage: null,
-                    fetchingStatus: Qr.BC.inProgress,
+                    fetchingStatus: Jr.BC.inProgress,
                   });
                 case C.V57:
                   return en({}, e, {
                     data: t.newsItems || [],
                     nextPage: t.nextPage,
-                    fetchingStatus: Qr.BC.success,
+                    fetchingStatus: Jr.BC.success,
                     newsfeedVisited: !1,
                   });
                 case C.UdY:
@@ -19454,12 +19406,12 @@
                       "id",
                     ),
                     nextPage: t.nextPage,
-                    fetchingStatus: Qr.BC.success,
+                    fetchingStatus: Jr.BC.success,
                   });
                 case C.VZE:
                   return en({}, e, {
                     data: null,
-                    fetchingStatus: Qr.BC.failure,
+                    fetchingStatus: Jr.BC.failure,
                   });
                 case C.Jqy:
                   return en({}, e, { newsfeedVisited: !0 });
@@ -19519,17 +19471,17 @@
                   return rn(
                     rn({}, e),
                     {},
-                    { detailsFetchingStatus: Qr.BC.inProgress },
+                    { detailsFetchingStatus: Jr.BC.inProgress },
                   );
                 case C.E3y:
                   return t.newsItem
                     ? {
                         activeNewsItem: t.newsItem,
-                        detailsFetchingStatus: Qr.BC.success,
+                        detailsFetchingStatus: Jr.BC.success,
                       }
                     : {
                         activeNewsItem: null,
-                        detailsFetchingStatus: Qr.BC.failure,
+                        detailsFetchingStatus: Jr.BC.failure,
                       };
                 case C.R_U:
                   if (
@@ -19562,17 +19514,17 @@
               switch (t.type) {
                 case C.CPx:
                   return dn({}, e, {
-                    fetchingStatus: Qr.BC.inProgress,
+                    fetchingStatus: Jr.BC.inProgress,
                     activeAnswer: e.activeAnswer,
                   });
                 case C._Ro:
                   return dn({}, e, {
-                    fetchingStatus: Qr.BC.failure,
+                    fetchingStatus: Jr.BC.failure,
                     activeAnswer: e.activeAnswer,
                   });
                 case C.X_d:
                   return dn({}, e, {
-                    fetchingStatus: Qr.BC.success,
+                    fetchingStatus: Jr.BC.success,
                     activeAnswer: t.answer,
                   });
                 case C.NVl:
@@ -19619,7 +19571,7 @@
               }
             },
             spaces: hn.ZP,
-            home: Vr.ZP,
+            home: Ur.ZP,
             help: pn.Z,
             intersection: function (e = mn, t) {
               switch (t.type) {
@@ -19814,9 +19766,9 @@
             e
           );
         }
-        const Vn = /^(UA|YT|MO)-\d+-\d+$/i,
-          Un = /^G-[0-9A-Z]{10}$/,
-          Bn = [C.ddI, C.UH6, C.In$, C.xjQ, C.u_3, C.s_C, C.E7l, C.vtD, C.Elv];
+        const Un = /^(UA|YT|MO)-\d+-\d+$/i,
+          Bn = /^G-[0-9A-Z]{10}$/,
+          Vn = [C.ddI, C.UH6, C.In$, C.xjQ, C.u_3, C.s_C, C.E7l, C.vtD, C.Elv];
         function Zn(e, t, r) {
           switch (e.type) {
             case C.ddI:
@@ -19922,7 +19874,7 @@
             var r = null != arguments[t] ? arguments[t] : {};
             t % 2
               ? Gn(Object(r), !0).forEach(function (t) {
-                  Qn(e, t, r[t]);
+                  Jn(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -19936,7 +19888,7 @@
           }
           return e;
         }
-        function Qn(e, t, r) {
+        function Jn(e, t, r) {
           return (
             (t = (function (e) {
               var t = (function (e, t) {
@@ -19963,7 +19915,7 @@
             e
           );
         }
-        function Jn(e) {
+        function Qn(e) {
           const t = {};
           return (
             Object.keys(e).forEach(function (r) {
@@ -19994,7 +19946,7 @@
                                 eventCategory: "Intercom Messenger",
                                 eventLabel: Fn(n),
                               },
-                              Jn(n),
+                              Qn(n),
                             ),
                             i ? { nonInteraction: i } : {},
                           ),
@@ -20026,7 +19978,7 @@
                                 eventCategory: "Intercom Messenger",
                                 eventLabel: Fn(n),
                               },
-                              Jn(n),
+                              Qn(n),
                             ),
                             i ? { nonInteraction: i } : {},
                           ),
@@ -20174,13 +20126,13 @@
         const ci = (e) => (t) => (r) => {
           const n = e.getState(),
             i = t(r);
-          if (-1 === Bn.indexOf(r.type) || !n.app.features.googleAnalytics)
+          if (-1 === Vn.indexOf(r.type) || !n.app.features.googleAnalytics)
             return i;
           const o = n.app.customGoogleAnalyticsTrackerId;
           let s, a, c;
           var l, u;
           return (
-            (((l = o) && l.match(Vn)) || !o) &&
+            (((l = o) && l.match(Un)) || !o) &&
               ((s = oi(o)),
               s &&
                 (function (e, t, r) {
@@ -20189,7 +20141,7 @@
                   i && n(i);
                 })(r, n, s)),
             (!(function (e) {
-              return e && e.match(Un);
+              return e && e.match(Bn);
             })(o) &&
               o) ||
               !n.app.features.googleAnalytics4Integration ||
@@ -20329,50 +20281,62 @@
           }
         }
         var Ci = r(99449),
-          Si = r(23493),
+          Si = r(23279),
           Ei = r.n(Si),
-          Ii = r(23279),
+          Ii = r(27567),
           Pi = r.n(Ii),
-          ji = r(27567),
-          Ai = r.n(ji),
-          ki = r(15178),
-          Ti = r(42279),
-          Ri = r(30980);
-        const Mi = (0, Ti.createSelector)(
+          ji = r(15178),
+          Ai = r(42279),
+          ki = r(30980);
+        const Ti = (0, Ai.createSelector)(
           (e) => e.app.hasTheMessengerBeenOpened,
-          Ri.ZP,
+          ki.ZP,
           (e, t) => e && !!t.length,
         );
-        var xi = r(33872),
-          Di = r(81705),
-          Li = r(60260),
-          Ni = r(44919),
-          zi = r(34131),
-          Vi = r(30200),
-          Ui = r(12325),
-          Bi = r(16899);
-        const Zi = "ConversationSeen",
-          Fi = "NewComment",
-          Hi = "ConversationPartUpdated",
-          $i = "UserContentSeenByAdmin",
-          qi = "UserIsTyping",
-          Wi = "AdminIsTyping",
-          Gi = "ConversationPartToken",
-          Yi = "MessengerCardUpdated",
-          Qi = "StartTour",
-          Ji = "NewContent",
-          Ki = "PingHint",
-          Xi = "ChecklistTaskCompleted",
-          eo = "ChecklistsResolveHint",
-          to = { increment: I.bk, count: I.Ec, timing: I.CT },
-          ro = { info: I.o2, error: I.Xi };
-        function no(e, t, r, n, i) {
+        var Ri = r(33872),
+          Mi = r(81705),
+          xi = r(60260),
+          Di = r(44919),
+          Li = r(34131),
+          Ni = r(30200),
+          zi = r(12325),
+          Ui = r(68630),
+          Bi = r.n(Ui),
+          Vi = r(11865),
+          Zi = r.n(Vi);
+        const Fi = (e) => {
+            if (!Bi()(e)) return e;
+            const t = {};
+            return (
+              Object.entries(e).forEach(([e, r]) => {
+                let n = Fi(r);
+                Array.isArray(n) && (n = n.map((e) => Fi(e))), (t[Zi()(e)] = n);
+              }),
+              t
+            );
+          },
+          Hi = "ConversationSeen",
+          $i = "NewComment",
+          qi = "ConversationPartUpdated",
+          Wi = "UserContentSeenByAdmin",
+          Gi = "UserIsTyping",
+          Yi = "AdminIsTyping",
+          Ji = "ConversationPartToken",
+          Qi = "MessengerCardUpdated",
+          Ki = "StartTour",
+          Xi = "NewContent",
+          eo = "PingHint",
+          to = "ChecklistTaskCompleted",
+          ro = "ChecklistsResolveHint",
+          no = { increment: I.bk, count: I.Ec, timing: I.CT },
+          io = { info: I.o2, error: I.Xi };
+        function oo(e, t, r, n, i) {
           let o;
           try {
             o = new t(
               e.endpoints,
-              ro,
-              to,
+              io,
+              no,
               r,
               n,
               () => {},
@@ -20380,11 +20344,11 @@
               i,
             );
           } catch (e) {
-            (0, I.Xi)(e), io(o);
+            (0, I.Xi)(e), so(o);
           }
           return o;
         }
-        function io(e) {
+        function so(e) {
           if (void 0 !== e)
             try {
               e.shutdown();
@@ -20392,47 +20356,47 @@
               (0, I.Xi)(e);
             }
         }
-        function oo(e, t, r, n, i, o, s, a, c, l) {
-          if (!go(t, r, c)) return e;
-          if ((io(e), !ho(r))) return;
+        function ao(e, t, r, n, i, o, s, a, c, l) {
+          if (!bo(t, r, c)) return e;
+          if ((so(e), !fo(r))) return;
           let u = jn.xY;
-          const d = no(
+          const d = oo(
             r,
-            Ai(),
+            Pi(),
             () => {
-              d.subscribeToAllTopics(), (u = co(u, n));
+              d.subscribeToAllTopics(), (u = uo(u, n));
             },
             () => {
-              u = lo(n);
+              u = po(n);
             },
             l,
           );
           try {
-            uo(d, n, i, o, s, a, f.c_, xi.Wg, Li.zH, Vi.XB);
+            ho(d, n, i, o, s, a, f.c_, Ri.Wg, xi.zH, Ni.XB);
           } catch (e) {
-            (0, I.Xi)(e), io(d);
+            (0, I.Xi)(e), so(d);
           }
           return d;
         }
-        const so = Pi()((e) => e(), 5e3, { leading: !0, trailing: !0 }),
-          ao = Pi()((e) => e(), 1e3);
-        function co(e, t) {
+        const co = Ei()((e) => e(), 5e3, { leading: !0, trailing: !0 }),
+          lo = Ei()((e) => e(), 1e3);
+        function uo(e, t) {
           return (
             e === jn.xK &&
-              Mi(t.getState()) &&
+              Ti(t.getState()) &&
               ((0, I.cb)("nexusReconnectedGettingConversations"),
-              so(() => t.dispatch((0, zi.hZ)(b.ZP)))),
+              co(() => t.dispatch((0, Li.hZ)(b.ZP)))),
             (0, p.US)() || ((0, I.cb)("realTimeConnected"), (0, p.KJ)(!0)),
             t.dispatch(Tn(jn.af)),
             jn.af
           );
         }
-        function lo(e) {
+        function po(e) {
           return e.dispatch(Tn(jn.xK)), jn.xK;
         }
-        function uo(e, t, r, n, i, o, s, c, l, u) {
-          const d = Pi()((e) => e(), 5e3);
-          e.addListener(Fi, (e) => {
+        function ho(e, t, r, n, i, o, s, c, l, u) {
+          const d = Ei()((e) => e(), 5e3);
+          e.addListener($i, (e) => {
             const {
                 deliveryChannel: n,
                 conversationId: i,
@@ -20448,15 +20412,15 @@
               h = () => t.dispatch(r(b.ZP, i, !0, s, a, u, c, l));
             o === p.id ? d(h) : h();
           }),
-            e.addListener($i, (e) => {
+            e.addListener(Wi, (e) => {
               const { conversationId: r } = e.eventData;
               t.dispatch(n(r));
             }),
-            e.addListener(Zi, (e) => {
+            e.addListener(Hi, (e) => {
               const { conversationId: r } = e.eventData;
               t.dispatch(o(r));
             }),
-            e.addListener(Wi, (e) => {
+            e.addListener(Yi, (e) => {
               const {
                 conversationId: r,
                 adminId: n,
@@ -20465,19 +20429,19 @@
                 hasDefaultAvatar: a,
                 isBot: c,
               } = e.eventData;
-              t.dispatch(i(r, n, o, po(s, a), c));
-            }),
-            e.addListener(Yi, (e) => {
-              const { cardUri: n } = e.eventData,
-                i = (0, ki.mA)(t.getState());
-              i && (0, S.$o)(i, n) && t.dispatch(r(b.ZP, i.id, !0));
-            }),
-            e.addListener(Hi, (e) => {
-              const { conversationId: n } = e.eventData;
-              (0, ki.mA)(t.getState()).id === String(n) &&
-                t.dispatch(r(b.ZP, n, !0));
+              t.dispatch(i(r, n, o, vo(s, a), c));
             }),
             e.addListener(Qi, (e) => {
+              const { cardUri: n } = e.eventData,
+                i = (0, ji.mA)(t.getState());
+              i && (0, S.$o)(i, n) && t.dispatch(r(b.ZP, i.id, !0));
+            }),
+            e.addListener(qi, (e) => {
+              const { conversationId: n } = e.eventData;
+              (0, ji.mA)(t.getState()).id === String(n) &&
+                t.dispatch(r(b.ZP, n, !0));
+            }),
+            e.addListener(Ki, (e) => {
               const { tour: r } = e.eventData,
                 { user: n } = t.getState();
               (0, I.Dw)(n, "received_nexus", "tour", "messenger", null, {
@@ -20485,20 +20449,20 @@
               }),
                 n.isPresent && t.dispatch(s(r.id));
             }),
-            e.addListener(Ji, (e) => {
+            e.addListener(Xi, (e) => {
               const { entity_id: r, entity_type: n } = e.eventData,
                 { user: i } = t.getState();
               (0, I.Dw)(i, "received_nexus", "new_content", "messenger", null, {
                 entity_id: r,
                 entity_type: n,
               }),
-                n === Ni.e.BANNER_VIEW
+                n === Di.e.BANNER_VIEW
                   ? t.dispatch(c(r))
-                  : n === Ni.e.SURVEY_PROGRESS && t.dispatch(l(r, n));
+                  : n === Di.e.SURVEY_PROGRESS && t.dispatch(l(r, n));
             }),
-            e.addListener(Ki, () => {
+            e.addListener(eo, () => {
               const { session: e } = t.getState();
-              ao(() => {
+              lo(() => {
                 t.dispatch(
                   u(
                     b.ZP,
@@ -20515,31 +20479,36 @@
                 );
               });
             }),
-            e.addListener(Xi, (e) => {
+            e.addListener(to, (e) => {
               const {
                 checklist_id: r,
                 checklist_progress_id: n,
                 task_id: i,
               } = e.eventData;
-              t.dispatch((0, Di._r)(r, Number(n), i));
+              t.dispatch((0, Mi._r)(r, Number(n), i));
             }),
-            e.addListener(eo, () => {
-              ao(() => {
-                t.dispatch((0, Di.Nn)());
+            e.addListener(ro, () => {
+              lo(() => {
+                t.dispatch((0, Mi.Nn)());
               });
             });
-          const p = Ei()((e, r) => {
-            t.dispatch((0, Ui.rI)({ conversationId: e, part: r }));
-          }, Bi.Q);
-          e.addListener(Gi, (e) => {
+          e.addListener(Ji, (e) => {
             var r;
             const n =
               null === (r = (0, a.VA)(t.getState())) || void 0 === r
                 ? void 0
                 : r.participant;
             if (!n) return;
-            const i = e.eventData.conversation_id,
-              o = Object.assign({}, (0, b.jK)(e.eventData), {
+            const {
+              conversationId: i,
+              tokenSequenceIndex: o,
+              e2eMetricId: s,
+            } = e.eventData;
+            ((e, r) => {
+              t.dispatch((0, zi.rI)({ conversationId: e, part: r }));
+            })(
+              i,
+              Object.assign({}, (0, b.jK)(Fi(e.eventData)), {
                 author: {
                   id: n.id,
                   avatar: n.avatar,
@@ -20550,14 +20519,14 @@
                   isBot: !0,
                   isSelf: !1,
                 },
-              });
-            p(i, o);
-            const s = (0, ki.jo)(i)(t.getState());
-            e.eventData.e2e_metric_id &&
-              0 === e.eventData.token_sequence_index &&
-              s &&
+              }),
+            );
+            const c = (0, ji.jo)(i)(t.getState());
+            s &&
+              0 === o &&
+              c &&
               (0, I.cb)("received_first_streamed_token", {
-                client_assigned_uuid: e.eventData.e2e_metric_id,
+                client_assigned_uuid: s,
                 timestamp: Date.now(),
               });
           }),
@@ -20565,22 +20534,22 @@
               t.dispatch(Rn(e.eventName));
             });
         }
-        const po = (e, t) => (t || 0 !== e.indexOf("http") ? void 0 : e),
-          ho = (e) =>
+        const vo = (e, t) => (t || 0 !== e.indexOf("http") ? void 0 : e),
+          fo = (e) =>
             void 0 !== e &&
             Array.isArray(e.endpoints) &&
             e.endpoints.length > 0,
-          vo = (e) => (0, E.Z)(e.split("/")).split("-")[0],
-          fo = (e, t) => vo(e) !== vo(t),
-          go = (e, t, r) =>
-            ho(e) && ho(t)
-              ? r || fo(e.endpoints[0], t.endpoints[0])
-              : (!ho(e) && ho(t)) || (ho(e) && !ho(t)),
-          mo = (0, Ti.createSelector)(
+          go = (e) => (0, E.Z)(e.split("/")).split("-")[0],
+          mo = (e, t) => go(e) !== go(t),
+          bo = (e, t, r) =>
+            fo(e) && fo(t)
+              ? r || mo(e.endpoints[0], t.endpoints[0])
+              : (!fo(e) && fo(t)) || (fo(e) && !fo(t)),
+          yo = (0, Ai.createSelector)(
             (e) => e.operator,
             (e) => e.lastComposerEvent,
           ),
-          bo = (e) => {
+          wo = (e) => {
             const {
                 app: {
                   color: t,
@@ -20648,13 +20617,13 @@
               launcherDiscoveryMode: { hasDiscoveredLauncher: S },
               user: { role: j, locale: A, hasConversations: k },
               message: { conversationId: E },
-              conversations: { byId: yo(M) },
+              conversations: { byId: _o(M) },
               openOnBoot: { type: I, metadata: P },
-              operator: { lastComposerEvent: mo(e) },
+              operator: { lastComposerEvent: yo(e) },
               router: T,
             };
           },
-          yo = (e) => {
+          _o = (e) => {
             const t = Object.keys(e),
               r = {};
             return (
@@ -20665,7 +20634,7 @@
               r
             );
           },
-          wo =
+          Oo =
             !0 === parent.__INTERCOM_REDUX_DEV_TOOLS__ &&
             parent.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
               ? parent.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
@@ -20673,8 +20642,8 @@
                   traceLimit: 25,
                 })
               : () => (e) => e;
-        let _o, Oo, Co;
-        const So =
+        let Co, So, Eo;
+        const Io =
             ({
               updateRealtimeClient: e,
               shutdownRealtimeClient: t,
@@ -20692,35 +20661,35 @@
                 case C.gWb: {
                   const t = l.user.app.realtimeConfig,
                     s = l.user.id;
-                  (_o = e(_o, Oo, t, a, r, n, i, o, s !== Co, l.user.role)),
-                    (Oo = t),
-                    (Co = s);
+                  (Co = e(Co, So, t, a, r, n, i, o, s !== Eo, l.user.role)),
+                    (So = t),
+                    (Eo = s);
                   break;
                 }
                 case C.wRh:
-                  t(_o), (_o = void 0), (Oo = void 0), (Co = void 0);
+                  t(Co), (Co = void 0), (So = void 0), (Eo = void 0);
                   break;
                 case C.sFg:
-                  s(_o, a);
+                  s(Co, a);
               }
-              if (!_o) return u;
+              if (!Co) return u;
               switch (l.type) {
                 case C.vtD:
-                  _o.sendEvent(Zi, { conversationId: l.conversationId });
+                  Co.sendEvent(Hi, { conversationId: l.conversationId });
                   break;
                 case C.g9c:
-                  _o.throttleSendEvent(
-                    qi,
+                  Co.throttleSendEvent(
+                    Gi,
                     { conversationId: l.conversationId },
                     !0,
                   );
                   break;
                 case C.s_C:
-                  _o.sendEvent(Yi, { cardUri: l.card.uri });
+                  Co.sendEvent(Qi, { cardUri: l.card.uri });
               }
               return u;
             },
-          Eo = (e) => {
+          Po = (e) => {
             if (
               window.parent &&
               window.parent.intercomSettings &&
@@ -20731,32 +20700,32 @@
             }
             return e;
           },
-          Io = (e) => {
+          jo = (e) => {
             try {
               return JSON.parse(Z.X.get(e));
             } catch (e) {
               (0, I.bk)("hydrate_read_error");
             }
           },
-          Po = (e, t) => {
+          Ao = (e, t) => {
             try {
               Z.X.set(e, JSON.stringify(t));
             } catch (e) {
               (0, I.bk)("hydrate_write_error");
             }
           };
-        const jo = (e) => ({ type: C.I2_, state: e }),
-          Ao =
+        const ko = (e) => ({ type: C.I2_, state: e }),
+          To =
             (e, t = "intercom-state") =>
             (r) =>
             (...n) => {
               const i = r(...n);
-              if (((t = Eo(t)), !(0, P.NN)())) return i;
-              const o = Io(t);
+              if (((t = Po(t)), !(0, P.NN)())) return i;
+              const o = jo(t);
               if (o) {
                 const e = i.getState();
                 try {
-                  i.dispatch(jo(o));
+                  i.dispatch(ko(o));
                 } catch (r) {
                   (0, I.bk)("hydrate_error"),
                     (function (e) {
@@ -20766,25 +20735,25 @@
                         (0, I.bk)("hydrate_remove_error");
                       }
                     })(t),
-                    i.dispatch(jo(e));
+                    i.dispatch(ko(e));
                 }
               }
               return (
                 i.subscribe(() => {
                   const r = i.getState(),
                     { session: n } = r;
-                  n && Po(t, e(r));
+                  n && Ao(t, e(r));
                 }),
                 i
               );
             },
-          ko = () => (e) => (t) => {
+          Ro = () => (e) => (t) => {
             const r = e(t);
             if (t.type === C.wRh)
-              (0, P.NN)() && t.clearCookies && Z.X.remove(Eo("intercom-state"));
+              (0, P.NN)() && t.clearCookies && Z.X.remove(Po("intercom-state"));
             return r;
           },
-          To = {
+          Mo = {
             play(e) {
               if (!P.ZP.hasAudioSupport()) return;
               const t = this.load(e);
@@ -20803,7 +20772,7 @@
                 this.audio[e] || (this.audio[e] = new Audio(e)), this.audio[e]
               );
             },
-            playNotification: Pi()(
+            playNotification: Ei()(
               function (e) {
                 this.play(r(49202)(`./${e}`).default);
               },
@@ -20812,20 +20781,20 @@
             ),
             audio: {},
           };
-        var Ro = r(19279);
-        const Mo = "played-notifications";
-        let xo = (() => {
-          const e = Z.y.get(Mo);
+        var xo = r(19279);
+        const Do = "played-notifications";
+        let Lo = (() => {
+          const e = Z.y.get(Do);
           return e ? JSON.parse(e) : {};
         })();
-        const Do = (e, t) => {
-            (xo[e] = t), Z.y.set(Mo, JSON.stringify(xo));
+        const No = (e, t) => {
+            (Lo[e] = t), Z.y.set(Do, JSON.stringify(Lo));
           },
-          Lo = (e, t) => {
+          zo = (e, t) => {
             const r = (0, E.Z)(e.parts);
             return (
               !((e, t) => {
-                const r = xo[e];
+                const r = Lo[e];
                 return r === t || -1 === r;
               })(e.id, r.id) ||
               ((e, t) => {
@@ -20834,15 +20803,15 @@
               })(e, t)
             );
           },
-          No = (e, t, r) => {
+          Uo = (e, t, r) => {
             let n = !1;
             e.forEach((e) => {
               const r = (0, E.Z)(e.parts);
-              Lo(e, t) && (n = !0), Do(e.id, r.id);
+              zo(e, t) && (n = !0), No(e.id, r.id);
             }),
-              n && To.playNotification(r);
+              n && Mo.playNotification(r);
           },
-          zo = (e, t) => {
+          Bo = (e, t) => {
             switch (e) {
               case C.xDT:
               case C.V0l:
@@ -20865,32 +20834,32 @@
                 case C.xx1:
                 case C.xDT:
                 case C.V0l:
-                  To.playFile(zo(r.type));
+                  Mo.playFile(Bo(r.type));
                   break;
                 case C.VHf: {
                   const e = i.conversations.byId[r.conversationId];
-                  No([e], i.session.newSession, zo(r.type));
+                  Uo([e], i.session.newSession, Bo(r.type));
                   break;
                 }
                 case C.OFq: {
                   const { conversation: e, skipNotification: t } = r;
                   if (e.read) return;
                   const n = (0, E.Z)(e.parts);
-                  if (!0 === t || (0, Ro.Z)(n.partType))
-                    return void Do(e.id, n.id);
-                  No([e], i.session.newSession, zo(r.type, n));
+                  if (!0 === t || (0, xo.Z)(n.partType))
+                    return void No(e.id, n.id);
+                  Uo([e], i.session.newSession, Bo(r.type, n));
                   break;
                 }
                 case C.FH3: {
                   const e = (0, O.Z)(i);
-                  No(e, i.session.newSession, zo(r.type));
+                  Uo(e, i.session.newSession, Bo(r.type));
                   break;
                 }
                 case C.gWb: {
                   const { unreadDismissedConversationIds: e } = r.user;
                   e &&
                     e.forEach((e) => {
-                      Do(e, -1);
+                      No(e, -1);
                     });
                   break;
                 }
@@ -20898,10 +20867,10 @@
               return n;
             }
           };
-        var Uo = r(4389);
-        const Bo = [],
-          Zo = [];
-        const Fo =
+        var Zo = r(4389);
+        const Fo = [],
+          Ho = [];
+        const $o =
           ({ getState: e }) =>
           (t) =>
           (r) => (
@@ -21015,7 +20984,7 @@
                   );
                   return [
                     t.fromBrowseMode &&
-                      (0, I.O3)(r, "clicked", Uo.Dg, Uo.nF, "messenger", s),
+                      (0, I.O3)(r, "clicked", Zo.Dg, Zo.nF, "messenger", s),
                     !!t.metricMetadata &&
                       !t.fromBrowseMode &&
                       (0, I.qt)(
@@ -21046,19 +21015,19 @@
                   return [];
               }
             })(e, r).forEach((e) => (0, I.qT)(e)),
-            "DESTROY_SESSION" === r.type && (Bo.splice(0), Zo.splice(0)),
+            "DESTROY_SESSION" === r.type && (Fo.splice(0), Ho.splice(0)),
             t(r)
           );
-        var Ho = r(32655),
-          $o = r(11227),
-          qo = r.n($o);
-        const Wo = qo()("intercom.client-matching.client-match-object.base");
+        var qo = r(32655),
+          Wo = r(11227),
+          Go = r.n(Wo);
+        const Yo = Go()("intercom.client-matching.client-match-object.base");
         class BaseClientMatchObject {
           constructor(e) {
             (this._ruleset = void 0),
               (this._predicateChain = void 0),
               (this._ruleset = e),
-              (this._predicateChain = new Ho.Z(e, () => {}));
+              (this._predicateChain = new qo.Z(e, () => {}));
           }
           getRuleset() {
             return this._ruleset;
@@ -21096,7 +21065,7 @@
             this.onRefreshActiveMatch(this._ruleset.serialized_object, e);
           }
           async match(e) {
-            Wo(`.match called [${this.getObjectType()}]`, this.getRuleset());
+            Yo(`.match called [${this.getObjectType()}]`, this.getRuleset());
             const t = e.getState(),
               r = this.getRuleset(),
               n = this.onPreMatch(e);
@@ -21129,7 +21098,7 @@
           onMatch(e, t, r) {}
           onRefreshActiveMatch(e, t) {}
           unmatch(e) {
-            Wo(`.unmatch called [${this.getObjectType()}]`, this.getRuleset()),
+            Yo(`.unmatch called [${this.getObjectType()}]`, this.getRuleset()),
               this.onUnmatch(e);
           }
           onUnmatch(e) {}
@@ -21142,7 +21111,7 @@
             if (!e) return;
             const r = b.ZP.buildBanner(e);
             let { banners: n } = t.getState();
-            (n = n.concat(r)), t.dispatch((0, xi.fz)(n));
+            (n = n.concat(r)), t.dispatch((0, Ri.fz)(n));
           }
           canRematch() {
             return !0;
@@ -21152,7 +21121,7 @@
             (t = t.filter(
               (e) => e.ruleset_id !== this.getRuleset().ruleset_id,
             )),
-              e.dispatch((0, xi.fz)(t));
+              e.dispatch((0, Ri.fz)(t));
           }
         }
         class TourClientMatchObject extends BaseClientMatchObject {
@@ -21205,20 +21174,20 @@
             e.dispatch((0, h.u7)(this.getRulesetId()));
           }
         }
-        var Go = r(52539);
+        var Jo = r(52539);
         class AnswerbotPredictiveContextClientMatchObject extends BaseClientMatchObject {
           selectMatchObject(e) {
             return e.answerbotPredictiveContexts;
           }
           onMatch(e, t) {
-            t.dispatch((0, Go.F)(e));
+            t.dispatch((0, Jo.F)(e));
           }
           onUnmatch(e) {
-            e.dispatch((0, Go.F)(null));
+            e.dispatch((0, Jo.F)(null));
           }
         }
-        var Yo = r(28720);
-        const Qo = qo()("intercom.client-match-object.messenger-trigger");
+        var Qo = r(28720);
+        const Ko = Go()("intercom.client-match-object.messenger-trigger");
         class MessengerTriggerClientMatchObject extends BaseClientMatchObject {
           constructor(...e) {
             super(...e), (this._node = void 0);
@@ -21228,14 +21197,14 @@
           }
           onMatch(e, t) {
             (this._node = this._findDOMNode(e)),
-              t.dispatch((0, Yo.U9)(e, b.ZP));
+              t.dispatch((0, Qo.U9)(e, b.ZP));
           }
           onUnmatch(e) {
-            e.dispatch((0, Yo.QX)(this.messengerTriggerId()));
+            e.dispatch((0, Qo.QX)(this.messengerTriggerId()));
           }
           onRefreshActiveMatch(e, t) {
             this._shouldRefreshActiveMatch() &&
-              (Qo(
+              (Ko(
                 `TriggerId=${e.id} (${e.selector}) is missing from the page, re-attaching listener`,
               ),
               this.onUnmatch(t),
@@ -21261,7 +21230,7 @@
             return e.chat;
           }
           onMatch(e, t) {
-            e && t.dispatch((0, Ui.xf)(b.ZP, (0, b.CC)(e)));
+            e && t.dispatch((0, zi.xf)(b.ZP, (0, b.CC)(e)));
           }
         }
         class CustomBotClientMatchObject extends BaseClientMatchObject {
@@ -21269,7 +21238,7 @@
             return e.customBot;
           }
           onMatch(e, t) {
-            e && t.dispatch((0, Ui.xf)(b.ZP, (0, b.CC)(e)));
+            e && t.dispatch((0, zi.xf)(b.ZP, (0, b.CC)(e)));
           }
         }
         class PostClientMatchObject extends BaseClientMatchObject {
@@ -21277,18 +21246,18 @@
             return e.post;
           }
           onMatch(e, t) {
-            e && t.dispatch((0, Ui.xf)(b.ZP, (0, b.CC)(e)));
+            e && t.dispatch((0, zi.xf)(b.ZP, (0, b.CC)(e)));
           }
         }
-        var Jo = r(72745);
+        var Xo = r(72745);
         class SurveyClientMatchObject extends BaseClientMatchObject {
           selectMatchObject(e) {
             return e.survey;
           }
           onMatch(e, t) {
             if (!e) return;
-            const r = (0, Jo.KT)(e);
-            t.dispatch((0, Li.OR)(r));
+            const r = (0, Xo.KT)(e);
+            t.dispatch((0, xi.OR)(r));
           }
         }
         class SeriesConditionClientMatchObject extends BaseClientMatchObject {
@@ -21298,7 +21267,7 @@
           onMatch(e, t, r) {
             const { session: n } = t.getState();
             t.dispatch(
-              (0, Vi.XB)(
+              (0, Ni.XB)(
                 b.ZP,
                 n,
                 window.parent.location.href,
@@ -21320,11 +21289,11 @@
           onMatch(e, t) {
             if (e) {
               const r = t.getState().checklists || [];
-              t.dispatch((0, Di.$0)(b.ZP.buildChecklists([...r, e])));
+              t.dispatch((0, Mi.$0)(b.ZP.buildChecklists([...r, e])));
             }
           }
         }
-        function Ko(e) {
+        function es(e) {
           switch (e.ruleset_link_object_type) {
             case "banner":
               return new BannerClientMatchObject(e);
@@ -21354,7 +21323,7 @@
               return new BaseClientMatchObject(e);
           }
         }
-        const Xo = qo()("intercom.client-matching.client-match-runner");
+        const ts = Go()("intercom.client-matching.client-match-runner");
         class ClientMatchRunner {
           constructor(e) {
             (this.clientMatches = []),
@@ -21365,7 +21334,7 @@
           }
           start() {
             void 0 === this.evalLoop &&
-              (Xo("Starting evaluation loop"),
+              (ts("Starting evaluation loop"),
               (this.evalLoop = setInterval(
                 () => this.performClientMatching(),
                 500,
@@ -21373,7 +21342,7 @@
           }
           stop() {
             void 0 !== this.evalLoop &&
-              (Xo("Stopping evaluation loop"),
+              (ts("Stopping evaluation loop"),
               window.clearInterval(this.evalLoop),
               (this.evalLoop = void 0));
           }
@@ -21416,7 +21385,7 @@
             for (const t of e)
               this.clientMatches.find(
                 (e) => e.getRulesetId() === t.ruleset_id,
-              ) || this.clientMatches.push(Ko(t));
+              ) || this.clientMatches.push(es(t));
             this._evaluateClientMatches();
           }
           _removeMissingMatches(e, t) {
@@ -21431,15 +21400,15 @@
             this.clientMatches.splice(this.clientMatches.indexOf(e), 1);
           }
         }
-        const es = 0,
-          ts = 12,
-          rs = 14;
-        let ns;
-        const is = (e, t, r) => {
-            ns || ((ns = new ClientMatchRunner(e)), ns.start()),
-              ns.updateClientMatches(t, r);
+        const rs = 0,
+          ns = 12,
+          is = 14;
+        let os;
+        const ss = (e, t, r) => {
+            os || ((os = new ClientMatchRunner(e)), os.start()),
+              os.updateClientMatches(t, r);
           },
-          os = (e) => (t) => (r) => {
+          as = (e) => (t) => (r) => {
             switch (r.type) {
               case C.gWb:
                 var n;
@@ -21447,7 +21416,7 @@
                   null !== (n = r.user) &&
                   void 0 !== n &&
                   n.clientsideRulesetConditions &&
-                  is(e, r.user.clientsideRulesetConditions, es);
+                  ss(e, r.user.clientsideRulesetConditions, rs);
                 break;
               case C.JLv:
                 var i;
@@ -21455,7 +21424,7 @@
                   null !== (i = r.response) &&
                   void 0 !== i &&
                   i.clientsideRulesetConditions &&
-                  is(e, r.response.clientsideRulesetConditions, rs);
+                  ss(e, r.response.clientsideRulesetConditions, is);
                 break;
               case C.m_e:
                 var o;
@@ -21466,23 +21435,23 @@
                   o.clientsideRulesetConditions
                 ) {
                   const { clientsideRulesetConditions: t } = r.response;
-                  t && t.length > 0 && is(e, t, ts);
+                  t && t.length > 0 && ss(e, t, ns);
                 }
                 break;
               case C.wRh:
                 var s;
-                if (ns)
-                  null === (s = ns) || void 0 === s || s.stop(), (ns = null);
+                if (os)
+                  null === (s = os) || void 0 === s || s.stop(), (os = null);
             }
             return t(r);
           },
-          ss = So({
-            updateRealtimeClient: oo,
-            shutdownRealtimeClient: io,
-            getConversation: Ui.cc,
-            userContentSeenByAdmin: Ui.x4,
-            adminIsTyping: Ui.Q8,
-            conversationReadElsewhere: Ui.XA,
+          cs = Io({
+            updateRealtimeClient: ao,
+            shutdownRealtimeClient: so,
+            getConversation: zi.cc,
+            userContentSeenByAdmin: zi.x4,
+            adminIsTyping: zi.Q8,
+            conversationReadElsewhere: zi.XA,
             retryRealtimeClient: function (e, t) {
               if (void 0 !== e)
                 try {
@@ -21492,7 +21461,7 @@
                 }
             },
           }),
-          as = (function (e) {
+          ls = (function (e) {
             let t, r;
             return (n) => (i) => (o) => {
               const s = n.getState();
@@ -21542,8 +21511,8 @@
               return i(o);
             };
           })(l.Z),
-          cs = Ao(bo),
-          ls = (e) =>
+          us = To(wo),
+          ds = (e) =>
             (0, M.configureStore)({
               reducer: Dn,
               preloadedState: e,
@@ -21553,19 +21522,18 @@
                   thunk: !0,
                   immutableCheck: !1,
                   serializableCheck: !1,
-                }).concat([Fo, Vo, ci, ss, as, ko, Ci.kB, bn.zk, os]),
-              enhancers: [cs, wo()],
+                }).concat([$o, Vo, ci, cs, ls, Ro, Ci.kB, bn.zk, as]),
+              enhancers: [us, Oo()],
             });
-        var us = r(94679),
-          ds = r(56937),
-          ps = r(50025),
-          hs = r(25304),
-          vs = r(35937),
-          fs = r.n(vs),
-          gs = r(51584),
-          ms = r.n(gs);
-        const bs = "#IntercomDefaultWidget",
-          ys = [
+        var ps = r(59680),
+          hs = r(56937),
+          vs = r(50025),
+          fs = r(35937),
+          gs = r.n(fs),
+          ms = r(51584),
+          bs = r.n(ms);
+        const ys = "#IntercomDefaultWidget",
+          ws = [
             "app_id",
             "user_id",
             "email",
@@ -21583,22 +21551,23 @@
             "background_color",
             "action_color",
             "api_base",
+            "page_title",
           ];
-        function ws(e) {
+        function _s(e) {
           return !wt()(e);
         }
-        function _s(e) {
-          return ys.indexOf(e) < 0;
-        }
         function Os(e) {
-          return Object.keys(e)
-            .filter(_s)
-            .filter(ws)
-            .reduce((t, r) => ((t[r] = e[r]), t), {});
+          return ws.indexOf(e) < 0;
         }
         function Cs(e) {
           return Object.keys(e)
-            .filter(ws)
+            .filter(Os)
+            .filter(_s)
+            .reduce((t, r) => ((t[r] = e[r]), t), {});
+        }
+        function Ss(e) {
+          return Object.keys(e)
+            .filter(_s)
             .reduce((t, r) => {
               const n = e[r];
               return (
@@ -21609,19 +21578,19 @@
               );
             }, {});
         }
-        function Ss(e) {
+        function Es(e) {
           return Object.assign(
             (function (e) {
-              return e.custom_data ? Os(e.custom_data) : {};
+              return e.custom_data ? Cs(e.custom_data) : {};
             })(e),
-            Os(e),
+            Cs(e),
           );
         }
-        function Es(e) {
+        function Is(e) {
           return (
             (function (e) {
               if (!e.user_data) return;
-              return Cs({
+              return Ss({
                 appId: e.app_id,
                 email: e.user_data.email,
                 userId: e.user_data.user_id,
@@ -21629,7 +21598,7 @@
               });
             })(e) ||
             (function (e) {
-              return Cs({
+              return Ss({
                 appId: e.app_id,
                 email: e.email,
                 userId: e.user_id,
@@ -21638,34 +21607,34 @@
             })(e)
           );
         }
-        function Is(e) {
+        function Ps(e) {
           return e &&
             e.widget &&
             !wt()(e.widget.activator) &&
-            e.widget.activator !== bs
+            e.widget.activator !== ys
             ? e.widget.activator
             : null;
         }
-        function Ps(e) {
+        function js(e) {
           return wt()(e.custom_launcher_selector)
-            ? Is(e)
+            ? Ps(e)
             : e.custom_launcher_selector;
         }
-        function js(e) {
-          return ms()(e.hide_default_launcher)
+        function As(e) {
+          return bs()(e.hide_default_launcher)
             ? e.hide_default_launcher
               ? "hide"
               : "show"
             : (function (e) {
-                return e.widget && e.widget.activator === bs
+                return e.widget && e.widget.activator === ys
                   ? "show"
                   : "not-present";
               })(e);
         }
-        function As(e) {
+        function ks(e) {
           return e.session_duration || null;
         }
-        function ks(e) {
+        function Ts(e) {
           const t = {
             alignment: e.alignment,
             horizontalPadding: e.horizontal_padding,
@@ -21674,18 +21643,18 @@
             color: e.action_color,
             secondaryColor: e.background_color,
           };
-          return fs()(t, (e) => void 0 !== e);
+          return gs()(t, (e) => void 0 !== e);
         }
-        var Ts = r(9688),
-          Rs = r(64943);
-        const Ms = (e) => {
+        var Rs = r(9688),
+          Ms = r(64943);
+        const xs = (e) => {
             try {
               return e.self !== e.top;
             } catch (e) {
               return !1;
             }
           },
-          xs = (e) => {
+          Ds = (e) => {
             try {
               return e.document.body.text.length > 0;
             } catch (e) {
@@ -21693,26 +21662,27 @@
             }
           };
         r(57557);
-        var Ds = r(28680),
-          Ls = r(65394),
-          Ns = r(74668);
-        const zs = (e) => async (t, r) => {
+        var Ls = r(28680),
+          Ns = r(65394),
+          zs = r(74668),
+          Us = r(87846);
+        const Bs = (e) => async (t, r) => {
             t(Vs());
             const n = r(),
               { session: i, app: o, homeScreen: s } = n;
-            (0, Ns.yC)(n) && t((0, hs.hU)());
+            (0, zs.yC)(n) && t((0, Us.hU)());
             const a = await e.getHomeScreenCards(i, {
               homeScreenSlots: s.matchedSlots,
               selfServeSuggestionsMatch: o.selfServeSuggestionsMatch,
             });
-            if ((t((0, Ls.Gp)(a)), !1 === a.cardsSuccess))
-              return t(Bs(a.conversations)), t(Zs("Couldn't load apps"));
+            if ((t((0, Ns.Gp)(a)), !1 === a.cardsSuccess))
+              return t(Fs(a.conversations)), t(Hs("Couldn't load apps"));
             const c = a.cards || a;
             return (
-              c.forEach((r) => t((0, Ds.YS)(e, r))),
+              c.forEach((r) => t((0, Ls.YS)(e, r))),
               a.ticketTypes && t((0, Yr.M)(a.ticketTypes)),
               t(
-                Us(
+                Zs(
                   c.map((e) => ({
                     uri: e.uri,
                     messengerCardId: e.messenger_card_id,
@@ -21725,24 +21695,23 @@
             );
           },
           Vs = () => ({ type: C.ntj }),
-          Us = (e, t, r, n) => ({
+          Zs = (e, t, r, n) => ({
             type: C.HKk,
             cards: e,
             conversations: t,
             hasMoreConversations: r,
             openInboundConversationIds: n,
           }),
-          Bs = (e) => ({ type: C.NmC, conversations: e }),
-          Zs = (e) => ({ type: C.Egy, error: e });
-        var Fs = r(77011),
-          Hs = r(42307),
-          $s = r(54930);
-        var qs = r(38049),
-          Ws = r(6435),
-          Gs = r(59685),
-          Ys = r(89853),
+          Fs = (e) => ({ type: C.NmC, conversations: e }),
+          Hs = (e) => ({ type: C.Egy, error: e });
+        var $s = r(77011),
+          qs = r(42307),
+          Ws = r(54930);
+        var Gs = r(38049),
+          Ys = r(6435),
+          Js = r(59685),
           Qs = r(66494);
-        function Js(e, t) {
+        function Ks(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
             var n = Object.getOwnPropertySymbols(e);
@@ -21754,16 +21723,16 @@
           }
           return r;
         }
-        function Ks(e) {
+        function Xs(e) {
           for (var t = 1; t < arguments.length; t++) {
             var r = null != arguments[t] ? arguments[t] : {};
             t % 2
-              ? Js(Object(r), !0).forEach(function (t) {
-                  Xs(e, t, r[t]);
+              ? Ks(Object(r), !0).forEach(function (t) {
+                  ea(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : Js(Object(r)).forEach(function (t) {
+              : Ks(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -21773,7 +21742,7 @@
           }
           return e;
         }
-        function Xs(e, t, r) {
+        function ea(e, t, r) {
           return (
             (t = (function (e) {
               var t = (function (e, t) {
@@ -21800,35 +21769,35 @@
             e
           );
         }
-        const { assign: ea } = Object;
-        function ta(e, t, r) {
+        const { assign: ta } = Object;
+        function ra(e, t, r) {
           let n = t(e.getState());
           return () => {
             const i = t(e.getState());
             n !== i && ((n = i), r(i));
           };
         }
-        function ra(e) {
+        function na(e) {
           const t = {},
             r = l.Z.read((0, u.j8)(e)) || l.Z.read((0, u.Xp)(e)),
             n = l.Z.read((0, u.Fj)(e));
           return (
-            r && ea(t, { anonymousId: r }),
-            n && ea(t, { anonymousSession: n }),
+            r && ta(t, { anonymousId: r }),
+            n && ta(t, { anonymousSession: n }),
             t
           );
         }
-        function na(e) {
+        function ia(e) {
           return e.intercomSettings;
         }
-        const ia = class Session {
+        const oa = class Session {
           constructor(e, t, r) {
             (this.handleCustomLauncherClick = (e) => {
               e.preventDefault(),
                 this.toggleMessenger(),
                 this.addLauncherClickedMetric();
               return (
-                Is(na(this.window)) &&
+                Ps(ia(this.window)) &&
                   (I.ZP.addIncrementOpMetric("legacyCustomLauncherClick"),
                   I.ZP.buildAndAddHcMetric("legacyCustomLauncherClick")),
                 !1
@@ -21842,7 +21811,7 @@
                   e && this.sendMessengerOpenRequest(),
                   e ||
                     "messenger-trigger" !== (0, a.WP)(this.store.getState()) ||
-                    this.store.dispatch(us.ZP.navigateBack());
+                    this.store.dispatch(ps.ZP.navigateBack());
               }),
               (this.handleUnreadConversationCountChange = (e) => {
                 this.unreadConversationCountChangeCallbacks.forEach((t) =>
@@ -21856,7 +21825,7 @@
               (this.store =
                 t ||
                 ((e) => {
-                  const t = ls(e);
+                  const t = ds(e);
                   return t.subscribe(R(t)), t;
                 })()),
               (this.destroyApp = r),
@@ -21879,9 +21848,9 @@
               })(this.window),
               o = this.store.getState().app;
             let { session: s } = this.store.getState();
-            const a = Es(n);
+            const a = Is(n);
             if (
-              ((s = ea({}, s, a)),
+              ((s = ta({}, s, a)),
               !(function (e) {
                 return e && e.appId;
               })(s))
@@ -21894,9 +21863,9 @@
               );
             const { appId: c } = s;
             (({ appWindow: e, appId: t }) => {
-              if (Ms(e)) {
-                const r = Ms(e.parent),
-                  n = xs(e),
+              if (xs(e)) {
+                const r = xs(e.parent),
+                  n = Ds(e),
                   { referrer: i } = e.document;
                 (0, I.o2)(`messenger_sandboxed - referrer=${i}`),
                   (0, I.bk)("messenger_sandboxed", {
@@ -21906,8 +21875,8 @@
                   });
               }
             })({ appWindow: this.window, appId: c }),
-              (s = ea({}, s, ra(c)));
-            const d = Ss(n),
+              (s = ta({}, s, na(c)));
+            const d = Es(n),
               p = {};
             if ((0, u.w6)())
               (p.marketo_tracking_cookie = null),
@@ -21924,29 +21893,29 @@
                 e && (p.hubspot_tracking_cookie = e);
               }
             }
-            const h = Ps(n);
+            const h = js(n);
             h && this.enableCustomLauncher(h),
               (this.stopMetricsPolling = I.ZP.startMetricsPolling(
                 s,
                 this.window,
               ));
             const v = this.window.document.URL,
-              f = ks(n);
+              f = Ts(n);
             return this.store
               .dispatch(
-                Vi.ZP.createOrUpdateUser(
+                Ni.ZP.createOrUpdateUser(
                   b.ZP,
                   s,
                   v,
                   d,
-                  js(n),
                   As(n),
+                  ks(n),
                   f,
                   r,
                   i,
                   t,
                   p,
-                  (0, Rs.f)(),
+                  (0, Ms.f)(),
                   this.destroyApp,
                 ),
               )
@@ -21955,9 +21924,9 @@
           sendMessengerOpenRequest() {
             this.whenReady(() =>
               this.store
-                .dispatch(Vi.ZP.sendMessengerOpen(b.ZP, (0, Rs.f)()))
+                .dispatch(Ni.ZP.sendMessengerOpen(b.ZP, (0, Ms.f)()))
                 .then((e) => e && this.handleMessengerOpen(e))
-                .then(() => this.store.dispatch(Vi.ZP.messengerOpenHandled())),
+                .then(() => this.store.dispatch(Ni.ZP.messengerOpenHandled())),
             );
           }
           handleMessengerOpen(e) {
@@ -21973,12 +21942,12 @@
               openInboundConversationIds: d,
             } = e;
             this.store.dispatch((0, h.vd)(t)),
-              this.store.dispatch((0, Hs.x)(r)),
-              this.store.dispatch((0, Ls.SV)(d));
+              this.store.dispatch((0, qs.x)(r)),
+              this.store.dispatch((0, Ns.SV)(d));
             const p = this.store.getState(),
               v = p.app;
             this.store.dispatch(
-              us.ZP.updateResolutionBotStateFromOpen(
+              ps.ZP.updateResolutionBotStateFromOpen(
                 o()(n, v.accessToTeammateEnabled),
                 o()(a, v.selfServeSuggestionsMatch),
                 o()(c, v.activeAdmins),
@@ -21986,35 +21955,35 @@
                 u,
               ),
             ),
-              l && this.store.dispatch((0, Ui.Ud)(l));
-            const f = (0, ps.DW)(p),
-              g = "/messages/conversation/trigger-screen" === (0, Ws.Fy)(p);
+              l && this.store.dispatch((0, zi.Ud)(l));
+            const f = (0, vs.DW)(p),
+              g = "/messages/conversation/trigger-screen" === (0, Ys.Fy)(p);
             if (f && g) {
-              const e = u ? "/messages/conversation/new" : (0, ps.CF)(p);
+              const e = u ? "/messages/conversation/new" : (0, vs.CF)(p);
               this.store.dispatch((0, s.gx)(e));
             }
           }
           createCustomizationOverride(e) {
-            const t = ks(this.getSettings(e));
+            const t = Ts(this.getSettings(e));
             return this.store.dispatch((0, v.w)(t));
           }
           destroy(e = !0) {
-            this.store.dispatch(Vi.ZP.destroySession(e)),
+            this.store.dispatch(Ni.ZP.destroySession(e)),
               this.stopMetricsPolling && this.stopMetricsPolling(),
               this.disableCustomLauncher(),
               this.removeStoreSubscribers(),
-              Vi.ZP.setupDefaultCreateOrUpdateUserRateLimiting(),
-              Vi.ZP.isDuplicateCreateOrUpdateUserRequest.reset();
+              Ni.ZP.setupDefaultCreateOrUpdateUserRateLimiting(),
+              Ni.ZP.isDuplicateCreateOrUpdateUserRequest.reset();
           }
           openMessenger() {
             this.whenReady(() => {
               const { borderless: e } = this.store.getState();
               e.conversationId
                 ? this.store.dispatch(
-                    us.ZP.openConversationInMessenger(e.conversationId),
+                    ps.ZP.openConversationInMessenger(e.conversationId),
                   )
-                : (this.store.dispatch(us.ZP.showInitialScreen()),
-                  this.store.dispatch(us.ZP.openMessenger()));
+                : (this.store.dispatch(ps.ZP.showInitialScreen()),
+                  this.store.dispatch(ps.ZP.openMessenger()));
             });
           }
           openOnBoot() {
@@ -22024,10 +21993,10 @@
               switch (r.type) {
                 case "conversation":
                   const e = r.metadata.conversationId;
-                  e && t(us.ZP.openConversationInMessenger(e));
+                  e && t(ps.ZP.openConversationInMessenger(e));
                   break;
                 case "new_conversation":
-                  t(us.ZP.openMessenger()), t(us.ZP.showNewConversation());
+                  t(ps.ZP.openMessenger()), t(ps.ZP.showNewConversation());
                   break;
                 case "article":
                   if (
@@ -22044,7 +22013,7 @@
                         : n.metadata;
                     if (e) {
                       const r = e.conversationId;
-                      r && t(us.ZP.openConversationInMessenger(r));
+                      r && t(ps.ZP.openConversationInMessenger(r));
                     }
                     t(
                       (0, m.$y)(
@@ -22059,7 +22028,7 @@
                   break;
                 case "open_checklist":
                   const i = r.metadata.checklistProgressId;
-                  t(us.ZP.openMessenger()), t((0, Ys.qf)(i));
+                  t(ps.ZP.openMessenger()), t((0, Mi.qf)(i));
               }
             r.metadata.openArticleStandalone &&
               this.showArticle(
@@ -22076,70 +22045,70 @@
             const { dispatch: t, getState: r } = this.store,
               { articleIds: n } = e.metadata,
               i = n.pop();
-            if (!(0, Ns.yC)(r())) return void t({ type: C.V_E });
-            const o = (0, ps.c0)(r());
-            await t(zs(b.ZP)),
-              t(o ? (0, s.VF)("/help") : (0, hs.VH)(!0)),
-              t((0, Fs.N_)(i, null, !0, !0)),
-              t(us.ZP.openMessenger(!0)),
-              t((0, Fs.V8)(i, null, !0));
+            (0, zs.yC)(r())
+              ? (await t(Bs(b.ZP)),
+                t((0, s.VF)("/help")),
+                t((0, $s.N_)(i, null, !0, !0)),
+                t(ps.ZP.openMessenger(!0)),
+                t((0, $s.V8)(i, null, !0)))
+              : t({ type: C.V_E });
           }
           async showConversation(e) {
             this.whenReady(async () => {
-              this.store.dispatch(us.ZP.getAndOpenConversation(e));
+              this.store.dispatch(ps.ZP.getAndOpenConversation(e));
             });
           }
           closeMessenger() {
             this.whenReady(() => {
-              this.store.dispatch(us.ZP.closeMessenger());
+              this.store.dispatch(ps.ZP.closeMessenger());
             });
           }
           toggleMessenger() {
             this.whenReady(() => {
-              this.store.dispatch(us.ZP.toggleMessenger());
+              this.store.dispatch(ps.ZP.toggleMessenger());
             });
           }
           showConversations() {
             this.whenReady(() => {
-              this.store.dispatch(us.ZP.openConversations());
+              this.store.dispatch(ps.ZP.openConversations());
             });
           }
           showNewConversation(e) {
             this.whenReady(() => {
-              this.store.dispatch(us.ZP.openNewConversation(e));
+              this.store.dispatch(ps.ZP.openNewConversation(e));
             });
           }
           sendMessage(e) {
             this.whenReady(() => {
               const t = this.store.getState(),
-                r = (0, Ws.Fy)(t),
-                n = (0, Gs.matchPath)(
-                  `/${qs.Yu.id}/conversation/:conversationId`,
+                r = (0, Ys.Fy)(t),
+                n = (0, Js.matchPath)(
+                  `/${Gs.Yu.id}/conversation/:conversationId`,
                   r,
                 );
               let i = (null == n ? void 0 : n.params.conversationId) || "";
               "new" === i && (i = void 0);
-              const o = (0, ki.jo)(i)(t);
+              const o = (0, ji.jo)(i)(t);
               "state_closed" === (null == o ? void 0 : o.state) &&
-                (this.store.dispatch(us.ZP.showNewConversation()),
+                (this.store.dispatch(ps.ZP.showNewConversation()),
                 (i = void 0));
               const s = {
                 body: [{ type: "paragraph", text: e }],
                 clientId: (0, pi.D)(),
                 createdAt: new Date(),
               };
-              this.store.dispatch((0, Ui.Cv)(b.ZP, i, s));
+              this.store.dispatch((0, zi.Cv)(b.ZP, i, s));
             });
           }
           startSurvey(e) {
             this.whenReady(() => {
-              this.store.dispatch((0, Li.MK)(e, $s.f.triggered_from_code)),
+              this.store.dispatch((0, xi.MK)(e, Ws.f.triggered_from_code)),
                 this.store.dispatch((0, Qs.YG)());
             });
           }
           startChecklist(e) {
             this.whenReady(() => {
-              this.store.dispatch((0, Di.Rq)(e, $s.f.triggered_from_code, !0));
+              this.store.dispatch((0, Mi.Rq)(e, Ws.f.triggered_from_code, !0));
             });
           }
           startTour(e) {
@@ -22149,7 +22118,7 @@
           }
           createEvent(e, t) {
             this.whenReady(() => {
-              this.store.dispatch(Vi.ZP.createEvent(b.ZP, e, t));
+              this.store.dispatch(Ni.ZP.createEvent(b.ZP, e, t));
             });
           }
           createArticleReaction(e, t, r, n) {
@@ -22170,18 +22139,18 @@
           }
           previewOutboundCustomBot(e) {
             this.whenReady(() => {
-              this.store.dispatch((0, Yo.Lt)(b.ZP, e));
+              this.store.dispatch((0, Qo.Lt)(b.ZP, e));
             });
           }
           previewWorkflow(e) {
             this.whenReady(() => {
-              this.store.dispatch((0, Yo.$W)(b.ZP, e));
+              this.store.dispatch((0, Qo.$W)(b.ZP, e));
             });
           }
           createMetric(e, t) {
             this.whenReady(() => {
               const { session: r, user: n } = this.store.getState();
-              t = ea(
+              t = ta(
                 {
                   anonymous_id: r.anonymousId,
                   end_user_id: n.id,
@@ -22204,7 +22173,7 @@
             });
           }
           trigger(e) {
-            return this.store.dispatch((0, Yo.fw)(e, b.ZP));
+            return this.store.dispatch((0, Qo.fw)(e, b.ZP));
           }
           triggerBot(e) {
             var t;
@@ -22219,10 +22188,10 @@
             return i ? this.trigger(i) : void 0;
           }
           getSettings(e) {
-            return ea({}, na(this.window), e);
+            return ta({}, ia(this.window), e);
           }
           setSetting(e, t) {
-            na(this.window)[e] = t;
+            ia(this.window)[e] = t;
           }
           getArticleReaction(e, t, r) {
             this.whenReady(() => {
@@ -22242,22 +22211,22 @@
           }
           previewSurvey(e) {
             this.whenReady(() => {
-              this.store.dispatch((0, Li.XG)(e));
+              this.store.dispatch((0, xi.XG)(e));
             });
           }
           fetchTooltips(e) {
             const { session: t } = this.store.getState(),
               r = this.getSettings(e),
-              n = Es(r),
+              n = Is(r),
               i =
                 (null == t ? void 0 : t.appId) ||
                 (null == n ? void 0 : n.appId);
             if (!i) return;
-            const o = ra(i),
-              s = Ks(Ks(Ks({}, t), n), o);
+            const o = na(i),
+              s = Xs(Xs(Xs({}, t), n), o);
             if (!s) return;
             s.sessionId || (s.sessionId = pi.Z.generateUUID());
-            const a = Ss(r);
+            const a = Es(r);
             this.store.dispatch((0, g.hn)({ session: s, customAttributes: a }));
           }
           previewTooltipGroup(e) {
@@ -22284,7 +22253,7 @@
           }
           onUnreadConversationCountChange(e) {
             const t = this.store.getState(),
-              r = (0, ds.qu)(t);
+              r = (0, hs.qu)(t);
             this.unreadConversationCountChangeCallbacks.push(e), e(r);
           }
           onUserEmailSupplied(e) {
@@ -22293,17 +22262,17 @@
           enableCustomLauncher(e) {
             this.disableCustomLauncher();
             const t = this.window.document.getElementsByTagName("body")[0];
-            (this.customLauncherClickHandler = (0, Ts.Zf)(
+            (this.customLauncherClickHandler = (0, Rs.Zf)(
               t,
               e,
               this.handleCustomLauncherClick,
             )),
-              (0, Ts.Oo)(t, "click", this.customLauncherClickHandler);
+              (0, Rs.Oo)(t, "click", this.customLauncherClickHandler);
           }
           disableCustomLauncher() {
             if (!this.customLauncherClickHandler) return;
             const e = this.window.document.getElementsByTagName("body")[0];
-            (0, Ts.xg)(e, "click", this.customLauncherClickHandler),
+            (0, Rs.xg)(e, "click", this.customLauncherClickHandler),
               (this.customLauncherClickHandler = null);
           }
           whenReady(e) {
@@ -22337,7 +22306,7 @@
             if (
               (this.executeReadyCallbacks(),
               (this.isReady = !0),
-              (0, Rs.f)() &&
+              (0, Ms.f)() &&
                 this.window.parent.postMessage("messenger_session_ready", "*"),
               !(0, p.cy)())
             ) {
@@ -22361,7 +22330,7 @@
               } = n();
               i || this.openMessenger(),
                 this.whenReady(() => {
-                  r((0, Fs.Me)(e, {}, !1, !1, "", t));
+                  r((0, $s.Me)(e, {}, !1, !1, "", t));
                 });
             });
           }
@@ -22372,7 +22341,7 @@
               const {
                 app: { isMessengerOpen: n },
               } = r();
-              n || t(us.ZP.openMessenger()), t((0, s.VF)(`/news/details/${e}`));
+              n || t(ps.ZP.openMessenger()), t((0, s.VF)(`/news/details/${e}`));
             });
           }
           showTicket(e) {
@@ -22382,7 +22351,7 @@
               const {
                 app: { isMessengerOpen: e },
               } = r();
-              e || t(us.ZP.openMessenger()),
+              e || t(ps.ZP.openMessenger()),
                 n.then((e) => {
                   var r;
                   null != e &&
@@ -22391,7 +22360,7 @@
                     r.id &&
                     t(
                       (0, s.VF)(`/tickets/details/${e.payload.id}`, {
-                        navigatingFrom: Uo.RO,
+                        navigatingFrom: Zo.RO,
                       }),
                     );
                 });
@@ -22402,7 +22371,7 @@
             const { dispatch: r, getState: n } = this.store,
               i = n(),
               o =
-                null === (t = (0, ps.fh)(i).find((t) => t.id === e)) ||
+                null === (t = (0, vs.fh)(i).find((t) => t.id === e)) ||
                 void 0 === t
                   ? void 0
                   : t.path;
@@ -22412,8 +22381,8 @@
                   app: { isMessengerOpen: e },
                   article: { isLoaded: t },
                 } = i;
-                e || r(us.ZP.openMessenger()),
-                  t && r((0, Fs.Xn)()),
+                e || r(ps.ZP.openMessenger()),
+                  t && r((0, $s.Xn)()),
                   r((0, s.VF)(o));
               });
           }
@@ -22427,7 +22396,7 @@
           }
           createMessengerChangeSubscriber() {
             this.addStoreSubscriber(
-              ta(
+              ra(
                 this.store,
                 (e) => e.app.isMessengerOpen,
                 this.handleMessengerChange,
@@ -22436,12 +22405,12 @@
           }
           createUnreadConversationCountChangeSubscriber() {
             this.addStoreSubscriber(
-              ta(this.store, ds.qu, this.handleUnreadConversationCountChange),
+              ra(this.store, hs.qu, this.handleUnreadConversationCountChange),
             );
           }
           createUserEmailSuppliedSubscriber() {
             this.addStoreSubscriber(
-              ta(
+              ra(
                 this.store,
                 (e) => {
                   var t;
@@ -22465,44 +22434,43 @@
             });
           }
         };
-        var oa = r(72047),
-          sa = r.n(oa),
-          aa = r(35270),
-          ca = r(6186);
-        const la = (0, Ti.createSelector)([(e) => e.accessibility], (e) => e);
-        var ua = r(22977),
-          da = r.n(ua);
-        const pa = (0, Ti.createSelector)(
-          ca.Z,
-          ps.c0,
-          ({ color: e, secondaryColor: t }, r) => {
+        var sa = r(72047),
+          aa = r.n(sa),
+          ca = r(35270),
+          la = r(6186);
+        const ua = (0, Ai.createSelector)([(e) => e.accessibility], (e) => e);
+        var da = r(22977),
+          pa = r.n(da);
+        const ha = (0, Ai.createSelector)(
+          la.Z,
+          ({ color: e, secondaryColor: t }) => {
             if (!e || !t) return {};
             const {
-              gradient_start_color: n,
-              gradient_end_color: i,
-              launcher_icon_color: o,
-            } = da()({
+              gradient_start_color: r,
+              gradient_end_color: n,
+              launcher_icon_color: i,
+            } = pa()({
               primaryColor: e,
               secondaryColor: t,
               darkenAmount: 20,
-              pureBlackActionColors: r,
+              pureBlackActionColors: !0,
             });
             return {
               primaryColor: e,
               secondaryColor: t,
-              gradientStartColor: n,
-              gradientEndColor: i,
-              launcherIconColor: o,
+              gradientStartColor: r,
+              gradientEndColor: n,
+              launcherIconColor: i,
             };
           },
         );
-        var ha = r(93893),
-          va = r(67690);
-        const fa = ({
+        var va = r(93893),
+          fa = r(67690);
+        const ga = ({
             isLauncherEnabled: e,
             customization: { verticalPadding: t },
-          }) => (e ? t + va.qe + va.OC : t),
-          ga = (e) => {
+          }) => (e ? t + fa.qe + fa.OC : t),
+          ma = (e) => {
             return `\n  @keyframes intercom-lightweight-app-launcher {\n    from {\n      opacity: 0;\n      transform: scale(0.5);\n    }\n    to {\n      opacity: 1;\n      transform: scale(1);\n    }\n  }\n\n  @keyframes intercom-lightweight-app-gradient {\n    from {\n      opacity: 0;\n    }\n    to {\n      opacity: 1;\n    }\n  }\n\n  @keyframes intercom-lightweight-app-messenger {\n    0% {\n      opacity: 0;\n      transform: scale(0);\n    }\n    40% {\n      opacity: 1;\n    }\n    100% {\n      transform: scale(1);\n    }\n  }\n\n  .intercom-lightweight-app {\n    position: fixed;\n    z-index: 2147483001;\n    width: 0;\n    height: 0;\n    font-family: intercom-font, "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;\n  }\n\n  .intercom-lightweight-app-gradient {\n    position: fixed;\n    z-index: 2147483002;\n    width: 500px;\n    height: 500px;\n    bottom: 0;\n    ${
               e.customization.alignment
             }: 0;\n    pointer-events: none;\n    background: radial-gradient(\n      ellipse at bottom ${
@@ -22514,30 +22482,30 @@
               e.customization.alignment
             }: ${(({ isMobile: e, customization: t }) =>
               e ? 20 : t.horizontalPadding)(e)}px;\n    max-width: ${
-              va.qe
-            }px;\n    width: ${va.qe}px;\n    max-height: ${
-              va.qe
+              fa.qe
+            }px;\n    width: ${fa.qe}px;\n    max-height: ${
+              fa.qe
             }px;\n    height: ${
-              va.qe
+              fa.qe
             }px;\n    border-radius: 50%;\n    background: ${
               e.colors.primaryColor
             };\n    cursor: pointer;\n    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);\n    transition: transform 167ms cubic-bezier(0.33, 0.00, 0.00, 1.00);\n    box-sizing: content-box;\n  }\n\n\n  .intercom-lightweight-app-launcher:hover {\n    transition: transform 250ms cubic-bezier(0.33, 0.00, 0.00, 1.00);\n    transform: scale(1.1)\n  }\n\n  .intercom-lightweight-app-launcher:active {\n    transform: scale(0.85);\n    transition: transform 134ms cubic-bezier(0.45, 0, 0.2, 1);\n  }\n\n\n  .intercom-lightweight-app-launcher:focus {\n    outline: none;\n\n    ${
               e.accessibility.tabNavigation
                 ? `box-shadow: inset 0 0 0 5px ${(({ accessibility: e }) =>
-                    ha.L[e.accessibilityTheme])(e)};`
+                    va.L[e.accessibilityTheme])(e)};`
                 : ""
             }\n  }\n\n  .intercom-lightweight-app-launcher-icon {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: ${
-              va.qe
+              fa.qe
             }px;\n    height: ${
-              va.qe
+              fa.qe
             }px;\n    transition: transform 100ms linear, opacity 80ms linear;\n  }\n\n  .intercom-lightweight-app-launcher-icon-open {\n    ${
               e.isMessengerOpen && !e.hideLightweightAppMessenger
                 ? "\n        opacity: 0;\n        transform: rotate(30deg) scale(0);\n      "
                 : "\n        opacity: 1;\n        transform: rotate(0deg) scale(1);\n      "
             }\n  }\n\n  .intercom-lightweight-app-launcher-icon-open svg {\n    width: ${
-              va.Ft
+              fa.Ft
             }px;\n    height: ${
-              va.Ft
+              fa.Ft
             }px;\n  }\n\n  .intercom-lightweight-app-launcher-icon-open svg path {\n    fill: ${
               e.colors.launcherIconColor
             };\n  }\n\n  .intercom-lightweight-app-launcher-icon-self-serve {\n    ${
@@ -22545,12 +22513,12 @@
                 ? "\n        opacity: 0;\n        transform: rotate(30deg) scale(0);\n      "
                 : "\n        opacity: 1;\n        transform: rotate(0deg) scale(1);\n      "
             }\n  }\n\n  .intercom-lightweight-app-launcher-icon-self-serve svg {\n    height: ${
-              va.qe - 4
+              fa.qe - 4
             }px;\n  }\n\n  .intercom-lightweight-app-launcher-icon-self-serve svg path {\n    fill: ${
               e.colors.launcherIconColor
             };\n  }\n\n  .intercom-lightweight-app-launcher-custom-icon-open {\n    max-height: ${
-              va.Ft
-            }px;\n    max-width: ${va.Ft}px;\n\n    ${
+              fa.Ft
+            }px;\n    max-width: ${fa.Ft}px;\n\n    ${
               e.isMessengerOpen && !e.hideLightweightAppMessenger
                 ? "\n        opacity: 0;\n        transform: rotate(30deg) scale(0);\n      "
                 : "\n        opacity: 1;\n        transform: rotate(0deg) scale(1);\n      "
@@ -22570,13 +22538,13 @@
                 : `\n        width: ${
                     ((t = e.isCompact), t ? 300 : 400)
                   }px;\n        height: ${((e) =>
-                    e.isCompact ? "250px" : `calc(100% - ${20 + fa(e)}px)`)(
+                    e.isCompact ? "250px" : `calc(100% - ${20 + ga(e)}px)`)(
                     e,
                   )};\n        max-height: 704px;\n        min-height: 250px;\n        ${
                     e.customization.alignment
                   }: ${
                     e.customization.horizontalPadding
-                  }px;\n        bottom: ${fa(
+                  }px;\n        bottom: ${ga(
                     e,
                   )}px;\n        box-shadow: 0 5px 40px rgba(0,0,0,0.16);\n      `
             }\n\n    border-radius: 16px;\n  }\n\n  .intercom-lightweight-app-messenger-header {\n    height: ${((
@@ -22591,15 +22559,15 @@
             }\n  }\n\n  @media print {\n    .intercom-lightweight-app {\n      display: none;\n    }\n  }\n`;
             var t;
           };
-        var ma = r(67592);
-        const ba = (e, t) => {
+        var ba = r(67592);
+        const ya = (e, t) => {
             const {
                 onLauncherClick: r,
                 onLauncherHover: n,
                 launcherLogoUrl: i,
                 allowSelfServeIcon: o,
               } = t,
-              s = _a(t),
+              s = Oa(t),
               a = e.document.createElement("div");
             a.addEventListener("click", r, !0),
               a.addEventListener("mouseover", n, !0),
@@ -22612,7 +22580,7 @@
               a.setAttribute("tabindex", "0"),
               a.setAttribute(
                 "aria-label",
-                (0, ma.Iu)("open_intercom_messenger"),
+                (0, ba.Iu)("open_intercom_messenger"),
               ),
               a.setAttribute("aria-live", "polite");
             const c = e.document.createElement("div");
@@ -22654,10 +22622,10 @@
               a
             );
           },
-          ya = (e, t, r, n, i, o) => (s) => {
+          wa = (e, t, r, n, i, o) => (s) => {
             if (
-              ((o.textContent = ga(s)),
-              t.locale !== s.locale && (0, ma.i_)(s.locale),
+              ((o.textContent = ma(s)),
+              t.locale !== s.locale && (0, ba.i_)(s.locale),
               !t.isAppActive && s.isAppActive
                 ? e.document.body.appendChild(r)
                 : t.isAppActive &&
@@ -22665,7 +22633,7 @@
                   e.document.body.removeChild(r),
               !t.isLauncherEnabled && s.isLauncherEnabled)
             ) {
-              const t = ba(e, s);
+              const t = ya(e, s);
               r.appendChild(t);
             } else if (t.isLauncherEnabled && !s.isLauncherEnabled) {
               const t = ((e) =>
@@ -22683,26 +22651,26 @@
               : (r.appendChild(n), r.appendChild(i)),
               (t = s);
           },
-          wa = (e, t) => () => {
+          _a = (e, t) => () => {
             const { body: r } = e.document;
             t && r.contains(t) && r.removeChild(t);
           },
-          _a =
+          Oa =
             ({ onLauncherKeypress: e }) =>
             ({ keyCode: t }) => {
-              (t !== Ts.tW.ENTER && t !== Ts.tW.SPACE) || e();
-            },
-          Oa =
-            ({ onTabKeyDown: e }) =>
-            ({ keyCode: t }) => {
-              t === Ts.tW.TAB && e();
+              (t !== Rs.tW.ENTER && t !== Rs.tW.SPACE) || e();
             },
           Ca =
+            ({ onTabKeyDown: e }) =>
+            ({ keyCode: t }) => {
+              t === Rs.tW.TAB && e();
+            },
+          Sa =
             ({ onClick: e }) =>
             () => {
               e();
             },
-          Sa = (e, t) => {
+          Ea = (e, t) => {
             const {
               isAppActive: r,
               isLauncherEnabled: n,
@@ -22710,9 +22678,9 @@
               locale: o,
               isCompact: s,
             } = t;
-            void 0 !== o && (0, ma.i_)(o);
-            const a = Oa(t),
-              c = Ca(t);
+            void 0 !== o && (0, ba.i_)(o);
+            const a = Ca(t),
+              c = Sa(t);
             e.document.addEventListener("keydown", a, !0),
               e.document.addEventListener("click", c, !1);
             const l = e.document.createElement("div");
@@ -22721,7 +22689,7 @@
               r && e.document.body.appendChild(l),
               n)
             ) {
-              const r = ba(e, t);
+              const r = ya(e, t);
               l.appendChild(r);
             }
             const u = e.document.createElement("div");
@@ -22752,26 +22720,26 @@
             const h = e.document.createElement("style");
             h.setAttribute("id", "intercom-lightweight-app-style"),
               h.setAttribute("type", "text/css");
-            const v = e.document.createTextNode(ga(t));
+            const v = e.document.createTextNode(ma(t));
             h.appendChild(v), l.appendChild(h);
             return {
-              updateLightweightApp: ya(e, t, l, u, p, v),
-              removeLightweightApp: wa(e, l),
+              updateLightweightApp: wa(e, t, l, u, p, v),
+              removeLightweightApp: _a(e, l),
             };
           },
-          Ea = (0, Ti.createSelector)(
+          Ia = (0, Ai.createSelector)(
             [(e) => e.app],
             (e) =>
               e.isBooted ||
               e.bootFailed ||
               (e.isBooting && e.isInstantBootEnabled),
           ),
-          Ia = (0, Ti.createSelector)([(e) => e.user], (e) =>
+          Pa = (0, Ai.createSelector)([(e) => e.user], (e) =>
             e ? e.locale : void 0,
           ),
-          Pa = (e) => ({ type: C.LmV, isActive: e });
-        var ja = r(46341);
-        function Aa(e, t) {
+          ja = (e) => ({ type: C.LmV, isActive: e });
+        var Aa = r(46341);
+        function ka(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
             var n = Object.getOwnPropertySymbols(e);
@@ -22783,16 +22751,16 @@
           }
           return r;
         }
-        function ka(e) {
+        function Ta(e) {
           for (var t = 1; t < arguments.length; t++) {
             var r = null != arguments[t] ? arguments[t] : {};
             t % 2
-              ? Aa(Object(r), !0).forEach(function (t) {
-                  Ta(e, t, r[t]);
+              ? ka(Object(r), !0).forEach(function (t) {
+                  Ra(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : Aa(Object(r)).forEach(function (t) {
+              : ka(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -22802,7 +22770,7 @@
           }
           return e;
         }
-        function Ta(e, t, r) {
+        function Ra(e, t, r) {
           return (
             (t = (function (e) {
               var t = (function (e, t) {
@@ -22829,108 +22797,108 @@
             e
           );
         }
-        const Ra = (0, Ti.createStructuredSelector)({
-            isAppActive: Ea,
+        const Ma = (0, Ai.createStructuredSelector)({
+            isAppActive: Ia,
             isLauncherEnabled: d.Z,
-            isMessengerOpen: aa.Z,
-            customization: ca.Z,
-            accessibility: la,
-            colors: pa,
+            isMessengerOpen: ca.Z,
+            customization: la.Z,
+            accessibility: ua,
+            colors: ha,
             launcherLogoUrl: a.aD,
             allowSelfServeIcon: a.iU,
-            locale: Ia,
+            locale: Pa,
             hideLightweightAppMessenger: a.i8,
-            isMinimalLightweightAppMessenger: ps.DW,
-            isCompact: ps.G0,
+            isMinimalLightweightAppMessenger: vs.DW,
+            isCompact: vs.G0,
           }),
-          Ma = (e) => {
-            const t = (0, ps.CF)(e.getState());
+          xa = (e) => {
+            const t = (0, vs.CF)(e.getState());
             (0, I.WM)("clicked", "launcher", "in_app", "", {
               is_messenger_open: !1,
               is_custom_launcher: !1,
               is_borderless_open: !1,
               space_opened: t,
             }),
-              e.dispatch((0, us.PJ)());
+              e.dispatch((0, ps.PJ)());
           },
-          xa = (e, t) => {
+          Da = (e, t) => {
             const r = ((e, t) => ({
                 isMobile: (0, c.UK)(),
                 onLauncherClick: () => {
                   const { tabNavigation: e } = t.getState().accessibility;
-                  e && t.dispatch((0, ja.gk)(!1)), Ma(t);
+                  e && t.dispatch((0, Aa.gk)(!1)), xa(t);
                 },
                 onLauncherHover: () => {
                   t.dispatch((0, hn.KQ)()), t.dispatch((0, hn._t)());
                 },
                 onLauncherKeypress: () => {
-                  Ma(t);
+                  xa(t);
                 },
                 onClick: () => {
                   const { tabNavigation: e } = t.getState().accessibility;
-                  e && t.dispatch((0, ja.gk)(!1));
+                  e && t.dispatch((0, Aa.gk)(!1));
                 },
                 onTabKeyDown: () => {
                   const { tabNavigation: e } = t.getState().accessibility;
-                  e || t.dispatch((0, ja.gk)(!0));
+                  e || t.dispatch((0, Aa.gk)(!0));
                 },
               }))(0, t),
-              n = Ra(t.getState()),
-              i = ka(ka({}, n), r),
-              { updateLightweightApp: o, removeLightweightApp: s } = Sa(e, i);
-            t.dispatch(Pa(!0));
+              n = Ma(t.getState()),
+              i = Ta(Ta({}, n), r),
+              { updateLightweightApp: o, removeLightweightApp: s } = Ea(e, i);
+            t.dispatch(ja(!0));
             const a = t.subscribe(() => {
-              const e = Ra(t.getState());
+              const e = Ma(t.getState());
               if (e === n) return;
-              const i = ka(ka({}, e), r);
+              const i = Ta(Ta({}, e), r);
               o(i);
             });
             return () => {
-              a(), s(e), t.dispatch(Pa(!1));
+              a(), s(e), t.dispatch(ja(!1));
             };
           };
-        var Da = r(50099),
-          La = r(39425);
-        const Na = (0, Ti.createSelector)(
+        var La = r(50099),
+          Na = r(39425);
+        const za = (0, Ai.createSelector)(
             [(e) => e.app.isMessengerOpen],
             (e) => e,
           ),
-          za = (0, Ti.createSelector)([_.Z], (e) => e.length > 0),
-          Va = (0, Ti.createSelector)([O.Z], (e) => e.length > 0),
-          Ua = (0, Ti.createSelector)([Da.Z], (e) => e.length > 0),
-          Ba = (0, Ti.createSelector)(
+          Ua = (0, Ai.createSelector)([_.Z], (e) => e.length > 0),
+          Ba = (0, Ai.createSelector)([O.Z], (e) => e.length > 0),
+          Va = (0, Ai.createSelector)([La.Z], (e) => e.length > 0),
+          Za = (0, Ai.createSelector)(
             [(e) => e.install.isInstallModeOpen],
             (e) => e,
           ),
-          Za = (0, Ti.createSelector)([(e) => e.banners], (e) => e.length > 0),
-          Fa = (0, Ti.createSelector)([La.S7], (e) => e),
-          Ha = (0, Ti.createSelector)(
+          Fa = (0, Ai.createSelector)([(e) => e.banners], (e) => e.length > 0),
+          Ha = (0, Ai.createSelector)([Na.S7], (e) => e),
+          $a = (0, Ai.createSelector)(
             [(e) => e.launcherDiscoveryMode.isLauncherDiscoveryModeOpening],
             (e) => e,
           ),
-          $a = (0, Ti.createSelector)(
+          qa = (0, Ai.createSelector)(
             [(e) => e.tour.activeTour],
             (e) => null != e,
           ),
-          qa = (0, Ti.createSelector)([(e) => e.survey], (e) => !!e),
-          Wa = (0, Ti.createSelector)(
-            [Na, za, Va, Ua, Ba, Za, Fa, Ha, $a, qa],
+          Wa = (0, Ai.createSelector)([(e) => e.survey], (e) => !!e),
+          Ga = (0, Ai.createSelector)(
+            [za, Ua, Ba, Va, Za, Fa, Ha, $a, qa, Wa],
             (e, t, r, n, i, o, s, a, c, l) =>
               Boolean(e || t || r || n || i || o || s || a || c || l),
           );
-        var Ga = r(10889),
-          Ya = r(96137);
+        var Ya = r(10889),
+          Ja = r(96137);
         const Qa = async (e = 3) => {
             try {
               const t = Date.now(),
-                n = await sa()(
+                n = await aa()(
                   async () =>
                     await Promise.all([
                       r.e(2461),
                       r.e(3481),
                       r.e(9870),
                       r.e(2143),
-                    ]).then(r.bind(r, 64489)),
+                    ]).then(r.bind(r, 34093)),
                   { retries: e },
                 ),
                 i = Date.now();
@@ -22939,10 +22907,10 @@
               throw ((0, I.bk)("load_app_bundle_failed"), e);
             }
           },
-          Ja = async (e = 3) => {
+          Ka = async (e = 3) => {
             try {
               return (
-                await sa()(
+                await aa()(
                   async () =>
                     await Promise.all([
                       r.e(2461),
@@ -22957,7 +22925,7 @@
               throw e;
             }
           },
-          Ka = async (e) => {
+          Xa = async (e) => {
             try {
               const t = e.getState(),
                 { launcherLogoUrl: r } = t.app;
@@ -22973,9 +22941,9 @@
               (0, I.bk)("load_launcher_image_failed");
             }
           },
-          Xa = async (e, t) => {
-            await Ka(t);
-            const r = !(0, Ya.m)() ? xa(e, t) : () => {};
+          ec = async (e, t) => {
+            await Xa(t);
+            const r = !(0, Ja.m)() ? Da(e, t) : () => {};
             let n,
               i,
               o = !0;
@@ -22983,17 +22951,17 @@
               ((e) =>
                 new Promise((t) => {
                   const r = e.subscribe(() => {
-                    (0, Ga.JX)(e.getState()) && (r(), t());
+                    (0, Ya.JX)(e.getState()) && (r(), t());
                   });
                 }))(t).then(async () => {
-                const r = await Ja();
+                const r = await Ka();
                 n = r(e, t);
               }),
               ((e) =>
                 new Promise((t) => {
-                  (0, Ya.m)() && t();
+                  (0, Ja.m)() && t();
                   const r = e.subscribe(() => {
-                    Wa(e.getState()) && (r(), t());
+                    Ga(e.getState()) && (r(), t());
                   });
                 }))(t).then(async () => {
                 if (!o) return;
@@ -23012,22 +22980,22 @@
               }
             );
           };
-        const ec = class App {
+        const tc = class App {
           constructor(e) {
             (this.destroySession = (e) => {
               this.session.destroy(e),
-                (this.session = new ia(this.window)),
+                (this.session = new oa(this.window)),
                 this.renderApp && this.renderApp.then((e) => e()),
                 (this.renderApp = void 0);
             }),
               (this.window = e),
-              (this.session = new ia(this.window, null, this.destroySession));
+              (this.session = new oa(this.window, null, this.destroySession));
           }
           createOrUpdateUser(e, t) {
             const r = this.session.createOrUpdateUser(e, t);
             return (
               this.renderApp ||
-                (this.renderApp = Xa(this.window, this.session.store)),
+                (this.renderApp = ec(this.window, this.session.store)),
               r
             );
           }
@@ -23183,10 +23151,10 @@
             if (this.session.isReady) return this.session.triggerBot(e);
           }
         };
-        var tc = r(94682),
-          rc = r(88324),
-          nc = r(41035);
-        function ic(e, t) {
+        var rc = r(94682),
+          nc = r(88324),
+          ic = r(41035);
+        function oc(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
             var n = Object.getOwnPropertySymbols(e);
@@ -23198,16 +23166,16 @@
           }
           return r;
         }
-        function oc(e) {
+        function sc(e) {
           for (var t = 1; t < arguments.length; t++) {
             var r = null != arguments[t] ? arguments[t] : {};
             t % 2
-              ? ic(Object(r), !0).forEach(function (t) {
-                  sc(e, t, r[t]);
+              ? oc(Object(r), !0).forEach(function (t) {
+                  ac(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : ic(Object(r)).forEach(function (t) {
+              : oc(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -23217,7 +23185,7 @@
           }
           return e;
         }
-        function sc(e, t, r) {
+        function ac(e, t, r) {
           return (
             (t = (function (e) {
               var t = (function (e, t) {
@@ -23244,14 +23212,14 @@
             e
           );
         }
-        const ac = "Intercom",
-          cc = "q";
-        function lc(e) {
+        const cc = "Intercom",
+          lc = "q";
+        function uc(e) {
           return (...t) => {
             const r = (t = {}, r = () => {}) => {
-                t.api_base && (0, tc.MF)("api_base", t.api_base);
+                t.api_base && (0, rc.MF)("api_base", t.api_base);
                 const n = e.session.getSettings();
-                oc(oc({}, n), t).disabled ||
+                sc(sc({}, n), t).disabled ||
                   (n.disabled && e.session.setSetting("disabled", !1),
                   e.fetchTooltips(t),
                   e.createCustomizationOverride(t),
@@ -23330,7 +23298,7 @@
                   return e.getVisitorId();
                 },
                 version() {
-                  return "c7e724a7ea17f840b4a85d16491574b6c6aabe59";
+                  return "91fe5435eab0d9038cc28ab1e13210b782141488";
                 },
                 "private:getArticleReaction": (t, r, n) => {
                   e.getArticleReaction(t, r, n);
@@ -23375,21 +23343,21 @@
                   e.handleIntersectionBoot();
                 },
                 "private:previewTooltipGroup": (t) => {
-                  (0, rc.L)("Previewing tooltip group", t),
+                  (0, nc.L)("Previewing tooltip group", t),
                     e.previewTooltipGroup(t);
                 },
                 "private:exitPreviewTooltipGroup": () => {
                   e.exitPreviewTooltipGroup();
                 },
                 "private:bootConversationDemoMode": (t = {}, n = () => {}) => {
-                  (0, Ya.O)(), r(t, n), e.showNewConversation();
+                  (0, Ja.O)(), r(t, n), e.showNewConversation();
                 },
                 "private:sendMessage": (t) => {
                   e.sendMessage(t);
                 },
                 "private:bootFinPreview": (t = {}, n = () => {}) => {
-                  (0, Ya.O)(),
-                    (0, nc.kt)(t.workflowInstanceId),
+                  (0, Ja.O)(),
+                    (0, ic.kt)(t.workflowInstanceId),
                     r(t, n),
                     e.showNewConversation();
                 },
@@ -23397,8 +23365,8 @@
                   t = {},
                   n = () => {},
                 ) => {
-                  (0, Ya.O)(),
-                    (0, nc.kt)(t.workflowInstanceId),
+                  (0, Ja.O)(),
+                    (0, ic.kt)(t.workflowInstanceId),
                     r(t, n),
                     e.showNewConversation();
                 },
@@ -23410,17 +23378,17 @@
               : n[i](...t.slice(1));
           };
         }
-        function uc(e, t) {
-          (t[ac] = e), (t[ac].booted = !0);
-        }
-        function dc(e) {
-          const t = (function (e) {
-            return e[ac];
-          })(e);
-          return (t && t[cc]) || [];
+        function dc(e, t) {
+          (t[cc] = e), (t[cc].booted = !0);
         }
         function pc(e) {
-          return dc(e).some(
+          const t = (function (e) {
+            return e[cc];
+          })(e);
+          return (t && t[lc]) || [];
+        }
+        function hc(e) {
+          return pc(e).some(
             (e) =>
               "boot" === e[0] ||
               "shutdown" === e[0] ||
@@ -23428,17 +23396,17 @@
               "private:workflow:bootMessengerPreview" === e[0],
           );
         }
-        function hc(e, t) {
-          const r = dc(t);
+        function vc(e, t) {
+          const r = pc(t);
           for (; r.length; ) e(...r.shift());
         }
-        var vc = r(62017),
-          fc = r(43726),
-          gc = r.n(fc);
-        const mc = r(97234),
-          bc = "intercom-snippet__intersection-mode",
-          yc = "intersection-frame",
-          wc = "intersection-container";
+        var fc = r(62017),
+          gc = r(43726),
+          mc = r.n(gc);
+        const bc = r(97234),
+          yc = "intercom-snippet__intersection-mode",
+          wc = "intersection-frame",
+          _c = "intersection-container";
         (0, r(7261).wI)(window.parent),
           (0, n.Z)(window),
           (function (e) {
@@ -23476,15 +23444,15 @@
           (window.requestAnimationFrame =
             window.parent.requestAnimationFrame ||
             window.requestAnimationFrame);
-        const _c = parent;
+        const Oc = parent;
         (0, Ci.Td)(window);
-        const Oc = new ec(_c);
-        (0, Ci.QL)(Oc.session.store);
-        const Cc = lc(Oc),
-          Sc = pc(_c);
-        hc(Cc, _c),
-          uc(Cc, _c),
-          Sc || Cc("boot"),
+        const Cc = new tc(Oc);
+        (0, Ci.QL)(Cc.session.store);
+        const Sc = uc(Cc),
+          Ec = hc(Oc);
+        vc(Sc, Oc),
+          dc(Sc, Oc),
+          Ec || Sc("boot"),
           new (class Intersection {
             constructor(e) {
               (this.intercomDomains = [
@@ -23517,13 +23485,13 @@
                     })));
             }
             sendMessageToOpener(e) {
-              (0, vc.mE)(this.opener) && this.opener.postMessage(e, "*");
+              (0, fc.mE)(this.opener) && this.opener.postMessage(e, "*");
             }
             openerExists() {
               return !!this.opener;
             }
             modeExists() {
-              return !!Z.y.get(bc);
+              return !!Z.y.get(yc);
             }
             setupMessageListener() {
               this.window.addEventListener(
@@ -23532,7 +23500,7 @@
               );
             }
             getMode() {
-              return Z.y.get(bc);
+              return Z.y.get(yc);
             }
             getAppId() {
               return Z.y.get("intercom-snippet__intersection-app-id");
@@ -23561,14 +23529,14 @@
               Z.y.set("intercom-snippet__intersection-opener-origin", e);
             }
             injectIntersection(e, t, r) {
-              this.window.document.getElementById(wc) ||
+              this.window.document.getElementById(_c) ||
                 (this.injectIntersectionFrame(), this.injectEmberApp(e, t, r));
             }
             injectIntersectionFrame() {
               const e = this.window.document.createElement("div"),
                 t = this.window.document.createElement("iframe");
-              (e.id = wc),
-                (t.id = yc),
+              (e.id = _c),
+                (t.id = wc),
                 (t.frameBorder = 0),
                 e.appendChild(t),
                 this.window.document.body.insertAdjacentElement("beforeend", e);
@@ -23588,9 +23556,9 @@
               r = this.getAppId(),
               n = this.getLocale(),
             ) {
-              const i = gc()(t),
-                o = gc()(r),
-                s = gc()(n);
+              const i = mc()(t),
+                o = mc()(r),
+                s = mc()(n);
               e.open(),
                 e.write(
                   `\n    <!DOCTYPE html>\n      <head>\n        <title>Intersection </title>\n        <meta name="intersection-mode" content=${i}>\n        <meta name="intersection-appId" content=${o}>\n        <meta name="intersection-locale" content=${s}>\n      </head>\n      <body></body>\n    </html>\n    `,
@@ -23598,17 +23566,17 @@
                 e.close();
             }
             injectIntersectionScripts(e) {
-              const t = this.createScriptTag(mc.intersection_js),
-                r = this.createScriptTag(mc.intersection_styles);
+              const t = this.createScriptTag(bc.intersection_js),
+                r = this.createScriptTag(bc.intersection_styles);
               e.contentWindow.document.head.appendChild(t),
                 e.contentWindow.document.head.appendChild(r);
             }
             injectEmberApp(e, t, r) {
-              const n = this.window.document.getElementById(yc);
+              const n = this.window.document.getElementById(wc);
               this.injectFrameTemplate(n.contentDocument, e, t, r),
                 this.injectIntersectionScripts(n);
             }
-          })(_c);
+          })(Oc);
       },
       60707: (e, t, r) => {
         "use strict";
@@ -24050,13 +24018,21 @@
               );
           },
           a = () => {
-            var e;
-            return null === (e = i) ||
+            var e, t;
+            return (
+              (null === (e = i) ||
               void 0 === e ||
-              null === (e = e.document) ||
+              null === (e = e.intercomSettings) ||
               void 0 === e
-              ? void 0
-              : e.title;
+                ? void 0
+                : e.page_title) ??
+              (null === (t = i) ||
+              void 0 === t ||
+              null === (t = t.document) ||
+              void 0 === t
+                ? void 0
+                : t.title)
+            );
           },
           c = () => {
             var e;
@@ -24111,33 +24087,32 @@
         r.d(t, {
           Dg: () => i,
           Dr: () => o,
-          EE: () => A,
-          J4: () => g,
-          PB: () => u,
-          RO: () => R,
-          TU: () => j,
+          EE: () => j,
+          J4: () => f,
+          RO: () => T,
+          TU: () => P,
           Tt: () => c,
           V7: () => n,
-          X_: () => d,
-          Yf: () => T,
-          _B: () => I,
-          _v: () => _,
+          X_: () => u,
+          Yf: () => k,
+          _B: () => E,
+          _v: () => w,
           bK: () => a,
-          cw: () => S,
-          df: () => E,
-          fi: () => h,
-          fp: () => y,
-          gl: () => f,
-          h_: () => C,
-          i6: () => b,
-          jK: () => O,
-          nF: () => w,
+          cw: () => C,
+          df: () => S,
+          fi: () => p,
+          fp: () => b,
+          gl: () => v,
+          h_: () => O,
+          i6: () => m,
+          jK: () => _,
+          nF: () => y,
           nq: () => l,
-          o1: () => v,
-          oD: () => k,
-          pM: () => m,
-          sT: () => p,
-          ur: () => P,
+          o1: () => h,
+          oD: () => A,
+          pM: () => g,
+          sT: () => d,
+          ur: () => I,
           w9: () => s,
         });
         const n = "search_browse_card_input",
@@ -24147,29 +24122,28 @@
           a = "help_card_suggestion",
           c = "article_suggestion",
           l = "article_suggestions",
-          u = "input",
-          d = "reaction",
-          p = "newsfeed",
-          h = "news_item",
-          v = "answer",
-          f = "news",
-          g = "help_center",
-          m = "recent_conversation_card",
-          b = "help_center_card",
-          y = "help_center_card_with_answers",
-          w = "search_browse",
-          _ = "messenger",
-          O = "home",
-          C = "help",
-          S = "messenger",
-          E = "home_screen",
-          I = "search_browse",
-          P = "search_browse_article",
-          j = "newsfeed",
-          A = "help_center",
-          k = "help_center_suggestions",
-          T = "home",
-          R = "from_ticket_space";
+          u = "reaction",
+          d = "newsfeed",
+          p = "news_item",
+          h = "answer",
+          v = "news",
+          f = "help_center",
+          g = "recent_conversation_card",
+          m = "help_center_card",
+          b = "help_center_card_with_answers",
+          y = "search_browse",
+          w = "messenger",
+          _ = "home",
+          O = "help",
+          C = "messenger",
+          S = "home_screen",
+          E = "search_browse",
+          I = "search_browse_article",
+          P = "newsfeed",
+          j = "help_center",
+          A = "help_center_suggestions",
+          k = "home",
+          T = "from_ticket_space";
       },
       11353: (e, t, r) => {
         "use strict";
@@ -24180,14 +24154,14 @@
           o2: () => Z,
           WM: () => X,
           CT: () => q,
-          cb: () => J,
+          cb: () => Q,
           Dw: () => D,
           qt: () => z,
-          O3: () => V,
+          O3: () => U,
           ZP: () => ee,
           n4: () => Y,
           Wl: () => L,
-          qT: () => B,
+          qT: () => V,
           Qm: () => T,
           Yw: () => G,
         });
@@ -24305,7 +24279,7 @@
         }
         function D(e, t, r, n, i, o = {}) {
           if ((0, d.pP)(e)) {
-            B(V(e, t, r, n, i, o));
+            V(U(e, t, r, n, i, o));
           }
         }
         function L() {
@@ -24327,18 +24301,18 @@
             : "m5_metric";
         }
         function z(e, t, r, n, i, o = {}) {
-          return U(e, t, r, n, i, o, "educate_event");
+          return B(e, t, r, n, i, o, "educate_event");
         }
-        function V(e, t, r, n, i, o = {}) {
-          return U(e, t, r, n, i, o, N());
+        function U(e, t, r, n, i, o = {}) {
+          return B(e, t, r, n, i, o, N());
         }
-        function U(e, t, r, n, i, s = {}, a = "m4_metric") {
+        function B(e, t, r, n, i, s = {}, a = "m4_metric") {
           if (!(0, d.pP)(e)) return {};
           const c = e && e.id ? e.id : null,
             l = h(
               h({}, s),
               {},
-              { version: "c7e724a7ea17f840b4a85d16491574b6c6aabe59" },
+              { version: "91fe5435eab0d9038cc28ab1e13210b782141488" },
             );
           return {
             id: o.Z.generateUUID(),
@@ -24350,7 +24324,7 @@
             ),
           };
         }
-        function B(e) {
+        function V(e) {
           i()(e) || E.push(e);
         }
         function Z(e) {
@@ -24381,7 +24355,7 @@
             P[e][t].hasOwnProperty("start")
           ) {
             const n = P[e][t];
-            J(
+            Q(
               e,
               h(
                 h(
@@ -24394,7 +24368,7 @@
               delete P[e][t];
           }
         }
-        function Q(e, t = {}) {
+        function J(e, t = {}) {
           return {
             id: o.Z.generateUUID(),
             name: e,
@@ -24405,10 +24379,10 @@
             sessionId: w && w.sessionId,
           };
         }
-        function J(e, t, r = !1) {
+        function Q(e, t, r = !1) {
           const n = a((0, c.i)() || (0, u.$z)());
           if ((void 0 === _ && (_ = s(n)), _ || r)) {
-            K(Q(e, h({ sample_rate: r ? 1 : n }, t)));
+            K(J(e, h({ sample_rate: r ? 1 : n }, t)));
           }
         }
         function K(e) {
@@ -24422,7 +24396,7 @@
           hcMetrics: j,
           logs: A,
           opMetrics: k,
-          pushMetric: B,
+          pushMetric: V,
           startMetricsPolling: function (e, t) {
             return (
               (w = e),
@@ -24432,9 +24406,9 @@
             );
           },
           buildAndAddMetric: D,
-          buildAndAddHcMetric: J,
-          buildMetric: V,
-          buildHcMetric: Q,
+          buildAndAddHcMetric: Q,
+          buildMetric: U,
+          buildHcMetric: J,
           addHcMetric: K,
           addInfoLog: Z,
           addErrorLog: F,
@@ -24453,13 +24427,13 @@
           endTimingMetric: function (e, t = {}) {
             I.hasOwnProperty(e) &&
               I[e].hasOwnProperty("start") &&
-              (J(e, h(h({ duration: Date.now() - I[e].start }, I[e].meta), t)),
+              (Q(e, h(h({ duration: Date.now() - I[e].start }, I[e].meta), t)),
               delete I[e]);
           },
           buildEducateEventMetric: z,
           addEducateEventMetric: function (e, t, r, n, i) {
             if ((0, d.pP)(S)) {
-              B(z(S, e, t, r, n, i));
+              V(z(S, e, t, r, n, i));
             }
           },
         };
@@ -24654,7 +24628,7 @@
         var n = r(47389),
           i = r(80299),
           o = r(38733),
-          s = r(25304),
+          s = r(87846),
           a = r(65394),
           c = r(28680),
           l = r(45504);
@@ -24830,8 +24804,9 @@
               { isFetching: a } = r.tickets;
             if (a) return;
             n(g());
-            const { tickets: c, nextPage: l } = await o.ZP.getTickets(s, e);
-            n((0, i.Ci)(c, l));
+            const { ticketsPortalUrl: c } = await o.ZP.getTicketsContent(s),
+              { tickets: l, nextPage: u } = await o.ZP.getTickets(s, e);
+            n((0, i.Ci)(l, u)), n((0, i.yD)(c));
           }),
           p = (0, a.as)("tickets/getTicketDetails", async (e, t) => {
             const r = t.getState(),
@@ -24858,6 +24833,7 @@
           v = (0, n.createSlice)({
             name: "tickets",
             initialState: {
+              ticketsPortalUrl: null,
               isFetched: !1,
               isFetching: !1,
               isFailed: !1,
@@ -24900,6 +24876,9 @@
                   f(e, t.tickets),
                     void 0 !== t.nextPage && (e.nextPage = t.nextPage);
                 }),
+                e.addCase(s.AiZ, (e, t) => {
+                  e.ticketsPortalUrl = t.ticketsPortalUrl;
+                }),
                 e.addCase(s.Id8, (e, t) => {
                   const r = t.ticket;
                   r &&
@@ -24934,36 +24913,50 @@
       },
       76437: (e, t, r) => {
         "use strict";
-        r.d(t, { KQ: () => c, ZP: () => d, _t: () => l, v3: () => a });
+        r.d(t, { KQ: () => f, ZP: () => b, _t: () => g, v3: () => v });
         var n = r(47389),
           i = r(50025),
           o = r(38049),
-          s = r(80299);
-        const a = (0, s.as)("spaces/prefetchAllSpaceContent", async (e, t) => {
+          s = r(80299),
+          a = r(38768),
+          c = r(65394),
+          l = r(87846),
+          u = r(99948),
+          d = r(84213),
+          p = r(43156);
+        const h = {
+            home: a.ig,
+            messages: c.rc,
+            help: l.hU,
+            news: u.A5,
+            tasks: d.x2,
+            tickets: p.St,
+          },
+          v = (0, s.as)("spaces/prefetchAllSpaceContent", async (e, t) => {
             const r = t.getState();
             (0, i.fh)(r).forEach((e) => {
-              t.dispatch(u(e));
+              t.dispatch(m(e));
             });
           }),
-          c = (0, s.as)("spaces/prefetchInitialSpaceContent", async (e, t) => {
+          f = (0, s.as)("spaces/prefetchInitialSpaceContent", async (e, t) => {
             const r = (0, i.RS)(t.getState());
-            return r === o.y7 && t.dispatch(u(o.vv)), t.dispatch(u(r));
+            return r === o.y7 && t.dispatch(m(o.vv)), t.dispatch(m(r));
           }),
-          l = (0, s.as)("spaces/prefetchTasksSpaceContent", async (e, t) => {
+          g = (0, s.as)("spaces/prefetchTasksSpaceContent", async (e, t) => {
             if (
               -1 !==
               (0, i.fh)(t.getState())
                 .map((e) => e.id)
                 .indexOf(o.eD.id)
             )
-              return t.dispatch(u(o.eD));
+              return t.dispatch(m(o.eD));
           }),
-          u = (0, s.as)(
+          m = (0, s.as)(
             "spaces/prefetchSpaceContent",
             async (e, t) => {
               if (!e) return t.rejectWithValue("Space does not exist");
               try {
-                return await t.dispatch(e.getContent()), t.fulfillWithValue(e);
+                return await t.dispatch(h[e.id]()), t.fulfillWithValue(e);
               } catch (r) {
                 return t.rejectWithValue(e);
               }
@@ -24978,12 +24971,12 @@
                 ),
             },
           ),
-          d = (0, n.createSlice)({
+          b = (0, n.createSlice)({
             name: "spaces",
             initialState: { dataPrefetchedBySpace: {} },
             reducers: {},
             extraReducers: (e) => {
-              e.addCase(u.pending, (e, t) => {
+              e.addCase(m.pending, (e, t) => {
                 const r = t.meta.arg;
                 r && (e.dataPrefetchedBySpace[r.id] = !0);
               });
@@ -25091,7 +25084,6 @@
           R1: () => h,
           T4: () => k,
           VA: () => b,
-          VJ: () => D,
           WP: () => O,
           XK: () => w,
           a5: () => x,
@@ -25101,12 +25093,14 @@
           er: () => v,
           i8: () => R,
           iU: () => I,
+          lq: () => D,
           lt: () => l,
           lz: () => y,
           m0: () => f,
           qZ: () => _,
           qb: () => A,
           r0: () => C,
+          ux: () => L,
         });
         var n = r(42279),
           i = r(15178),
@@ -25121,17 +25115,16 @@
           h = (0, n.createSelector)(d, (e) =>
             e && e.length > 0 ? e[e.length - 1] : void 0,
           ),
-          v = ({
-            app: {
+          v = (0, n.createSelector)(
+            (e) => e.app.localizedExpectedResponseDelayShortText,
+            (e) => e.app.localizedExpectedResponseDelayLongText,
+            (e) => e.app.officeHoursResponse,
+            (e, t, r) => ({
               localizedExpectedResponseDelayShortText: e,
               localizedExpectedResponseDelayLongText: t,
               officeHoursResponse: r,
-            },
-          }) => ({
-            localizedExpectedResponseDelayShortText: e,
-            localizedExpectedResponseDelayLongText: t,
-            officeHoursResponse: r,
-          }),
+            }),
+          ),
           f = (0, n.createSelector)(d, (e) => !e || 0 === e.length),
           g = (e) => e.app.accessToTeammateEnabled,
           m = { useBotUX: !1 },
@@ -25239,42 +25232,52 @@
           x = (e) => e.app.isBooted,
           D = (e) => {
             var t;
-            return null === (t = e.app.messages) || void 0 === t
+            return null === (t = e.app.messages) ||
+              void 0 === t ||
+              null === (t = t.newConversationPrompt) ||
+              void 0 === t
               ? void 0
-              : t.newConversationPrompt;
+              : t.cta;
+          },
+          L = (e) => {
+            var t;
+            return null === (t = e.app.messages) ||
+              void 0 === t ||
+              null === (t = t.newConversationPrompt) ||
+              void 0 === t
+              ? void 0
+              : t.homeCard;
           };
       },
       58187: (e, t, r) => {
         "use strict";
         r.d(t, {
-          C0: () => y,
-          JQ: () => c,
-          Jn: () => d,
-          NK: () => l,
-          Rt: () => f,
-          SA: () => u,
-          Y6: () => b,
-          c7: () => v,
-          so: () => h,
+          C0: () => m,
+          JQ: () => s,
+          Jn: () => l,
+          NK: () => a,
+          Rt: () => h,
+          SA: () => c,
+          Y6: () => g,
+          c7: () => p,
+          so: () => d,
         });
         var n = r(38049),
-          i = r(50025),
-          o = r(42279),
-          s = r(38712),
-          a = r(82517);
-        const c = (e) => e.article || {},
-          l = (0, o.createSelector)(
-            c,
+          i = r(42279),
+          o = r(38712);
+        const s = (e) => e.article || {},
+          a = (0, i.createSelector)(
+            s,
             (e) => e.articles || {},
             (e, t) =>
               null != e && e.activeArticleId ? t[e.activeArticleId] : void 0,
           ),
-          u = (e) =>
+          c = (e) =>
             Boolean(e.article.inSearchBrowse && e.article.activeArticleId),
-          d = (e) => e.article.fromHomeScreenSuggestions,
-          p = (0, o.createSelector)(u, d, (e, t) => Boolean(e || t)),
-          h = (0, o.createSelector)(l, p, (e, t) => (t ? e : null)),
-          v = (e) => {
+          l = (e) => e.article.fromHomeScreenSuggestions,
+          u = (0, i.createSelector)(c, l, (e, t) => Boolean(e || t)),
+          d = (0, i.createSelector)(a, u, (e, t) => (t ? e : null)),
+          p = (e) => {
             var t;
             return (
               (null === (t = e.router) ||
@@ -25285,24 +25288,21 @@
                 : t.pathname) === `/${n.jg.id}`
             );
           },
-          f = (0, o.createSelector)(
-            l,
-            u,
-            a.zl,
+          h = (0, i.createSelector)(
+            a,
+            c,
             (e) => e.article.isStandalone,
-            i.c0,
-            v,
-            (e, t, r, n, i, o) =>
-              !!n || (i ? null !== e && t && o : null !== e && t && r),
+            p,
+            (e, t, r, n) => !!r || (null !== e && t && n),
           ),
-          g = (e) => e.article.isLoaded,
-          m = (0, o.createSelector)(
+          v = (e) => e.article.isLoaded,
+          f = (0, i.createSelector)(
             (e) => !!e.chrome.expansionTransitionComplete,
-            s.UK,
+            o.UK,
             (e, t) => !(!t && !e),
           ),
-          b = (0, o.createSelector)(g, m, (e, t) => e && t),
-          y = (0, o.createSelector)(g, m, (e, t) => !e && t);
+          g = (0, i.createSelector)(v, f, (e, t) => e && t),
+          m = (0, i.createSelector)(v, f, (e, t) => !e && t);
       },
       39425: (e, t, r) => {
         "use strict";
@@ -25707,12 +25707,21 @@
             (e) => e.conversations.isFetching,
             (e, t) => e && !t,
           ),
-          v = (e) => {
-            var t;
-            return null === (t = e.conversations) || void 0 === t
-              ? void 0
-              : t.animatingPartId;
-          };
+          v = (0, i.createSelector)(
+            (e) => e.conversations.byId,
+            (e, t) => t,
+            (e, t) => {
+              var r;
+              const n = e[t];
+              if (!n) return;
+              const { parts: i = [] } = n;
+              return null ===
+                (r = i.find((e) => void 0 !== e.tokenSequenceIndex)) ||
+                void 0 === r
+                ? void 0
+                : r.id;
+            },
+          );
       },
       6186: (e, t, r) => {
         "use strict";
@@ -25760,13 +25769,7 @@
       },
       74668: (e, t, r) => {
         "use strict";
-        r.d(t, {
-          Th: () => S,
-          yC: () => g,
-          Uq: () => E,
-          Ty: () => C,
-          $Q: () => b,
-        });
+        r.d(t, { Th: () => C, yC: () => g, Uq: () => S, Ty: () => O });
         var n = r(42279),
           i = r(45578),
           o = r.n(i),
@@ -25806,35 +25809,36 @@
           m = (0, n.createSelector)(v, ({ fetchedSlots: e = [] } = {}) =>
             f(e, "help_center"),
           ),
-          b = (0, n.createSelector)(
-            v,
-            ({ matchedSlots: e = [] }) =>
-              f(e, "help_center") || f(e, "messenger_app"),
-          ),
+          b =
+            ((0, n.createSelector)(
+              v,
+              ({ matchedSlots: e = [] }) =>
+                f(e, "help_center") || f(e, "messenger_app"),
+            ),
+            (0, n.createSelector)(
+              [m, p.T4, p.aA],
+              (e, t, r) => (!e || !t) && r,
+            )),
           y = (0, n.createSelector)(
-            [m, p.T4, p.aA],
-            (e, t, r) => (!e || !t) && r,
-          ),
-          w = (0, n.createSelector)(
             v,
             ({ fetchedSlots: e = [] }) =>
               0 === e.findIndex((e) => "new_conversation_card" === e.slotType),
           ),
-          _ = (0, n.createSelector)([d], (e = []) => e.length > 0),
-          O =
-            ((0, n.createSelector)([_, w], (e, t) => !!e || !t),
+          w = (0, n.createSelector)([d], (e = []) => e.length > 0),
+          _ =
+            ((0, n.createSelector)([w, y], (e, t) => !!e || !t),
             (0, n.createSelector)(
               [s.ZP, (e) => e.homeScreen.hasMoreConversations],
               (e, t) => e.length > 0 || t,
             )),
-          C = ((0, n.createSelector)([_, O], (e, t) => !e && t), p.aV),
-          S =
-            ((0, n.createSelector)([_, y, O], (e, t, r) => !e && !t && r),
+          O = ((0, n.createSelector)([w, _], (e, t) => !e && t), p.aV),
+          C =
+            ((0, n.createSelector)([w, b, _], (e, t, r) => !e && !t && r),
             (0, n.createSelector)(v, ({ articleSuggestions: e } = {}) => e)),
-          E = (0, n.createSelector)(v, ({ mixedSuggestions: e } = {}) => e);
+          S = (0, n.createSelector)(v, ({ mixedSuggestions: e } = {}) => e);
         (0, n.createSelector)(
           v,
-          y,
+          b,
           m,
           h.LO,
           ({ fetchedSlots: e, isFetched: t, isFailed: r }, n, i) => ({
@@ -26103,29 +26107,26 @@
       50025: (e, t, r) => {
         "use strict";
         r.d(t, {
-          CF: () => _,
-          D6: () => P,
-          DW: () => w,
-          Fy: () => f,
-          G0: () => O,
-          RS: () => y,
-          TF: () => C,
-          Td: () => E,
-          Ty: () => g,
-          c0: () => b,
-          cC: () => I,
-          fh: () => S,
+          CF: () => b,
+          D6: () => S,
+          DW: () => m,
+          Fy: () => h,
+          G0: () => y,
+          Im: () => O,
+          RS: () => g,
+          TF: () => w,
+          Ty: () => v,
+          cC: () => C,
+          fh: () => _,
         });
-        var n = r(41609),
-          i = r.n(n),
-          o = r(42279),
-          s = r(38049),
-          a = r(6435),
-          c = r(28750),
-          l = r(39425),
-          u = r(45809),
-          d = r(26134);
-        function p(e, t) {
+        var n = r(42279),
+          i = r(38049),
+          o = r(6435),
+          s = r(28750),
+          a = r(39425),
+          c = r(45809),
+          l = r(26134);
+        function u(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
             var n = Object.getOwnPropertySymbols(e);
@@ -26137,16 +26138,16 @@
           }
           return r;
         }
-        function h(e) {
+        function d(e) {
           for (var t = 1; t < arguments.length; t++) {
             var r = null != arguments[t] ? arguments[t] : {};
             t % 2
-              ? p(Object(r), !0).forEach(function (t) {
-                  v(e, t, r[t]);
+              ? u(Object(r), !0).forEach(function (t) {
+                  p(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : p(Object(r)).forEach(function (t) {
+              : u(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -26156,7 +26157,7 @@
           }
           return e;
         }
-        function v(e, t, r) {
+        function p(e, t, r) {
           return (
             (t = (function (e) {
               var t = (function (e, t) {
@@ -26183,66 +26184,62 @@
             e
           );
         }
-        function f(e) {
+        function h(e) {
           const t = e.split("/")[1];
-          return s.RV.find((e) => e.id === t) || s.y7;
+          return i.RV.find((e) => e.id === t) || i.y7;
         }
-        function g(e) {
-          return e.startsWith(`/${s.eD.id}/${u.g8.checklists}/complete`);
+        function v(e) {
+          return e.startsWith(`/${i.eD.id}/${c.g8.checklists}/complete`);
         }
-        const m = (e) => {
+        const f = (e) => {
             var t;
             return null === (t = e.app) || void 0 === t ? void 0 : t.openConfig;
           },
-          b = (0, o.createSelector)(
-            m,
-            (e) => !i()(null == e ? void 0 : e.layout),
-          ),
-          y = (0, o.createSelector)(m, (e) =>
+          g = (0, n.createSelector)(f, (e) =>
             e
-              ? s.RV.find((t) => t.id === (null == e ? void 0 : e.openTo))
+              ? i.RV.find((t) => t.id === (null == e ? void 0 : e.openTo))
               : void 0,
           ),
-          w = (0, o.createSelector)(
-            m,
+          m = (0, n.createSelector)(
+            f,
             (e) => "conversational" === (null == e ? void 0 : e.layout),
           ),
-          _ = (0, o.createSelector)(y, w, (e, t) =>
+          b = (0, n.createSelector)(g, m, (e, t) =>
             t ? "/messages/conversation/new" : e ? e.path : "/",
           ),
-          O = (0, o.createSelector)(
-            m,
+          y = (0, n.createSelector)(
+            f,
             (e) => "compact" === (null == e ? void 0 : e.layout),
           ),
-          C = (0, o.createSelector)(a.Fy, f),
-          S = (0, o.createSelector)(m, c.I3, d.FW, (e, t, r) => {
+          w = (0, n.createSelector)(o.Fy, h),
+          _ = (0, n.createSelector)(f, s.I3, l.FW, (e, t, r) => {
             if (null == e || !e.spaces) return [];
             let n = e.spaces
               .map((e) => {
-                const t = s.RV.find((t) => t.id === e.type);
+                const t = i.RV.find((t) => t.id === e.type);
                 if (t)
-                  return h(h({}, t), {}, { title: e.label, badge: e.badge });
+                  return d(d({}, t), {}, { title: e.label, badge: e.badge });
               })
               .filter((e) => void 0 !== e);
             (null == t ? void 0 : t.length) > 0 ||
               !!e.userHasReceivedChecklists ||
-              (n = n.filter((e) => (null == e ? void 0 : e.id) !== s.eD.id)),
+              (n = n.filter((e) => (null == e ? void 0 : e.id) !== i.eD.id)),
               e.userHasLiveNewsfeed ||
-                (n = n.filter((e) => (null == e ? void 0 : e.id) !== s.vv.id));
+                (n = n.filter((e) => (null == e ? void 0 : e.id) !== i.vv.id));
             return (
               r.length > 0 ||
                 e.userHasTickets ||
-                (n = n.filter((e) => (null == e ? void 0 : e.id) !== s.cO.id)),
+                (n = n.filter((e) => (null == e ? void 0 : e.id) !== i.cO.id)),
               n
             );
           }),
-          E = (0, o.createSelector)(S, C, l.hU, (e, t, r) =>
+          O = (0, n.createSelector)(_, w, a.hU, (e, t, r) =>
             e.reduce((e, n) => {
               var i, o;
               return (
                 e.push(
-                  h(
-                    h({}, n),
+                  d(
+                    d({}, n),
                     {},
                     {
                       isActive: n.id === t.id,
@@ -26262,8 +26259,8 @@
               );
             }, []),
           ),
-          I =
-            ((0, o.createSelector)(S, (e) =>
+          C =
+            ((0, n.createSelector)(_, (e) =>
               e.reduce(
                 (e, t) =>
                   t.badge && "unread" === t.badge.badgeType
@@ -26272,8 +26269,8 @@
                 0,
               ),
             ),
-            (0, o.createSelector)(S, (e) => e.some((e) => e.id === s.jg.id))),
-          P = (0, o.createSelector)(S, (e) => e.some((e) => e.id === s.cO.id));
+            (0, n.createSelector)(_, (e) => e.some((e) => e.id === i.jg.id))),
+          S = (0, n.createSelector)(_, (e) => e.some((e) => e.id === i.cO.id));
       },
       24620: (e, t, r) => {
         "use strict";
@@ -26434,8 +26431,9 @@
           Fp: () => a,
           HU: () => s,
           NA: () => c,
-          QN: () => u,
+          QN: () => d,
           YX: () => l,
+          kH: () => u,
         });
         var n = r(42279);
         const i = (e) => e.tickets,
@@ -26457,7 +26455,10 @@
             i,
             (e) => (null == e ? void 0 : e.nextPage) || null,
           ),
-          u = (0, n.createSelector)(c, (e) => {
+          u = (0, n.createSelector)(i, (e) =>
+            null == e ? void 0 : e.ticketsPortalUrl,
+          ),
+          d = (0, n.createSelector)(c, (e) => {
             const t = Date.now() - 6048e5;
             return e
               .filter((e) => {
@@ -26653,250 +26654,251 @@
       45504: (e, t, r) => {
         "use strict";
         r.d(t, {
-          $dl: () => En,
-          AFM: () => Ct,
-          AWI: () => Ye,
+          $dl: () => In,
+          AFM: () => St,
+          AWI: () => Je,
+          AiZ: () => qr,
           BTV: () => G,
           BbA: () => kr,
-          Bgr: () => xe,
-          CB6: () => ie,
-          CPx: () => Oe,
+          Bgr: () => De,
+          CB6: () => oe,
+          CPx: () => Ce,
           Cc_: () => Er,
-          CnJ: () => fr,
-          Cpz: () => Et,
-          D5g: () => cr,
+          CnJ: () => gr,
+          Cpz: () => It,
+          D5g: () => lr,
           DB8: () => xr,
           E15: () => s,
-          E3y: () => we,
+          E3y: () => _e,
           E7l: () => Qt,
           EBG: () => d,
-          EL$: () => xt,
+          EL$: () => Dt,
           Ecv: () => Cr,
-          Egy: () => Fe,
-          Ekh: () => Zt,
-          Elv: () => On,
-          EtJ: () => re,
-          FH3: () => Ze,
-          FKB: () => Ke,
+          Egy: () => He,
+          Ekh: () => Ft,
+          Elv: () => Cn,
+          EtJ: () => ne,
+          FH3: () => Fe,
+          FKB: () => Xe,
           FYf: () => a,
           Gnx: () => H,
-          GyA: () => _e,
-          HGg: () => vt,
-          HKk: () => We,
-          H_v: () => bt,
-          HmR: () => Bt,
-          I2_: () => Kt,
-          IEn: () => ht,
-          Id8: () => qr,
-          Igv: () => _n,
+          GyA: () => Oe,
+          HGg: () => ft,
+          HKk: () => Ge,
+          H_v: () => yt,
+          HmR: () => Zt,
+          I2_: () => Xt,
+          IEn: () => vt,
+          Id8: () => Wr,
+          Igv: () => On,
           In$: () => N,
-          IuP: () => wn,
+          IuP: () => _n,
           IxI: () => K,
           J9G: () => yr,
-          JCd: () => jn,
+          JCd: () => An,
           JDs: () => p,
-          JLv: () => ct,
-          Jqy: () => _t,
+          JLv: () => lt,
+          Jqy: () => Ot,
           Jxk: () => f,
-          K7$: () => Ft,
+          K7$: () => Ht,
           KAD: () => Lr,
           KDy: () => wr,
           KQ5: () => k,
-          KgQ: () => Wr,
-          KvC: () => rt,
-          L9e: () => et,
-          LjG: () => pe,
+          KgQ: () => Gr,
+          KvC: () => nt,
+          L9e: () => tt,
+          LjG: () => he,
           LmV: () => Or,
-          M9O: () => ir,
+          M9O: () => or,
           MCw: () => y,
           Mpv: () => S,
-          Mti: () => Ue,
-          MxU: () => Xr,
-          NVl: () => He,
+          Mti: () => Ve,
+          MxU: () => en,
+          NVl: () => $e,
           Nhw: () => h,
-          NmC: () => Ge,
+          NmC: () => Ye,
           NqY: () => u,
-          OFq: () => Ve,
+          OFq: () => Be,
           OJm: () => O,
-          OPG: () => Be,
-          OVu: () => kt,
-          OzT: () => fe,
-          PDN: () => sr,
-          Pgx: () => ne,
+          OPG: () => Ze,
+          OVu: () => Tt,
+          OzT: () => ge,
+          PDN: () => ar,
+          Pgx: () => ie,
           Pm4: () => Ir,
-          Q4h: () => mt,
-          Q5w: () => Ot,
-          QJO: () => dt,
-          QSn: () => jt,
+          Q4h: () => bt,
+          Q5w: () => Ct,
+          QJO: () => pt,
+          QSn: () => At,
           Qe$: () => _r,
-          R$7: () => ue,
-          REJ: () => fn,
-          R_U: () => It,
-          RdF: () => mr,
-          ReA: () => Re,
+          R$7: () => de,
+          REJ: () => gn,
+          R_U: () => Pt,
+          RdF: () => br,
+          ReA: () => Me,
           Rwn: () => jr,
-          S1A: () => pn,
-          SEG: () => bn,
+          S1A: () => hn,
+          SEG: () => yn,
           Sap: () => $,
-          Sd2: () => un,
+          Sd2: () => dn,
           SqP: () => P,
-          Szl: () => Jt,
-          T7U: () => Br,
-          TCd: () => er,
+          Szl: () => Kt,
+          T7U: () => Vr,
+          TCd: () => tr,
           TN5: () => Hr,
           TPP: () => n,
-          Tpu: () => it,
-          UDo: () => Pt,
+          Tpu: () => ot,
+          UDo: () => jt,
           UH6: () => _,
           UUs: () => Pr,
-          UdY: () => je,
-          Umx: () => Le,
+          UdY: () => Ae,
+          Umx: () => Ne,
           V0l: () => D,
-          V57: () => Pe,
-          VHf: () => ft,
+          V57: () => je,
+          VHf: () => gt,
           VRJ: () => w,
-          VZE: () => Ae,
+          VZE: () => ke,
           V_E: () => v,
-          VcU: () => Kr,
-          Vcf: () => ut,
-          Vq2: () => Lt,
+          VcU: () => Xr,
+          Vcf: () => dt,
+          Vq2: () => Nt,
           W8J: () => Qe,
+          WBK: () => X,
           WaR: () => Z,
-          Wu3: () => Vt,
-          XC7: () => Mt,
+          Wu3: () => Bt,
+          XC7: () => xt,
           XM7: () => i,
-          XUb: () => Pn,
-          XXb: () => br,
-          X_d: () => Ce,
-          Y1d: () => Jr,
-          Y3A: () => tt,
+          XUb: () => jn,
+          X_d: () => Se,
+          Y1d: () => Kr,
+          Y3A: () => rt,
           Y4j: () => c,
-          YJd: () => Ie,
-          YbZ: () => be,
+          YJd: () => Pe,
+          YbZ: () => ye,
           Yfx: () => b,
-          YxE: () => ke,
-          Z2$: () => ot,
-          Z7g: () => Q,
-          ZGX: () => Cn,
-          ZIG: () => hn,
-          ZvY: () => wt,
+          YxE: () => Te,
+          Z2$: () => st,
+          Z7g: () => J,
+          ZGX: () => Sn,
+          ZIG: () => vn,
+          ZvY: () => _t,
           _$g: () => m,
           _IE: () => Ar,
           _J_: () => Qr,
-          _KQ: () => U,
+          _KQ: () => B,
           _PS: () => zr,
-          _Ro: () => Se,
+          _Ro: () => Ee,
           _aA: () => Zr,
-          a80: () => yn,
-          axS: () => ee,
-          bOW: () => At,
-          bb3: () => ce,
-          bbi: () => V,
+          a80: () => wn,
+          axS: () => te,
+          bOW: () => kt,
+          bb3: () => le,
+          bbi: () => U,
           bec: () => M,
-          bfK: () => on,
-          cTE: () => Ht,
-          ccE: () => pt,
-          crQ: () => ve,
-          cvy: () => gr,
-          d1o: () => Te,
-          ddI: () => gt,
+          bfK: () => sn,
+          cTE: () => $t,
+          ccE: () => ht,
+          crQ: () => fe,
+          cvy: () => mr,
+          d1o: () => Re,
+          ddI: () => mt,
           e7o: () => $r,
-          eaZ: () => Ne,
-          ees: () => nn,
-          epJ: () => $e,
-          f3d: () => $t,
-          fJ8: () => Rt,
-          fPK: () => nr,
-          fWs: () => cn,
-          ffC: () => B,
+          eaZ: () => ze,
+          ees: () => on,
+          epJ: () => qe,
+          f3d: () => qt,
+          fJ8: () => Mt,
+          fPK: () => ir,
+          fWs: () => ln,
+          ffC: () => V,
           g53: () => Mr,
-          g9c: () => In,
-          gUD: () => at,
+          g9c: () => Pn,
+          gUD: () => ct,
           gWb: () => W,
-          gk$: () => en,
-          gyJ: () => pr,
-          hFe: () => Xt,
-          hvb: () => an,
-          i1I: () => tn,
-          iEM: () => gn,
-          iLs: () => De,
-          idU: () => le,
-          iqB: () => Dt,
-          itv: () => zt,
-          iuk: () => yt,
-          jAS: () => se,
-          jEY: () => or,
-          jx5: () => me,
-          k16: () => st,
-          k3y: () => ye,
+          gk$: () => tn,
+          gyJ: () => hr,
+          hFe: () => er,
+          hvb: () => cn,
+          i1I: () => rn,
+          iEM: () => mn,
+          iLs: () => Le,
+          idU: () => ue,
+          iqB: () => Lt,
+          itv: () => Ut,
+          iuk: () => wt,
+          jAS: () => ae,
+          jEY: () => sr,
+          jx5: () => be,
+          k16: () => at,
+          k3y: () => we,
           k5d: () => E,
-          l5E: () => ge,
-          lGu: () => Gt,
-          lkG: () => Vr,
-          lnT: () => Tn,
-          m84: () => lr,
-          mGz: () => vr,
-          mXv: () => Ee,
-          mYd: () => Ur,
+          l5E: () => me,
+          lGu: () => Yt,
+          lkG: () => Ur,
+          lnT: () => Rn,
+          m84: () => ur,
+          mGz: () => fr,
+          mXv: () => Ie,
+          mYd: () => Br,
           m_e: () => F,
-          mnY: () => Ut,
-          nIE: () => rr,
-          nL$: () => dr,
+          mnY: () => Vt,
+          nIE: () => nr,
+          nL$: () => pr,
           nTn: () => l,
           na9: () => Tr,
-          ntj: () => qe,
+          ntj: () => We,
           ooI: () => Y,
-          pIc: () => Yr,
-          pSw: () => sn,
-          qBE: () => ze,
-          qBt: () => rn,
-          qGz: () => qt,
+          pIc: () => Jr,
+          pSw: () => an,
+          qBE: () => Ue,
+          qBt: () => nn,
+          qGz: () => Wt,
           qMC: () => Nr,
-          qP7: () => vn,
-          qQp: () => Yt,
+          qP7: () => fn,
+          qQp: () => Jt,
           qYb: () => q,
-          qiM: () => hr,
+          qiM: () => vr,
           qz6: () => I,
           r3t: () => g,
-          r88: () => Sn,
-          rY3: () => dn,
+          r88: () => En,
+          rY3: () => pn,
           rfn: () => C,
-          rq7: () => Me,
-          sFg: () => tr,
+          rq7: () => xe,
+          sFg: () => rr,
           sMq: () => o,
-          sR6: () => Tt,
-          sXx: () => ar,
+          sR6: () => Rt,
+          sXx: () => cr,
           s_C: () => Fr,
-          smh: () => Nt,
-          tE9: () => An,
-          tHO: () => de,
-          tHY: () => Je,
+          smh: () => zt,
+          tE9: () => kn,
+          tHO: () => pe,
+          tHY: () => Ke,
           tsQ: () => T,
-          u64: () => Wt,
-          uV2: () => te,
-          u_3: () => mn,
-          uxv: () => ur,
-          vQx: () => ae,
-          vtD: () => nt,
+          u64: () => Gt,
+          uV2: () => re,
+          u_3: () => bn,
+          uxv: () => dr,
+          vQx: () => ce,
+          vtD: () => it,
           w6X: () => Rr,
-          wPO: () => oe,
-          wRh: () => X,
+          wPO: () => se,
+          wRh: () => ee,
           wac: () => Sr,
-          wlL: () => J,
+          wlL: () => Q,
           wtf: () => j,
           xDT: () => R,
-          xFY: () => Xe,
-          xJo: () => lt,
+          xFY: () => et,
+          xJo: () => ut,
           xcd: () => Dr,
           xjQ: () => x,
-          xpG: () => ln,
+          xpG: () => un,
           xx1: () => L,
-          y9P: () => St,
-          yI9: () => he,
+          y9P: () => Et,
+          yI9: () => ve,
           yYg: () => A,
           zAA: () => z,
-          zFR: () => kn,
-          zv5: () => Gr,
+          zFR: () => Tn,
+          zv5: () => Yr,
         });
         const n = "ACTIVATE_TRIGGER_FAILED",
           i = "ACTIVATE_TRIGGER",
@@ -26934,9 +26936,9 @@
           L = "CREATE_CONVERSATION_REQUEST",
           N = "CREATE_CONVERSATION_SUCCESS",
           z = "CREATE_TICKET_FAILURE",
-          V = "CREATE_TICKET_REQUEST",
-          U = "CREATE_TICKET_SUCCESS",
-          B = "CREATE_CUSTOMIZATION_OVERRIDE",
+          U = "CREATE_TICKET_REQUEST",
+          B = "CREATE_TICKET_SUCCESS",
+          V = "CREATE_CUSTOMIZATION_OVERRIDE",
           Z = "CREATE_EVENT_FAILED",
           F = "CREATE_EVENT_SUCCESS",
           H = "CREATE_EVENT",
@@ -26945,137 +26947,137 @@
           W = "CREATE_OR_UPDATE_USER_SUCCESS",
           G = "CREATE_REACTION_FAILURE",
           Y = "CREATE_REACTION_REQUEST",
-          Q = "CREATE_REACTION_SUCCESS",
-          J = "DEACTIVATE_TRIGGER",
+          J = "CREATE_REACTION_SUCCESS",
+          Q = "DEACTIVATE_TRIGGER",
           K = "DELIVER_BOT_INTRO",
-          X = "DESTROY_SESSION",
-          ee = "DISABLE_LAUNCHER_DISCOVERY_MODE",
-          te = "DISMISS_BANNER",
-          re = "DISMISS_NOTIFICATIONS_FAILURE",
-          ne = "DISMISS_NOTIFICATIONS_REQUEST",
-          ie = "DISMISS_NOTIFICATIONS_SUCCESS",
-          oe = "DISMISS_POINTER_MESSAGE",
-          se = "RECORD_SURVEY_STEP_VALIDATION_RESULT",
-          ae = "RECORD_FIRST_FAILED_VALIDATION_QUESTION",
-          ce = "DISMISS_SURVEY",
-          le = "COMPLETE_SURVEY",
-          ue = "START_SUBMITTING_SURVEY",
-          de = "FINISH_SUBMITTING_SURVEY",
-          pe = "EMAIL_ATTRIBUTE_COLLECTOR_INSERTED",
-          he = "ENTER_STANDALONE_MODE",
-          ve = "EXPANSION_TRANSITION_COMPLETE",
-          fe = "FETCH_BANNER_VIEW",
-          ge = "FETCH_MESSENGER_SHEET_DATA_FAILURE",
-          me = "FETCH_MESSENGER_SHEET_DATA_REQUEST",
-          be = "FETCH_MESSENGER_SHEET_DATA_SUCCESS",
-          ye = "FETCH_NEWS_ITEM_DETAILS_REQUEST",
-          we = "FETCH_NEWS_ITEM_DETAILS_SUCCESS",
-          _e = "FETCH_NEWS_ITEM_DETAILS_FAILURE",
-          Oe = "FETCH_ANSWER_DETAILS_REQUEST",
-          Ce = "FETCH_ANSWER_DETAILS_SUCCESS",
-          Se = "FETCH_ANSWER_DETAILS_FAILURE",
-          Ee = "FETCH_ALL_NEWS_ITEMS_REQUEST",
-          Ie = "FETCH_NEXT_NEWS_ITEMS_REQUEST",
-          Pe = "FETCH_ALL_NEWS_ITEMS_SUCCESS",
-          je = "FETCH_NEXT_NEWS_ITEMS_SUCCESS",
-          Ae = "FETCH_ALL_NEWS_ITEMS_FAILURE",
-          ke = "FETCH_TOUR_FAILURE",
-          Te = "FETCH_TOUR_REQUEST",
-          Re = "FETCH_TOUR_SUCCESS",
-          Me = "FINISH_NAVIGATION",
-          xe = "GET_CARD_CONTENT_FAILURE",
-          De = "GET_CARD_CONTENT_REQUEST",
-          Le = "GET_CARD_CONTENT_SUCCESS",
-          Ne = "GET_CONVERSATION_FAILURE",
-          ze = "GET_CONVERSATION_REQUEST",
-          Ve = "GET_CONVERSATION_SUCCESS",
-          Ue = "GET_CONVERSATIONS_FAILURE",
-          Be = "GET_CONVERSATIONS_REQUEST",
-          Ze = "GET_CONVERSATIONS_SUCCESS",
-          Fe = "GET_HOME_SCREEN_CARDS_FAILURE",
-          He = "SELECT_ANSWER",
-          $e = "REACT_TO_ANSWER",
-          qe = "GET_HOME_SCREEN_CARDS_REQUEST",
-          We = "GET_HOME_SCREEN_CARDS_SUCCESS",
-          Ge = "GET_HOME_SCREEN_CONVERSATIONS_SUCCESS",
-          Ye = "GET_RECENT_CONVERSATIONS_SUCCESS",
+          X = "DELIVER_COMPOSER_SUGGESTION_PARTS",
+          ee = "DESTROY_SESSION",
+          te = "DISABLE_LAUNCHER_DISCOVERY_MODE",
+          re = "DISMISS_BANNER",
+          ne = "DISMISS_NOTIFICATIONS_FAILURE",
+          ie = "DISMISS_NOTIFICATIONS_REQUEST",
+          oe = "DISMISS_NOTIFICATIONS_SUCCESS",
+          se = "DISMISS_POINTER_MESSAGE",
+          ae = "RECORD_SURVEY_STEP_VALIDATION_RESULT",
+          ce = "RECORD_FIRST_FAILED_VALIDATION_QUESTION",
+          le = "DISMISS_SURVEY",
+          ue = "COMPLETE_SURVEY",
+          de = "START_SUBMITTING_SURVEY",
+          pe = "FINISH_SUBMITTING_SURVEY",
+          he = "EMAIL_ATTRIBUTE_COLLECTOR_INSERTED",
+          ve = "ENTER_STANDALONE_MODE",
+          fe = "EXPANSION_TRANSITION_COMPLETE",
+          ge = "FETCH_BANNER_VIEW",
+          me = "FETCH_MESSENGER_SHEET_DATA_FAILURE",
+          be = "FETCH_MESSENGER_SHEET_DATA_REQUEST",
+          ye = "FETCH_MESSENGER_SHEET_DATA_SUCCESS",
+          we = "FETCH_NEWS_ITEM_DETAILS_REQUEST",
+          _e = "FETCH_NEWS_ITEM_DETAILS_SUCCESS",
+          Oe = "FETCH_NEWS_ITEM_DETAILS_FAILURE",
+          Ce = "FETCH_ANSWER_DETAILS_REQUEST",
+          Se = "FETCH_ANSWER_DETAILS_SUCCESS",
+          Ee = "FETCH_ANSWER_DETAILS_FAILURE",
+          Ie = "FETCH_ALL_NEWS_ITEMS_REQUEST",
+          Pe = "FETCH_NEXT_NEWS_ITEMS_REQUEST",
+          je = "FETCH_ALL_NEWS_ITEMS_SUCCESS",
+          Ae = "FETCH_NEXT_NEWS_ITEMS_SUCCESS",
+          ke = "FETCH_ALL_NEWS_ITEMS_FAILURE",
+          Te = "FETCH_TOUR_FAILURE",
+          Re = "FETCH_TOUR_REQUEST",
+          Me = "FETCH_TOUR_SUCCESS",
+          xe = "FINISH_NAVIGATION",
+          De = "GET_CARD_CONTENT_FAILURE",
+          Le = "GET_CARD_CONTENT_REQUEST",
+          Ne = "GET_CARD_CONTENT_SUCCESS",
+          ze = "GET_CONVERSATION_FAILURE",
+          Ue = "GET_CONVERSATION_REQUEST",
+          Be = "GET_CONVERSATION_SUCCESS",
+          Ve = "GET_CONVERSATIONS_FAILURE",
+          Ze = "GET_CONVERSATIONS_REQUEST",
+          Fe = "GET_CONVERSATIONS_SUCCESS",
+          He = "GET_HOME_SCREEN_CARDS_FAILURE",
+          $e = "SELECT_ANSWER",
+          qe = "REACT_TO_ANSWER",
+          We = "GET_HOME_SCREEN_CARDS_REQUEST",
+          Ge = "GET_HOME_SCREEN_CARDS_SUCCESS",
+          Ye = "GET_HOME_SCREEN_CONVERSATIONS_SUCCESS",
+          Je = "GET_RECENT_CONVERSATIONS_SUCCESS",
           Qe = "GET_UNREAD_CONVERSATIONS_REQUEST",
-          Je = "GET_UNREAD_CONVERSATIONS_SUCCESS",
-          Ke = "HIDE_SEARCH_BROWSE",
-          Xe = "INPUT_VALUE_CHANGED",
-          et = "INTERSECTION_BOOTED",
-          tt = "MARK_ACTIVE_TOUR_AS_COMPLETED",
-          rt = "MARK_CONVERSATION_AS_READ_FAILURE",
-          nt = "MARK_CONVERSATION_AS_READ_REQUEST",
-          it = "MARK_CONVERSATION_AS_READ_SUCCESS",
-          ot = "MESSENGER_NAVIGATE_BACK",
-          st = "MESSENGER_OPEN_REQUEST_FAILED",
-          at = "MESSENGER_OPEN_REQUEST_SENT",
-          ct = "MESSENGER_OPEN_REQUEST_SUCCESS",
-          lt = "MESSENGER_OPEN_HANDLED",
-          ut = "OPEN_ARTICLE",
-          dt = "CHANGE_ARTICLE_LOCALE",
-          pt = "OPEN_BORDERLESS_CONVERSATION",
-          ht = "OPEN_INSTALL_MODE",
-          vt = "OPEN_LAUNCHER_DISCOVERY_MODE",
-          ft = "OPEN_MESSAGE",
-          gt = "OPEN_MESSENGER",
-          mt = "OPEN_POINTER_MESSAGE",
-          bt = "OPEN_SHEET_WITH_TOKEN",
-          yt = "OPEN_SHEET",
-          wt = "OPENING_MESSENGER_FROM_LAUNCHER_DISCOVERY_MODE",
-          _t = "NOTIFY_NEWSFEED_VISIT_SUCCESS",
-          Ot = "PROGRESS_TOUR_REQUEST_FINISHED",
-          Ct = "PROGRESS_TOUR_REQUEST_STARTED",
-          St = "PROGRESS_TOUR",
-          Et = "REACT_TO_BANNER",
-          It = "REACT_TO_NEWS_ITEM",
-          Pt = "NEWSFEED_ID_RECEIVED",
-          jt = "RECEIVE_ARTICLE_COLLECTIONS",
-          At = "RECEIVE_ARTICLE",
-          kt = "RECEIVE_BANNERS",
-          Tt = "RECEIVE_CHECKLISTS",
-          Rt = "RESOLVE_CHECKLIST_TASK",
-          Mt = "RESOLVE_CHECKLIST_TASK_STARTED",
-          xt = "RESOLVE_CHECKLIST_TASK_COMPLETE",
-          Dt = "DISMISS_CHECKLIST",
-          Lt = "OPEN_CHECKLIST",
-          Nt = "CLOSE_CHECKLIST",
-          zt = "RECEIVE_CONVERSATION_PART_TOKEN",
-          Vt = "RECEIVE_HOME_SCREEN_ARTICLE_SUGGESTIONS",
-          Ut = "RECEIVE_HOME_SCREEN_MIXED_SUGGESTIONS",
-          Bt = "RECEIVE_SURVEY",
-          Zt = "RECEIVE_SURVEY_STEP",
-          Ft = "RECEIVE_TICKET_TYPES",
-          Ht = "RECEIVE_TOOLTIP_GROUPS",
-          $t = "START_TOOLTIP_GROUP_PREVIEW",
-          qt = "END_TOOLTIP_GROUP_PREVIEW",
-          Wt = "TOGGLE_TOOLTIP",
-          Gt = "MATCH_TOOLTIPS",
-          Yt = "TOOLTIP_VIEWED",
+          Ke = "GET_UNREAD_CONVERSATIONS_SUCCESS",
+          Xe = "HIDE_SEARCH_BROWSE",
+          et = "INPUT_VALUE_CHANGED",
+          tt = "INTERSECTION_BOOTED",
+          rt = "MARK_ACTIVE_TOUR_AS_COMPLETED",
+          nt = "MARK_CONVERSATION_AS_READ_FAILURE",
+          it = "MARK_CONVERSATION_AS_READ_REQUEST",
+          ot = "MARK_CONVERSATION_AS_READ_SUCCESS",
+          st = "MESSENGER_NAVIGATE_BACK",
+          at = "MESSENGER_OPEN_REQUEST_FAILED",
+          ct = "MESSENGER_OPEN_REQUEST_SENT",
+          lt = "MESSENGER_OPEN_REQUEST_SUCCESS",
+          ut = "MESSENGER_OPEN_HANDLED",
+          dt = "OPEN_ARTICLE",
+          pt = "CHANGE_ARTICLE_LOCALE",
+          ht = "OPEN_BORDERLESS_CONVERSATION",
+          vt = "OPEN_INSTALL_MODE",
+          ft = "OPEN_LAUNCHER_DISCOVERY_MODE",
+          gt = "OPEN_MESSAGE",
+          mt = "OPEN_MESSENGER",
+          bt = "OPEN_POINTER_MESSAGE",
+          yt = "OPEN_SHEET_WITH_TOKEN",
+          wt = "OPEN_SHEET",
+          _t = "OPENING_MESSENGER_FROM_LAUNCHER_DISCOVERY_MODE",
+          Ot = "NOTIFY_NEWSFEED_VISIT_SUCCESS",
+          Ct = "PROGRESS_TOUR_REQUEST_FINISHED",
+          St = "PROGRESS_TOUR_REQUEST_STARTED",
+          Et = "PROGRESS_TOUR",
+          It = "REACT_TO_BANNER",
+          Pt = "REACT_TO_NEWS_ITEM",
+          jt = "NEWSFEED_ID_RECEIVED",
+          At = "RECEIVE_ARTICLE_COLLECTIONS",
+          kt = "RECEIVE_ARTICLE",
+          Tt = "RECEIVE_BANNERS",
+          Rt = "RECEIVE_CHECKLISTS",
+          Mt = "RESOLVE_CHECKLIST_TASK",
+          xt = "RESOLVE_CHECKLIST_TASK_STARTED",
+          Dt = "RESOLVE_CHECKLIST_TASK_COMPLETE",
+          Lt = "DISMISS_CHECKLIST",
+          Nt = "OPEN_CHECKLIST",
+          zt = "CLOSE_CHECKLIST",
+          Ut = "RECEIVE_CONVERSATION_PART_TOKEN",
+          Bt = "RECEIVE_HOME_SCREEN_ARTICLE_SUGGESTIONS",
+          Vt = "RECEIVE_HOME_SCREEN_MIXED_SUGGESTIONS",
+          Zt = "RECEIVE_SURVEY",
+          Ft = "RECEIVE_SURVEY_STEP",
+          Ht = "RECEIVE_TICKET_TYPES",
+          $t = "RECEIVE_TOOLTIP_GROUPS",
+          qt = "START_TOOLTIP_GROUP_PREVIEW",
+          Wt = "END_TOOLTIP_GROUP_PREVIEW",
+          Gt = "TOGGLE_TOOLTIP",
+          Yt = "MATCH_TOOLTIPS",
+          Jt = "TOOLTIP_VIEWED",
           Qt = "RECORD_MESSAGE_SENT",
-          Jt = "RECORD_SURVEY_RESPONSE",
-          Kt = "REHYDRATE",
-          Xt = "REMOVE_INBOUND_SUGGESTIONS",
-          er = "REMOVE_TRIGGER",
-          tr = "RETRY_SESSION",
-          rr = "RESET_TOUR",
-          nr = "SNOOZE_TOUR",
-          ir = "SEARCH_ARTICLES_FAILURE",
-          or = "SEARCH_ARTICLES_REQUEST",
-          sr = "SEARCH_ARTICLES_SUCCESS",
-          ar = "SEARCH_BROWSE_CLOSE_TRANSITION_ENDED",
-          cr = "SEARCH_BROWSE_GO_BACK_COMPLETE",
-          lr = "SEARCH_BROWSE_GO_BACK",
-          ur = "SEARCH_BROWSE_CLOSE",
-          dr = "SEARCH_BROWSE_SET_SEARCH_FOCUS",
-          pr = "SEARCH_GIFS_FAILURE",
-          hr = "SEARCH_GIFS_REQUEST",
-          vr = "SEARCH_GIFS_SUCCESS",
-          fr = "SELECT_ARTICLE_COLLECTION",
-          gr = "SELECT_NEWS_ITEM",
-          mr = "SET_ACCESSIBILITY_THEME",
-          br = "SET_ANIMATING_CONVERSATION_PART",
+          Kt = "RECORD_SURVEY_RESPONSE",
+          Xt = "REHYDRATE",
+          er = "REMOVE_INBOUND_SUGGESTIONS",
+          tr = "REMOVE_TRIGGER",
+          rr = "RETRY_SESSION",
+          nr = "RESET_TOUR",
+          ir = "SNOOZE_TOUR",
+          or = "SEARCH_ARTICLES_FAILURE",
+          sr = "SEARCH_ARTICLES_REQUEST",
+          ar = "SEARCH_ARTICLES_SUCCESS",
+          cr = "SEARCH_BROWSE_CLOSE_TRANSITION_ENDED",
+          lr = "SEARCH_BROWSE_GO_BACK_COMPLETE",
+          ur = "SEARCH_BROWSE_GO_BACK",
+          dr = "SEARCH_BROWSE_CLOSE",
+          pr = "SEARCH_BROWSE_SET_SEARCH_FOCUS",
+          hr = "SEARCH_GIFS_FAILURE",
+          vr = "SEARCH_GIFS_REQUEST",
+          fr = "SEARCH_GIFS_SUCCESS",
+          gr = "SELECT_ARTICLE_COLLECTION",
+          mr = "SELECT_NEWS_ITEM",
+          br = "SET_ACCESSIBILITY_THEME",
           yr = "SET_COMPOSER_SUGGESTIONS_DISMISSED",
           wr = "SET_COMPOSER_SUGGESTIONS_LOADING",
           _r = "SET_COMPOSER_SUGGESTIONS",
@@ -27096,52 +27098,53 @@
           Lr = "SHOW_SEARCH_BROWSE_M5",
           Nr = "START_NAVIGATION",
           zr = "START_TOUR_PREVIEW",
-          Vr = "STOP_TOUR_PREVIEW",
-          Ur = "STOP_TOUR",
-          Br = "SUBMIT_MESSENGER_CARD_ACTION_FAILURE",
+          Ur = "STOP_TOUR_PREVIEW",
+          Br = "STOP_TOUR",
+          Vr = "SUBMIT_MESSENGER_CARD_ACTION_FAILURE",
           Zr = "SUBMIT_MESSENGER_CARD_ACTION_REQUEST",
           Fr = "SUBMIT_MESSENGER_CARD_ACTION_SUCCESS",
           Hr = "SET_EXPANDED_MODE",
           $r = "RECEIVE_TICKETS",
-          qr = "RECEIVE_TICKET_DETAILS",
-          Wr = "MARK_TICKET_AS_READ",
-          Gr = "MARK_TICKET_AS_UNREAD",
-          Yr = "TOGGLE_UPFRONT_EMAIL_COLLECTOR_STATE",
+          qr = "RECEIVE_TICKETS_PORTAL_URL",
+          Wr = "RECEIVE_TICKET_DETAILS",
+          Gr = "MARK_TICKET_AS_READ",
+          Yr = "MARK_TICKET_AS_UNREAD",
+          Jr = "TOGGLE_UPFRONT_EMAIL_COLLECTOR_STATE",
           Qr = "TOUR_UPDATE_FAILED",
-          Jr = "TRIGGER_TRANSITIONS_FAILURE",
-          Kr = "TRIGGER_TRANSITIONS_REQUEST",
-          Xr = "TRIGGER_TRANSITIONS_SUCCESS",
-          en = "UPDATE_BOT_INTRO",
-          tn = "UPDATE_CONVERSATION_FORM_FAILURE",
-          rn = "UPDATE_CONVERSATION_FORM_REQUEST",
-          nn = "UPDATE_CONVERSATION_FORM_SUCCESS",
-          on = "UPDATE_HELP_CENTER_SESSION",
-          sn = "UPDATE_SPACE_HEADER",
-          an = "UPDATE_NOTIFICATION_TYPE_OVERRIDES",
-          cn = "UPDATE_PHONE_NUMBER_FAILURE",
-          ln = "UPDATE_PHONE_NUMBER_REQUEST",
-          un = "UPDATE_PHONE_NUMBER_SUCCESS",
-          dn = "UPDATE_PREVIEW_INBOUND_SUGGESTIONS",
-          pn = "UPDATE_RESOLUTION_BOT_STATE_FROM_OPEN",
-          hn = "UPDATE_SEARCH_BROWSE_QUERY",
-          vn = "UPDATE_SERVER_SIDE_INBOUND_SUGGESTIONS",
-          fn = "UPDATE_UPLOAD_PROGRESS",
-          gn = "UPDATE_USER_SUPPLIED_EMAIL_REQUEST",
-          mn = "UPDATE_USER_SUPPLIED_EMAIL_SUCCESS",
-          bn = "UPDATED_CHECKLIST_NOTIFICATION_DETAILS",
-          yn = "UPDATE_OPEN_INBOUND_CONVERSATION_IDS",
-          wn = "QUEUE_AUTO_RESOLVE",
-          _n = "DEQUEUE_ALL_AUTO_RESOLVE",
-          On = "UPFRONT_EMAIL_COLLECTION_SUBMITTED",
-          Cn = "USER_CONTENT_SEEN_BY_ADMIN",
-          Sn = "USER_IS_ABSENT",
-          En = "USER_IS_PRESENT",
-          In = "USER_IS_TYPING",
-          Pn = "VISITOR_AUTO_MESSAGE_CONDITION_SATISFIED_SUCCESS",
-          jn = "PREVIEW_WORKFLOW",
-          An = "SET_WORKFLOW_PREVIEW_DATA",
-          kn = "JOIN_CONVERSATION_FAILURE",
-          Tn = "JOIN_CONVERSATION_REQUEST";
+          Kr = "TRIGGER_TRANSITIONS_FAILURE",
+          Xr = "TRIGGER_TRANSITIONS_REQUEST",
+          en = "TRIGGER_TRANSITIONS_SUCCESS",
+          tn = "UPDATE_BOT_INTRO",
+          rn = "UPDATE_CONVERSATION_FORM_FAILURE",
+          nn = "UPDATE_CONVERSATION_FORM_REQUEST",
+          on = "UPDATE_CONVERSATION_FORM_SUCCESS",
+          sn = "UPDATE_HELP_CENTER_SESSION",
+          an = "UPDATE_SPACE_HEADER",
+          cn = "UPDATE_NOTIFICATION_TYPE_OVERRIDES",
+          ln = "UPDATE_PHONE_NUMBER_FAILURE",
+          un = "UPDATE_PHONE_NUMBER_REQUEST",
+          dn = "UPDATE_PHONE_NUMBER_SUCCESS",
+          pn = "UPDATE_PREVIEW_INBOUND_SUGGESTIONS",
+          hn = "UPDATE_RESOLUTION_BOT_STATE_FROM_OPEN",
+          vn = "UPDATE_SEARCH_BROWSE_QUERY",
+          fn = "UPDATE_SERVER_SIDE_INBOUND_SUGGESTIONS",
+          gn = "UPDATE_UPLOAD_PROGRESS",
+          mn = "UPDATE_USER_SUPPLIED_EMAIL_REQUEST",
+          bn = "UPDATE_USER_SUPPLIED_EMAIL_SUCCESS",
+          yn = "UPDATED_CHECKLIST_NOTIFICATION_DETAILS",
+          wn = "UPDATE_OPEN_INBOUND_CONVERSATION_IDS",
+          _n = "QUEUE_AUTO_RESOLVE",
+          On = "DEQUEUE_ALL_AUTO_RESOLVE",
+          Cn = "UPFRONT_EMAIL_COLLECTION_SUBMITTED",
+          Sn = "USER_CONTENT_SEEN_BY_ADMIN",
+          En = "USER_IS_ABSENT",
+          In = "USER_IS_PRESENT",
+          Pn = "USER_IS_TYPING",
+          jn = "VISITOR_AUTO_MESSAGE_CONDITION_SATISFIED_SUCCESS",
+          An = "PREVIEW_WORKFLOW",
+          kn = "SET_WORKFLOW_PREVIEW_DATA",
+          Tn = "JOIN_CONVERSATION_FAILURE",
+          Rn = "JOIN_CONVERSATION_REQUEST";
       },
       13590: (e, t, r) => {
         "use strict";
@@ -27447,7 +27450,6 @@
               isMobile: e.isMobileBrowser || e.isMobileSize,
               scrollBarsWidthPx: (0, n.n)(),
               visibleScrollBars: 0 !== (0, n.n)(),
-              suggestionsMaxHeightWithExpandedHeaderPx: 316,
               isRtlLocale: (0, s.jZ)(e.locale),
             };
           };
@@ -27850,67 +27852,67 @@
       })[e] +
       "-modern." +
       {
-        13: "c56be1fb",
-        20: "9f402157",
-        29: "f0eb1770",
-        78: "42f01c27",
-        97: "87f41093",
-        270: "52bdffda",
-        419: "d219fe7f",
-        549: "69872e7e",
+        13: "5507a839",
+        20: "95f7447e",
+        29: "577ce674",
+        78: "8c596d8c",
+        97: "e0b88005",
+        270: "5b9f43a4",
+        419: "ad6a7904",
+        549: "1089db6b",
         661: "ee8487f2",
-        721: "323db184",
+        721: "169d530f",
         1216: "85609c2d",
-        1676: "c17901ba",
-        1757: "171ca142",
+        1676: "9074f8b1",
+        1757: "0f4b362a",
         1914: "1d50ca84",
-        1999: "05c33dab",
-        2143: "486d20a4",
+        1999: "7cda7d99",
+        2143: "3659691c",
         2392: "befe2f20",
         2461: "b3a4419b",
-        2712: "168b775d",
-        2897: "4b6c810d",
-        2935: "59bf65d4",
-        3103: "bc351b98",
-        3109: "023c5fae",
-        3410: "932909c4",
-        3440: "6c5e547c",
-        3481: "ebdaf51b",
-        3798: "041e9a19",
-        3828: "44c58b07",
-        3900: "63d758ff",
-        4007: "e6e32a78",
-        4255: "9fb4bb7d",
-        4374: "3275fb3e",
-        4483: "8e208316",
-        4532: "b4600521",
-        4548: "cd4d61fa",
-        4804: "e11e09e5",
-        4914: "e394c0ca",
+        2712: "b0a4b412",
+        2897: "2974dd68",
+        2935: "3ed62ec5",
+        3103: "172cde3c",
+        3109: "c63b63be",
+        3410: "f147716f",
+        3440: "df100074",
+        3481: "ee464b0f",
+        3798: "ba5ab217",
+        3828: "75fa76ab",
+        3900: "158e8a09",
+        4007: "543179a8",
+        4255: "02a357e5",
+        4374: "74dcbdff",
+        4483: "36af7865",
+        4532: "c842d305",
+        4548: "17ce1ea8",
+        4804: "8ff720be",
+        4914: "96e13f3e",
         4965: "c698799d",
         5001: "ac568468",
-        5249: "a7c7fa88",
-        5307: "bc6ef997",
-        5508: "5fa73d52",
-        5566: "ffd14b9f",
-        5600: "e6dae1e6",
-        5696: "a1566650",
-        6382: "592152dc",
-        6457: "16c8b1f6",
-        6540: "e7464ea8",
-        6764: "1d2da0ef",
-        6769: "a346214c",
-        6954: "08b6ffc4",
-        7194: "546da564",
-        7465: "4ec3cfe6",
-        7775: "1bb8c884",
+        5249: "4f624624",
+        5307: "d4fc27c0",
+        5508: "e249f843",
+        5566: "24516113",
+        5600: "76fa13b0",
+        5696: "44d7ebf6",
+        6382: "4ff5b2cc",
+        6457: "21417d7f",
+        6540: "e1f3977d",
+        6764: "d7a0d5f1",
+        6769: "c5b1cdb2",
+        6954: "eb4b9b6c",
+        7194: "d1e48e9d",
+        7465: "071a80a9",
+        7775: "6d049162",
         8056: "7088be9d",
-        8325: "f7d6364a",
-        8628: "ca6d0f1f",
+        8325: "2cd61ce5",
+        8628: "c719265b",
         9203: "d2c7c395",
-        9870: "66ce4dae",
-        9873: "035cbe44",
-        9988: "4a0f1140",
+        9870: "fc37018a",
+        9873: "30f742e0",
+        9988: "bc3a895c",
       }[e] +
       ".js"),
     (a.g = (function () {

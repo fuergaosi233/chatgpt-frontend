@@ -11,12 +11,12 @@
       var s = a(21722),
         t = a(39324),
         r = a(22830),
-        i = a(75883),
+        i = a(38104),
         l = a(35250),
         o = a(95137),
         c = a(78931),
-        d = a(50795),
-        u = a(82081),
+        d = a(18719),
+        u = a(73426),
         p = a(9181),
         m = a.n(p),
         f = a(60554),
@@ -36,12 +36,12 @@
           p = (0, b.Z)(),
           v = (0, c.hz)(),
           w = (0, r._)((0, g.useState)(!1), 2),
-          N = w[0],
-          T = w[1],
-          M = (0, f.useRouter)(),
+          S = w[0],
+          N = w[1],
+          T = (0, f.useRouter)(),
           k = (0, g.useCallback)(
             function () {
-              d.o.logEvent(u.a.closeAccountPaymentModal), a();
+              d.A.logEvent(u.M.closeAccountPaymentModal), a();
             },
             [a],
           ),
@@ -51,31 +51,31 @@
               return (0, i.Jh)(this, function (n) {
                 switch (n.label) {
                   case 0:
-                    T(!0),
-                      d.o.logEvent(u.a.clickAccountPaymentCheckout),
+                    N(!0),
+                      d.A.logEvent(u.M.clickAccountPaymentCheckout),
                       (n.label = 1);
                   case 1:
                     return (
                       n.trys.push([1, 3, 4, 5]), [4, o.ZP.getCheckoutLink()]
                     );
                   case 2:
-                    return (e = n.sent()), M.push(e.url), [3, 5];
+                    return (e = n.sent()), T.push(e.url), [3, 5];
                   case 3:
                     return (
                       n.sent(),
-                      y.m.warning(p.formatMessage(S.paymentErrorWarning), {
+                      y.m.warning(p.formatMessage(M.paymentErrorWarning), {
                         hasCloseButton: !0,
                       }),
                       [3, 5]
                     );
                   case 4:
-                    return T(!1), [7];
+                    return N(!1), [7];
                   case 5:
                     return [2];
                 }
               });
             }),
-            [p, M],
+            [p, T],
           ),
           I = (0, g.useCallback)(
             (0, s._)(function () {
@@ -83,8 +83,8 @@
               return (0, i.Jh)(this, function (n) {
                 switch (n.label) {
                   case 0:
-                    T(!0),
-                      d.o.logEvent(u.a.clickAccountCustomerPortal),
+                    N(!0),
+                      d.A.logEvent(u.M.clickAccountCustomerPortal),
                       (n.label = 1);
                   case 1:
                     return (
@@ -92,26 +92,26 @@
                       [4, o.ZP.fetchCustomerPortalUrl()]
                     );
                   case 2:
-                    return (e = n.sent()), M.push(e.url), [3, 5];
+                    return (e = n.sent()), T.push(e.url), [3, 5];
                   case 3:
                     return (
                       n.sent(),
-                      y.m.warning(p.formatMessage(S.accountErrorWarning), {
+                      y.m.warning(p.formatMessage(M.accountErrorWarning), {
                         hasCloseButton: !0,
                       }),
                       [3, 5]
                     );
                   case 4:
-                    return T(!1), [7];
+                    return N(!1), [7];
                   case 5:
                     return [2];
                 }
               });
             }),
-            [p, M],
+            [p, T],
           ),
           E = (0, g.useCallback)(function () {
-            d.o.logEvent(u.a.clickAccountPaymentGetHelp);
+            d.A.logEvent(u.M.clickAccountPaymentGetHelp);
           }, []),
           Z = (0, c.YD)(),
           D = v.has("disable_upgrade_ui");
@@ -125,7 +125,7 @@
               children: [
                 (0, l.jsx)("span", {
                   className: "text-base font-semibold sm:text-base",
-                  children: (0, l.jsx)(h.Z, (0, t._)({}, S.modalTitle)),
+                  children: (0, l.jsx)(h.Z, (0, t._)({}, M.modalTitle)),
                 }),
                 (0, l.jsx)("button", {
                   className:
@@ -202,10 +202,10 @@
                         {
                           variant: "primary",
                           disabledText: D
-                            ? p.formatMessage(S.highDemandDisabledText)
+                            ? p.formatMessage(M.highDemandDisabledText)
                             : "",
-                          disabled: N,
-                          isLoading: N,
+                          disabled: S,
+                          isLoading: S,
                           onClick: _,
                           text: P.S.plus.callToAction.inactivePayment,
                         },
@@ -235,7 +235,7 @@
                           j.nR,
                           {
                             className: "sm:pb-1",
-                            isLoading: N,
+                            isLoading: S,
                             text: P.S.manageSubscriptionWeb.callToAction,
                             onClick: I,
                           },
@@ -269,7 +269,7 @@
           ],
         });
       }
-      var S = (0, v.vU)({
+      var M = (0, v.vU)({
         paymentErrorWarning: {
           id: "AccountPaymentModal.paymentErrorWarning",
           description: "Error toast when payment page has an error",

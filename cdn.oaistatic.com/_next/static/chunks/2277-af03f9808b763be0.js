@@ -31,11 +31,11 @@
         s = n(46020),
         l = n(33669),
         c = n(50744),
-        u = n(13090);
-      function d() {
+        d = n(13090);
+      function u() {
         var e = (0, t._)(["overflow-hidden w-full h-full relative flex z-0"]);
         return (
-          (d = function () {
+          (u = function () {
             return e;
           }),
           e
@@ -57,21 +57,21 @@
           n = e.showNavigation,
           t = e.renderTitle,
           o = e.renderMobileHeaderRightContent,
-          d = e.renderSidebar,
+          u = e.renderSidebar,
           f = (0, l.w$)(),
-          m = [],
-          g = null;
+          x = [],
+          v = null;
         return (
           a.Children.forEach(r, function (e) {
             a.isValidElement(e) &&
-              (e.type === h.Sidebars ? (g = e) : m.push(e));
+              (e.type === h.Sidebars ? (v = e) : x.push(e));
           }),
-          (0, i.jsxs)(v, {
+          (0, i.jsxs)(g, {
             children: [
               f &&
                 n &&
                 (0, i.jsx)(c.Z, {
-                  children: (0, i.jsx)(u.l6, { children: d }),
+                  children: (0, i.jsx)(d.l6, { children: u }),
                 }),
               (0, i.jsxs)("div", {
                 className:
@@ -83,27 +83,27 @@
                       !f &&
                         n &&
                         (0, i.jsx)(c.Z, {
-                          children: (0, i.jsx)(u.Vs, {
+                          children: (0, i.jsx)(d.Vs, {
                             onClickOpenSidebar: function () {
                               return s.vm.toggleActiveSidebar("mobile-nav");
                             },
                             renderTitle: t,
-                            renderSidebar: d,
+                            renderSidebar: u,
                             renderRightContent: o,
                           }),
                         }),
-                      (0, i.jsx)(x, { className: "flex-1", children: m }),
+                      (0, i.jsx)(m, { className: "flex-1", children: x }),
                     ],
                   }),
-                  g,
+                  v,
                 ],
               }),
             ],
           })
         );
       }
-      var v = o.Z.div(d()),
-        x = o.Z.main(f());
+      var g = o.Z.div(u()),
+        m = o.Z.main(f());
       h.Sidebars = function (e) {
         var r = e.children;
         return (0, i.jsx)(i.Fragment, { children: r });
@@ -124,7 +124,7 @@
           return C;
         },
         l6: function () {
-          return F;
+          return z;
         },
       });
       var t = n(39324),
@@ -134,18 +134,18 @@
         s = n(20525),
         l = n(32148),
         c = n(19841),
-        u = n(97296),
-        d = n(70737),
+        d = n(97296),
+        u = n(70737),
         f = n(60554),
         h = n(70079),
-        v = n(1454),
-        x = n(70671),
-        m = n(32004),
-        g = n(94968),
+        g = n(1454),
+        m = n(70671),
+        x = n(32004),
+        v = n(94968),
         b = n(46020),
         p = n(33669),
-        j = n(42271),
-        y = n(45635),
+        y = n(42271),
+        j = n(45635),
         k = n(20522),
         w = n(15329);
       function N(e) {
@@ -172,19 +172,19 @@
         );
       }
       function S() {
-        var e = (0, x.Z)();
+        var e = (0, m.Z)();
         return (0, p.w$)()
-          ? (0, a.jsx)(y.u, {
+          ? (0, a.jsx)(j.u, {
               side: "right",
-              label: e.formatMessage(z.closeSidebar),
+              label: e.formatMessage(F.closeSidebar),
               children: (0, a.jsxs)(w.zV, {
                 onClick: b.vm.toggleDesktopNavCollapsed,
                 className:
                   "w-11 flex-shrink-0 items-center justify-center bg-white dark:bg-transparent",
                 children: [
-                  (0, a.jsx)(v.iYc, { className: "icon-sm" }),
+                  (0, a.jsx)(g.iYc, { className: "icon-sm" }),
                   (0, a.jsx)(l.f, {
-                    children: (0, a.jsx)(m.Z, (0, t._)({}, z.closeSidebar)),
+                    children: (0, a.jsx)(x.Z, (0, t._)({}, F.closeSidebar)),
                   }),
                 ],
               }),
@@ -228,7 +228,7 @@
                       leaveTo: "-translate-x-full",
                       children: (0, a.jsxs)(s.V.Panel, {
                         className:
-                          "relative flex w-full max-w-xs flex-1 flex-col bg-gray-900",
+                          "relative flex w-full max-w-xs flex-1 flex-col bg-gray-900 gizmo:bg-gray-800",
                         children: [
                           (0, a.jsx)(o.u.Child, {
                             as: h.Fragment,
@@ -249,11 +249,11 @@
                                   (0, a.jsx)("span", {
                                     className: "sr-only",
                                     children: (0, a.jsx)(
-                                      m.Z,
-                                      (0, t._)({}, z.closeSidebar),
+                                      x.Z,
+                                      (0, t._)({}, F.closeSidebar),
                                     ),
                                   }),
-                                  (0, a.jsx)(v.q5L, {
+                                  (0, a.jsx)(g.q5L, {
                                     className: "icon-lg text-white",
                                     "aria-hidden": "true",
                                   }),
@@ -303,11 +303,11 @@
                         (0, a.jsx)("span", {
                           className: "sr-only",
                           children: (0, a.jsx)(
-                            m.Z,
-                            (0, t._)({}, z.openSidebar),
+                            x.Z,
+                            (0, t._)({}, F.openSidebar),
                           ),
                         }),
-                        (0, a.jsx)(v.cur, {
+                        (0, a.jsx)(g.cur, {
                           "aria-hidden": "true",
                           className: "icon-lg",
                         }),
@@ -331,9 +331,9 @@
             })
           );
         };
-      function F(e) {
+      function z(e) {
         var r = e.children,
-          n = (0, x.Z)(),
+          n = (0, m.Z)(),
           t = (0, h.useRef)(null),
           i = (0, b.tN)(function (e) {
             return e.isDesktopNavCollapsed;
@@ -341,11 +341,11 @@
           o = (0, k.Ml)();
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, a.jsx)(u.E.div, {
+            (0, a.jsx)(d.E.div, {
               className: (0, c.default)(
                 "flex-shrink-0 overflow-x-hidden",
                 o
-                  ? "border-r border-gray-100 bg-gray-50 gizmo:bg-white dark:border-0 dark:bg-gray-900"
+                  ? "border-r border-gray-100 bg-gray-50 gizmo:bg-white dark:border-0 dark:bg-gray-800 gizmo:dark:border-r gizmo:dark:border-token-border-light"
                   : "dark bg-gray-900",
               ),
               ref: t,
@@ -368,26 +368,27 @@
                 }),
               }),
             }),
-            (0, a.jsx)(d.M, {
+            (0, a.jsx)(u.M, {
               initial: !1,
               children:
                 i &&
-                (0, a.jsx)(u.E.div, {
+                (0, a.jsx)(d.E.div, {
                   className:
-                    "absolute left-2 top-2 z-40 hidden md:inline-block",
+                    "absolute left-2 top-2 z-40 hidden gizmo:bottom-1 gizmo:left-1 gizmo:top-auto md:inline-block",
                   initial: { opacity: 0 },
                   animate: {
                     opacity: 1,
                     transition: { duration: 0.165, ease: "easeIn" },
                   },
-                  children: (0, a.jsx)(y.u, {
+                  children: (0, a.jsx)(j.u, {
                     side: "right",
-                    label: n.formatMessage(z.openSidebar),
-                    children: (0, a.jsx)(j.O, {
+                    label: n.formatMessage(F.openSidebar),
+                    children: (0, a.jsx)(y.O, {
                       onClick: b.vm.toggleDesktopNavCollapsed,
-                      "aria-label": n.formatMessage(z.openSidebar),
-                      children: (0, a.jsx)(v.iYc, {
-                        className: "icon-sm text-black dark:text-white",
+                      "aria-label": n.formatMessage(F.openSidebar),
+                      children: (0, a.jsx)(g.iYc, {
+                        className:
+                          "icon-sm text-token-text-primary gizmo:text-token-text-tertiary gizmo:hover:text-token-text-secondary",
                       }),
                     }),
                   }),
@@ -396,7 +397,7 @@
           ],
         });
       }
-      var z = (0, g.vU)({
+      var F = (0, v.vU)({
         closeSidebar: {
           id: "navigation.closeSidebar",
           defaultMessage: "Close sidebar",
@@ -446,19 +447,19 @@
     15329: function (e, r, n) {
       n.d(r, {
         R: function () {
-          return m;
+          return x;
         },
         Vq: function () {
-          return g;
+          return v;
         },
         ZB: function () {
-          return v;
+          return g;
         },
         ZP: function () {
           return h;
         },
         zV: function () {
-          return x;
+          return m;
         },
       });
       var t = n(4337),
@@ -488,21 +489,21 @@
           e
         );
       }
-      function u() {
+      function d() {
         var e = (0, t._)([
           "rounded-md border dark:border-white/20 gizmo:min-h-0 hover:bg-gray-500/10 h-11 gizmo:h-10 gizmo:rounded-lg gizmo:border-[rgba(0,0,0,0.1)]",
         ]);
         return (
-          (u = function () {
+          (d = function () {
             return e;
           }),
           e
         );
       }
-      function d() {
+      function u() {
         var e = (0, t._)(["my-1.5 h-px dark:bg-white/20 bg-black/20"]);
         return (
-          (d = function () {
+          (u = function () {
             return e;
           }),
           e
@@ -525,7 +526,7 @@
         return (0, i.jsx)(a.v.Item, {
           children: function (e) {
             var a = e.active;
-            return (0, i.jsx)(v, {
+            return (0, i.jsx)(g, {
               as: void 0 !== n ? "a" : "button",
               onClick: r,
               href: n,
@@ -541,10 +542,10 @@
         });
       }
       s.Z.a(l());
-      var v = s.Z.a(c()),
-        x = (0, s.Z)(v)(u()),
-        m = s.Z.div(d()),
-        g = (0, s.Z)(v)(f(), function (e) {
+      var g = s.Z.a(c()),
+        m = (0, s.Z)(g)(d()),
+        x = s.Z.div(u()),
+        v = (0, s.Z)(g)(f(), function (e) {
           return e.$active
             ? "bg-gray-100 dark:bg-gray-800"
             : "hover:bg-gray-100 dark:hover:bg-gray-800";
