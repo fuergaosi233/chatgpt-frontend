@@ -12,8 +12,8 @@
             t.getHours(),
             t.getMinutes(),
             t.getSeconds(),
-            t.getMilliseconds()
-          )
+            t.getMilliseconds(),
+          ),
         );
         return e.setUTCFullYear(t.getFullYear()), t.getTime() - e.getTime();
       }
@@ -33,7 +33,7 @@
               (t > 1 ? "s" : "") +
               " required, but only " +
               e.length +
-              " present"
+              " present",
           );
       }
       n.d(e, {
@@ -144,7 +144,7 @@
                   ? void 0
                   : h.weekStartsOn) && void 0 !== n
               ? n
-              : 0
+              : 0,
           );
         if (!(m >= 0 && m <= 6))
           throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
@@ -195,11 +195,11 @@
                   ? void 0
                   : m.firstWeekContainsDate) && void 0 !== n
               ? n
-              : 1
+              : 1,
           );
         if (!(w >= 1 && w <= 7))
           throw RangeError(
-            "firstWeekContainsDate must be between 1 and 7 inclusively"
+            "firstWeekContainsDate must be between 1 and 7 inclusively",
           );
         var b = new Date(0);
         b.setUTCFullYear(v + 1, 0, w), b.setUTCHours(0, 0, 0, 0);
@@ -260,7 +260,7 @@
             var n = e.length;
             return h(
               Math.floor(t.getUTCMilliseconds() * Math.pow(10, n - 3)),
-              e.length
+              e.length,
             );
           },
         },
@@ -460,7 +460,7 @@
                                 ? void 0
                                 : m.firstWeekContainsDate) && void 0 !== n
                             ? n
-                            : 1
+                            : 1,
                         ),
                         v = f(t, e),
                         w = new Date(0);
@@ -470,7 +470,7 @@
                         c(w, e)
                       );
                     })(n, e).getTime()) /
-                    6048e5
+                    6048e5,
                 ) + 1
               );
             })(t, r);
@@ -495,7 +495,7 @@
                         s(n)
                       );
                     })(e).getTime()) /
-                    6048e5
+                    6048e5,
                 ) + 1
               );
             })(t);
@@ -782,7 +782,7 @@
           t: function (t, e, n, r) {
             return h(
               Math.floor((r._originalDate || t).getTime() / 1e3),
-              e.length
+              e.length,
             );
           },
           T: function (t, e, n, r) {
@@ -847,8 +847,8 @@
               .concat(e, "`) for formatting years to the input `")
               .concat(
                 n,
-                "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"
-              )
+                "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md",
+              ),
           );
         if ("YY" === t)
           throw RangeError(
@@ -856,8 +856,8 @@
               .concat(e, "`) for formatting years to the input `")
               .concat(
                 n,
-                "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"
-              )
+                "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md",
+              ),
           );
         if ("D" === t)
           throw RangeError(
@@ -865,8 +865,8 @@
               .concat(e, "`) for formatting days of the month to the input `")
               .concat(
                 n,
-                "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"
-              )
+                "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md",
+              ),
           );
         if ("DD" === t)
           throw RangeError(
@@ -874,8 +874,8 @@
               .concat(e, "`) for formatting days of the month to the input `")
               .concat(
                 n,
-                "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"
-              )
+                "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md",
+              ),
           );
       }
       var U = {
@@ -1384,11 +1384,11 @@
                   ? void 0
                   : w.firstWeekContainsDate) && void 0 !== d
               ? d
-              : 1
+              : 1,
           );
         if (!(z >= 1 && z <= 7))
           throw RangeError(
-            "firstWeekContainsDate must be between 1 and 7 inclusively"
+            "firstWeekContainsDate must be between 1 and 7 inclusively",
           );
         var L = (0, u.Z)(
           null !==
@@ -1416,7 +1416,7 @@
                 ? void 0
                 : Y.weekStartsOn) && void 0 !== b
             ? b
-            : 0
+            : 0,
         );
         if (!(L >= 0 && L <= 6))
           throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
@@ -1488,7 +1488,7 @@
               throw RangeError(
                 "Format string contains an unescaped latin alphabet character `" +
                   o +
-                  "`"
+                  "`",
               );
             return r;
           })
@@ -1528,7 +1528,7 @@
           : (("string" == typeof t || "[object String]" === e) &&
               "undefined" != typeof console &&
               (console.warn(
-                "Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments"
+                "Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments",
               ),
               console.warn(Error().stack)),
             new Date(NaN));

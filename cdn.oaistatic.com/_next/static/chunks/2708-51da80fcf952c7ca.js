@@ -57,8 +57,8 @@
             },
             (0, t.createElement)(
               c.WV.div,
-              (0, n.Z)({ dir: f, "data-orientation": u }, M, { ref: a })
-            )
+              (0, n.Z)({ dir: f, "data-orientation": u }, M, { ref: a }),
+            ),
           );
         }),
         T = (0, t.forwardRef)((e, a) => {
@@ -77,9 +77,9 @@
               (0, n.Z)(
                 { role: "tablist", "aria-orientation": u.orientation },
                 i,
-                { ref: a }
-              )
-            )
+                { ref: a },
+              ),
+            ),
           );
         }),
         g = (0, t.forwardRef)((e, a) => {
@@ -120,9 +120,9 @@
                     let e = "manual" !== p.activationMode;
                     M || u || !e || p.onValueChange(i);
                   }),
-                }
-              )
-            )
+                },
+              ),
+            ),
           );
         }),
         S = (0, t.forwardRef)((e, a) => {
@@ -163,10 +163,10 @@
                       ...e.style,
                       animationDuration: M.current ? "0s" : void 0,
                     },
-                  }
+                  },
                 ),
-                o && l
-              )
+                o && l,
+              ),
             )
           );
         });
@@ -200,7 +200,7 @@
         var o = i(e),
           t = i(a);
         return Math.round(
-          (o.getTime() - (0, n.Z)(o) - (t.getTime() - (0, n.Z)(t))) / 864e5
+          (o.getTime() - (0, n.Z)(o) - (t.getTime() - (0, n.Z)(t))) / 864e5,
         );
       }
     },
@@ -767,14 +767,14 @@
               ref: t,
               "aria-labelledby": a,
             },
-            o
+            o,
           ),
           e ? n.createElement("title", { id: a }, e) : null,
           n.createElement("path", {
             strokeLinecap: "round",
             strokeLinejoin: "round",
             d: "M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21",
-          })
+          }),
         );
       });
       a.Z = t;
@@ -793,14 +793,14 @@
               ref: t,
               "aria-labelledby": a,
             },
-            o
+            o,
           ),
           e ? n.createElement("title", { id: a }, e) : null,
           n.createElement("path", {
             fillRule: "evenodd",
             d: "M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z",
             clipRule: "evenodd",
-          })
+          }),
         );
       });
       a.Z = t;

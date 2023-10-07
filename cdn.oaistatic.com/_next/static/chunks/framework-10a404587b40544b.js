@@ -81,7 +81,7 @@
         ["contentEditable", "draggable", "spellCheck", "value"].forEach(
           function (e) {
             S[e] = new w(e, 2, !1, e.toLowerCase(), null, !1, !1);
-          }
+          },
         ),
         [
           "autoReverse",
@@ -194,7 +194,7 @@
             e,
             "http://www.w3.org/XML/1998/namespace",
             !1,
-            !1
+            !1,
           );
         }),
         ["tabIndex", "crossOrigin"].forEach(function (e) {
@@ -207,7 +207,7 @@
           "xlink:href",
           "http://www.w3.org/1999/xlink",
           !0,
-          !1
+          !1,
         )),
         ["src", "href", "action", "formAction"].forEach(function (e) {
           S[e] = new w(e, 1, !1, e.toLowerCase(), null, !0, !0);
@@ -680,7 +680,7 @@
           source: !0,
           track: !0,
           wbr: !0,
-        }
+        },
       );
       function ew(e, n) {
         if (n) {
@@ -1071,7 +1071,7 @@
         nE = [],
         n_ =
           "mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset submit".split(
-            " "
+            " ",
           );
       function nC(e, n) {
         switch (e) {
@@ -1496,7 +1496,7 @@
         n8 = nY(B({}, n3, { dataTransfer: 0 })),
         n5 = nY(B({}, n1, { relatedTarget: 0 })),
         n6 = nY(
-          B({}, nJ, { animationName: 0, elapsedTime: 0, pseudoElement: 0 })
+          B({}, nJ, { animationName: 0, elapsedTime: 0, pseudoElement: 0 }),
         ),
         n9 = nY(
           B({}, nJ, {
@@ -1505,7 +1505,7 @@
                 ? e.clipboardData
                 : window.clipboardData;
             },
-          })
+          }),
         ),
         n7 = nY(B({}, nJ, { data: 0 })),
         te = {
@@ -1612,7 +1612,7 @@
                 ? e.keyCode
                 : 0;
             },
-          })
+          }),
         ),
         tu = nY(
           B({}, n3, {
@@ -1626,7 +1626,7 @@
             twist: 0,
             pointerType: 0,
             isPrimary: 0,
-          })
+          }),
         ),
         to = nY(
           B({}, n1, {
@@ -1638,10 +1638,10 @@
             ctrlKey: 0,
             shiftKey: 0,
             getModifierState: tl,
-          })
+          }),
         ),
         ti = nY(
-          B({}, nJ, { propertyName: 0, elapsedTime: 0, pseudoElement: 0 })
+          B({}, nJ, { propertyName: 0, elapsedTime: 0, pseudoElement: 0 }),
         ),
         ts = nY(
           B({}, n3, {
@@ -1663,7 +1663,7 @@
             },
             deltaZ: 0,
             deltaMode: 0,
-          })
+          }),
         ),
         tc = [9, 13, 27, 32],
         tf = g && "CompositionEvent" in window,
@@ -1913,7 +1913,7 @@
         t3 = new Map(),
         t4 =
           "abort auxClick cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange emptied encrypted ended error gotPointerCapture input invalid keyDown keyPress keyUp load loadedData loadedMetadata loadStart lostPointerCapture mouseDown mouseMove mouseOut mouseOver mouseUp paste pause play playing pointerCancel pointerDown pointerMove pointerOut pointerOver pointerUp progress rateChange reset resize seeked seeking stalled submit suspend timeUpdate touchCancel touchEnd touchStart volumeChange scroll toggle touchMove waiting wheel".split(
-            " "
+            " ",
           );
       function t8(e, n) {
         t3.set(e, n), m(n, [e]);
@@ -1936,14 +1936,14 @@
         m(
           "onChange",
           "change click focusin focusout input keydown keyup selectionchange".split(
-            " "
-          )
+            " ",
+          ),
         ),
         m(
           "onSelect",
           "focusout contextmenu dragend focusin keydown keyup mousedown mouseup selectionchange".split(
-            " "
-          )
+            " ",
+          ),
         ),
         m("onBeforeInput", [
           "compositionend",
@@ -1953,26 +1953,26 @@
         ]),
         m(
           "onCompositionEnd",
-          "compositionend focusout keydown keypress keyup mousedown".split(" ")
+          "compositionend focusout keydown keypress keyup mousedown".split(" "),
         ),
         m(
           "onCompositionStart",
           "compositionstart focusout keydown keypress keyup mousedown".split(
-            " "
-          )
+            " ",
+          ),
         ),
         m(
           "onCompositionUpdate",
           "compositionupdate focusout keydown keypress keyup mousedown".split(
-            " "
-          )
+            " ",
+          ),
         );
       var t9 =
           "abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange resize seeked seeking stalled suspend timeupdate volumechange waiting".split(
-            " "
+            " ",
           ),
         t7 = new Set(
-          "cancel close invalid load scroll toggle".split(" ").concat(t9)
+          "cancel close invalid load scroll toggle".split(" ").concat(t9),
         );
       function re(e, n, t) {
         var r = e.type || "unknown-event";
@@ -2713,8 +2713,8 @@
                   }
                   return null;
                 })(e) || "Unknown",
-                l
-              )
+                l,
+              ),
             );
         return B({}, t, r);
       }
@@ -3354,8 +3354,8 @@
             31,
             "[object Object]" === (e = Object.prototype.toString.call(n))
               ? "object with keys {" + Object.keys(n).join(", ") + "}"
-              : e
-          )
+              : e,
+          ),
         );
       }
       function l0(e) {
@@ -3413,7 +3413,7 @@
             : (((r = oY(t.type, t.key, t.props, null, e.mode, r)).ref = lZ(
                 e,
                 n,
-                t
+                t,
               )),
               (r.return = e),
               r);
@@ -3441,7 +3441,7 @@
                   ((t = oY(n.type, n.key, n.props, null, e.mode, t)).ref = lZ(
                     e,
                     null,
-                    n
+                    n,
                   )),
                   (t.return = e),
                   t
@@ -3486,14 +3486,14 @@
                   n,
                   (e = e.get(null === r.key ? t : r.key) || null),
                   r,
-                  l
+                  l,
                 );
               case N:
                 return s(
                   n,
                   (e = e.get(null === r.key ? t : r.key) || null),
                   r,
-                  l
+                  l,
                 );
               case U:
                 return m(e, n, t, (0, r._init)(r._payload), l);
@@ -4786,7 +4786,7 @@
                     { mode: "visible", children: r.children },
                     l,
                     0,
-                    null
+                    null,
                   )),
                   (a = oX(a, l, u, null)),
                   (a.flags |= 2),
@@ -5707,7 +5707,7 @@
                         r.componentDidUpdate(
                           l,
                           t.memoizedState,
-                          r.__reactInternalSnapshotBeforeUpdate
+                          r.__reactInternalSnapshotBeforeUpdate,
                         );
                       }
                     }
@@ -7109,7 +7109,7 @@
                                           n.elementType === n.type
                                             ? g
                                             : lS(n.type, g),
-                                          v
+                                          v,
                                         );
                                       y.__reactInternalSnapshotBeforeUpdate = b;
                                     }
@@ -7264,7 +7264,7 @@
                           e5,
                           e,
                           void 0,
-                          128 == (128 & e.current.flags)
+                          128 == (128 & e.current.flags),
                         );
                       } catch (e) {}
                   })(t.stateNode, r),
@@ -8260,7 +8260,7 @@
                 for (t = e; t.parentNode; ) t = t.parentNode;
                 for (
                   t = t.querySelectorAll(
-                    "input[name=" + JSON.stringify("" + n) + '][type="radio"]'
+                    "input[name=" + JSON.stringify("" + n) + '][type="radio"]',
                   ),
                     n = 0;
                   n < t.length;
@@ -8537,7 +8537,7 @@
         (v.prototype.setState = function (e, n) {
           if ("object" != typeof e && "function" != typeof e && null != e)
             throw Error(
-              "setState(...): takes an object of state variables to update or a function which returns an object of state variables."
+              "setState(...): takes an object of state variables to update or a function which returns an object of state variables.",
             );
           this.updater.enqueueSetState(this, e, n, "setState");
         }),
@@ -8672,7 +8672,7 @@
                   ("[object Object]" === (l = String(n))
                     ? "object with keys {" + Object.keys(n).join(", ") + "}"
                     : l) +
-                  "). If you meant to render a collection of children, use an array instead."
+                  "). If you meant to render a collection of children, use an array instead.",
               );
             return d;
           })(e, a, "", "", function (e) {
@@ -8692,7 +8692,7 @@
             function (n) {
               (0 === e._status || -1 === e._status) &&
                 ((e._status = 2), (e._result = n));
-            }
+            },
           ),
             -1 === e._status && ((e._status = 0), (e._result = n));
         }
@@ -8709,7 +8709,7 @@
             function () {
               n.apply(this, arguments);
             },
-            t
+            t,
           );
         },
         count: function (e) {
@@ -8731,7 +8731,7 @@
         only: function (e) {
           if (!C(e))
             throw Error(
-              "React.Children.only expected to receive a single React element child."
+              "React.Children.only expected to receive a single React element child.",
             );
           return e;
         },
@@ -8752,7 +8752,7 @@
             throw Error(
               "React.cloneElement(...): The argument must be a React element, but you passed " +
                 e +
-                "."
+                ".",
             );
           var l = h({}, e.props),
             a = e.key,
@@ -8834,7 +8834,7 @@
         }),
         (n.unstable_act = function () {
           throw Error(
-            "act(...) is not supported in production builds of React."
+            "act(...) is not supported in production builds of React.",
           );
         }),
         (n.useCallback = function (e, n) {
@@ -9071,7 +9071,7 @@
         (n.unstable_forceFrameRate = function (e) {
           0 > e || 125 < e
             ? console.error(
-                "forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported"
+                "forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported",
               )
             : (P = 0 < e ? Math.floor(1e3 / e) : 5);
         }),

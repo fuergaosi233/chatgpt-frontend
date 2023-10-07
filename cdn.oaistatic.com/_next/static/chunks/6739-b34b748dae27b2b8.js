@@ -26,7 +26,7 @@
             function () {
               return new c().humanTypingDelaysQuertyDistance(t);
             },
-            [t]
+            [t],
           );
         return (
           (0, r.useEffect)(
@@ -40,7 +40,7 @@
                   }, e);
                 }));
             },
-            [h, n, o, t]
+            [h, n, o, t],
           ),
           (0, i.jsxs)(i.Fragment, {
             children: [t.substring(0, f + 1), o && "▋"],
@@ -86,13 +86,13 @@
               },
               r = (0, a._)(
                 null !== (n = i[e.toLowerCase()]) && void 0 !== n ? n : [0, 0],
-                2
+                2,
               ),
               l = r[0],
               o = r[1],
               c = (0, a._)(
                 null !== (s = i[t.toLowerCase()]) && void 0 !== s ? s : [0, 0],
-                2
+                2,
               );
             return Math.abs(l - c[0]) + Math.abs(o - c[1]);
           }),
@@ -386,7 +386,7 @@
                 })),
                 R.current.observe(e));
             },
-            [L, B, D, T]
+            [L, B, D, T],
           );
         (0, M.useEffect)(function () {
           return function () {
@@ -403,18 +403,21 @@
             function () {
               (t.current = n.current), (n.current = S);
             },
-            [S]
+            [S],
           ),
           S === n.current)
             ? t.current
             : n.current);
         (0, M.useEffect)(
           function () {
-            N(function () {
-              k(w + 1);
-            }, (0, f.Z)((0, m.Z)(), Date.now()) + 1e3);
+            N(
+              function () {
+                k(w + 1);
+              },
+              (0, f.Z)((0, m.Z)(), Date.now()) + 1e3,
+            );
           },
-          [w, N]
+          [w, N],
         );
         var H = 0 === S.length,
           q = (0, M.useMemo)(
@@ -430,7 +433,7 @@
                             ? n
                             : t.create_time) && void 0 !== s
                         ? s
-                        : 0
+                        : 0,
                     ),
                     i = (0, d.Z)(new Date(), a);
                   if (0 === i) e.recent.today.items.push(t);
@@ -464,38 +467,38 @@
                     today: {
                       label: (0, l.jsx)(
                         C.Z,
-                        (0, s._)({}, en.historyBucketToday)
+                        (0, s._)({}, en.historyBucketToday),
                       ),
                       items: [],
                     },
                     yesterday: {
                       label: (0, l.jsx)(
                         C.Z,
-                        (0, s._)({}, en.historyBucketYesterday)
+                        (0, s._)({}, en.historyBucketYesterday),
                       ),
                       items: [],
                     },
                     lastSeven: {
                       label: (0, l.jsx)(
                         C.Z,
-                        (0, s._)({}, en.historyBucketLastSeven)
+                        (0, s._)({}, en.historyBucketLastSeven),
                       ),
                       items: [],
                     },
                     lastThirty: {
                       label: (0, l.jsx)(
                         C.Z,
-                        (0, s._)({}, en.historyBucketLastThirty)
+                        (0, s._)({}, en.historyBucketLastThirty),
                       ),
                       items: [],
                     },
                   },
                   dynamicMonths: {},
                   dynamicYears: {},
-                }
+                },
               );
             },
-            [w, S]
+            [w, S],
           );
         return (0, l.jsxs)(ei, {
           $centered: B || (I && H),
@@ -570,7 +573,7 @@
                                     (0, l.jsx)(v.E.div, {
                                       className: (0, u.default)(
                                         "sticky top-0",
-                                        d ? "z-[16]" : "z-[14]"
+                                        d ? "z-[16]" : "z-[14]",
                                       ),
                                       layoutId: "bucketTitle-".concat(n),
                                       layout: "position",
@@ -585,19 +588,47 @@
                                             : W.find(function (t) {
                                                 return t.id === e.id;
                                               });
-                                      return (0,
-                                      l.jsx)(v.E.li, { className: (0, u.default)("relative", d && 0 === t ? "z-[15]" : ""), layoutId: "".concat(e.id), layout: "position", custom: { isNew: !s }, variants: es, initial: "initial", animate: "animate", exit: "exit", children: (0, l.jsx)(er, { id: e.id, title: e.title, active: n, onNewThread: r, conversationTemplateId: e.conversation_template_id, forwardRef: D && S[S.length - 5 - 1].id === e.id ? O : void 0 }) }, "history-item-".concat(e.id));
+                                      return (0, l.jsx)(
+                                        v.E.li,
+                                        {
+                                          className: (0, u.default)(
+                                            "relative",
+                                            d && 0 === t ? "z-[15]" : "",
+                                          ),
+                                          layoutId: "".concat(e.id),
+                                          layout: "position",
+                                          custom: { isNew: !s },
+                                          variants: es,
+                                          initial: "initial",
+                                          animate: "animate",
+                                          exit: "exit",
+                                          children: (0, l.jsx)(er, {
+                                            id: e.id,
+                                            title: e.title,
+                                            active: n,
+                                            onNewThread: r,
+                                            conversationTemplateId:
+                                              e.conversation_template_id,
+                                            forwardRef:
+                                              D &&
+                                              S[S.length - 5 - 1].id === e.id
+                                                ? O
+                                                : void 0,
+                                          }),
+                                        },
+                                        "history-item-".concat(e.id),
+                                      );
                                     }),
                                   }),
                                 ],
                               },
-                              n
+                              n,
                             );
                           }),
                         },
-                        "category-".concat(t)
+                        "category-".concat(t),
                       );
-                    }
+                    },
                   ),
                 }),
               }),
@@ -621,7 +652,7 @@
                       loading: E,
                       children: (0, l.jsx)(
                         C.Z,
-                        (0, s._)({}, en.showMoreButton)
+                        (0, s._)({}, en.showMoreButton),
                       ),
                     }),
                 }),
@@ -666,13 +697,13 @@
                   y();
               }
             },
-            [t, y, n]
+            [t, y, n],
           ),
           _ = (0, M.useCallback)(
             function (e) {
               "Enter" === e.key && k();
             },
-            [k]
+            [k],
           ),
           C = (0, M.useCallback)(
             function () {
@@ -681,7 +712,7 @@
               }),
                 a();
             },
-            [t, a, y]
+            [t, a, y],
           ),
           N = (0, M.useCallback)(
             function (e) {
@@ -690,7 +721,7 @@
                 o.o.logEvent(c.a.loadThread, { threadId: t }),
                 m.push((0, B.ZV)(t), void 0, { shallow: !0 });
             },
-            [t, m]
+            [t, m],
           ),
           Z = (0, E.Z)(t, n, s),
           z = Z.resolvedTitle,
@@ -814,7 +845,7 @@
               C.Z,
               (0, a._)((0, s._)({}, en.deleteModalBody), {
                 values: { title: (0, l.jsx)("strong", { children: n }) },
-              })
+              }),
             ),
           });
         },
@@ -857,15 +888,25 @@
           Portal: l.Uv,
           Content: o.forwardRef(function (e) {
             var t;
-            return (0,
-            r.jsx)(c.ay, (0, a._)((0, s._)({}, e), { $as: l.VY, sideOffset: 4, align: null !== (t = e.align) && void 0 !== t ? t : "start" }));
+            return (0, r.jsx)(
+              c.ay,
+              (0, a._)((0, s._)({}, e), {
+                $as: l.VY,
+                sideOffset: 4,
+                align: null !== (t = e.align) && void 0 !== t ? t : "start",
+              }),
+            );
           }),
           Item: o.forwardRef(function (e, t) {
             var n = e.children,
               o = e.onSelect,
               u = (0, i._)(e, ["children", "onSelect"]);
-            return (0,
-            r.jsx)(c.mS, (0, a._)((0, s._)({ $as: l.ck, ref: t, onSelect: o }, u), { children: n }));
+            return (0, r.jsx)(
+              c.mS,
+              (0, a._)((0, s._)({ $as: l.ck, ref: t, onSelect: o }, u), {
+                children: n,
+              }),
+            );
           }),
         };
       t.Z = u;
@@ -949,7 +990,7 @@
               var t = e.target.files;
               t && t.length > 0 && (n(Array.from(t)), (e.target.value = ""));
             },
-            [n]
+            [n],
           );
         return (0, c.jsxs)(c.Fragment, {
           children: [
@@ -1181,7 +1222,7 @@
             function () {
               return (0, T.Z)(new Date(t.ready_time), "MMM d, yyyy");
             },
-            [t.ready_time]
+            [t.ready_time],
           ),
           d = (0, v.useMemo)(
             function () {
@@ -1190,7 +1231,7 @@
                 ? "".concat((e / 1024).toFixed(0), " KB")
                 : "".concat((e / 1048576).toFixed(1), " MB");
             },
-            [t.size]
+            [t.size],
           ),
           f = (0, b.Z)(),
           m = (0, O.O6)(),
@@ -1205,7 +1246,7 @@
                 }
               });
             }),
-            [t, l, o, m]
+            [t, l, o, m],
           ),
           g = (0, v.useCallback)(
             (0, _._)(function () {
@@ -1239,7 +1280,7 @@
                 }
               });
             }),
-            [s, i, r, t, n, f]
+            [s, i, r, t, n, f],
           );
         return (0, c.jsxs)(I.Z.Row, {
           disabled: t.state === a.Uploading,
@@ -1251,7 +1292,7 @@
                   t.retrieval_index_status === F.Xf.Success
                     ? (0, c.jsx)(G, {
                         label: f.formatMessage(
-                          Y.successfullyEmbeddedFileTooltip
+                          Y.successfullyEmbeddedFileTooltip,
                         ),
                         children: (0, c.jsx)(y._rq, {
                           className:
@@ -1277,7 +1318,7 @@
                       l.includes(t.id)
                         ? "text-[#800080]"
                         : "hover:text-gray-900 dark:hover:text-gray-100",
-                      "truncate whitespace-normal break-words text-left focus:outline-none"
+                      "truncate whitespace-normal break-words text-left focus:outline-none",
                     ),
                     onClick: h,
                     children: (0, c.jsx)("span", { children: t.name }),
@@ -1351,7 +1392,7 @@
                   }
                 });
               }),
-              { enabled: e.has("files_list_ui") }
+              { enabled: e.has("files_list_ui") },
             )),
           p = g.data,
           x = g.isLoading,
@@ -1371,7 +1412,7 @@
                 ? d
                 : [];
             },
-            [p]
+            [p],
           ),
           et = (0, l._)((0, v.useState)([]), 2),
           en = et[0],
@@ -1387,7 +1428,7 @@
             function () {
               f.vm.closeFilesModal(), k.length > 0 && M();
             },
-            [M, k]
+            [M, k],
           ),
           ef = (0, D.D)({
             mutationFn: function (e) {
@@ -1481,13 +1522,13 @@
             function (e) {
               return o.apply(this, arguments);
             }),
-            [M, K, X]
+            [M, K, X],
           );
         (0, v.useEffect)(
           function () {
             L.current.length > 0 && em(L.current[L.current.length - 1]);
           },
-          [V, em]
+          [V, em],
         );
         var eh = (0, v.useCallback)(
             (0, _._)(function () {
@@ -1506,7 +1547,7 @@
                           (e = ee.filter(function (e) {
                             return e.use_case === F.Ei.MyFiles;
                           })),
-                          30
+                          30,
                         ),
                       ]
                     );
@@ -1518,9 +1559,9 @@
                           (0, C._)(
                             e.map(function (e) {
                               return e.id;
-                            })
-                          )
-                        )
+                            }),
+                          ),
+                        ),
                       ),
                       [3, 4]
                     );
@@ -1535,7 +1576,7 @@
                 }
               });
             }),
-            [K, ee, h, en, es, eu]
+            [K, ee, h, en, es, eu],
           ),
           eg = (0, v.useCallback)(
             (0, _._)(function () {
@@ -1563,7 +1604,7 @@
                             })
                             .map(function (e) {
                               return Z.ZP.deleteFileFromFileService(e.id);
-                            })
+                            }),
                         ),
                       ]
                     );
@@ -1587,7 +1628,7 @@
                 }
               });
             }),
-            [ee, k, K, h, M]
+            [ee, k, K, h, M],
           ),
           ep = (0, v.useCallback)(function () {
             er(!0);
@@ -1601,7 +1642,7 @@
                 return er(!1), eg(), [2];
               });
             }),
-            [eg]
+            [eg],
           ),
           ey = (0, v.useCallback)(function () {
             er(!1);
@@ -1612,7 +1653,7 @@
                 return ec(!1), eh(), [2];
               });
             }),
-            [eh]
+            [eh],
           ),
           ej = (0, v.useCallback)(function () {
             ec(!1);
@@ -1676,7 +1717,7 @@
                   );
                 });
             },
-            [ee, eM, k]
+            [ee, eM, k],
           ),
           eC = (0, v.useMemo)(
             function () {
@@ -1684,13 +1725,13 @@
                 return e + (t.size || 0);
               }, 0);
             },
-            [e_]
+            [e_],
           ),
           eN = (0, v.useMemo)(
             function () {
               return eC / 1073741824;
             },
-            [eC]
+            [eC],
           ),
           eF = (0, v.useCallback)(
             ((u = (0, _._)(function (e) {
@@ -1701,7 +1742,7 @@
                     U.m.warning(
                       h.formatMessage(Y.tooManyFilesUploadedAtOnce, {
                         maxFiles: 10,
-                      })
+                      }),
                     ),
                     [2]
                   );
@@ -1716,7 +1757,7 @@
                       U.m.warning(
                         h.formatMessage(Y.totalFileSizeExceedsLimit, {
                           maxSize: "".concat(2, "GB"),
-                        })
+                        }),
                       );
                       break;
                     }
@@ -1734,7 +1775,7 @@
                         c = q(c, ee);
                       } catch (e) {
                         U.m.warning(
-                          h.formatMessage(Y.tooManyFilesWithSameName)
+                          h.formatMessage(Y.tooManyFilesWithSameName),
                         );
                         break;
                       }
@@ -1767,7 +1808,7 @@
             function (e) {
               return u.apply(this, arguments);
             }),
-            [ee, h, ef, eC]
+            [ee, h, ef, eC],
           );
         return (0, c.jsxs)(c.Fragment, {
           children: [
@@ -1800,12 +1841,12 @@
                                   className: "font-bold",
                                   children: "".concat(
                                     Number(eN).toPrecision(2),
-                                    "GB"
+                                    "GB",
                                   ),
                                 }),
                                 maxFileSize: "".concat(2, "GB"),
                               },
-                            })
+                            }),
                           ),
                         }),
                         (0, c.jsxs)(I.Z.Root, {
@@ -1847,7 +1888,7 @@
                                                 }),
                                                 (0, c.jsx)("span", {
                                                   children: h.formatMessage(
-                                                    Y.downloadAll
+                                                    Y.downloadAll,
                                                   ),
                                                 }),
                                               ],
@@ -1861,7 +1902,7 @@
                                                 }),
                                                 (0, c.jsx)("span", {
                                                   children: h.formatMessage(
-                                                    Y.deleteAll
+                                                    Y.deleteAll,
                                                   ),
                                                 }),
                                               ],
@@ -1876,8 +1917,19 @@
                             }),
                             (0, c.jsx)(I.Z.Body, {
                               children: e_.map(function (e, t) {
-                                return (0,
-                                c.jsx)(J, { file: e, refetch: M, handleFileDelete: ew, handleFileDeleteFailed: ek, session: K, downloadedFiles: en, setDownloadedFiles: es }, t);
+                                return (0, c.jsx)(
+                                  J,
+                                  {
+                                    file: e,
+                                    refetch: M,
+                                    handleFileDelete: ew,
+                                    handleFileDeleteFailed: ek,
+                                    session: K,
+                                    downloadedFiles: en,
+                                    setDownloadedFiles: es,
+                                  },
+                                  t,
+                                );
                               }),
                             }),
                           ],
@@ -1970,7 +2022,7 @@
               refetchOnWindowFocus: !1,
               refetchInterval: !1,
               refetchOnReconnect: !1,
-            }
+            },
           ),
           o = a.data,
           u = a.isLoading,
@@ -1987,13 +2039,13 @@
                 d &&
                 (g(!0),
                 ei.m9.logEvent(
-                  "chatgpt_referral_show_claimed_sidebar_menu_promo"
+                  "chatgpt_referral_show_claimed_sidebar_menu_promo",
                 ),
                 ee.o.logEvent(
-                  et.a.chatgptReferralShowClaimedSidebartMenuPromo
+                  et.a.chatgptReferralShowClaimedSidebartMenuPromo,
                 ));
             },
-            [f, g, h, d]
+            [f, g, h, d],
           ),
           !f || u || !d)
         )
@@ -2036,7 +2088,7 @@
                     j.Z,
                     (0, r._)((0, i._)({}, ec.freeTrialCta), {
                       values: { duration: M },
-                    })
+                    }),
                   ),
                 ],
               }),
@@ -2143,7 +2195,7 @@
                 ee.o.logEvent(et.a.clickSidebarAccountPaymentMenuItem);
               });
             },
-            [w]
+            [w],
           ),
           C = (0, ef.C)(function (e) {
             return { setShowReferralInviteModal: e.setShowReferralInviteModal };
@@ -2156,7 +2208,7 @@
                   ee.o.logEvent(et.a.clickSidebarAccountPaymentMenuItem);
                 });
             },
-            [C]
+            [C],
           );
         return (0, c.jsxs)(c.Fragment, {
           children: [
@@ -2217,7 +2269,7 @@
               function () {
                 return Z.ZP.getEligibleReferralInvites();
               },
-              { enabled: n }
+              { enabled: n },
             ),
             a = s.data,
             r = s.isSuccess,
@@ -2236,7 +2288,7 @@
                 ei.m9.logEvent("chatgpt_referral_show_sidebar_menu_item"),
                 ee.o.logEvent(et.a.chatgptReferralShowSidebarMenuItem));
             },
-            [o, h, f]
+            [o, h, f],
           ),
           o)
             ? (0, c.jsx)(eu.Vq, {
@@ -2337,7 +2389,7 @@
               var e = ey.m.getItem(eN);
               return "number" == typeof e && e;
             }),
-            2
+            2,
           ),
           r = a[0],
           o = a[1],
@@ -2509,7 +2561,7 @@
                 className: (0, p.default)(
                   s
                     ? "bg-gray-100 dark:bg-gray-800"
-                    : "cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
+                    : "cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800",
                 ),
                 children: n,
               }),
@@ -2563,7 +2615,7 @@
                     "text-sm font-bold text-gray-600 dark:text-gray-400",
                   children: (0, c.jsx)(
                     j.Z,
-                    (0, i._)({}, eG.accountSwitcherTitle)
+                    (0, i._)({}, eG.accountSwitcherTitle),
                   ),
                 }),
                 (0, c.jsx)("div", {
@@ -2617,9 +2669,9 @@
               (0, C._)(
                 t.filter(function (e) {
                   return e.structure !== F.CZ.PERSONAL;
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
         return (
           r.sort(function (e, t) {
@@ -2663,7 +2715,7 @@
                                   {
                                     "bg-white":
                                       t.id === (null == n ? void 0 : n.id),
-                                  }
+                                  },
                                 ),
                                 children:
                                   t.id === (null == n ? void 0 : n.id) &&
@@ -2675,7 +2727,7 @@
                         ],
                       }),
                     },
-                    t.id
+                    t.id,
                   );
                 }),
               }),
@@ -2710,13 +2762,13 @@
                             className: "font-bold",
                             children: (0, c.jsx)(
                               j.Z,
-                              (0, i._)({}, eG.surveyTitle)
+                              (0, i._)({}, eG.surveyTitle),
                             ),
                           }),
                           (0, c.jsx)("div", {
                             children: (0, c.jsx)(
                               j.Z,
-                              (0, i._)({}, eG.surveyDescription)
+                              (0, i._)({}, eG.surveyDescription),
                             ),
                           }),
                         ],
@@ -2918,7 +2970,7 @@
               var e = (0, x.getCookie)(u.Yl);
               return "string" == typeof e && e !== u.bC;
             }),
-            1
+            1,
           )[0],
           C = o.has(d.Rw) || o.has(d.uo),
           N = (0, m.ec)(m.F_.isBusinessWorkspace),
@@ -2939,7 +2991,7 @@
             function () {
               f.vm.closeModal(f.B.Settings), T();
             },
-            [T]
+            [T],
           );
         (0, v.useEffect)(function () {
           B && f.vm.openModal(f.B.Settings);
@@ -2948,12 +3000,12 @@
             function () {
               n(), D();
             },
-            [n, D]
+            [n, D],
           ),
           A = (0, c.jsxs)("div", {
             className: (0, p.default)(
               "absolute left-0 top-14 z-20 overflow-hidden transition-all duration-500",
-              S ? "visible max-h-72" : "invisible max-h-0"
+              S ? "visible max-h-72" : "invisible max-h-0",
             ),
             children: [
               (0, c.jsxs)("div", {
@@ -2972,7 +3024,7 @@
                           {},
                           N
                             ? eX.chatHistoryOffDescriptionBusiness
-                            : eX.chatHistoryOffDescription
+                            : eX.chatHistoryOffDescription,
                         ),
                         {
                           values: {
@@ -2983,15 +3035,15 @@
                               rel: "noreferrer",
                               children: (0, c.jsx)(
                                 j.Z,
-                                (0, i._)({}, eX.learnMore)
+                                (0, i._)({}, eX.learnMore),
                               ),
                             }),
                             b: function (e) {
                               return (0, c.jsx)("strong", { children: e });
                             },
                           },
-                        }
-                      )
+                        },
+                      ),
                     ),
                   }),
                   (0, c.jsxs)(k.z, {
@@ -3025,7 +3077,7 @@
                   children: (0, c.jsx)("h2", {
                     children: (0, c.jsx)(
                       j.Z,
-                      (0, i._)({}, eX.chatHistoryLabel)
+                      (0, i._)({}, eX.chatHistoryLabel),
                     ),
                   }),
                 }),
@@ -3051,7 +3103,7 @@
                               className: "truncate",
                               children: (0, c.jsx)(
                                 j.Z,
-                                (0, i._)({}, S ? eX.clearChat : eX.newChat)
+                                (0, i._)({}, S ? eX.clearChat : eX.newChat),
                               ),
                             }),
                           ],
@@ -3164,7 +3216,7 @@
                 }
               );
             },
-            [n, f, o]
+            [n, f, o],
           ),
           { isTypingEffect: u, resolvedTitle: f }
         );

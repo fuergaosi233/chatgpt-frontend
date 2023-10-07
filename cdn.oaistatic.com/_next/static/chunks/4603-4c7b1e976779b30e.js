@@ -45,12 +45,12 @@
                 this._insertTag(
                   ((t = document.createElement("style")).setAttribute(
                     "data-emotion",
-                    this.key
+                    this.key,
                   ),
                   void 0 !== this.nonce && t.setAttribute("nonce", this.nonce),
                   t.appendChild(document.createTextNode("")),
                   t.setAttribute("data-s", ""),
-                  t)
+                  t),
                 );
               }
               var r = this.tags[this.tags.length - 1];
@@ -123,7 +123,7 @@
           b("", null, null, "", null, null, 0),
           e,
           { length: -e.length },
-          t
+          t,
         );
       }
       function w() {
@@ -373,7 +373,7 @@
                           i(
                             t,
                             /(\w+).+(:[^]+)/,
-                            O + "box-$1$2" + S + "flex-$1$2"
+                            O + "box-$1$2" + S + "flex-$1$2",
                           ) +
                           t
                         );
@@ -415,10 +415,10 @@
                             i(
                               i(t, /(zoom-|grab)/, O + "$1"),
                               /(image-set)/,
-                              O + "$1"
+                              O + "$1",
                             ),
                             t,
-                            ""
+                            "",
                           ) + t
                         );
                       case 5495:
@@ -430,10 +430,10 @@
                             i(
                               t,
                               /(.+:)(flex-)?(.*)/,
-                              O + "box-pack:$3" + S + "flex-pack:$3"
+                              O + "box-pack:$3" + S + "flex-pack:$3",
                             ),
                             /s.+-b[^;]+/,
-                            "justify"
+                            "justify",
                           ) +
                           O +
                           t +
@@ -469,7 +469,7 @@
                                     O +
                                     "$2-$3$1" +
                                     _ +
-                                    (108 == u(t, r + 3) ? "$3" : "$2-$3")
+                                    (108 == u(t, r + 3) ? "$3" : "$2-$3"),
                                 ) + t
                               );
                             case 115:
@@ -496,7 +496,7 @@
                                   O +
                                   "$2$3$1" +
                                   S +
-                                  "$2box$3"
+                                  "$2box$3",
                               ) + t
                             );
                         }
@@ -544,7 +544,7 @@
                                   props: [i(t, /:(read-\w+)/, ":" + _ + "$1")],
                                 }),
                               ],
-                              n
+                              n,
                             );
                           case "::placeholder":
                             return P(
@@ -561,7 +561,7 @@
                                   props: [i(t, /:(plac\w+)/, S + "input-$1")],
                                 }),
                               ],
-                              n
+                              n,
                             );
                         }
                         return "";
@@ -579,7 +579,7 @@
             k = e.key;
           if ("css" === k) {
             var S = document.querySelectorAll(
-              "style[data-emotion]:not([data-s])"
+              "style[data-emotion]:not([data-s])",
             );
             Array.prototype.forEach.call(S, function (e) {
               -1 !== e.getAttribute("data-emotion").indexOf(" ") &&
@@ -600,7 +600,7 @@
                 )
                   O[t[r]] = !0;
                 N.push(e);
-              }
+              },
             );
           var R =
               ((r = (t = [D, F].concat(_, [
@@ -703,9 +703,9 @@
                                 E,
                                 s(m),
                                 l(_, 2, -2),
-                                0
+                                0,
                               ),
-                              S
+                              S,
                             );
                             break;
                           default:
@@ -729,7 +729,7 @@
                                   P > 32
                                     ? I(B + ";", a, n, R - 1)
                                     : I(i(B, " ", "") + ";", a, n, R - 2),
-                                  S
+                                  S,
                                 );
                             break;
                           case 59:
@@ -748,9 +748,9 @@
                                   D,
                                   (F = []),
                                   (L = []),
-                                  R
+                                  R,
                                 )),
-                                v
+                                v,
                               ),
                               123 === q)
                             ) {
@@ -778,15 +778,15 @@
                                             D,
                                             c,
                                             (F = []),
-                                            R
+                                            R,
                                           ),
-                                          L
+                                          L,
                                         ),
                                       c,
                                       L,
                                       R,
                                       C,
-                                      a ? F : L
+                                      a ? F : L,
                                     );
                                     break;
                                   default:
@@ -828,7 +828,7 @@
                                     (function (e) {
                                       for (; !$(x()); ) w();
                                       return l(y, e, g);
-                                    })(g))
+                                    })(g)),
                                 )),
                               q++;
                             break;
@@ -840,7 +840,7 @@
                 })("", null, null, null, [""], (t = C((t = e))), 0, [0], t)),
                 (y = ""),
                 r),
-                R
+                R,
               );
             },
             M = {

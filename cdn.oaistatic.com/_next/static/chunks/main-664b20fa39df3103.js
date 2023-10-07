@@ -38,7 +38,7 @@
                 return t.resolve(e()).then(function () {
                   throw r;
                 });
-              }
+              },
             );
           }),
         Object.fromEntries ||
@@ -215,7 +215,7 @@
               if ("link" === e.type && e.props["data-optimized-fonts"]) {
                 if (
                   document.querySelector(
-                    'style[data-href="' + e.props["data-href"] + '"]'
+                    'style[data-href="' + e.props["data-href"] + '"]',
                   )
                 )
                   return;
@@ -387,11 +387,11 @@
                           String(
                             (0, L.assign)(
                               (0, L.urlQueryToSearchParams)(n.query),
-                              new URLSearchParams(location.search)
-                            )
+                              new URLSearchParams(location.search),
+                            ),
                           ),
                         a,
-                        { _h: 1, shallow: !o.isFallback && !Z }
+                        { _h: 1, shallow: !o.isFallback && !Z },
                       )
                       .catch(function (e) {
                         if (!e.cancelled) throw e;
@@ -437,7 +437,7 @@
             return (
               void 0 === e && (e = {}),
               (o = JSON.parse(
-                document.getElementById("__NEXT_DATA__").textContent
+                document.getElementById("__NEXT_DATA__").textContent,
               )),
               (window.__NEXT_DATA__ = o),
               (Q = o.defaultLocale),
@@ -522,13 +522,13 @@
                           unoptimized: !1,
                         },
                       },
-                      r
-                    )
-                  )
-                )
-              )
-            )
-          )
+                      r,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
         );
       }
       var ea = function (e) {
@@ -543,7 +543,7 @@
         return (
           console.error(u),
           console.error(
-            "A client-side exception has occurred, see here for more info: https://nextjs.org/docs/messages/client-side-exception-occurred"
+            "A client-side exception has occurred, see here for more info: https://nextjs.org/docs/messages/client-side-exception-occurred",
           ),
           i
             .loadPage("/_error")
@@ -589,7 +589,7 @@
               return Promise.resolve(
                 (null == (i = e.props) ? void 0 : i.err)
                   ? e.props
-                  : (0, T.loadGetInitialProps)(t, f)
+                  : (0, T.loadGetInitialProps)(t, f),
               ).then(function (t) {
                 return eh(
                   b._(g._({}, e), {
@@ -597,7 +597,7 @@
                     Component: c,
                     styleSheets: l,
                     props: t,
-                  })
+                  }),
                 );
               });
             })
@@ -610,7 +610,7 @@
             function () {
               return t();
             },
-            [t]
+            [t],
           ),
           null
         );
@@ -621,7 +621,7 @@
         ["beforeRender", "afterHydrate", "afterRender", "routeChange"].forEach(
           function (e) {
             return performance.clearMarks(e);
-          }
+          },
         );
       }
       function ef() {
@@ -630,12 +630,12 @@
           performance.measure(
             "Next.js-before-hydration",
             "navigationStart",
-            "beforeRender"
+            "beforeRender",
           ),
           performance.measure(
             "Next.js-hydration",
             "beforeRender",
-            "afterHydrate"
+            "afterHydrate",
           ),
           d && performance.getEntriesByName("Next.js-hydration").forEach(d),
           es());
@@ -648,12 +648,12 @@
             (performance.measure(
               "Next.js-route-change-to-render",
               e[0].name,
-              "beforeRender"
+              "beforeRender",
             ),
             performance.measure(
               "Next.js-render",
               "beforeRender",
-              "afterRender"
+              "afterRender",
             ),
             d &&
               (performance.getEntriesByName("Next.js-render").forEach(d),
@@ -664,7 +664,7 @@
             ["Next.js-route-change-to-render", "Next.js-render"].forEach(
               function (e) {
                 return performance.clearMeasures(e);
-              }
+              },
             ));
         }
       }
@@ -678,7 +678,7 @@
                 return e();
               });
             },
-            [t]
+            [t],
           ),
           S.default.useEffect(function () {
             (0, B.default)(d);
@@ -717,7 +717,7 @@
               t = new Set(
                 e.map(function (e) {
                   return e.getAttribute("data-n-href");
-                })
+                }),
               ),
               r = document.querySelector("noscript[data-n-css]"),
               n = null == r ? void 0 : r.getAttribute("data-n-css");
@@ -745,7 +745,7 @@
                   var t = new Set(
                       p.map(function (e) {
                         return e.href;
-                      })
+                      }),
                     ),
                     r = J(document.querySelectorAll("style[data-n-href]")),
                     n = r.map(function (e) {
@@ -763,14 +763,14 @@
                   p.forEach(function (e) {
                     var t = e.href,
                       r = document.querySelector(
-                        'style[data-n-href="' + t + '"]'
+                        'style[data-n-href="' + t + '"]',
                       );
                     r && (a.parentNode.insertBefore(r, a.nextSibling), (a = r));
                   }),
                   J(document.querySelectorAll("link[data-n-p]")).forEach(
                     function (e) {
                       e.parentNode.removeChild(e);
-                    }
+                    },
                   );
               }
               if (e.scroll) {
@@ -790,9 +790,9 @@
             S.default.createElement(
               I.Portal,
               { type: "next-route-announcer" },
-              S.default.createElement(H.RouteAnnouncer, null)
-            )
-          )
+              S.default.createElement(H.RouteAnnouncer, null),
+            ),
+          ),
         );
         return (
           (o = u),
@@ -808,7 +808,7 @@
                 },
               ],
             },
-            S.default.createElement(S.default.StrictMode, null, y)
+            S.default.createElement(S.default.StrictMode, null, y),
           )),
           ec
             ? (0, S.default.startTransition)(function () {
@@ -1118,7 +1118,7 @@
                     _ = (0, d.removeTrailingSlash)(h);
                   if ("/" !== _[0])
                     throw Error(
-                      'Route name should start with a "/", got "' + _ + '"'
+                      'Route name should start with a "/", got "' + _ + '"',
                     );
                   return (
                     (t = e.skipInterpolation
@@ -1128,11 +1128,11 @@
                       : _),
                     (r = (0, c.default)(
                       (0, d.removeTrailingSlash)((0, l.addLocale)(t, a)),
-                      ".json"
+                      ".json",
                     )),
                     (0, i.addBasePath)(
                       "/_next/data/" + this.buildId + r + m,
-                      !0
+                      !0,
                     )
                   );
                 },
@@ -1263,7 +1263,7 @@
                   }
                 );
               },
-              [r]
+              [r],
             ),
             u ? (0, a.createPortal)(t, u) : null
           );
@@ -1408,12 +1408,12 @@
                         ? t
                         : null == r
                         ? void 0
-                        : r.textContent) || e
+                        : r.textContent) || e,
                     );
                   }
                 }
               },
-              [e]
+              [e],
             ),
             o.default.createElement(
               "p",
@@ -1423,7 +1423,7 @@
                 role: "alert",
                 style: i,
               },
-              r
+              r,
             )
           );
         },
@@ -1523,7 +1523,7 @@
                 };
               }),
               3800,
-              u(Error("Failed to load client build manifest"))
+              u(Error("Failed to load client build manifest")),
             );
       }
       function d(e, t) {
@@ -1564,7 +1564,7 @@
                         (t.crossOrigin = void 0),
                         (t.src = e),
                         document.body.appendChild(t);
-                    }))
+                    })),
                   ),
                   r))
             );
@@ -1584,7 +1584,7 @@
                     })
                     .catch(function (e) {
                       throw u(e);
-                    }))
+                    })),
                 ),
               t
             );
@@ -1609,7 +1609,7 @@
                     },
                     function (e) {
                       return { error: e };
-                    }
+                    },
                   )
               : Promise.resolve(void 0)
             ).then(function (t) {
@@ -1639,7 +1639,7 @@
                     });
                   }),
                 3800,
-                u(Error("Route did not complete loading: " + o))
+                u(Error("Route did not complete loading: " + o)),
               )
                 .then(function (e) {
                   var t = e.entrypoint,
@@ -1679,7 +1679,7 @@
                                       t +
                                       '"],\n      script[src^="' +
                                       t +
-                                      '"]'
+                                      '"]',
                                   )
                                 )
                                   return e();
@@ -1690,7 +1690,7 @@
                                   (n.onload = e),
                                   (n.onerror = function () {
                                     return o(
-                                      u(Error("Failed to prefetch: " + t))
+                                      u(Error("Failed to prefetch: " + t)),
                                     );
                                   }),
                                   (n.href = t),
@@ -1698,7 +1698,7 @@
                               })
                             );
                           })
-                        : []
+                        : [],
                     );
                   })
                   .then(function () {
@@ -1780,7 +1780,7 @@
       function h() {
         if (!f.router)
           throw Error(
-            'No router instance found.\nYou should only use "next/router" on the client side of your app.\n'
+            'No router instance found.\nYou should only use "next/router" on the client side of your app.\n',
           );
         return f.router;
       }
@@ -1823,7 +1823,7 @@
                 } catch (e) {
                   console.error("Error when running the Router event: " + a),
                     console.error(
-                      (0, l.default)(e) ? e.message + "\n" + e.stack : e + ""
+                      (0, l.default)(e) ? e.message + "\n" + e.stack : e + "",
                     );
                 }
             });
@@ -1834,7 +1834,7 @@
         var e = i.default.useContext(c.RouterContext);
         if (!e)
           throw Error(
-            "NextRouter was not mounted. https://nextjs.org/docs/messages/next-router-not-mounted"
+            "NextRouter was not mounted. https://nextjs.org/docs/messages/next-router-not-mounted",
           );
         return e;
       }
@@ -2026,8 +2026,8 @@
             ._(document.querySelectorAll('[data-nscript="beforeInteractive"]'))
             .concat(
               i._(
-                document.querySelectorAll('[data-nscript="beforePageRender"]')
-              )
+                document.querySelectorAll('[data-nscript="beforePageRender"]'),
+              ),
             )
             .forEach(function (e) {
               var t = e.id || e.getAttribute("src");
@@ -2057,7 +2057,7 @@
             var e = t || a;
             S.current || (c && e && v.has(e) && c(), (S.current = !0));
           },
-          [c, t, a]
+          [c, t, a],
         );
         var E = (0, s.useRef)(!1);
         if (
@@ -2078,7 +2078,7 @@
                         })),
                 (E.current = !0));
             },
-            [e, h]
+            [e, h],
           ),
           ("beforeInteractive" === h || "worker" === h) &&
             (b
@@ -2091,7 +2091,7 @@
                       onReady: c,
                       onError: m,
                     },
-                    _
+                    _,
                   ),
                 ])),
                 b(P))
@@ -2106,7 +2106,7 @@
                   a,
                   _.integrity
                     ? { as: "script", integrity: _.integrity }
-                    : { as: "script" }
+                    : { as: "script" },
                 ),
                 s.default.createElement("script", {
                   nonce: j,
@@ -2135,7 +2135,7 @@
               a,
               _.integrity
                 ? { as: "script", integrity: _.integrity }
-                : { as: "script" }
+                : { as: "script" },
             );
         }
         return null;
@@ -2211,7 +2211,7 @@
         var t = function (t) {
           return o.default.createElement(
             e,
-            n._({ router: (0, a.useRouter)() }, t)
+            n._({ router: (0, a.useRouter)() }, t),
           );
         };
         return (
@@ -2377,8 +2377,8 @@
                         null,
                         t
                           ? t + ": " + n
-                          : "Application error: a client-side exception has occurred"
-                      )
+                          : "Application error: a client-side exception has occurred",
+                      ),
                     ),
                     c.default.createElement(
                       "div",
@@ -2396,7 +2396,7 @@
                         ? c.default.createElement(
                             "h1",
                             { className: "next-error-h1", style: d.h1 },
-                            t
+                            t,
                           )
                         : null,
                       c.default.createElement(
@@ -2410,12 +2410,12 @@
                             : c.default.createElement(
                                 c.default.Fragment,
                                 null,
-                                "Application error: a client-side exception has occurred (see the browser console for more information)"
+                                "Application error: a client-side exception has occurred (see the browser console for more information)",
                               ),
-                          "."
-                        )
-                      )
-                    )
+                          ".",
+                        ),
+                      ),
+                    ),
                   );
                 },
               },
@@ -2552,7 +2552,7 @@
               a.default.createElement("meta", {
                 name: "viewport",
                 content: "width=device-width",
-              })
+              }),
             ),
           t
         );
@@ -2564,13 +2564,12 @@
           ? e.concat(
               a.default.Children.toArray(t.props.children).reduce(function (
                 e,
-                t
+                t,
               ) {
                 return "string" == typeof t || "number" == typeof t
                   ? e
                   : e.concat(t);
-              },
-              [])
+              }, []),
             )
           : e.concat(t);
       }
@@ -2620,7 +2619,7 @@
                   }
               }
               return t;
-            })
+            }),
           )
           .reverse()
           .map(function (e, t) {
@@ -2658,7 +2657,7 @@
             headManager: n,
             inAmpMode: (0, l.isInAmpMode)(r),
           },
-          t
+          t,
         );
       };
       ("function" == typeof t.default ||
@@ -2988,12 +2987,12 @@
               }
               return e.pathname;
             },
-            [r.asPath, r.isFallback, r.isReady, r.pathname]
+            [r.asPath, r.isFallback, r.isReady, r.pathname],
           );
         return a.default.createElement(
           i.PathnameContext.Provider,
           { value: l },
-          t
+          t,
         );
       }
     },
@@ -3175,13 +3174,13 @@
                               a.includes(
                                 (0, y.normalizeLocalePath)(
                                   (0, R.removeBasePath)(i),
-                                  r.router.locales
-                                ).pathname
+                                  r.router.locales,
+                                ).pathname,
                               ))
                           ) {
                             var u = (0, k.getNextPathnameInfo)(
                               (0, P.parseRelativeUrl)(e).pathname,
-                              { parseData: !0 }
+                              { parseData: !0 },
                             );
                             (i = (0, M.addBasePath)(u.pathname)),
                               (s.pathname = i);
@@ -3195,13 +3194,13 @@
                             : X(
                                 (0, y.normalizeLocalePath)(
                                   (0, R.removeBasePath)(s.pathname),
-                                  r.router.locales
+                                  r.router.locales,
                                 ).pathname,
-                                a
+                                a,
                               );
                           if ((0, b.isDynamicRoute)(d)) {
                             var p = (0, O.getRouteMatcher)(
-                              (0, j.getRouteRegex)(d)
+                              (0, j.getRouteRegex)(d),
                             )(i);
                             Object.assign(s.query, p || {});
                           }
@@ -3224,13 +3223,13 @@
                                 (0, k.getNextPathnameInfo)(v.pathname, {
                                   nextConfig: n,
                                   parseData: !0,
-                                })
+                                }),
                               ),
                               {
                                 defaultLocale: r.router.defaultLocale,
                                 buildId: "",
-                              }
-                            )
+                              },
+                            ),
                           ) +
                           v.query +
                           v.hash,
@@ -3247,13 +3246,13 @@
                                 (0, k.getNextPathnameInfo)(_.pathname, {
                                   nextConfig: n,
                                   parseData: !0,
-                                })
+                                }),
                               ),
                               {
                                 defaultLocale: r.router.defaultLocale,
                                 buildId: "",
-                              }
-                            )
+                              },
+                            ),
                           );
                         return Promise.resolve({
                           type: "redirect-internal",
@@ -3325,7 +3324,7 @@
               headers: Object.assign(
                 {},
                 o ? { purpose: "prefetch" } : {},
-                o && a ? { "x-middleware-prefetch": "1" } : {}
+                o && a ? { "x-middleware-prefetch": "1" } : {},
               ),
               method: null != (t = null == e ? void 0 : e.method) ? t : "GET",
             })
@@ -3411,7 +3410,7 @@
             "Invariant: attempted to hard navigate to the same URL " +
               t +
               " " +
-              location.href
+              location.href,
           );
         window.location.href = t;
       }
@@ -3462,7 +3461,7 @@
                       pathname: (0, M.addBasePath)(o),
                       query: a,
                     }),
-                    (0, g.getURL)()
+                    (0, g.getURL)(),
                   );
                   return;
                 }
@@ -3493,7 +3492,7 @@
                         locale: c.locale || y.defaultLocale,
                         _h: 0,
                       }),
-                      t
+                      t,
                     );
                 }
               });
@@ -3555,7 +3554,7 @@
                           query: r,
                         }),
                     j,
-                    O
+                    O,
                   ),
                   e
                 );
@@ -3722,7 +3721,7 @@
                                   "routeChangeError",
                                   U(),
                                   f._inFlightRoute,
-                                  z
+                                  z,
                                 ),
                               f.clc(),
                               (f.clc = null)),
@@ -3732,14 +3731,14 @@
                                   ? (0, R.removeBasePath)(o)
                                   : o,
                                 a.locale,
-                                f.defaultLocale
-                              )
+                                f.defaultLocale,
+                              ),
                             )),
                             (G = (0, C.removeLocale)(
                               (0, A.hasBasePath)(o)
                                 ? (0, R.removeBasePath)(o)
                                 : o,
-                              _.locale
+                              _.locale,
                             )),
                             (f._inFlightRoute = o),
                             (K = k !== _.locale),
@@ -3752,7 +3751,7 @@
                               t,
                               r,
                               o,
-                              u._(i._({}, a), { scroll: !1 })
+                              u._(i._({}, a), { scroll: !1 }),
                             ),
                             F && f.scrollToHash(G),
                             (l.label = 3);
@@ -3814,7 +3813,7 @@
                             (en = o),
                             (Q = Q
                               ? (0, d.removeTrailingSlash)(
-                                  (0, R.removeBasePath)(Q)
+                                  (0, R.removeBasePath)(Q),
                                 )
                               : Q),
                             (eo = (0, d.removeTrailingSlash)(Q)),
@@ -3825,7 +3824,7 @@
                               eo !== ea &&
                               (!(0, b.isDynamicRoute)(eo) ||
                                 !(0, O.getRouteMatcher)(
-                                  (0, j.getRouteRegex)(eo)
+                                  (0, j.getRouteRegex)(eo),
                                 )(ea))
                             )),
                             !(ec = !a.shallow))
@@ -3855,7 +3854,7 @@
                           if (
                             ((en = (0, C.removeLocale)(
                               (0, R.removeBasePath)(en),
-                              _.locale
+                              _.locale,
                             )),
                             (eo = (0, d.removeTrailingSlash)(Q)),
                             (el = !1),
@@ -3876,7 +3875,7 @@
                                     Object.assign({}, es, {
                                       pathname: eh.result,
                                       query: (0, B.omit)(Z, eh.params),
-                                    })
+                                    }),
                                   ))
                                 : Object.assign(Z, el);
                             else if (
@@ -3900,7 +3899,7 @@
                                   "Read more: https://nextjs.org/docs/messages/" +
                                   (ep
                                     ? "href-interpolation-failed"
-                                    : "incompatible-href-as")
+                                    : "incompatible-href-as"),
                               );
                           }
                           m || e.events.emit("routeChangeStart", o, z),
@@ -3938,7 +3937,7 @@
                             f._bfl(
                               o,
                               "resolvedAs" in eb ? eb.resolvedAs : void 0,
-                              _.locale
+                              _.locale,
                             ),
                           ];
                         case 16:
@@ -3965,15 +3964,15 @@
                                   : (0, M.addBasePath)(
                                       (0, x.addLocale)(
                                         new URL(o, location.href).pathname,
-                                        _.locale
+                                        _.locale,
                                       ),
-                                      !0
+                                      !0,
                                     )),
                               (0, A.hasBasePath)(ew) &&
                                 (ew = (0, R.removeBasePath)(ew)),
                               (eO = (0, j.getRouteRegex)(Q)),
                               (ej = (0, O.getRouteMatcher)(eO)(
-                                new URL(ew, location.href).pathname
+                                new URL(ew, location.href).pathname,
                               )) && Object.assign(Z, ej)),
                             "type" in eb)
                           ) {
@@ -4002,7 +4001,7 @@
                             if (
                               ((a.locale = !1),
                               (eE = eb.props.pageProps.__N_REDIRECT).startsWith(
-                                "/"
+                                "/",
                               ) &&
                                 !1 !==
                                   eb.props.pageProps.__N_REDIRECT_BASE_PATH)
@@ -4101,7 +4100,7 @@
                         case 24:
                           if ("type" in (eb = l.sent()))
                             throw Error(
-                              "Unexpected middleware effect on " + f.pathname
+                              "Unexpected middleware effect on " + f.pathname,
                             );
                           "/_error" === f.pathname &&
                             (null == (eH = self.__NEXT_DATA__.props)
@@ -4159,7 +4158,7 @@
                                   "routeChangeError",
                                   eb.error,
                                   G,
-                                  z
+                                  z,
                                 ),
                               eb.error)
                             );
@@ -4199,7 +4198,7 @@
                             "pushState" !== e ? this._key : Z()),
                         },
                         "",
-                        r
+                        r,
                       ));
                 },
               },
@@ -4255,7 +4254,7 @@
                           return (
                             console.error(
                               "Error in error page `getInitialProps`: ",
-                              l.sent()
+                              l.sent(),
                             ),
                             (d.props = {}),
                             [3, 6]
@@ -4273,7 +4272,7 @@
                                 o,
                                 a,
                                 i,
-                                !0
+                                !0,
                               ),
                             ]
                           );
@@ -4426,7 +4425,7 @@
                             return [3, 6];
                           return (
                             (D = (0, d.removeTrailingSlash)(
-                              I.effect.resolvedHref
+                              I.effect.resolvedHref,
                             )),
                             [4, t.pageLoader.getPageList()]
                           );
@@ -4440,8 +4439,8 @@
                               (s = (0, R.removeBasePath)(
                                 (0, y.normalizeLocalePath)(
                                   I.effect.parsedAs.pathname,
-                                  t.locales
-                                ).pathname
+                                  t.locales,
+                                ).pathname,
                               )),
                               (M = t.components[w]),
                               f.shallow && M && t.route === w && !h))
@@ -4549,7 +4548,7 @@
                                         return [2, ((r.props = n.sent()), r)];
                                     }
                                   });
-                                })
+                                }),
                               ),
                             ]
                           );
@@ -4566,7 +4565,7 @@
                                   isBackground: !0,
                                   persistCache: !1,
                                   inflightCache: t.sbc,
-                                })
+                                }),
                               ).catch(function () {}),
                             (z.pageProps = Object.assign({}, z.pageProps)),
                             (H.props = z),
@@ -4586,7 +4585,7 @@
                                 o,
                                 a,
                                 c,
-                                f
+                                f,
                               ),
                             ]
                           );
@@ -4703,7 +4702,7 @@
                             (y = (0, w.default)(
                               (0, M.addBasePath)(
                                 (0, x.addLocale)(t, o.locale),
-                                !0
+                                !0,
                               ),
                               f,
                               m,
@@ -4711,14 +4710,14 @@
                               function (e) {
                                 return X(e, f);
                               },
-                              o.locales
+                              o.locales,
                             )).externalDest)
                           )
                             return [2];
                           v ||
                             (p = (0, C.removeLocale)(
                               (0, R.removeBasePath)(y.asPath),
-                              o.locale
+                              o.locale,
                             )),
                             y.matchedPage &&
                               y.resolvedHref &&
@@ -4735,8 +4734,8 @@
                               Object.assign(
                                 c,
                                 (0, O.getRouteMatcher)(
-                                  (0, j.getRouteRegex)(n.pathname)
-                                )((0, E.parsePath)(t).pathname) || {}
+                                  (0, j.getRouteRegex)(n.pathname),
+                                )((0, E.parsePath)(t).pathname) || {},
                               ),
                               v || (e = (0, S.formatWithValidation)(n))),
                             [3, 5]
@@ -5060,7 +5059,7 @@
           e.pathname,
           e.locale,
           e.buildId ? void 0 : e.defaultLocale,
-          e.ignorePrefix
+          e.ignorePrefix,
         );
         return (
           (e.buildId || !e.trailingSlash) &&
@@ -5068,7 +5067,7 @@
           e.buildId &&
             (t = (0, a.addPathSuffix)(
               (0, o.addPathPrefix)(t, "/_next/data/" + e.buildId),
-              "/" === e.pathname ? "index.json" : ".json"
+              "/" === e.pathname ? "index.json" : ".json",
             )),
           (t = (0, o.addPathPrefix)(t, e.basePath)),
           !e.buildId && e.trailingSlash
@@ -5293,7 +5292,7 @@
                             return encodeURIComponent(e);
                           })
                           .join("/")
-                      : encodeURIComponent(t)
+                      : encodeURIComponent(t),
                   ) || "/")
             );
           }) || (a = ""),
@@ -5305,7 +5304,7 @@
       "use strict";
       function r(e) {
         return /Googlebot|Mediapartners-Google|AdsBot-Google|googleweblight|Storebot-Google|Google-PageRenderer|Bingbot|BingPreview|Slurp|DuckDuckBot|baiduspider|yandex|sogou|LinkedInBot|bitlybot|tumblr|vkShare|quora link preview|facebookexternalhit|facebookcatalog|Twitterbot|applebot|redditbot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|ia_archiver/i.test(
-          e
+          e,
         );
       }
       Object.defineProperty(t, "__esModule", { value: !0 }),
@@ -5576,7 +5575,7 @@
               d +
               "' passed to next/router in page: '" +
               e.pathname +
-              "'. Repeated forward-slashes (//) or backslashes \\ are not valid in the href."
+              "'. Repeated forward-slashes (//) or backslashes \\ are not valid in the href.",
           );
           var v = (0, i.normalizeRepeatedSlashes)(h);
           d = (p ? p[0] : "") + v;
@@ -5833,8 +5832,8 @@
                       a._(
                         this.children
                           .get("[]")
-                          ._smoosh(e + "[" + this.slugName + "]/")
-                      )
+                          ._smoosh(e + "[" + this.slugName + "]/"),
+                      ),
                     ),
                   !this.placeholder)
                 ) {
@@ -5847,7 +5846,7 @@
                         o +
                         "[[..." +
                         this.optionalRestSlugName +
-                        ']]").'
+                        ']]").',
                     );
                   n.unshift(o);
                 }
@@ -5858,8 +5857,8 @@
                       a._(
                         this.children
                           .get("[...]")
-                          ._smoosh(e + "[..." + this.restSlugName + "]/")
-                      )
+                          ._smoosh(e + "[..." + this.restSlugName + "]/"),
+                      ),
                     ),
                   null !== this.optionalRestSlugName &&
                     n.push.apply(
@@ -5868,9 +5867,9 @@
                         this.children
                           .get("[[...]]")
                           ._smoosh(
-                            e + "[[..." + this.optionalRestSlugName + "]]/"
-                          )
-                      )
+                            e + "[[..." + this.optionalRestSlugName + "]]/",
+                          ),
+                      ),
                     ),
                   n
                 );
@@ -5894,14 +5893,14 @@
                             e +
                             "' !== '" +
                             t +
-                            "')."
+                            "').",
                         );
                       r.forEach(function (e) {
                         if (e === t)
                           throw Error(
                             'You cannot have the same slug name "' +
                               t +
-                              '" repeat within a single dynamic path'
+                              '" repeat within a single dynamic path',
                           );
                         if (e.replace(/\W/g, "") === o.replace(/\W/g, ""))
                           throw Error(
@@ -5909,7 +5908,7 @@
                               e +
                               '" and "' +
                               t +
-                              '" differ only by non-word symbols within a single dynamic path'
+                              '" differ only by non-word symbols within a single dynamic path',
                           );
                       }),
                         r.push(t);
@@ -5926,13 +5925,13 @@
                     throw Error(
                       "Segment names may not start or end with extra brackets ('" +
                         i +
-                        "')."
+                        "').",
                     );
                   if (i.startsWith("."))
                     throw Error(
                       "Segment names may not start with erroneous periods ('" +
                         i +
-                        "')."
+                        "').",
                     );
                   if (n) {
                     if (u) {
@@ -5942,7 +5941,7 @@
                             this.restSlugName +
                             ']" and "' +
                             t[0] +
-                            '" ).'
+                            '" ).',
                         );
                       a(this.optionalRestSlugName, i),
                         (this.optionalRestSlugName = i),
@@ -5954,7 +5953,7 @@
                             this.optionalRestSlugName +
                             ']]" and "' +
                             t[0] +
-                            '").'
+                            '").',
                         );
                       a(this.restSlugName, i),
                         (this.restSlugName = i),
@@ -5965,7 +5964,7 @@
                       throw Error(
                         'Optional route parameters are not yet supported ("' +
                           t[0] +
-                          '").'
+                          '").',
                       );
                     a(this.slugName, i), (this.slugName = i), (o = "[]");
                   }
@@ -6032,7 +6031,7 @@
         var t = function () {
             if (r && r.mountedInstances) {
               var t = n.Children.toArray(
-                Array.from(r.mountedInstances).filter(Boolean)
+                Array.from(r.mountedInstances).filter(Boolean),
               );
               r.updateHead(i(t, e));
             }
@@ -6208,7 +6207,7 @@
                       m(e) +
                       '.getInitialProps()" should resolve to an object. But found "' +
                       o +
-                      '" instead.'
+                      '" instead.',
                   );
                 return [2, o];
             }
@@ -6402,7 +6401,7 @@
             function (t) {
               t.persisted && ((c = t.timeStamp), e(t));
             },
-            !0
+            !0,
           );
         }),
         (s = function () {
@@ -6633,7 +6632,7 @@
           ["mousedown", "keydown", "touchstart", "pointerdown"].forEach(
             function (t) {
               return e(t, C, j);
-            }
+            },
           );
         }),
         (M = function (e, t) {
@@ -6804,7 +6803,7 @@
                 function () {
                   return e(t);
                 },
-                !0
+                !0,
               )
             : "complete" !== document.readyState
             ? addEventListener(
@@ -6812,7 +6811,7 @@
                 function () {
                   return e(t);
                 },
-                !0
+                !0,
               )
             : setTimeout(t, 0);
         }),
@@ -7024,7 +7023,7 @@
             : (function (e) {
                 if (void 0 === e)
                   throw ReferenceError(
-                    "this hasn't been initialised - super() hasn't been called"
+                    "this hasn't been initialised - super() hasn't been called",
                   );
                 return e;
               })(this);
@@ -7156,7 +7155,7 @@
         try {
           return (
             Boolean.prototype.valueOf.call(
-              Reflect.construct(Boolean, [], function () {})
+              Reflect.construct(Boolean, [], function () {}),
             ),
             !0
           );
@@ -7190,7 +7189,7 @@
             (o = o.concat(
               Object.getOwnPropertySymbols(r).filter(function (e) {
                 return Object.getOwnPropertyDescriptor(r, e).enumerable;
-              })
+              }),
             )),
             o.forEach(function (t) {
               (0, n.j)(e, t, r[t]);
@@ -7217,7 +7216,7 @@
                 Object.defineProperty(
                   e,
                   r,
-                  Object.getOwnPropertyDescriptor(t, r)
+                  Object.getOwnPropertyDescriptor(t, r),
                 );
               }),
           e
@@ -7335,7 +7334,7 @@
           (0, n.N)(e, t) ||
           (function () {
             throw TypeError(
-              "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+              "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
             );
           })()
         );
@@ -7369,7 +7368,7 @@
           (0, o.N)(e) ||
           (function () {
             throw TypeError(
-              "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+              "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
             );
           })()
         );
@@ -7454,7 +7453,7 @@
             return e;
           if ("function" != typeof e)
             throw TypeError(
-              "Super expression must either be null or a function"
+              "Super expression must either be null or a function",
             );
           if (void 0 !== t) {
             if (t.has(e)) return t.get(e);
@@ -7517,7 +7516,9 @@
       function o(e, t) {
         if ("function" != typeof t && null !== t)
           throw TypeError(
-            "Class extends value " + String(t) + " is not a constructor or null"
+            "Class extends value " +
+              String(t) +
+              " is not a constructor or null",
           );
         function r() {
           this.constructor = e;

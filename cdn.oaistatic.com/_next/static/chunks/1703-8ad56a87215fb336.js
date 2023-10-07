@@ -252,7 +252,7 @@
               { Alias: e.Node, Map: e.Node, Scalar: e.Node, Seq: e.Node },
               e.Value && { Map: e.Value, Scalar: e.Value, Seq: e.Value },
               e.Collection && { Map: e.Collection, Seq: e.Collection },
-              e
+              e,
             )
           : e;
       }
@@ -478,13 +478,13 @@
         clone() {
           let e = Object.create(
             Object.getPrototypeOf(this),
-            Object.getOwnPropertyDescriptors(this)
+            Object.getOwnPropertyDescriptors(this),
           );
           return this.range && (e.range = this.range.slice()), e;
         }
         toJS(
           e,
-          { mapAsMap: t, maxAliasCount: s, onAnchor: n, reviver: i } = {}
+          { mapAsMap: t, maxAliasCount: s, onAnchor: n, reviver: i } = {},
         ) {
           if (!p(e)) throw TypeError("A document argument is required");
           let r = {
@@ -534,7 +534,7 @@
           let o = s.get(r);
           if ((o || (P(r, null, t), (o = s.get(r))), !o || void 0 === o.res))
             throw ReferenceError(
-              "This should not happen: Alias anchor was not resolved?"
+              "This should not happen: Alias anchor was not resolved?",
             );
           if (
             i >= 0 &&
@@ -564,7 +564,7 @@
             o.count * o.aliasCount > i)
           )
             throw ReferenceError(
-              "Excessive alias count indicates a resource exhaustion attack"
+              "Excessive alias count indicates a resource exhaustion attack",
             );
           return o.res;
         }
@@ -694,7 +694,7 @@
         clone(e) {
           let t = Object.create(
             Object.getPrototypeOf(this),
-            Object.getOwnPropertyDescriptors(this)
+            Object.getOwnPropertyDescriptors(this),
           );
           return (
             e && (t.schema = e),
@@ -713,7 +713,7 @@
               this.set(s, J(this.schema, n, t));
             else
               throw Error(
-                `Expected YAML collection at ${s}. Remaining path: ${n}`
+                `Expected YAML collection at ${s}. Remaining path: ${n}`,
               );
           }
         }
@@ -766,7 +766,7 @@
               this.set(s, J(this.schema, n, t));
             else
               throw Error(
-                `Expected YAML collection at ${s}. Remaining path: ${n}`
+                `Expected YAML collection at ${s}. Remaining path: ${n}`,
               );
           }
         }
@@ -799,7 +799,7 @@
           minContentWidth: r = 20,
           onFold: o,
           onOverflow: l,
-        } = {}
+        } = {},
       ) {
         let a, c, u;
         if (!i || i < 0) return e;
@@ -971,7 +971,7 @@ ${t}${e.slice(i + 1, r)}`));
             e.replace(/'/g, "''").replace(
               /\n+/g,
               `$&
-${s}`
+${s}`,
             ) +
             "'";
         return t.implicitKey ? n : ee(n, s, X, es(t, !1));
@@ -1086,7 +1086,7 @@ ${d}${v}`;
                   if (
                     !r ||
                     /^[\n\t ,[\]{}#&*!|>'"%@`]|^[?-]$|^[?-][ \t]|[\n:][ \t]|[ \t]\n|[\n\t ]#|[\n\t :]$/.test(
-                      r
+                      r,
                     )
                   )
                     return l || u || !r.includes("\n")
@@ -1102,7 +1102,7 @@ ${d}${v}`;
                   let f = r.replace(
                     /\n+/g,
                     `$&
-${a}`
+${a}`,
                   );
                   if (o) {
                     let e = (e) =>
@@ -1150,7 +1150,7 @@ ${a}`
             verifyAliasOrder: !0,
           },
           e.schema.toStringOptions,
-          t
+          t,
         );
         switch (n.collectionStyle) {
           case "block":
@@ -1179,7 +1179,7 @@ ${a}`
           if (t.doc.directives) return e.toString(t);
           if (t.resolvedAliases?.has(e))
             throw TypeError(
-              "Cannot stringify circular structure without alias nodes"
+              "Cannot stringify circular structure without alias nodes",
             );
           t.resolvedAliases
             ? t.resolvedAliases.add(e)
@@ -1265,7 +1265,7 @@ ${t.indent}${l}`
                     e.length > 40 && (e = e.substring(0, 36) + '..."'),
                       eh(
                         s.doc.options.logLevel,
-                        `Keys with collection values will be stringified due to JS Object restrictions: ${e}. Set mapAsMap: true to use object keys.`
+                        `Keys with collection values will be stringified due to JS Object restrictions: ${e}. Set mapAsMap: true to use object keys.`,
                       ),
                       (s.mapKeyWarned = !0);
                   }
@@ -1343,11 +1343,11 @@ ${t.indent}${l}`
                 if (p) {
                   if (m)
                     throw Error(
-                      "With simple keys, key nodes cannot have comments"
+                      "With simple keys, key nodes cannot have comments",
                     );
                   if (k(e))
                     throw Error(
-                      "With simple keys, collection cannot be used as a key value"
+                      "With simple keys, collection cannot be used as a key value",
                     );
                 }
                 let y =
@@ -1369,12 +1369,12 @@ ${t.indent}${l}`
                     e,
                     s,
                     () => (v = !0),
-                    () => (S = !0)
+                    () => (S = !0),
                   );
                 if (!y && !s.inFlow && E.length > 1024) {
                   if (p)
                     throw Error(
-                      "With simple keys, single line scalar must not span more than 1024 characters"
+                      "With simple keys, single line scalar must not span more than 1024 characters",
                     );
                   y = !0;
                 }
@@ -1414,7 +1414,7 @@ ${u}:`))
                     t,
                     s,
                     () => (N = !0),
-                    () => (S = !0)
+                    () => (S = !0),
                   ),
                   A = " ";
                 if (m || r || o) {
@@ -1474,7 +1474,7 @@ ${s.indent}`);
           itemIndent: r,
           onChompKeep: o,
           onComment: l,
-        }
+        },
       ) {
         let a;
         let {
@@ -1501,7 +1501,7 @@ ${s.indent}`);
             i,
             f,
             () => (o = null),
-            () => (h = !0)
+            () => (h = !0),
           );
           o && (l += H(l, r, u(o))), h && o && (h = !1), d.push(n + l);
         }
@@ -1521,7 +1521,7 @@ ${c}${t}`
       function ew(
         { comment: e, items: t },
         s,
-        { flowChars: n, itemIndent: i, onComment: r }
+        { flowChars: n, itemIndent: i, onComment: r },
       ) {
         let o;
         let {
@@ -1666,8 +1666,8 @@ ${l}${g}`;
             if (!y(e))
               throw Error(
                 `Map items must all be pairs; found ${JSON.stringify(
-                  e
-                )} instead`
+                  e,
+                )} instead`,
               );
           return (
             !e.allNullValues &&
@@ -1964,7 +1964,7 @@ ${l}${g}`;
           if ("function" != typeof atob)
             return (
               t(
-                "This environment does not support reading binary tags; either Buffer or atob is required"
+                "This environment does not support reading binary tags; either Buffer or atob is required",
               ),
               e
             );
@@ -1988,12 +1988,12 @@ ${l}${g}`;
             o = btoa(e);
           } else
             throw Error(
-              "This environment does not support writing binary tags; either Buffer or btoa is required"
+              "This environment does not support writing binary tags; either Buffer or btoa is required",
             );
           if ((t || (t = F.BLOCK_LITERAL), t !== F.QUOTE_DOUBLE)) {
             let e = Math.max(
                 n.options.lineWidth - n.indent.length,
-                n.options.minContentWidth
+                n.options.minContentWidth,
               ),
               s = Math.ceil(o.length / e),
               i = Array(s);
@@ -2053,7 +2053,7 @@ ${t.comment}`
               if (1 === t.length) l = e[(o = t[0])];
               else
                 throw TypeError(
-                  `Expected tuple with one key, not ${t.length} keys`
+                  `Expected tuple with one key, not ${t.length} keys`,
                 );
             } else o = e;
             i.items.push(ey(o, l, s));
@@ -2198,7 +2198,7 @@ ${t.comment}`
         set(e, t) {
           if ("boolean" != typeof t)
             throw Error(
-              `Expected boolean value for set(key, value) in a YAML set, not ${typeof t}`
+              `Expected boolean value for set(key, value) in a YAML set, not ${typeof t}`,
             );
           let s = eS(this.items, e);
           s && !t
@@ -2214,7 +2214,7 @@ ${t.comment}`
             return super.toString(
               Object.assign({}, e, { allNullValues: !0 }),
               t,
-              s
+              s,
             );
           throw Error("Set items must all have null values");
         }
@@ -2299,13 +2299,13 @@ ${t.comment}`
           default: !0,
           tag: "tag:yaml.org,2002:timestamp",
           test: RegExp(
-            "^([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})(?:(?:t|T|[ \\t]+)([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}(\\.[0-9]+)?)(?:[ \\t]*(Z|[-+][012]?[0-9](?::[0-9]{2})?))?)?$"
+            "^([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})(?:(?:t|T|[ \\t]+)([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}(\\.[0-9]+)?)(?:[ \\t]*(Z|[-+][012]?[0-9](?::[0-9]{2})?))?)?$",
           ),
           resolve(e) {
             let t = e.match(te.test);
             if (!t)
               throw Error(
-                "!!timestamp expects a date, starting with yyyy-mm-dd"
+                "!!timestamp expects a date, starting with yyyy-mm-dd",
               );
             let [, s, n, i, r, o, l] = t.map(Number),
               a = t[7] ? Number((t[7] + "00").substr(1, 3)) : 0,
@@ -2454,7 +2454,7 @@ ${t.comment}`
               .map((e) => JSON.stringify(e))
               .join(", ");
             throw Error(
-              `Unknown schema "${t}"; use one of ${e} or define customTags array`
+              `Unknown schema "${t}"; use one of ${e} or define customTags array`,
             );
           }
         }
@@ -2500,7 +2500,7 @@ ${t.comment}`
         clone() {
           let e = Object.create(
             tl.prototype,
-            Object.getOwnPropertyDescriptors(this)
+            Object.getOwnPropertyDescriptors(this),
           );
           return (e.tags = this.tags.slice()), e;
         }
@@ -2526,7 +2526,7 @@ ${t.comment}`
               uniqueKeys: !0,
               version: "1.2",
             },
-            s
+            s,
           );
           this.options = i;
           let { version: r } = i;
@@ -2577,7 +2577,7 @@ ${t.comment}`
                 (e) =>
                   "number" == typeof e ||
                   e instanceof String ||
-                  e instanceof Number
+                  e instanceof Number,
               )
               .map(String);
             e.length > 0 && (t = t.concat(e)), (n = t);
@@ -2615,7 +2615,7 @@ ${t.comment}`
                       t.node.anchor = t.anchor;
                     else {
                       let t = Error(
-                        "Failed to resolve repeated object (this should not happen)"
+                        "Failed to resolve repeated object (this should not happen)",
                       );
                       throw ((t.source = e), t);
                     }
@@ -2703,7 +2703,7 @@ ${t.comment}`
             default: {
               let t = JSON.stringify(e);
               throw Error(
-                `Expected '1.1', '1.2' or null as first argument, but found: ${t}`
+                `Expected '1.1', '1.2' or null as first argument, but found: ${t}`,
               );
             }
           }
@@ -2711,7 +2711,7 @@ ${t.comment}`
           else if (s) this.schema = new tl(Object.assign(s, t));
           else
             throw Error(
-              "With a null YAML version, the { schema: Schema } option is required"
+              "With a null YAML version, the { schema: Schema } option is required",
             );
         }
         toJS({
@@ -2868,7 +2868,7 @@ ${l}
           offset: i,
           onError: r,
           startOnNewline: o,
-        }
+        },
       ) {
         let l = !1,
           a = o,
@@ -2892,7 +2892,7 @@ ${l}
                 r(
                   n.offset,
                   "MISSING_CHAR",
-                  "Tags and anchors must be separated from the next token by white space"
+                  "Tags and anchors must be separated from the next token by white space",
                 ),
               (p = !1)),
             n.type)
@@ -2910,7 +2910,7 @@ ${l}
                 r(
                   n,
                   "MISSING_CHAR",
-                  "Comments must be separated from other tokens by white space characters"
+                  "Comments must be separated from other tokens by white space characters",
                 );
               let e = n.source.substring(1) || " ";
               u ? (u += f + e) : (u = e), (f = ""), (a = !1);
@@ -2931,7 +2931,7 @@ ${l}
                     n.offset + n.source.length - 1,
                     "BAD_ALIAS",
                     "Anchor ending in : is ambiguous",
-                    !0
+                    !0,
                   ),
                 (m = n),
                 null === k && (k = n.offset),
@@ -2952,13 +2952,13 @@ ${l}
                 r(
                   n,
                   "BAD_PROP_ORDER",
-                  `Anchors and tags must be after the ${n.source} indicator`
+                  `Anchors and tags must be after the ${n.source} indicator`,
                 ),
                 b &&
                   r(
                     n,
                     "UNEXPECTED_TOKEN",
-                    `Unexpected ${n.source} in ${t ?? "collection"}`
+                    `Unexpected ${n.source} in ${t ?? "collection"}`,
                   ),
                 (b = n),
                 (a = !1),
@@ -2989,7 +2989,7 @@ ${l}
             r(
               n.offset,
               "MISSING_CHAR",
-              "Tags and anchors must be separated from the next token by white space"
+              "Tags and anchors must be separated from the next token by white space",
             ),
           {
             comma: g,
@@ -3040,7 +3040,7 @@ ${l}
               n,
               "BAD_INDENT",
               "Flow end indicator should be more indented than parent",
-              !0
+              !0,
             );
         }
       }
@@ -3076,7 +3076,7 @@ ${l}
                   n(
                     l,
                     "MISSING_CHAR",
-                    "Comments must be separated from other tokens by white space characters"
+                    "Comments must be separated from other tokens by white space characters",
                   );
                 let t = e.substring(1) || " ";
                 i ? (i += o + t) : (i = t), (o = "");
@@ -3103,7 +3103,7 @@ ${l}
                   s,
                   n,
                   i,
-                  r
+                  r,
                 ) {
                   let o = r?.nodeClass ?? eE,
                     l = new o(s.schema);
@@ -3127,7 +3127,7 @@ ${l}
                             ? i(
                                 a,
                                 "BLOCK_AS_IMPLICIT_KEY",
-                                "A block sequence may not be used as an implicit map key"
+                                "A block sequence may not be used as an implicit map key",
                               )
                             : "indent" in u &&
                               u.indent !== n.indent &&
@@ -3145,7 +3145,7 @@ ${l}
                         i(
                           u ?? o[o.length - 1],
                           "MULTILINE_IMPLICIT_KEY",
-                          "Implicit keys need to be on a single line"
+                          "Implicit keys need to be on a single line",
                         );
                     } else
                       d.found?.indent !== n.indent && i(a, "BAD_INDENT", tb);
@@ -3168,14 +3168,14 @@ ${l}
                           i(
                             a,
                             "BLOCK_AS_IMPLICIT_KEY",
-                            "Nested mappings are not allowed in compact mappings"
+                            "Nested mappings are not allowed in compact mappings",
                           ),
                         s.options.strict &&
                           d.start < g.found.offset - 1024 &&
                           i(
                             y.range,
                             "KEY_OVER_1024_CHARS",
-                            "The : indicator must be at most 1024 chars after the start of an implicit block mapping key"
+                            "The : indicator must be at most 1024 chars after the start of an implicit block mapping key",
                           ));
                       let o = h ? e(s, h, g, i) : t(s, a, f, null, g, i);
                       s.schema.compat && ty(n.indent, h, i), (a = o.range[2]);
@@ -3187,7 +3187,7 @@ ${l}
                         i(
                           y.range,
                           "MISSING_CHAR",
-                          "Implicit map keys need to be followed by map values"
+                          "Implicit map keys need to be followed by map values",
                         ),
                         g.comment &&
                           (y.comment
@@ -3212,7 +3212,7 @@ ${l}
                   s,
                   n,
                   i,
-                  r
+                  r,
                 ) {
                   let o = r?.nodeClass ?? eO,
                     l = new o(s.schema);
@@ -3233,12 +3233,12 @@ ${l}
                           ? i(
                               u.end,
                               "BAD_INDENT",
-                              "All sequence items must start at the same column"
+                              "All sequence items must start at the same column",
                             )
                           : i(
                               a,
                               "MISSING_CHAR",
-                              "Sequence item without - indicator"
+                              "Sequence item without - indicator",
                             );
                       else {
                         (c = u.end), u.comment && (l.comment = u.comment);
@@ -3257,7 +3257,7 @@ ${l}
                   s,
                   n,
                   i,
-                  r
+                  r,
                 ) {
                   let o = "{" === n.start.source,
                     l = o ? "flow map" : "flow sequence",
@@ -3284,13 +3284,13 @@ ${l}
                           ? i(
                               m.comma,
                               "UNEXPECTED_TOKEN",
-                              `Unexpected , in ${l}`
+                              `Unexpected , in ${l}`,
                             )
                           : r < n.items.length - 1 &&
                             i(
                               m.start,
                               "UNEXPECTED_TOKEN",
-                              `Unexpected empty item in ${l}`
+                              `Unexpected empty item in ${l}`,
                             ),
                           m.comment &&
                             (c.comment
@@ -3305,7 +3305,7 @@ ${l}
                         i(
                           h,
                           "MULTILINE_IMPLICIT_KEY",
-                          "Implicit keys of flow sequence pairs need to be on a single line"
+                          "Implicit keys of flow sequence pairs need to be on a single line",
                         );
                     }
                     if (0 === r)
@@ -3316,7 +3316,7 @@ ${l}
                         i(
                           m.start,
                           "MISSING_CHAR",
-                          `Missing , between ${l} items`
+                          `Missing , between ${l} items`,
                         ),
                       m.comment)
                     ) {
@@ -3360,7 +3360,7 @@ ${l}
                                 i(
                                   e,
                                   "MULTILINE_IMPLICIT_KEY",
-                                  "Implicit keys of flow sequence pairs need to be on a single line"
+                                  "Implicit keys of flow sequence pairs need to be on a single line",
                                 );
                                 break;
                               }
@@ -3369,7 +3369,7 @@ ${l}
                             i(
                               y.found,
                               "KEY_OVER_1024_CHARS",
-                              "The : indicator must be at most 1024 chars after the start of an implicit flow sequence key"
+                              "The : indicator must be at most 1024 chars after the start of an implicit flow sequence key",
                             );
                         }
                       } else
@@ -3378,12 +3378,12 @@ ${l}
                             ? i(
                                 p,
                                 "MISSING_CHAR",
-                                `Missing space after : in ${l}`
+                                `Missing space after : in ${l}`,
                               )
                             : i(
                                 y.start,
                                 "MISSING_CHAR",
-                                `Missing , or : between ${l} items`
+                                `Missing , or : between ${l} items`,
                               ));
                       let g = p
                         ? e(s, p, y, i)
@@ -3463,7 +3463,7 @@ ${l}
               n(
                 a,
                 "UNEXPECTED_TOKEN",
-                `Block scalar header includes extra characters: ${i}`
+                `Block scalar header includes extra characters: ${i}`,
               );
             let c = !1,
               u = "",
@@ -3482,7 +3482,7 @@ ${l}
                     n(
                       i,
                       "MISSING_CHAR",
-                      "Comments must be separated from other tokens by white space characters"
+                      "Comments must be separated from other tokens by white space characters",
                     ),
                     (f += i.source.length),
                     (u = i.source.substring(1));
@@ -3542,7 +3542,7 @@ ${l}
               s(
                 c + t.length,
                 "MISSING_CHAR",
-                "Block scalars with more-indented leading empty lines must use an explicit indentation indicator"
+                "Block scalars with more-indented leading empty lines must use an explicit indentation indicator",
               ),
               0 === i.indent && (a = t.length),
               (u = e);
@@ -3623,7 +3623,7 @@ ${l}
                     t(
                       0,
                       "BAD_SCALAR_START",
-                      `Plain value cannot start with ${s}`
+                      `Plain value cannot start with ${s}`,
                     ),
                   tO(e)
                 );
@@ -3678,7 +3678,7 @@ ${l}
                               n(
                                 t - 2,
                                 "BAD_DQ_ESCAPE",
-                                `Invalid escape sequence ${i}`
+                                `Invalid escape sequence ${i}`,
                               ),
                               i
                             );
@@ -3691,7 +3691,7 @@ ${l}
                         t(
                           n - 1,
                           "BAD_DQ_ESCAPE",
-                          `Invalid escape sequence ${i}`
+                          `Invalid escape sequence ${i}`,
                         ),
                           (s += i);
                       }
@@ -3717,7 +3717,7 @@ ${l}
               s(
                 e,
                 "UNEXPECTED_TOKEN",
-                `Expected a flow scalar value, but found: ${o}`
+                `Expected a flow scalar value, but found: ${o}`,
               ),
               {
                 value: "",
@@ -3791,7 +3791,7 @@ ${l}
             : tN(t, e.options.strict, n),
           c = s
             ? e.directives.tagName(s.source, (e) =>
-                n(s, "TAG_RESOLVE_FAILED", e)
+                n(s, "TAG_RESOLVE_FAILED", e),
               )
             : null,
           f =
@@ -3808,14 +3808,14 @@ ${l}
                   let o = e.knownTags[s];
                   return o && !o.collection
                     ? (e.tags.push(
-                        Object.assign({}, o, { default: !1, test: void 0 })
+                        Object.assign({}, o, { default: !1, test: void 0 }),
                       ),
                       o)
                     : (i(
                         n,
                         "TAG_RESOLVE_FAILED",
                         `Unresolved tag: ${s}`,
-                        "tag:yaml.org,2002:str" !== s
+                        "tag:yaml.org,2002:str" !== s,
                       ),
                       e[u]);
                 })(e.schema, r, c, s, n)
@@ -3841,7 +3841,7 @@ ${l}
           let o = f.resolve(
             r,
             (e) => n(s ?? t, "TAG_RESOLVE_FAILED", e),
-            e.options
+            e.options,
           );
           i = g(o) ? o : new F(o);
         } catch (o) {
@@ -3868,7 +3868,7 @@ ${l}
             (i = (function (
               { options: e },
               { offset: t, source: s, end: n },
-              i
+              i,
             ) {
               let r = new U(s.substring(1));
               "" === r.source &&
@@ -3878,7 +3878,7 @@ ${l}
                     t + s.length - 1,
                     "BAD_ALIAS",
                     "Alias ending in : is ambiguous",
-                    !0
+                    !0,
                   );
               let o = t + s.length,
                 l = tk(n, o, e.strict, i);
@@ -3892,7 +3892,7 @@ ${l}
                 n(
                   t,
                   "ALIAS_PROPS",
-                  "An alias node must not specify any properties"
+                  "An alias node must not specify any properties",
                 );
             break;
           case "scalar":
@@ -3907,7 +3907,7 @@ ${l}
             (i = (function (e, t, s, n, i) {
               let r = n
                   ? t.directives.tagName(n.source, (e) =>
-                      i(n, "TAG_RESOLVE_FAILED", e)
+                      i(n, "TAG_RESOLVE_FAILED", e),
                     )
                   : null,
                 o =
@@ -3928,7 +3928,7 @@ ${l}
               )
                 return tS(e, t, s, i, r);
               let l = t.schema.tags.find(
-                (e) => e.tag === r && e.collection === o
+                (e) => e.tag === r && e.collection === o,
               );
               if (!l) {
                 let a = t.schema.knownTags[r];
@@ -3939,7 +3939,7 @@ ${l}
                           n,
                           "BAD_COLLECTION_TYPE",
                           `${a.tag} used for ${o} collection, but expects ${a.collection}`,
-                          !0
+                          !0,
                         )
                       : i(n, "TAG_RESOLVE_FAILED", `Unresolved tag: ${r}`, !0),
                     tS(e, t, s, i, r)
@@ -3952,7 +3952,7 @@ ${l}
                   l.resolve?.(
                     a,
                     (e) => i(n, "TAG_RESOLVE_FAILED", e),
-                    t.options
+                    t.options,
                   ) ?? a,
                 u = w(c) ? c : new F(c);
               return (
@@ -3993,7 +3993,7 @@ ${l}
         s,
         n,
         { spaceBefore: i, comment: r, anchor: o, tag: l, end: a },
-        c
+        c,
       ) {
         let u = {
             type: "scalar",
@@ -4135,7 +4135,7 @@ ${e}`
                 e,
                 t,
                 { offset: s, start: n, value: i, end: r },
-                o
+                o,
               ) {
                 let l = Object.assign({ _directives: t }, e),
                   a = new ta(void 0, l),
@@ -4160,7 +4160,7 @@ ${e}`
                     o(
                       u.end,
                       "MISSING_CHAR",
-                      "Block collection cannot start on same line with directives-end marker"
+                      "Block collection cannot start on same line with directives-end marker",
                     )),
                   (a.contents = i
                     ? tL(c, i, u, o)
@@ -4178,7 +4178,7 @@ ${e}`
                 this.onError(
                   e,
                   "MISSING_CHAR",
-                  "Missing directives-end/doc-start indicator line"
+                  "Missing directives-end/doc-start indicator line",
                 ),
                 this.decorate(t, !1),
                 this.doc && (yield this.doc),
@@ -4209,8 +4209,8 @@ ${e}`
                   new tf(
                     t$(e),
                     "UNEXPECTED_TOKEN",
-                    "Unexpected doc-end without preceding document"
-                  )
+                    "Unexpected doc-end without preceding document",
+                  ),
                 );
                 break;
               }
@@ -4219,7 +4219,7 @@ ${e}`
                 e.end,
                 e.offset + e.source.length,
                 this.doc.options.strict,
-                this.onError
+                this.onError,
               );
               if ((this.decorate(this.doc, !0), t.comment)) {
                 let e = this.doc.comment;
@@ -4233,7 +4233,11 @@ ${t.comment}`
             }
             default:
               this.errors.push(
-                new tf(t$(e), "UNEXPECTED_TOKEN", `Unsupported token ${e.type}`)
+                new tf(
+                  t$(e),
+                  "UNEXPECTED_TOKEN",
+                  `Unsupported token ${e.type}`,
+                ),
               );
           }
         }
@@ -4243,14 +4247,14 @@ ${t.comment}`
           else if (e) {
             let e = Object.assign(
                 { _directives: this.directives },
-                this.options
+                this.options,
               ),
               s = new ta(void 0, e);
             this.atDirectives &&
               this.onError(
                 t,
                 "MISSING_CHAR",
-                "Missing directives-end indicator line"
+                "Missing directives-end indicator line",
               ),
               (s.range = [0, t, t]),
               this.decorate(s, !1),
@@ -4292,7 +4296,7 @@ ${t.comment}`
               indent: n > 0 ? " ".repeat(n) : "",
               inFlow: i,
               options: { blockQuote: !0, lineWidth: -1 },
-            }
+            },
           ),
           a = t.end ?? [
             { type: "newline", offset: -1, indent: n, source: "\n" },
@@ -4381,7 +4385,7 @@ ${t.comment}`
             indent: null !== l && l > 0 ? " ".repeat(l) : "",
             inFlow: r,
             options: { blockQuote: !0, lineWidth: -1 },
-          }
+          },
         );
         switch (a[0]) {
           case "|":
@@ -4484,7 +4488,7 @@ ${t.comment}`
                       (e) =>
                         "space" === e.type ||
                         "comment" === e.type ||
-                        "newline" === e.type
+                        "newline" === e.type,
                     )
                   : [];
             for (let t of Object.keys(e))
@@ -4676,7 +4680,7 @@ ${t.comment}`
       let t1 = "0123456789ABCDEFabcdef".split(""),
         t2 =
           "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-#;/?:@&=+$_.!~*'()".split(
-            ""
+            "",
           ),
         t9 = ",[]{}".split(""),
         t8 = " ,[]{}\n\r	".split(""),
@@ -5455,7 +5459,7 @@ ${t.comment}`
                   -1 === t5(s.start) &&
                   (0 === t.indent ||
                     s.start.every(
-                      (e) => "comment" !== e.type || e.indent < t.indent
+                      (e) => "comment" !== e.type || e.indent < t.indent,
                     )) &&
                   ("document" === e.type
                     ? (e.end = s.start)
@@ -6014,8 +6018,8 @@ ${t.comment}`
                 new tf(
                   t.range.slice(0, 2),
                   "MULTIPLE_DOCS",
-                  "Source contains multiple documents; please use YAML.parseAllDocuments()"
-                )
+                  "Source contains multiple documents; please use YAML.parseAllDocuments()",
+                ),
               );
               break;
             }

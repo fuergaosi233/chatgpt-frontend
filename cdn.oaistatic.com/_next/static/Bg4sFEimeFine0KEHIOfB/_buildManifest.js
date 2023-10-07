@@ -22,7 +22,7 @@
   _,
   y,
   P,
-  x
+  x,
 ) {
   return {
     __rewrites: { beforeFiles: [], afterFiles: [], fallback: [] },
@@ -297,6 +297,6 @@
   "static/chunks/3389-482943a0011c8266.js",
   "static/chunks/8967-6561da345bb514a5.js",
   "static/chunks/2759-f7bda12ecf7c1c13.js",
-  "static/chunks/695-ec75a6ad3ecb3cc1.js"
+  "static/chunks/695-ec75a6ad3ecb3cc1.js",
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();

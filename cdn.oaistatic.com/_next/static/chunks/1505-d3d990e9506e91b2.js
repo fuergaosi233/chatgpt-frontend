@@ -39,7 +39,7 @@
             return n.createElement(
               c,
               { scope: t, itemMap: o, collectionRef: u },
-              r
+              r,
             );
           },
           s = e + "CollectionSlot",
@@ -61,7 +61,7 @@
                 () => (
                   s.itemMap.set(c, { ref: c, ...i }),
                   () => void s.itemMap.delete(c)
-                )
+                ),
               ),
               n.createElement(l.g7, { [p]: "", ref: a }, u)
             );
@@ -77,7 +77,7 @@
                   n = Array.from(r.itemMap.values()),
                   u = n.sort(
                     (e, r) =>
-                      t.indexOf(e.ref.current) - t.indexOf(r.ref.current)
+                      t.indexOf(e.ref.current) - t.indexOf(r.ref.current),
                   );
                 return u;
               }, [r.collectionRef, r.itemMap]);
@@ -102,7 +102,7 @@
               let u = (null == r ? void 0 : r[e]) || t;
               return (0, n.useMemo)(
                 () => ({ [`__scope${e}`]: { ...r, [e]: u } }),
-                [r, u]
+                [r, u],
               );
             };
           };
@@ -149,7 +149,7 @@
                   }, {});
                   return (0, n.useMemo)(
                     () => ({ [`__scope${t.scopeName}`]: u }),
-                    [u]
+                    [u],
                   );
                 };
               };
@@ -214,7 +214,7 @@
                   ? void 0
                   : r.call(t, ...e);
               },
-            []
+            [],
           )
         );
       }
@@ -249,7 +249,7 @@
                 r !== e && c(r);
               } else l(t);
             },
-            [i, e, l, c]
+            [i, e, l, c],
           );
         return [i ? e : o, f];
       }
@@ -280,7 +280,7 @@
               ((t.current.previous = t.current.value), (t.current.value = e)),
             t.current.previous
           ),
-          [e]
+          [e],
         );
       }
     },

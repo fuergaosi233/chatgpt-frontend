@@ -98,7 +98,7 @@ var arkoseLabsClientApi385154e0;
                   r &&
                     (n += "@layer".concat(
                       t[5].length > 0 ? " ".concat(t[5]) : "",
-                      " {"
+                      " {",
                     )),
                   (n += e(t)),
                   r && (n += "}"),
@@ -179,7 +179,7 @@ var arkoseLabsClientApi385154e0;
                     extractLocation: function (e) {
                       if (-1 === e.indexOf(":")) return [e];
                       var t = /(.+?)(?::(\d+))?(?::(\d+))?$/.exec(
-                        e.replace(/[()]/g, "")
+                        e.replace(/[()]/g, ""),
                       );
                       return [t[1], t[2] || void 0, t[3] || void 0];
                     },
@@ -226,7 +226,7 @@ var arkoseLabsClientApi385154e0;
                             (t.indexOf(" > eval") > -1 &&
                               (t = t.replace(
                                 / line (\d+)(?: > eval line \d+)* > eval:\d+:\d+/g,
-                                ":$1"
+                                ":$1",
                               )),
                             -1 === t.indexOf("@") && -1 === t.indexOf(":"))
                           )
@@ -271,7 +271,7 @@ var arkoseLabsClientApi385154e0;
                               fileName: c[2],
                               lineNumber: c[1],
                               source: r[i],
-                            })
+                            }),
                           );
                       }
                       return o;
@@ -295,7 +295,7 @@ var arkoseLabsClientApi385154e0;
                               fileName: c[2],
                               lineNumber: c[1],
                               source: r[i],
-                            })
+                            }),
                           );
                       }
                       return o;
@@ -641,9 +641,9 @@ var arkoseLabsClientApi385154e0;
                 .replace(/[\\^$.*+?()[\]{}|]/g, "\\$&")
                 .replace(
                   /hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,
-                  "$1.*?"
+                  "$1.*?",
                 ) +
-              "$"
+              "$",
           ),
           ie = q ? F.Buffer : void 0,
           ae = F.Symbol,
@@ -783,7 +783,7 @@ var arkoseLabsClientApi385154e0;
                   e,
                   (function (e, t) {
                     return e && Fe(t, Qe(t), e);
-                  })(y, e)
+                  })(y, e),
                 );
             } else {
               if (!K[R]) return i ? e : {};
@@ -1145,7 +1145,7 @@ var arkoseLabsClientApi385154e0;
                       else {
                         if (!(e instanceof Object))
                           throw new TypeError(
-                            "Eval Origin must be an Object or StackFrame"
+                            "Eval Origin must be an Object or StackFrame",
                           );
                         this.evalOrigin = new s(e);
                       }
@@ -1332,7 +1332,7 @@ var arkoseLabsClientApi385154e0;
           })(e);
           if (!r)
             throw new Error(
-              "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+              "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.",
             );
           r.appendChild(n);
         };
@@ -1365,7 +1365,7 @@ var arkoseLabsClientApi385154e0;
                 o &&
                   (r += "@layer".concat(
                     n.layer.length > 0 ? " ".concat(n.layer) : "",
-                    " {"
+                    " {",
                   )),
                   (r += n.css),
                   o && (r += "}"),
@@ -1377,7 +1377,7 @@ var arkoseLabsClientApi385154e0;
                   (r +=
                     "\n/*# sourceMappingURL=data:application/json;base64,".concat(
                       btoa(unescape(encodeURIComponent(JSON.stringify(i)))),
-                      " */"
+                      " */",
                     )),
                   t.styleTagTransform(r, e, t.options);
               })(t, e, n);
@@ -1484,7 +1484,7 @@ var arkoseLabsClientApi385154e0;
               var r = n.call(e, t || "default");
               if ("object" !== i(r)) return r;
               throw new TypeError(
-                "@@toPrimitive must return a primitive value."
+                "@@toPrimitive must return a primitive value.",
               );
             }
             return ("string" === t ? String : Number)(e);
@@ -1704,7 +1704,7 @@ var arkoseLabsClientApi385154e0;
               var r = n.call(e, t || "default");
               if ("object" !== ue(r)) return r;
               throw new TypeError(
-                "@@toPrimitive must return a primitive value."
+                "@@toPrimitive must return a primitive value.",
               );
             }
             return ("string" === t ? String : Number)(e);
@@ -1775,7 +1775,7 @@ var arkoseLabsClientApi385154e0;
               Object.defineProperty(
                 e,
                 t,
-                Object.getOwnPropertyDescriptor(n, t)
+                Object.getOwnPropertyDescriptor(n, t),
               );
             });
       }
@@ -1815,7 +1815,7 @@ var arkoseLabsClientApi385154e0;
               var r = n.call(e, t || "default");
               if ("object" !== de(r)) return r;
               throw new TypeError(
-                "@@toPrimitive must return a primitive value."
+                "@@toPrimitive must return a primitive value.",
               );
             }
             return ("string" === t ? String : Number)(e);
@@ -1872,7 +1872,7 @@ var arkoseLabsClientApi385154e0;
               Object.defineProperty(
                 e,
                 t,
-                Object.getOwnPropertyDescriptor(n, t)
+                Object.getOwnPropertyDescriptor(n, t),
               );
             });
       }
@@ -1888,7 +1888,7 @@ var arkoseLabsClientApi385154e0;
               var r = n.call(e, t || "default");
               if ("object" !== Te(r)) return r;
               throw new TypeError(
-                "@@toPrimitive must return a primitive value."
+                "@@toPrimitive must return a primitive value.",
               );
             }
             return ("string" === t ? String : Number)(e);
@@ -1983,7 +1983,7 @@ var arkoseLabsClientApi385154e0;
               Object.defineProperty(
                 e,
                 t,
-                Object.getOwnPropertyDescriptor(n, t)
+                Object.getOwnPropertyDescriptor(n, t),
               );
             });
       }
@@ -2120,11 +2120,11 @@ var arkoseLabsClientApi385154e0;
                     window,
                     this.config.publicKey,
                     "listener",
-                    this.messageListener
+                    this.messageListener,
                   ),
                   window.addEventListener(
                     "message",
-                    window[D][this.config.publicKey].listener
+                    window[D][this.config.publicKey].listener,
                   );
               },
             },
@@ -2144,13 +2144,13 @@ var arkoseLabsClientApi385154e0;
                   var a = Ke(
                     Ke({}, n),
                     {},
-                    { data: n, key: r, message: o, type: i }
+                    { data: n, key: r, message: o, type: i },
                   );
                   e.postMessage(
                     (function (e) {
                       return JSON.stringify(e);
                     })(a),
-                    this.config.target
+                    this.config.target,
                   );
                 }
               },
@@ -2176,7 +2176,7 @@ var arkoseLabsClientApi385154e0;
                   this.postMessage(
                     s,
                     { data: t, key: n, message: r, type: "emit" },
-                    this.config.target
+                    this.config.target,
                   );
                 }
               },
@@ -2354,7 +2354,7 @@ var arkoseLabsClientApi385154e0;
               var r = n.call(e, t || "default");
               if ("object" !== at(r)) return r;
               throw new TypeError(
-                "@@toPrimitive must return a primitive value."
+                "@@toPrimitive must return a primitive value.",
               );
             }
             return ("string" === t ? String : Number)(e);
@@ -2385,7 +2385,7 @@ var arkoseLabsClientApi385154e0;
       lt = function () {
         return je()(
           it.container,
-          ct({ show: !!ut.show, active: !!ut.isActive }, ut.mode, !0)
+          ct({ show: !!ut.show, active: !!ut.isActive }, ut.mode, !0),
         );
       };
     He.on("challenge iframe", function (e) {
@@ -2552,7 +2552,7 @@ var arkoseLabsClientApi385154e0;
               Object.defineProperty(
                 e,
                 t,
-                Object.getOwnPropertyDescriptor(n, t)
+                Object.getOwnPropertyDescriptor(n, t),
               );
             });
       }
@@ -2623,14 +2623,14 @@ var arkoseLabsClientApi385154e0;
                       (crypto.getRandomValues(new Uint8Array(1))[0] &
                         (15 >> (e / 4)))
                     ).toString(16);
-                  }
+                  },
                 )
               : "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
                   /[xy]/g,
                   function (e) {
                     var t = (16 * Math.random()) | 0;
                     return ("x" == e ? t : (3 & t) | 8).toString(16);
-                  }
+                  },
                 ),
           c = (function () {
             var e = {},
@@ -2763,9 +2763,9 @@ var arkoseLabsClientApi385154e0;
                   threshold: null,
                   logged: !1,
                   metrics: {},
-                }
+                },
               ),
-              e
+              e,
             );
           },
           _ = function () {
@@ -2829,7 +2829,7 @@ var arkoseLabsClientApi385154e0;
               o.end ||
                 ((o.metrics[t] = ye(
                   { start: n, end: null, diff: null },
-                  r && { info: r }
+                  r && { info: r },
                 )),
                 (u[e] = o),
                 O("".concat(e, ".").concat(t, " started:"), n));
@@ -2865,17 +2865,17 @@ var arkoseLabsClientApi385154e0;
                       return ye(
                         ye({}, t),
                         {},
-                        he({}, n, "boolean" == typeof r ? r : o.default)
+                        he({}, n, "boolean" == typeof r ? r : o.default),
                       );
                     var i =
                       "float" === o.type ? parseFloat(r, 0) : parseInt(r, 10);
                     return ye(
                       ye({}, t),
                       {},
-                      he({}, n, isNaN(i) ? o.default : i)
+                      he({}, n, isNaN(i) ? o.default : i),
                     );
                   }, {});
-                })(e)
+                })(e),
               )),
               (v = t),
               Object.keys(u).forEach(function (e) {
@@ -3013,7 +3013,7 @@ var arkoseLabsClientApi385154e0;
               token: null,
               externalRequested: !1,
             },
-            t
+            t,
           ),
           {},
           {
@@ -3030,10 +3030,10 @@ var arkoseLabsClientApi385154e0;
                 settings: {},
                 accessibilitySettings: { lockFocusToModal: !0 },
               },
-              t.config
+              t.config,
             ),
             events: yt({}, t.events),
-          }
+          },
         );
       },
       qt = function (e) {
@@ -3194,7 +3194,7 @@ var arkoseLabsClientApi385154e0;
       Bt = function () {
         return ae(xt, "config.mode") === s
           ? ((xt.container = document.querySelector(
-              ae(xt, "config.selector", "")
+              ae(xt, "config.selector", ""),
             )),
             void (
               xt.container &&
@@ -3271,7 +3271,7 @@ var arkoseLabsClientApi385154e0;
               publicKey: i,
               language:
                 "" !== t.language ? t.language || xt.config.language : void 0,
-            }
+            },
           )),
           (xt.events = yt(
             yt({}, xt.events),
@@ -3287,7 +3287,7 @@ var arkoseLabsClientApi385154e0;
             bt(e, Lt, t[Lt] || xt.events[Lt]),
             bt(e, Kt, t[Kt] || xt.events[Kt]),
             bt(e, It, t[It] || xt.events[It]),
-            e)
+            e),
           )),
           He.emit("config", xt.config),
           o || a ? zt(!0) : Bt(),

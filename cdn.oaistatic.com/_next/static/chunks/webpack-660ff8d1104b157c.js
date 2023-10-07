@@ -110,7 +110,7 @@
       return Promise.all(
         Object.keys(b.f).reduce(function (t, n) {
           return b.f[n](e, t), t;
-        }, [])
+        }, []),
       );
     }),
     (b.u = function (e) {
@@ -245,7 +245,7 @@
         },
         l = setTimeout(
           s.bind(null, void 0, { type: "timeout", target: a }),
-          12e4
+          12e4,
         );
       (a.onerror = s.bind(null, a.onerror)),
         (a.onload = s.bind(null, a.onload)),
@@ -305,7 +305,7 @@
               }
             },
             "chunk-" + e,
-            e
+            e,
           );
         } else a[e] = 0;
       }
@@ -333,7 +333,7 @@
       return b.O(u);
     }),
     (d = self.webpackChunk_N_E = self.webpackChunk_N_E || []).forEach(
-      o.bind(null, 0)
+      o.bind(null, 0),
     ),
     (d.push = o.bind(null, d.push.bind(d))),
     (b.nc = void 0);

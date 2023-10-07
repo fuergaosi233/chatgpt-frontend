@@ -57,7 +57,7 @@
               e
             );
           },
-          [a, t, i]
+          [a, t, i],
         );
       }
       function c(e) {
@@ -216,7 +216,7 @@
                     sideOffset: 4,
                     position: "popper",
                   },
-                  a
+                  a,
                 ),
                 {
                   children: [
@@ -232,15 +232,19 @@
                       children: (0, o.jsx)(d.bTu, { className: "icon-sm" }),
                     }),
                   ],
-                }
-              )
+                },
+              ),
             );
           },
           Item: l.forwardRef(function (e, t) {
             var a = e.children,
               l = (0, i._)(e, ["children"]);
-            return (0,
-            o.jsx)(c.mS, (0, s._)((0, n._)({ $as: r.ck, ref: t }, l), { children: (0, o.jsx)(r.eT, { children: a }) }));
+            return (0, o.jsx)(
+              c.mS,
+              (0, s._)((0, n._)({ $as: r.ck, ref: t }, l), {
+                children: (0, o.jsx)(r.eT, { children: a }),
+              }),
+            );
           }),
         };
       t.Z = u;
@@ -466,14 +470,14 @@
                 children: (0, d.jsx)(U.ck, {
                   onClick: function () {
                     window.confirm(
-                      t.formatMessage(Q.deleteAllSharedLinksConfirm)
+                      t.formatMessage(Q.deleteAllSharedLinksConfirm),
                     ) && a();
                   },
                   className:
                     "cursor-pointer select-none px-2 py-1 text-red-500 radix-highlighted:bg-gray-50 dark:radix-highlighted:bg-gray-700",
                   children: (0, d.jsx)(
                     _.Z,
-                    (0, i._)({}, Q.deleteAllSharedLinks)
+                    (0, i._)({}, Q.deleteAllSharedLinks),
                   ),
                 }),
               }),
@@ -602,7 +606,7 @@
                     className: "mb-4 text-red-500",
                     children: (0, d.jsx)(
                       _.Z,
-                      (0, i._)({}, Q.somethingWentWrong)
+                      (0, i._)({}, Q.somethingWentWrong),
                     ),
                   }),
                   (0, d.jsx)("div", {
@@ -621,7 +625,7 @@
                 className: "pb-8 text-gray-600 dark:text-gray-400",
                 children: (0, d.jsx)(
                   _.Z,
-                  (0, i._)({}, Q.noSharedConversations)
+                  (0, i._)({}, Q.noSharedConversations),
                 ),
               })
             : (0, d.jsxs)(q.Z.Root, {
@@ -731,7 +735,7 @@
             function () {
               null == a || a(), q();
             },
-            [a, q]
+            [a, q],
           ),
           eL = (0, m.S)(),
           eD = eL.setupMfa,
@@ -773,7 +777,7 @@
                   "-ml-[8px] flex min-w-[180px] flex-shrink-0",
                   u
                     ? "max-w-[200px] flex-col"
-                    : "flex-row rounded-lg bg-gray-100 p-1 dark:bg-gray-800/30"
+                    : "flex-row rounded-lg bg-gray-100 p-1 dark:bg-gray-800/30",
                 ),
                 children: [
                   (0, d.jsx)(eh, {
@@ -851,8 +855,8 @@
                                         });
                                       },
                                     },
-                                  }
-                                )
+                                  },
+                                ),
                               ),
                             }),
                           }),
@@ -866,12 +870,12 @@
                                 _.Z,
                                 (0, i._)(
                                   {},
-                                  ey.chatTrainingEnterpriseDescription
-                                )
+                                  ey.chatTrainingEnterpriseDescription,
+                                ),
                               ),
                               toggleTooltip: (0, d.jsx)(
                                 _.Z,
-                                (0, i._)({}, ey.chatTrainingEnterpriseTooltip)
+                                (0, i._)({}, ey.chatTrainingEnterpriseTooltip),
                               ),
                             }),
                           }),
@@ -896,7 +900,7 @@
                                   });
                                 },
                               },
-                            })
+                            }),
                           ),
                         }),
                       }),
@@ -905,7 +909,7 @@
                       children: (0, d.jsx)(el, {
                         label: l.formatMessage(ey.sharedConversations),
                         buttonLabel: l.formatMessage(
-                          ey.sharedConversationsButton
+                          ey.sharedConversationsButton,
                         ),
                         onClick: function () {
                           H(!0);
@@ -926,7 +930,7 @@
                           children: (0, d.jsx)(el, {
                             label: l.formatMessage(ey.deleteAccount),
                             buttonLabel: l.formatMessage(
-                              ey.deleteAccountButton
+                              ey.deleteAccountButton,
                             ),
                             color: "danger",
                             onClick: ek,
@@ -1016,7 +1020,7 @@
                   },
                   description: (0, d.jsx)(
                     _.Z,
-                    (0, i._)({}, ey.betaBrowsingToggleDescription)
+                    (0, i._)({}, ey.betaBrowsingToggleDescription),
                   ),
                 }),
               }),
@@ -1031,7 +1035,7 @@
                   },
                   description: (0, d.jsx)(
                     _.Z,
-                    (0, i._)({}, ey.betaPluginToggleDescription)
+                    (0, i._)({}, ey.betaPluginToggleDescription),
                   ),
                 }),
               }),
@@ -1039,7 +1043,7 @@
               (0, d.jsx)(ep, {
                 children: (0, d.jsx)(er, {
                   label: e.formatMessage(
-                    ey.betaAdvancedDataAnalysisToggleLabel
+                    ey.betaAdvancedDataAnalysisToggleLabel,
                   ),
                   disabled: y,
                   enabled: y ? (null == m ? void 0 : m.enabled) : g,
@@ -1048,7 +1052,7 @@
                   },
                   description: (0, d.jsx)(
                     _.Z,
-                    (0, i._)({}, ey.betaAdvancedDataAnalysisToggleDescription)
+                    (0, i._)({}, ey.betaAdvancedDataAnalysisToggleDescription),
                   ),
                 }),
               }),
@@ -1063,7 +1067,7 @@
                   },
                   description: (0, d.jsx)(
                     _.Z,
-                    (0, i._)({}, ey.betaSunshineToggleDescription)
+                    (0, i._)({}, ey.betaSunshineToggleDescription),
                   ),
                 }),
               }),
@@ -1182,7 +1186,7 @@
                 return x.u9.includes(e) || a;
               });
             },
-            [a]
+            [a],
           );
         return (0, d.jsxs)("div", {
           className: "flex items-center justify-between",
@@ -1210,8 +1214,11 @@
                         children: (0, d.jsx)(_.Z, (0, i._)({}, ey.localeAuto)),
                       }),
                       s.map(function (e) {
-                        return (0,
-                        d.jsx)(B.Z.Item, { value: e, children: e }, e);
+                        return (0, d.jsx)(
+                          B.Z.Item,
+                          { value: e, children: e },
+                          e,
+                        );
                       }),
                     ],
                   }),
@@ -1259,7 +1266,7 @@
                 });
               }
             },
-            [a, t]
+            [a, t],
           );
         return (0, d.jsx)(N.Z, {
           isOpen: !0,
@@ -1285,25 +1292,25 @@
                   (0, d.jsx)("li", {
                     children: (0, d.jsx)(
                       _.Z,
-                      (0, i._)({}, ey.dataExportModalDescription1)
+                      (0, i._)({}, ey.dataExportModalDescription1),
                     ),
                   }),
                   (0, d.jsx)("li", {
                     children: (0, d.jsx)(
                       _.Z,
-                      (0, i._)({}, ey.dataExportModalDescription2)
+                      (0, i._)({}, ey.dataExportModalDescription2),
                     ),
                   }),
                   (0, d.jsx)("li", {
                     children: (0, d.jsx)(
                       _.Z,
-                      (0, i._)({}, ey.dataExportModalDescription3)
+                      (0, i._)({}, ey.dataExportModalDescription3),
                     ),
                   }),
                   (0, d.jsx)("li", {
                     children: (0, d.jsx)(
                       _.Z,
-                      (0, i._)({}, ey.dataExportModalDescription4)
+                      (0, i._)({}, ey.dataExportModalDescription4),
                     ),
                   }),
                 ],
@@ -1311,7 +1318,7 @@
               (0, d.jsx)("div", {
                 children: (0, d.jsx)(
                   _.Z,
-                  (0, i._)({}, ey.dataExportModalDescription5)
+                  (0, i._)({}, ey.dataExportModalDescription5),
                 ),
               }),
             ],
@@ -1326,7 +1333,7 @@
         return (0, d.jsxs)(v.xz, {
           className: (0, y.default)(
             "group flex items-center justify-start gap-2 rounded-md px-2 py-1.5 text-sm radix-state-active:bg-gray-800 radix-state-active:text-white dark:text-gray-500 dark:radix-state-active:text-white",
-            { "flex-1 items-center justify-center": !s }
+            { "flex-1 items-center justify-center": !s },
           ),
           value: t,
           children: [
@@ -1387,7 +1394,7 @@
                     : e.iat;
               return void 0 === t || Date.now() / 1e3 - t < 600;
             },
-            [s]
+            [s],
           ),
           m = (0, L.useCallback)(
             function () {
@@ -1398,7 +1405,7 @@
                     })
                   : J.m.warning(
                       n.formatMessage(ey.deleteAccountSessionTooOld),
-                      { hasCloseButton: !0 }
+                      { hasCloseButton: !0 },
                     );
               } catch (e) {
                 J.m.warning(n.formatMessage(ey.deleteAccountFailed), {
@@ -1406,7 +1413,7 @@
                 });
               }
             },
-            [n, b]
+            [n, b],
           ),
           v = (0, L.useCallback)(function () {
             (0, j.w7)();
@@ -1418,7 +1425,7 @@
             (0, L.useState)(function () {
               return b();
             }),
-            1
+            1,
           )[0],
           C = (0, f.e2)();
         return (0, d.jsx)(N.Z, {
@@ -1436,25 +1443,25 @@
                   (0, d.jsx)("li", {
                     children: (0, d.jsx)(
                       _.Z,
-                      (0, i._)({}, ey.deleteAccountWarning)
+                      (0, i._)({}, ey.deleteAccountWarning),
                     ),
                   }),
                   (0, d.jsx)("li", {
                     children: (0, d.jsx)(
                       _.Z,
-                      (0, i._)({}, ey.reuseEmailPhoneWarning)
+                      (0, i._)({}, ey.reuseEmailPhoneWarning),
                     ),
                   }),
                   (0, d.jsx)("li", {
                     children: (0, d.jsx)(
                       _.Z,
-                      (0, i._)({}, ey.dataRemovalWarning)
+                      (0, i._)({}, ey.dataRemovalWarning),
                     ),
                   }),
                   (0, d.jsx)("li", {
                     children: (0, d.jsx)(
                       _.Z,
-                      (0, i._)({}, ey.apiAccessDeletionWarning)
+                      (0, i._)({}, ey.apiAccessDeletionWarning),
                     ),
                   }),
                   (null == C ? void 0 : C.purchase_origin_platform) ===
@@ -1462,7 +1469,7 @@
                     (0, d.jsx)("li", {
                       children: (0, d.jsx)(
                         _.Z,
-                        (0, i._)({}, ey.iapSubscriptionWarning)
+                        (0, i._)({}, ey.iapSubscriptionWarning),
                       ),
                     }),
                   (null == C ? void 0 : C.purchase_origin_platform) ===
@@ -1470,7 +1477,7 @@
                     (0, d.jsx)("li", {
                       children: (0, d.jsx)(
                         _.Z,
-                        (0, i._)({}, ey.playStoreSubscriptionWarning)
+                        (0, i._)({}, ey.playStoreSubscriptionWarning),
                       ),
                     }),
                 ],
@@ -1485,7 +1492,7 @@
                               (0, d.jsx)(eb, {
                                 children: (0, d.jsx)(
                                   _.Z,
-                                  (0, i._)({}, ey.typeEmailLabel)
+                                  (0, i._)({}, ey.typeEmailLabel),
                                 ),
                               }),
                               (0, d.jsx)(I.Z, {
@@ -1505,7 +1512,7 @@
                           (0, d.jsx)(eb, {
                             children: (0, d.jsx)(
                               _.Z,
-                              (0, i._)({}, ey.typeDeleteInputLabel)
+                              (0, i._)({}, ey.typeDeleteInputLabel),
                             ),
                           }),
                           (0, d.jsx)(I.Z, {
@@ -1530,7 +1537,7 @@
                                 " ",
                                 (0, d.jsx)(
                                   _.Z,
-                                  (0, i._)({}, ey.deleteAccountButtonLabel)
+                                  (0, i._)({}, ey.deleteAccountButtonLabel),
                                 ),
                               ],
                             })
@@ -1540,7 +1547,7 @@
                                 " ",
                                 (0, d.jsx)(
                                   _.Z,
-                                  (0, i._)({}, ey.lockedButtonLabel)
+                                  (0, i._)({}, ey.lockedButtonLabel),
                                 ),
                               ],
                             }),
@@ -1553,7 +1560,7 @@
                         className: "pb-4 text-xs text-gray-500",
                         children: (0, d.jsx)(
                           _.Z,
-                          (0, i._)({}, ey.recentLoginMessage)
+                          (0, i._)({}, ey.recentLoginMessage),
                         ),
                       }),
                       (0, d.jsx)(S.z, {
@@ -1562,7 +1569,7 @@
                         className: "w-full",
                         children: (0, d.jsx)(
                           _.Z,
-                          (0, i._)({}, ey.refreshLoginButtonLabel)
+                          (0, i._)({}, ey.refreshLoginButtonLabel),
                         ),
                       }),
                     ],
@@ -2043,7 +2050,7 @@
             function () {
               return V ? z[0] : z.find(k.cf);
             },
-            [z, V]
+            [z, V],
           ),
           J = (0, h.useCallback)(
             (0, n._)(function () {
@@ -2062,13 +2069,13 @@
                           null != e.scrapeManifestResponse.plugin &&
                             (0, C.updateCachedApprovedPlugins)(
                               e.scrapeManifestResponse.plugin,
-                              U
+                              U,
                             );
                       },
                       onError: function (e) {
                         y.m.danger(
                           (null == e ? void 0 : e.message) ||
-                            "Error refreshing plugin."
+                            "Error refreshing plugin.",
                         );
                       },
                     })),
@@ -2076,13 +2083,13 @@
                 );
               });
             }),
-            [q, U, Y]
+            [q, U, Y],
           );
         return ((0, h.useEffect)(
           function () {
             G && J();
           },
-          [G, J]
+          [G, J],
         ),
         H.has(d.Wk))
           ? (0, l.jsx)(M.ZP, {
@@ -2106,7 +2113,7 @@
                               onClick: J,
                               children: (0, l.jsx)(
                                 x.Z,
-                                (0, s._)({}, P.refreshPlugin)
+                                (0, s._)({}, P.refreshPlugin),
                               ),
                             }),
                           }),
@@ -2119,7 +2126,7 @@
                                       x.Z,
                                       (0, i._)((0, s._)({}, P.pluginId), {
                                         values: { id: q.id },
-                                      })
+                                      }),
                                     ),
                                   }),
                                   (0, l.jsx)(L.rC, {
@@ -2158,11 +2165,11 @@
                         children: V
                           ? (0, l.jsx)(
                               x.Z,
-                              (0, s._)({}, P.enableLocalhostPluginWithDevTools)
+                              (0, s._)({}, P.enableLocalhostPluginWithDevTools),
                             )
                           : (0, l.jsx)(
                               x.Z,
-                              (0, s._)({}, P.enableLocalhostPlugin)
+                              (0, s._)({}, P.enableLocalhostPlugin),
                             ),
                       }),
               }),

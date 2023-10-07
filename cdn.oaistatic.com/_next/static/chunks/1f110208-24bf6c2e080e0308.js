@@ -273,7 +273,7 @@
                   " [" +
                   e +
                   "]",
-                r
+                r,
               );
             "warn" === a
               ? "undefined" != typeof console &&
@@ -282,7 +282,7 @@
                     t +
                     " [" +
                     e +
-                    "]"
+                    "]",
                 )
               : "undefined" != typeof console &&
                 console.warn(
@@ -290,7 +290,7 @@
                     ("unrecognized '" + a + "': " + t) +
                     " [" +
                     e +
-                    "]"
+                    "]",
                 );
           }
         }
@@ -314,7 +314,7 @@
                         t +
                         " [" +
                         e +
-                        "]"
+                        "]",
                     ),
                   !1)
                 : ("undefined" != typeof console &&
@@ -323,7 +323,7 @@
                         ("unrecognized '" + a + "': " + t) +
                         " [" +
                         e +
-                        "]"
+                        "]",
                     ),
                   !1)))
           );
@@ -3290,11 +3290,11 @@
             t = null;
           for (var r in (this.italic > 0 &&
             ((t = document.createElement("span")).style.marginRight = J(
-              this.italic
+              this.italic,
             )),
           this.classes.length > 0 &&
             ((t = t || document.createElement("span")).className = Q(
-              this.classes
+              this.classes,
             )),
           this.style))
             this.style.hasOwnProperty(r) &&
@@ -3355,7 +3355,7 @@
         toNode() {
           var e = document.createElementNS(
             "http://www.w3.org/2000/svg",
-            "path"
+            "path",
           );
           return (
             this.alternate
@@ -3377,7 +3377,7 @@
         toNode() {
           var e = document.createElementNS(
             "http://www.w3.org/2000/svg",
-            "line"
+            "line",
           );
           for (var t in this.attributes)
             Object.prototype.hasOwnProperty.call(this.attributes, t) &&
@@ -4160,7 +4160,7 @@
                   ("for '" + e + "' in style '" + t) +
                   "' and mode '" +
                   r +
-                  "'"
+                  "'",
               ),
               (i = new eo(e, 0, 0, 0, 0, 0, n));
           if (a) {
@@ -4316,7 +4316,7 @@
             return (
               (a.height = Math.max(
                 r || t.fontMetrics().defaultRuleThickness,
-                t.minRuleThickness
+                t.minRuleThickness,
               )),
               (a.style.borderBottomWidth = J(a.height)),
               (a.maxFontSize = 1),
@@ -4355,7 +4355,7 @@
                     g.wrapperClasses || [],
                     [h, f],
                     void 0,
-                    g.wrapperStyle || {}
+                    g.wrapperStyle || {},
                   );
                 (v.style.top = J(-i - u - f.depth)),
                   g.marginLeft && (v.style.marginLeft = g.marginLeft),
@@ -4422,7 +4422,7 @@
                   e6("amsrm", t.fontWeight, t.fontShape),
                   a,
                   t,
-                  i.concat("amsrm", t.fontWeight, t.fontShape)
+                  i.concat("amsrm", t.fontWeight, t.fontShape),
                 );
               if ("main" === g || !g)
                 return eZ(
@@ -4430,7 +4430,7 @@
                   e6("textrm", t.fontWeight, t.fontShape),
                   a,
                   t,
-                  i.concat(t.fontWeight, t.fontShape)
+                  i.concat(t.fontWeight, t.fontShape),
                 );
               var f = e6(g, t.fontWeight, t.fontShape);
               return eZ(n, f, a, t, i.concat(f, t.fontWeight, t.fontShape));
@@ -4452,7 +4452,7 @@
                     preserveAspectRatio: "xMinYMin",
                   }),
                 ],
-                t
+                t,
               );
             return (
               (s.height = n), (s.style.height = J(n)), (s.style.width = J(a)), s
@@ -4619,7 +4619,7 @@
               },
               { node: m },
               c,
-              p
+              p,
             ),
             tf(
               n,
@@ -4636,7 +4636,7 @@
               },
               { node: m },
               c,
-              p
+              p,
             ),
             n
           );
@@ -4780,7 +4780,7 @@
         toNode() {
           var e = document.createElementNS(
             "http://www.w3.org/1998/Math/MathML",
-            this.type
+            this.type,
           );
           for (var t in this.attributes)
             Object.prototype.hasOwnProperty.call(this.attributes, t) &&
@@ -4851,7 +4851,7 @@
                 return document.createTextNode(this.character);
               var e = document.createElementNS(
                 "http://www.w3.org/1998/Math/MathML",
-                "mspace"
+                "mspace",
               );
               return e.setAttribute("width", J(this.width)), e;
             }
@@ -5171,7 +5171,7 @@
                     x2: "100%",
                     y2: "100%",
                     "stroke-width": "0.046em",
-                  })
+                  }),
                 ),
                 /^x?cancel$/.test(t) &&
                   l.push(
@@ -5181,7 +5181,7 @@
                       x2: "100%",
                       y2: "0",
                       "stroke-width": "0.046em",
-                    })
+                    }),
                   );
               var h = new el(l, { width: "100%", height: J(s) });
               i = e8.makeSvgSpan([], [h], n);
@@ -5257,7 +5257,7 @@
                 throw Error(
                   "Correct katexImagesData or update code here to support\n                    " +
                     w +
-                    " children."
+                    " children.",
                 );
               for (var k = 0; k < w; k++) {
                 var S = new eh(f[k]),
@@ -5291,7 +5291,7 @@
             "Expected node of type " +
               t +
               ", but got " +
-              (e ? "node of type " + e.type : String(e))
+              (e ? "node of type " + e.type : String(e)),
           );
         return e;
       }
@@ -5300,7 +5300,7 @@
         if (!t)
           throw Error(
             "Expected node of symbol group type, but got " +
-              (e ? "node of type " + e.type : String(e))
+              (e ? "node of type " + e.type : String(e)),
           );
         return t;
       }
@@ -5314,7 +5314,7 @@
               (h = (function (e) {
                 if (e instanceof ea) return e;
                 throw Error(
-                  "Expected span<HtmlDomNode> but got " + String(e) + "."
+                  "Expected span<HtmlDomNode> but got " + String(e) + ".",
                 );
               })(tw(e, t))),
               (e.base = l))
@@ -5348,7 +5348,7 @@
                     },
                   ],
                 },
-                t
+                t,
               ));
           else {
             "\\vec" === l.label
@@ -5357,8 +5357,8 @@
                   (c = e8.makeOrd(
                     { mode: l.mode, text: l.label },
                     t,
-                    "textord"
-                  ))
+                    "textord",
+                  )),
                 )).italic = 0),
                 (p = c.width),
                 i && (s += c.depth)),
@@ -5384,7 +5384,7 @@
                     { type: "elem", elem: m },
                   ],
                 },
-                t
+                t,
               ));
           }
           var g = e8.makeSpan(["mord", "accent"], [m], t);
@@ -5417,7 +5417,7 @@
             "\\mathring",
           ]
             .map((e) => "\\" + e)
-            .join("|")
+            .join("|"),
         );
       ts({
         type: "accent",
@@ -5496,7 +5496,7 @@
               "math" === a &&
                 (e.parser.settings.reportNonstrict(
                   "mathVsTextAccents",
-                  "LaTeX's accent " + e.funcName + " works only in text mode"
+                  "LaTeX's accent " + e.funcName + " works only in text mode",
                 ),
                 (a = "text")),
               {
@@ -5542,7 +5542,7 @@
                     { type: "elem", elem: r },
                   ],
                 },
-                t
+                t,
               );
             return e8.makeSpan(["mord", "accentunder"], [i], t);
           },
@@ -5611,7 +5611,7 @@
             e.below &&
               ((i = t.havingStyle(n.sub())),
               (r = e8.wrapFragment(tw(e.below, i, t), t)).classes.push(
-                o + "-arrow-pad"
+                o + "-arrow-pad",
               ));
           var l = tV.svgSpan(e, t),
             h = -t.fontMetrics().axisHeight + 0.5 * l.height,
@@ -5632,7 +5632,7 @@
                   { type: "elem", elem: r, shift: c },
                 ],
               },
-              t
+              t,
             );
           } else
             a = e8.makeVList(
@@ -5643,7 +5643,7 @@
                   { type: "elem", elem: l, shift: h },
                 ],
               },
-              t
+              t,
             );
           return (
             a.children[0].children[0].children[1].classes.push("svg-align"),
@@ -5656,7 +5656,7 @@
           if (
             (a.setAttribute(
               "minsize",
-              "x" === e.label.charAt(0) ? "1.75em" : "3.0em"
+              "x" === e.label.charAt(0) ? "1.75em" : "3.0em",
             ),
             e.body)
           ) {
@@ -5722,7 +5722,7 @@
             r.setAttribute("voffset", "0.7em"),
             (r = new tT.MathNode("mstyle", [r])).setAttribute(
               "displaystyle",
-              "false"
+              "false",
             ),
             r.setAttribute("scriptlevel", "1"),
             r
@@ -5768,7 +5768,7 @@
                 : ((l -= 65536),
                   (r = String.fromCharCode(
                     (l >> 10) + 55296,
-                    (1023 & l) + 56320
+                    (1023 & l) + 56320,
                   ))),
               { type: "textord", mode: a.mode, text: r }
             );
@@ -5830,7 +5830,7 @@
                 !a.settings.displayMode ||
                 !a.settings.useStrictBehavior(
                   "newLineInDisplayMode",
-                  "In LaTeX, \\\\ or \\newline does nothing in display mode"
+                  "In LaTeX, \\\\ or \\newline does nothing in display mode",
                 );
             return {
               type: "cr",
@@ -5945,7 +5945,7 @@
               r.gullet.macros.set(
                 s,
                 { tokens: h, numArgs: o, delimiters: l },
-                a === t1[a]
+                a === t1[a],
               ),
               { type: "internal", mode: r.mode }
             );
@@ -5987,7 +5987,7 @@
           var a = G((ed.math[e] && ed.math[e].replace) || e, t, r);
           if (!a)
             throw Error(
-              "Unsupported symbol " + e + " and font size " + t + "."
+              "Unsupported symbol " + e + " and font size " + t + ".",
             );
           return a;
         },
@@ -6022,7 +6022,7 @@
               e8.makeSpan(["delimsizing", "size" + t], [s], a),
               N.TEXT,
               a,
-              i
+              i,
             );
           return r && t8(o, a, N.TEXT), o;
         },
@@ -6034,7 +6034,7 @@
                 "delimsizinginner",
                 "Size1-Regular" === t ? "delim-size1" : "delim-size4",
               ],
-              [e8.makeSpan([], [e8.makeSymbol(e, t, r)])]
+              [e8.makeSpan([], [e8.makeSymbol(e, t, r)])],
             ),
           };
         },
@@ -6153,7 +6153,7 @@
           var B = a.havingBaseStyle(N.TEXT),
             C = e8.makeVList(
               { positionType: "bottom", positionData: z, children: A },
-              B
+              B,
             );
           return t3(e8.makeSpan(["delimsizing", "mult"], [C], B), N.TEXT, a, i);
         },
@@ -6296,7 +6296,7 @@
               s = n.sizeMultiplier,
               o = Math.max(
                 0,
-                t.minRuleThickness - t.fontMetrics().sqrtRuleThickness
+                t.minRuleThickness - t.fontMetrics().sqrtRuleThickness,
               ),
               l = 0,
               h = 0,
@@ -6323,7 +6323,7 @@
                     l,
                     (m = Math.floor(1e3 * e + o) + 80),
                     o,
-                    t
+                    t,
                   )).style.minWidth = "0.742em"),
                   (a = 1.056)),
               (r.height = h),
@@ -6434,7 +6434,7 @@
         if (r)
           throw new i(
             "Invalid delimiter '" + r.text + "' after '" + t.funcName + "'",
-            e
+            e,
           );
         throw new i("Invalid delimiter type '" + e.type + "'", e);
       }
@@ -6561,7 +6561,7 @@
                     s,
                     m.options,
                     e.mode,
-                    []
+                    [],
                   ));
               }
             if ("." === e.right) a = tx(t, ["mclose"]);
@@ -6650,7 +6650,7 @@
                       p / 2 +
                       " 0 l65 45 L145 " +
                       (p - 80) +
-                      " H400000z"
+                      " H400000z",
                   ),
                 ],
                 {
@@ -6658,7 +6658,7 @@
                   height: J(p / 1e3),
                   viewBox: "0 0 400000 " + p,
                   preserveAspectRatio: "xMinYMin slice",
-                }
+                },
               );
             ((r = e8.makeSvgSpan(["hide-tail"], [u], t)).style.height = J(c)),
               (o = n.depth + h + m);
@@ -6679,7 +6679,7 @@
                   4 *
                   (f = Math.max(
                     t.fontMetrics().defaultRuleThickness,
-                    t.minRuleThickness
+                    t.minRuleThickness,
                   ))),
                 (g = Math.max(0, 0.25 - n.depth)))
               : (g = d = l ? 0.2 : 0),
@@ -6705,7 +6705,7 @@
                   { type: "elem", elem: n, shift: 0 },
                 ],
               },
-              t
+              t,
             );
           else {
             var v = /cancel|phase/.test(i) ? ["svg-align"] : [];
@@ -6717,7 +6717,7 @@
                   { type: "elem", elem: r, shift: o, wrapperClasses: v },
                 ],
               },
-              t
+              t,
             );
           }
           return (/cancel/.test(i) &&
@@ -6730,7 +6730,7 @@
           var r = 0,
             a = new tT.MathNode(
               e.label.indexOf("colorbox") > -1 ? "mpadded" : "menclose",
-              [tR(e.body, t)]
+              [tR(e.body, t)],
             );
           switch (e.label) {
             case "\\cancel":
@@ -6764,7 +6764,7 @@
                 var n = Math.max(t.fontMetrics().fboxrule, t.minRuleThickness);
                 a.setAttribute(
                   "style",
-                  "border: " + n + "em solid " + String(e.borderColor)
+                  "border: " + n + "em solid " + String(e.borderColor),
                 );
               }
               break;
@@ -6957,7 +6957,7 @@
                 throw new i("Too many tab characters: &", e.nextToken);
               e.settings.reportNonstrict(
                 "textEnv",
-                "Too few columns specified in the {array} column argument."
+                "Too few columns specified in the {array} column argument.",
               );
             }
             e.consume();
@@ -7084,7 +7084,7 @@
               if (
                 (F ||
                   (((n = e8.makeSpan(["arraycolsep"], [])).style.width = J(
-                    t.fontMetrics().doubleRuleSep
+                    t.fontMetrics().doubleRuleSep,
                   )),
                   R.push(n)),
                 "|" === P.separator || ":" === P.separator)
@@ -7119,7 +7119,7 @@
               }
               (X = e8.makeVList(
                 { positionType: "individualShift", children: X },
-                t
+                t,
               )),
                 (X = e8.makeSpan(["col-align-" + (P.align || "c")], [X])),
                 R.push(X),
@@ -7145,13 +7145,13 @@
             }
             m = e8.makeVList(
               { positionType: "individualShift", children: Q },
-              t
+              t,
             );
           }
           if (0 === O.length) return e8.makeSpan(["mord"], [m], t);
           var er = e8.makeVList(
             { positionType: "individualShift", children: O },
-            t
+            t,
           );
           return (er = e8.makeSpan(["tag"], [er], t)), e8.makeFragment([m, er]);
         },
@@ -7224,13 +7224,13 @@
             "" !== c &&
               (h = new tT.MathNode("menclose", [h])).setAttribute(
                 "notation",
-                c.trim()
+                c.trim(),
               ),
             e.arraystretch &&
               e.arraystretch < 1 &&
               (h = new tT.MathNode("mstyle", [h])).setAttribute(
                 "scriptlevel",
-                "1"
+                "1",
               ),
             h
           );
@@ -7252,7 +7252,7 @@
                 maxNumCols: s ? 2 : void 0,
                 leqno: e.parser.settings.leqno,
               },
-              "display"
+              "display",
             ),
             l = 0,
             h = { type: "ordgroup", mode: e.mode, body: [] };
@@ -7273,7 +7273,7 @@
               if (r < n)
                 throw new i(
                   "Too many math in a row: expected " + r + ", but got " + n,
-                  e[0]
+                  e[0],
                 );
             }
           });
@@ -7290,15 +7290,15 @@
         names: ["array", "darray"],
         props: { numArgs: 1 },
         handler(e, t) {
-          var r = (tY(t[0]) ? [t[0]] : tG(t[0], "ordgroup").body).map(function (
-              e
-            ) {
-              var t = tU(e).text;
-              if (-1 !== "lcr".indexOf(t)) return { type: "align", align: t };
-              if ("|" === t) return { type: "separator", separator: "|" };
-              if (":" === t) return { type: "separator", separator: ":" };
-              throw new i("Unknown column alignment: " + t, e);
-            }),
+          var r = (tY(t[0]) ? [t[0]] : tG(t[0], "ordgroup").body).map(
+              function (e) {
+                var t = tU(e).text;
+                if (-1 !== "lcr".indexOf(t)) return { type: "align", align: t };
+                if ("|" === t) return { type: "separator", separator: "|" };
+                if (":" === t) return { type: "separator", separator: ":" };
+                throw new i("Unknown column alignment: " + t, e);
+              },
+            ),
             a = { cols: r, hskipBeforeAndAfter: !0, maxNumCols: r.length };
           return rq(e.parser, a, rN(e.envName));
         },
@@ -7393,7 +7393,7 @@
                 var t = tU(e).text;
                 if (-1 !== "lc".indexOf(t)) return { type: "align", align: t };
                 throw new i("Unknown column alignment: " + t, e);
-              }
+              },
             );
             if (r.length > 1)
               throw new i("{subarray} can contain only one column");
@@ -7422,7 +7422,7 @@
                   { type: "align", align: "l", pregap: 0, postgap: 0 },
                 ],
               },
-              rN(e.envName)
+              rN(e.envName),
             );
             return {
               type: "leftright",
@@ -7538,7 +7538,7 @@
                               "Missing a " +
                                 m +
                                 " character to complete a CD arrow.",
-                              o[d]
+                              o[d],
                             );
                           c[p].body.push(o[d]);
                         }
@@ -7547,7 +7547,7 @@
                             "Missing a " +
                               m +
                               " character to complete a CD arrow.",
-                            o[h]
+                            o[h],
                           );
                       }
                     else throw new i('Expected one of "<>AV=|." after @', o[h]);
@@ -7573,7 +7573,7 @@
                                       family: "rel",
                                     },
                                   ],
-                                  []
+                                  [],
                                 ),
                                 s = r.callFunction("\\\\cdright", [t[1]], []);
                               return r.callFunction(
@@ -7585,7 +7585,7 @@
                                     body: [n, i, s],
                                   },
                                 ],
-                                []
+                                [],
                               );
                             case "\\\\cdlongequal":
                               return r.callFunction("\\\\cdlongequal", [], []);
@@ -7599,7 +7599,7 @@
                                     mode: "math",
                                   },
                                 ],
-                                []
+                                [],
                               );
                             default:
                               return {
@@ -7669,7 +7669,7 @@
               var l = rM[s],
                 { args: h, optArgs: m } = r.parseArguments(
                   "\\begin{" + s + "}",
-                  l
+                  l,
                 ),
                 c = { mode: r.mode, envName: s, parser: r },
                 p = l.handler(c, h, m);
@@ -7683,7 +7683,7 @@
                     "} matched by \\end{" +
                     d.name +
                     "}",
-                  u
+                  u,
                 );
               return p;
             }
@@ -7964,7 +7964,7 @@
                   { type: "elem", elem: f, shift: -s },
                 ],
               },
-              t
+              t,
             );
           } else {
             var k = s - f.depth - (y.height - l);
@@ -7977,7 +7977,7 @@
                     { type: "elem", elem: f, shift: -s },
                   ],
                 },
-                t
+                t,
               ));
           }
           return (
@@ -7999,7 +7999,7 @@
                     !0,
                     t.havingStyle(u),
                     e.mode,
-                    ["mopen"]
+                    ["mopen"],
                   )),
             (p = e.continued
               ? e8.makeSpan([])
@@ -8011,12 +8011,12 @@
                   !0,
                   t.havingStyle(u),
                   e.mode,
-                  ["mclose"]
+                  ["mclose"],
                 )),
             e8.makeSpan(
               ["mord"].concat(r.sizingClasses(t)),
               [c, e8.makeSpan(["mfrac"], [h]), p],
-              t
+              t,
             )
           );
         },
@@ -8288,7 +8288,7 @@
                     { type: "elem", elem: o },
                   ],
                 },
-                t
+                t,
               )).children[0].children[0].children[1].classes.push("svg-align")
             : (n = e8.makeVList(
                 {
@@ -8300,7 +8300,7 @@
                     { type: "elem", elem: s },
                   ],
                 },
-                t
+                t,
               )).children[0].children[0].children[0].classes.push("svg-align"),
           r)
         ) {
@@ -8315,7 +8315,7 @@
                     { type: "elem", elem: r },
                   ],
                 },
-                t
+                t,
               )
             : e8.makeVList(
                 {
@@ -8327,7 +8327,7 @@
                     { type: "elem", elem: l },
                   ],
                 },
-                t
+                t,
               );
         }
         return e8.makeSpan(["mord", a.isOver ? "mover" : "munder"], [n], t);
@@ -8437,7 +8437,7 @@
             a.settings.strict &&
               a.settings.reportNonstrict(
                 "htmlExtension",
-                "HTML extension is disabled on strict mode"
+                "HTML extension is disabled on strict mode",
               );
             var h = {};
             switch (n) {
@@ -8548,7 +8548,7 @@
                     break;
                   default:
                     throw new i(
-                      "Invalid key: '" + c[0] + "' in \\includegraphics."
+                      "Invalid key: '" + c[0] + "' in \\includegraphics.",
                     );
                 }
               }
@@ -8557,7 +8557,7 @@
           return ("" === l &&
             (l = (l = (l = u).replace(/^.*[\\/]/, "")).substring(
               0,
-              l.lastIndexOf(".")
+              l.lastIndexOf("."),
             )),
           a.settings.isTrusted({ command: "\\includegraphics", url: u }))
             ? {
@@ -8622,17 +8622,17 @@
                         a +
                         " supports only mu units, not " +
                         n.value.unit +
-                        " units"
+                        " units",
                     ),
                   "math" !== r.mode &&
                     r.settings.reportNonstrict(
                       "mathVsTextUnits",
-                      "LaTeX's " + a + " works only in math mode"
+                      "LaTeX's " + a + " works only in math mode",
                     ))
                 : s &&
                   r.settings.reportNonstrict(
                     "mathVsTextUnits",
-                    "LaTeX's " + a + " doesn't support mu units"
+                    "LaTeX's " + a + " doesn't support mu units",
                   );
             }
             return { type: "kern", mode: r.mode, dimension: n.value };
@@ -8755,7 +8755,7 @@
               elem: c,
               kern: Math.max(
                 a.fontMetrics().bigOpSpacing1,
-                a.fontMetrics().bigOpSpacing3 - c.depth
+                a.fontMetrics().bigOpSpacing3 - c.depth,
               ),
             };
           }
@@ -8765,7 +8765,7 @@
               elem: p,
               kern: Math.max(
                 a.fontMetrics().bigOpSpacing2,
-                a.fontMetrics().bigOpSpacing4 - p.height
+                a.fontMetrics().bigOpSpacing4 - p.height,
               ),
             };
           }
@@ -8791,7 +8791,7 @@
                   { type: "kern", size: a.fontMetrics().bigOpSpacing5 },
                 ],
               },
-              a
+              a,
             );
           } else if (o) {
             var d = e.height - s;
@@ -8806,7 +8806,7 @@
                   { type: "elem", elem: e },
                 ],
               },
-              a
+              a,
             );
           } else {
             if (!l) return e;
@@ -8822,7 +8822,7 @@
                   { type: "kern", size: a.fontMetrics().bigOpSpacing5 },
                 ],
               },
-              a
+              a,
             );
           }
           var f = [h];
@@ -8874,7 +8874,7 @@
                     { type: "elem", elem: p, shift: l ? 0.08 : 0 },
                   ],
                 },
-                t
+                t,
               )),
                 (n.name = "\\" + m),
                 i.classes.unshift("mop"),
@@ -9142,7 +9142,7 @@
                     : e;
                 }),
                 t.withFont("mathrm"),
-                !0
+                !0,
               ),
               l = 0;
             l < o.length;
@@ -9263,7 +9263,7 @@
                     { type: "kern", size: n },
                   ],
                 },
-                t
+                t,
               );
             return e8.makeSpan(["mord", "overline"], [i], t);
           },
@@ -9312,7 +9312,7 @@
                   positionType: "firstBaseline",
                   children: [{ type: "elem", elem: r }],
                 },
-                t
+                t,
               )),
               e8.makeSpan(["mord"], [r], t)
             );
@@ -9366,7 +9366,7 @@
                 positionData: -a,
                 children: [{ type: "elem", elem: r }],
               },
-              t
+              t,
             );
           },
           mathmlBuilder(e, t) {
@@ -9520,7 +9520,7 @@
                 positionType: "firstBaseline",
                 children: [{ type: "elem", elem: r }],
               },
-              t
+              t,
             );
             return e8.makeSpan(["mord"], [i], t);
           },
@@ -9568,7 +9568,7 @@
                   { type: "kern", size: l },
                 ],
               },
-              t
+              t,
             );
             if (!e.index) return e8.makeSpan(["mord", "sqrt"], [p], t);
             var u = t.havingStyle(N.SCRIPTSCRIPT),
@@ -9580,7 +9580,7 @@
                   positionData: -g,
                   children: [{ type: "elem", elem: d }],
                 },
-                t
+                t,
               ),
               v = e8.makeSpan(["root"], [f]);
             return e8.makeSpan(["mord", "sqrt"], [v, p], t);
@@ -9727,14 +9727,14 @@
             ];
             i = e8.makeVList(
               { positionType: "individualShift", children: M },
-              t
+              t,
             );
           } else if (a) {
             u = Math.max(u, c.sub1, a.height - 0.8 * c.xHeight);
             var z = [{ type: "elem", elem: a, marginLeft: y, marginRight: b }];
             i = e8.makeVList(
               { positionType: "shift", positionData: u, children: z },
-              t
+              t,
             );
           } else if (r)
             (p = Math.max(p, n, r.depth + 0.25 * c.xHeight)),
@@ -9744,7 +9744,7 @@
                   positionData: -p,
                   children: [{ type: "elem", elem: r, marginRight: b }],
                 },
-                t
+                t,
               ));
           else throw Error("supsub must have either sup or sub.");
           var A = ty(m, "right") || "mord";
@@ -9876,7 +9876,7 @@
               return e8.makeSpan(
                 ["mspace", r],
                 [e8.mathsym(e.text, e.mode, t)],
-                t
+                t,
               );
             var a = e8.makeOrd(e, t, "textord");
             return a.classes.push(r), a;
@@ -9988,7 +9988,7 @@
                     { type: "elem", elem: r },
                   ],
                 },
-                t
+                t,
               );
             return e8.makeSpan(["mord", "underline"], [i], t);
           },
@@ -10017,7 +10017,7 @@
                 positionData: n,
                 children: [{ type: "elem", elem: r }],
               },
-              t
+              t,
             );
           },
           mathmlBuilder: (e, t) =>
@@ -10029,7 +10029,7 @@
           props: { numArgs: 0, allowedInText: !0 },
           handler(e, t, r) {
             throw new i(
-              "\\verb ended by end of line instead of matching delimiter"
+              "\\verb ended by end of line instead of matching delimiter",
             );
           },
           htmlBuilder(e, t) {
@@ -10044,13 +10044,13 @@
                   e8.makeSymbol(s, "Typewriter-Regular", e.mode, n, [
                     "mord",
                     "texttt",
-                  ])
+                  ]),
                 );
             }
             return e8.makeSpan(
               ["mord", "text"].concat(n.sizingClasses(t)),
               e8.tryCombineChars(a),
-              n
+              n,
             );
           },
           mathmlBuilder(e, t) {
@@ -10095,7 +10095,7 @@
           if (null === r || r.index !== t)
             throw new i(
               "Unexpected character: '" + e[t] + "'",
-              new n(e[t], new a(this, t, t + 1))
+              new n(e[t], new a(this, t, t + 1)),
             );
           var s = r[6] || r[3] || (r[2] ? "\\ " : " ");
           if (14 === this.catcodes[s]) {
@@ -10105,7 +10105,7 @@
                 ? ((this.tokenRegex.lastIndex = e.length),
                   this.settings.reportNonstrict(
                     "commentAtEnd",
-                    "% comment has no terminating newline; LaTeX would fail because of commenting the end of math mode (e.g. $)"
+                    "% comment has no terminating newline; LaTeX would fail because of commenting the end of math mode (e.g. $)",
                   ))
                 : (this.tokenRegex.lastIndex = o + 1),
               this.lex()
@@ -10131,7 +10131,7 @@
         endGroup() {
           if (0 === this.undefStack.length)
             throw new i(
-              "Unbalanced namespace destruction: attempt to pop global namespace; please report this as a bug"
+              "Unbalanced namespace destruction: attempt to pop global namespace; please report this as a bug",
             );
           var e = this.undefStack.pop();
           for (var t in e)
@@ -10254,7 +10254,7 @@
               n +
               "} attempting to redefine " +
               n +
-              "; use \\renewcommand"
+              "; use \\renewcommand",
           );
         if (!s && !r)
           throw new i(
@@ -10262,7 +10262,7 @@
               n +
               "} when command " +
               n +
-              " does not yet exist; use \\newcommand"
+              " does not yet exist; use \\newcommand",
           );
         var o = 0;
         if (1 === (a = e.consumeArg().tokens).length && "[" === a[0].text) {
@@ -10290,7 +10290,7 @@
               .consumeArgs(1)[0]
               .reverse()
               .map((e) => e.text)
-              .join("")
+              .join(""),
           ),
           ""
         )),
@@ -10301,7 +10301,7 @@
               .consumeArgs(1)[0]
               .reverse()
               .map((e) => e.text)
-              .join("")
+              .join(""),
           ),
           ""
         )),
@@ -10888,7 +10888,7 @@
                 "Unexpected end of input in a macro argument, expected '" +
                   (e && a ? e[o] : "}") +
                   "'",
-                t
+                t,
               );
             if (e && a) {
               if ((0 === s || (1 === s && "{" === e[o])) && t.text === e[o]) {
@@ -10911,7 +10911,7 @@
           if (t) {
             if (t.length !== e + 1)
               throw new i(
-                "The length of delimiters doesn't match the number of args!"
+                "The length of delimiters doesn't match the number of args!",
               );
             for (var r = t[0], a = 0; a < r.length; a++) {
               var n = this.popToken();
@@ -10937,7 +10937,7 @@
             this.expansionCount > this.settings.maxExpand)
           )
             throw new i(
-              "Too many expansions: infinite loop or need to increase maxExpand setting"
+              "Too many expansions: infinite loop or need to increase maxExpand setting",
             );
           var n = a.tokens,
             s = this.consumeArgs(a.numArgs, a.delimiters);
@@ -11510,7 +11510,7 @@
           if ((void 0 === t && (t = !0), this.fetch().text !== e))
             throw new i(
               "Expected '" + e + "', got '" + this.fetch().text + "'",
-              this.fetch()
+              this.fetch(),
             );
           t && this.consume();
         }
@@ -11679,7 +11679,7 @@
                 a +
                 "' with no arguments" +
                 (t ? " as " + t : ""),
-              r
+              r,
             );
           if ("text" !== this.mode || n.allowedInText) {
             if ("math" === this.mode && !1 === n.allowedInMath)
@@ -11694,7 +11694,7 @@
             return s.handler(
               { funcName: e, parser: this, token: a, breakOnTokenText: n },
               t,
-              r
+              r,
             );
           throw new i("No function handler for " + e);
         }
@@ -11791,7 +11791,7 @@
                 ? this.parseStringGroup("size", e)
                 : this.parseRegexGroup(
                     /^[-+]? *(?:$|\d+|\d+\.\d*|\.\d*) *[a-z]{0,2} *$/,
-                    "size"
+                    "size",
                   )))
           )
             return null;
@@ -11899,7 +11899,7 @@
               r.length < 2 || r.charAt(0) !== r.slice(-1))
             )
               throw new i(
-                "\\verb assertion failed --\n                    please report what input caused this bug"
+                "\\verb assertion failed --\n                    please report what input caused this bug",
               );
             return {
               type: "verb",
@@ -11917,7 +11917,7 @@
                 'Accented Unicode text character "' +
                   t[0] +
                   '" used in math mode',
-                e
+                e,
               ),
             (t = aM[t[0]] + t.substr(1)));
           var s = ah.exec(t);
@@ -11936,7 +11936,7 @@
                 'Latin-1/Unicode text character "' +
                   t[0] +
                   '" used in math mode',
-                e
+                e,
               );
             var o,
               l = ed[this.mode][t].group,
@@ -11952,7 +11952,7 @@
                   this.settings.reportNonstrict(
                     "unicodeTextInMathMode",
                     'Unicode text character "' + t[0] + '" used in math mode',
-                    e
+                    e,
                   )
                 : this.settings.reportNonstrict(
                     "unknownSymbol",
@@ -11961,7 +11961,7 @@
                       '" (' +
                       t.charCodeAt(0) +
                       ")",
-                    e
+                    e,
                   )),
               (o = { type: "textord", mode: "text", loc: a.range(e), text: t });
           }
@@ -11973,7 +11973,7 @@
               if (!p)
                 throw new i(
                   "Accent " + c + " unsupported in " + this.mode + " mode",
-                  e
+                  e,
                 );
               o = {
                 type: "accent",
@@ -12022,7 +12022,7 @@
         "CSS1Compat" !== document.compatMode &&
         ("undefined" != typeof console &&
           console.warn(
-            "Warning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype."
+            "Warning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype.",
           ),
         (aT = function () {
           throw new i("KaTeX doesn't work in quirks mode.");

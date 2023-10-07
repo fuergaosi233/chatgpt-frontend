@@ -107,7 +107,7 @@
                       P = this.audios.length;
                     for (u = 0; u < P; u += 1)
                       this.audios[u].volume(
-                        this._volume * (this._isMuted ? 0 : 1)
+                        this._volume * (this._isMuted ? 0 : 1),
                       );
                   },
                 }),
@@ -169,7 +169,7 @@
             expressionsInterfaces = null,
             idPrefix$1 = "",
             isSafari = /^((?!chrome|android).)*safari/i.test(
-              navigator.userAgent
+              navigator.userAgent,
             ),
             _shouldRoundValues = !1,
             bmPow = Math.pow,
@@ -464,7 +464,7 @@
                         "var _workerSelf = self; self.onmessage = ",
                         P.toString(),
                       ],
-                      { type: "text/javascript" }
+                      { type: "text/javascript" },
                     ),
                     D = URL.createObjectURL(S);
                   return new Worker(D);
@@ -829,7 +829,7 @@
                         },
                         function () {
                           M.postMessage({ id: u.data.id, status: "error" });
-                        }
+                        },
                       );
                     else if ("complete" === u.data.type) {
                       var S = u.data.animation;
@@ -853,7 +853,7 @@
                           },
                           function () {
                             M.postMessage({ id: u.data.id, status: "error" });
-                          }
+                          },
                         );
                   })).onmessage = function (u) {
                     var P = u.data,
@@ -938,7 +938,7 @@
                         (this._imageLoaded(), clearInterval(S)),
                         (P += 1);
                     }.bind(this),
-                    50
+                    50,
                   );
               }
               function M(P) {
@@ -952,7 +952,7 @@
                     function () {
                       (M.img = u), this._imageLoaded();
                     }.bind(this),
-                    !1
+                    !1,
                   ),
                   T.setAttributeNS("http://www.w3.org/1999/xlink", "href", S),
                   this._elementHelper.append
@@ -971,7 +971,7 @@
                     function () {
                       (M.img = u), this._imageLoaded();
                     }.bind(this),
-                    !1
+                    !1,
                   ),
                   (T.src = S);
                 var M = { img: T, assetData: P };
@@ -988,7 +988,7 @@
                     }.bind(this),
                     function () {
                       (P.img = {}), this._footageLoaded();
-                    }.bind(this)
+                    }.bind(this),
                   ),
                   P
                 );
@@ -1218,7 +1218,7 @@
                 "drawnFrame",
                 0,
                 0,
-                0
+                0,
               )),
               (this.expressionsPlugin = getExpressionsPlugin());
           };
@@ -1232,7 +1232,7 @@
               (this.renderer = new S(this, u.rendererSettings)),
                 this.imagePreloader.setCacheType(
                   P,
-                  this.renderer.globalData.defs
+                  this.renderer.globalData.defs,
                 ),
                 this.renderer.setProjectInterface(this.projectInterface),
                 (this.animType = P),
@@ -1249,7 +1249,7 @@
                 (this.autoloadSegments =
                   !Object.prototype.hasOwnProperty.call(
                     u,
-                    "autoloadSegments"
+                    "autoloadSegments",
                   ) || u.autoloadSegments),
                 (this.assetsPath = u.assetsPath),
                 (this.initialSegment = u.initialSegment),
@@ -1261,23 +1261,23 @@
                     (-1 !== u.path.lastIndexOf("\\")
                       ? (this.path = u.path.substr(
                           0,
-                          u.path.lastIndexOf("\\") + 1
+                          u.path.lastIndexOf("\\") + 1,
                         ))
                       : (this.path = u.path.substr(
                           0,
-                          u.path.lastIndexOf("/") + 1
+                          u.path.lastIndexOf("/") + 1,
                         )),
                     (this.fileName = u.path.substr(
-                      u.path.lastIndexOf("/") + 1
+                      u.path.lastIndexOf("/") + 1,
                     )),
                     (this.fileName = this.fileName.substr(
                       0,
-                      this.fileName.lastIndexOf(".json")
+                      this.fileName.lastIndexOf(".json"),
                     )),
                     dataManager.loadAnimation(
                       u.path,
                       this.configAnimation,
-                      this.onSetupError
+                      this.onSetupError,
                     ));
             }),
             (AnimationItem.prototype.onSetupError = function () {
@@ -1367,7 +1367,7 @@
                   (this.renderer.globalData.fontManager.addChars(u.chars),
                   this.renderer.globalData.fontManager.addFonts(
                     u.fonts,
-                    this.renderer.globalData.defs
+                    this.renderer.globalData.defs,
                   )),
                 u.assets)
               )
@@ -1376,7 +1376,7 @@
               (this.animationData.__complete = !1),
                 dataManager.completeAnimation(
                   this.animationData,
-                  this.onSegmentComplete
+                  this.onSegmentComplete,
                 );
             }),
             (AnimationItem.prototype.onSegmentComplete = function (u) {
@@ -1401,7 +1401,7 @@
                   this.includeLayers.bind(this),
                   function () {
                     this.trigger("data_failed");
-                  }.bind(this)
+                  }.bind(this),
                 );
             }),
             (AnimationItem.prototype.loadSegments = function () {
@@ -1417,7 +1417,7 @@
                 this.imagePreloader.setPath(this.path),
                 this.imagePreloader.loadAssets(
                   this.animationData.assets,
-                  this.imagesLoaded.bind(this)
+                  this.imagesLoaded.bind(this),
                 );
             }),
             (AnimationItem.prototype.configAnimation = function (u) {
@@ -1426,11 +1426,11 @@
                   (this.animationData = u),
                     this.initialSegment
                       ? ((this.totalFrames = Math.floor(
-                          this.initialSegment[1] - this.initialSegment[0]
+                          this.initialSegment[1] - this.initialSegment[0],
                         )),
                         (this.firstFrame = Math.round(this.initialSegment[0])))
                       : ((this.totalFrames = Math.floor(
-                          this.animationData.op - this.animationData.ip
+                          this.animationData.op - this.animationData.ip,
                         )),
                         (this.firstFrame = Math.round(this.animationData.ip))),
                     this.renderer.configAnimation(u),
@@ -1472,7 +1472,7 @@
                     function () {
                       this.trigger("DOMLoaded");
                     }.bind(this),
-                    0
+                    0,
                   ),
                   this.gotoFrame(),
                   this.autoplay && this.play();
@@ -1502,7 +1502,7 @@
                 try {
                   this.expressionsPlugin && this.expressionsPlugin.resetFrame(),
                     this.renderer.renderFrame(
-                      this.currentFrame + this.firstFrame
+                      this.currentFrame + this.firstFrame,
                     );
                 } catch (u) {
                   this.triggerRenderFrameError(u);
@@ -1581,13 +1581,13 @@
                           this.trigger("loopComplete")))
                       : this.setCurrentRawFrameValue(P)
                     : this.checkSegments(
-                        P > this.totalFrames ? P % this.totalFrames : 0
+                        P > this.totalFrames ? P % this.totalFrames : 0,
                       ) || ((S = !0), (P = this.totalFrames - 1))
                   : P < 0
                   ? this.checkSegments(P % this.totalFrames) ||
                     (this.loop && !(this.playCount-- <= 0 && !0 !== this.loop)
                       ? (this.setCurrentRawFrameValue(
-                          this.totalFrames + (P % this.totalFrames)
+                          this.totalFrames + (P % this.totalFrames),
                         ),
                         this._completedLoop
                           ? this.trigger("loopComplete")
@@ -1705,7 +1705,7 @@
               (this.frameModifier =
                 this.frameMult * this.playSpeed * this.playDirection),
                 this.audioController.setRate(
-                  this.playSpeed * this.playDirection
+                  this.playSpeed * this.playDirection,
                 );
             }),
             (AnimationItem.prototype.getPath = function () {
@@ -1752,8 +1752,8 @@
                         u,
                         this.currentFrame,
                         this.totalFrames,
-                        this.frameModifier
-                      )
+                        this.frameModifier,
+                      ),
                     );
                     break;
                   case "drawnFrame":
@@ -1769,14 +1769,14 @@
                         u,
                         this.loop,
                         this.playCount,
-                        this.frameMult
-                      )
+                        this.frameMult,
+                      ),
                     );
                     break;
                   case "complete":
                     this.triggerEvent(
                       u,
-                      new BMCompleteEvent(u, this.frameMult)
+                      new BMCompleteEvent(u, this.frameMult),
                     );
                     break;
                   case "segmentStart":
@@ -1785,8 +1785,8 @@
                       new BMSegmentStartEvent(
                         u,
                         this.firstFrame,
-                        this.totalFrames
-                      )
+                        this.totalFrames,
+                      ),
                     );
                     break;
                   case "destroy":
@@ -1803,8 +1803,8 @@
                     u,
                     this.currentFrame,
                     this.totalFrames,
-                    this.frameMult
-                  )
+                    this.frameMult,
+                  ),
                 ),
                 "loopComplete" === u &&
                   this.onLoopComplete &&
@@ -1814,14 +1814,14 @@
                       u,
                       this.loop,
                       this.playCount,
-                      this.frameMult
-                    )
+                      this.frameMult,
+                    ),
                   ),
                 "complete" === u &&
                   this.onComplete &&
                   this.onComplete.call(
                     this,
-                    new BMCompleteEvent(u, this.frameMult)
+                    new BMCompleteEvent(u, this.frameMult),
                   ),
                 "segmentStart" === u &&
                   this.onSegmentStart &&
@@ -1830,8 +1830,8 @@
                     new BMSegmentStartEvent(
                       u,
                       this.firstFrame,
-                      this.totalFrames
-                    )
+                      this.totalFrames,
+                    ),
                   ),
                 "destroy" === u &&
                   this.onDestroy &&
@@ -1940,7 +1940,7 @@
                 var D,
                   T = [].concat(
                     [].slice.call(document.getElementsByClassName("lottie")),
-                    [].slice.call(document.getElementsByClassName("bodymovin"))
+                    [].slice.call(document.getElementsByClassName("bodymovin")),
                   ),
                   M = T.length;
                 for (D = 0; D < M; D += 1)
@@ -2013,7 +2013,7 @@
                   M ||
                   ("bez_" + u + "_" + S + "_" + D + "_" + T).replace(
                     /\./g,
-                    "p"
+                    "p",
                   );
                 if (P[E]) return P[E];
                 var F = new H([u, S, D, T]);
@@ -2151,11 +2151,11 @@
                   addedLength: 0,
                   percents: createTypedArray(
                     "float32",
-                    getDefaultCurveSegments()
+                    getDefaultCurveSegments(),
                   ),
                   lengths: createTypedArray(
                     "float32",
-                    getDefaultCurveSegments()
+                    getDefaultCurveSegments(),
                   ),
                 };
               });
@@ -2173,7 +2173,7 @@
                 function () {
                   return { lengths: [], totalLength: 0 };
                 },
-                u
+                u,
               );
             })();
           function bezFunction() {
@@ -2342,14 +2342,14 @@
                     (F * L * L + L * F * L + L * L * F) * D[0] +
                     (F * F * L + L * F * F + F * L * F) * T[0] +
                     F * F * F * S[0]) *
-                    1e3
+                    1e3,
                 ) / 1e3,
                 u.round(
                   (L * L * L * P[1] +
                     (F * L * L + L * F * L + L * L * F) * D[1] +
                     (F * F * L + L * F * F + F * L * F) * T[1] +
                     F * F * F * S[1]) *
-                    1e3
+                    1e3,
                 ) / 1e3,
               ];
             }
@@ -2386,15 +2386,15 @@
                     1e3),
                     (R[4 * L + 1] =
                       u.round(
-                        (K * P[L] + Z * D[L] + U * T[L] + Q * S[L]) * 1e3
+                        (K * P[L] + Z * D[L] + U * T[L] + Q * S[L]) * 1e3,
                       ) / 1e3),
                     (R[4 * L + 2] =
                       u.round(
-                        ($ * P[L] + tt * D[L] + te * T[L] + ts * S[L]) * 1e3
+                        ($ * P[L] + tt * D[L] + te * T[L] + ts * S[L]) * 1e3,
                       ) / 1e3),
                     (R[4 * L + 3] =
                       u.round(
-                        (tr * P[L] + ta * D[L] + tn * T[L] + th * S[L]) * 1e3
+                        (tr * P[L] + ta * D[L] + tn * T[L] + th * S[L]) * 1e3,
                       ) / 1e3);
                 return R;
               },
@@ -2444,7 +2444,7 @@
                   H.s,
                   X.s || H.e,
                   H.to,
-                  H.ti
+                  H.ti,
                 ));
               var G = J.bezierData;
               if (u >= O || u < N) {
@@ -2459,7 +2459,7 @@
                       H.o.y,
                       H.i.x,
                       H.i.y,
-                      H.n
+                      H.n,
                     ).get),
                     (J.__fnct = tt)),
                   (U = tt((u - N) / (O - N)));
@@ -2529,8 +2529,8 @@
                     slerp(
                       createQuaternion(H.s),
                       createQuaternion(te),
-                      (u - N) / (O - N)
-                    )
+                      (u - N) / (O - N),
+                    ),
                   );
             else
               for (L = 0; L < R; L += 1)
@@ -2551,7 +2551,7 @@
                                 S,
                                 D,
                                 T,
-                                M
+                                M,
                               ).get),
                               (J.__fnct[L] = tt)))
                         : J.__fnct
@@ -2784,7 +2784,7 @@
                     E[0],
                     E[1],
                     M[0] + F[0],
-                    M[1] + F[1]
+                    M[1] + F[1],
                   ) &&
                   bez.pointOnLine2D(
                     M[0],
@@ -2792,7 +2792,7 @@
                     E[0],
                     E[1],
                     E[0] + I[0],
-                    E[1] + I[1]
+                    E[1] + I[1],
                   )) ||
                   (3 === M.length &&
                     !(M[0] === E[0] && M[1] === E[1] && M[2] === E[2]) &&
@@ -2805,7 +2805,7 @@
                       E[2],
                       M[0] + F[0],
                       M[1] + F[1],
-                      M[2] + F[2]
+                      M[2] + F[2],
                     ) &&
                     bez.pointOnLine3D(
                       M[0],
@@ -2816,7 +2816,7 @@
                       E[2],
                       E[0] + I[0],
                       E[1] + I[1],
-                      E[2] + I[2]
+                      E[2] + I[2],
                     ))) &&
                   ((P.k[T].to = null), (P.k[T].ti = null)),
                 M[0] === E[0] &&
@@ -2968,7 +2968,7 @@
               T,
               M,
               E,
-              F
+              F,
             ) {
               this.setXYAt(u, P, "v", E, F),
                 this.setXYAt(S, D, "o", E, F),
@@ -2991,7 +2991,7 @@
                   D[0][0],
                   D[0][1],
                   0,
-                  !1
+                  !1,
                 ),
                 (M = 1));
               var E = this._length - 1,
@@ -3005,7 +3005,7 @@
                   D[E][0],
                   D[E][1],
                   u,
-                  !1
+                  !1,
                 ),
                   (E -= 1);
               return P;
@@ -3038,7 +3038,7 @@
                   u.o[P][1],
                   u.i[P][0],
                   u.i[P][1],
-                  P
+                  P,
                 );
               return D;
             }
@@ -3047,7 +3047,7 @@
               function () {
                 return new ShapePath();
               },
-              u
+              u,
             );
             return (S.clone = P), S;
           })();
@@ -3059,7 +3059,7 @@
           (ShapeCollection.prototype.addShape = function (u) {
             this._length === this._maxLength &&
               ((this.shapes = this.shapes.concat(
-                createSizedArray(this._maxLength)
+                createSizedArray(this._maxLength),
               )),
               (this._maxLength *= 2)),
               (this.shapes[this._length] = u),
@@ -3142,12 +3142,12 @@
                                 G.o.x,
                                 G.o.y,
                                 G.i.x,
-                                G.i.y
+                                G.i.y,
                               ).get),
                               (Y.__fnct = H)),
                           (O = H(
                             (u - (G.t - this.offsetTime)) /
-                              (W.t - this.offsetTime - (G.t - this.offsetTime))
+                              (W.t - this.offsetTime - (G.t - this.offsetTime)),
                           ))),
                       (E = W.s ? W.s[0] : G.e[0])),
                     (M = G.s[0]);
@@ -3376,14 +3376,14 @@
                             P.ir,
                             0,
                             0,
-                            this
+                            this,
                           )),
                           (this.is = PropertyFactory.getProp(
                             u,
                             P.is,
                             0,
                             0.01,
-                            this
+                            this,
                           )),
                           (this.convertToPath = this.convertStarToPath))
                         : (this.convertToPath = this.convertPolygonToPath),
@@ -3394,7 +3394,7 @@
                         P.r,
                         0,
                         degToRads,
-                        this
+                        this,
                       )),
                       (this.or = PropertyFactory.getProp(u, P.or, 0, 0, this)),
                       (this.os = PropertyFactory.getProp(
@@ -3402,7 +3402,7 @@
                         P.os,
                         0,
                         0.01,
-                        this
+                        this,
                       )),
                       (this.localShapeCollection =
                         shapeCollectionPool.newShapeCollection()),
@@ -3460,7 +3460,7 @@
                               W + H * D * S * G,
                               Y + X * D * S * G,
                               u,
-                              !0
+                              !0,
                             ),
                             (E = !E),
                             (N += M * G);
@@ -3500,7 +3500,7 @@
                               I + R * M * T * F,
                               L + V * M * T * F,
                               u,
-                              !0
+                              !0,
                             ),
                             (E += S * F);
                         }
@@ -3550,7 +3550,7 @@
                                 u + S,
                                 P - D + M,
                                 0,
-                                !0
+                                !0,
                               ),
                               this.v.setTripleAt(
                                 u + S,
@@ -3560,7 +3560,7 @@
                                 u + S,
                                 P + D - T,
                                 1,
-                                !0
+                                !0,
                               ),
                               0 !== T
                                 ? (this.v.setTripleAt(
@@ -3571,7 +3571,7 @@
                                     u + S - M,
                                     P + D,
                                     2,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u - S + T,
@@ -3581,7 +3581,7 @@
                                     u - S + T,
                                     P + D,
                                     3,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u - S,
@@ -3591,7 +3591,7 @@
                                     u - S,
                                     P + D - M,
                                     4,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u - S,
@@ -3601,7 +3601,7 @@
                                     u - S,
                                     P - D + T,
                                     5,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u - S + T,
@@ -3611,7 +3611,7 @@
                                     u - S + M,
                                     P - D,
                                     6,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u + S - T,
@@ -3621,7 +3621,7 @@
                                     u + S - T,
                                     P - D,
                                     7,
-                                    !0
+                                    !0,
                                   ))
                                 : (this.v.setTripleAt(
                                     u - S,
@@ -3630,7 +3630,7 @@
                                     P + D,
                                     u - S,
                                     P + D,
-                                    2
+                                    2,
                                   ),
                                   this.v.setTripleAt(
                                     u - S,
@@ -3639,7 +3639,7 @@
                                     P - D + M,
                                     u - S,
                                     P - D,
-                                    3
+                                    3,
                                   )))
                             : (this.v.setTripleAt(
                                 u + S,
@@ -3649,7 +3649,7 @@
                                 u + S,
                                 P - D + T,
                                 0,
-                                !0
+                                !0,
                               ),
                               0 !== T
                                 ? (this.v.setTripleAt(
@@ -3660,7 +3660,7 @@
                                     u + S - M,
                                     P - D,
                                     1,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u - S + T,
@@ -3670,7 +3670,7 @@
                                     u - S + T,
                                     P - D,
                                     2,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u - S,
@@ -3680,7 +3680,7 @@
                                     u - S,
                                     P - D + M,
                                     3,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u - S,
@@ -3690,7 +3690,7 @@
                                     u - S,
                                     P + D - T,
                                     4,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u - S + T,
@@ -3700,7 +3700,7 @@
                                     u - S + M,
                                     P + D,
                                     5,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u + S - T,
@@ -3710,7 +3710,7 @@
                                     u + S - T,
                                     P + D,
                                     6,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u + S,
@@ -3720,7 +3720,7 @@
                                     u + S,
                                     P + D - M,
                                     7,
-                                    !0
+                                    !0,
                                   ))
                                 : (this.v.setTripleAt(
                                     u - S,
@@ -3730,7 +3730,7 @@
                                     u - S,
                                     P - D,
                                     1,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u - S,
@@ -3740,7 +3740,7 @@
                                     u - S,
                                     P + D,
                                     2,
-                                    !0
+                                    !0,
                                   ),
                                   this.v.setTripleAt(
                                     u + S,
@@ -3750,7 +3750,7 @@
                                     u + S,
                                     P + D,
                                     3,
-                                    !0
+                                    !0,
                                   )));
                       },
                       getValue: function () {
@@ -3968,7 +3968,7 @@
                   P[12],
                   P[13],
                   P[14],
-                  P[15]
+                  P[15],
                 );
               }
               function H() {
@@ -4087,7 +4087,7 @@
                 return this.getInverseMatrix().applyToPointArray(
                   u[0],
                   u[1],
-                  u[2] || 0
+                  u[2] || 0,
                 );
               }
               function ts(u) {
@@ -4246,7 +4246,7 @@
               ? animationManager.searchAnimations(
                   animationData,
                   standalone,
-                  renderer
+                  renderer,
                 )
               : animationManager.searchAnimations();
           }
@@ -4421,7 +4421,7 @@
               P,
               S,
               D,
-              T
+              T,
             ) {
               var M,
                 E,
@@ -4541,7 +4541,7 @@
                               E,
                               G.totalShapeLength,
                               K,
-                              T
+                              T,
                             )),
                             (K += G.totalShapeLength))
                           : (Y = [[X, J]]),
@@ -4599,7 +4599,7 @@
               D,
               T,
               M,
-              E
+              E,
             ) {
               T.setXYAt(P[0], P[1], "o", M),
                 T.setXYAt(S[0], S[1], "i", M + 1),
@@ -4610,7 +4610,7 @@
               u,
               P,
               S,
-              D
+              D,
             ) {
               P.setXYAt(u[1], u[5], "o", S),
                 P.setXYAt(u[2], u[6], "i", S + 1),
@@ -4663,7 +4663,7 @@
                           O[D].v[T],
                           S,
                           F,
-                          Y
+                          Y,
                         ),
                         (Y = !1))
                       : ((L = bez.getNewSegment(
@@ -4673,7 +4673,7 @@
                           O[D].i[T],
                           (P.s - G) / E.addedLength,
                           (P.e - G) / E.addedLength,
-                          I[T - 1]
+                          I[T - 1],
                         )),
                         this.addSegmentFromArray(L, S, F, Y),
                         (Y = !1),
@@ -4691,7 +4691,7 @@
                           O[D].v[0],
                           S,
                           F,
-                          Y
+                          Y,
                         ),
                         (Y = !1))
                       : ((L = bez.getNewSegment(
@@ -4701,7 +4701,7 @@
                           O[D].i[0],
                           (P.s - G) / H,
                           (P.e - G) / H,
-                          I[T - 1]
+                          I[T - 1],
                         )),
                         this.addSegmentFromArray(L, S, F, Y),
                         (Y = !1),
@@ -4716,7 +4716,7 @@
                       S.v[S._length - 1][0],
                       S.v[S._length - 1][1],
                       "o",
-                      S._length - 1
+                      S._length - 1,
                     )),
                   G > P.e)
                 )
@@ -4735,7 +4735,7 @@
                     P.a,
                     0,
                     null,
-                    this
+                    this,
                   )),
                   (this._isAnimated = !!this.amount.effectsSequence.length);
               }),
@@ -4856,23 +4856,23 @@
                       this.p.keyframes[0].t
                         ? ((D = this.p.getValueAtTime(
                             (this.p.keyframes[0].t + 0.01) / S,
-                            0
+                            0,
                           )),
                           (T = this.p.getValueAtTime(
                             this.p.keyframes[0].t / S,
-                            0
+                            0,
                           )))
                         : this.p._caching.lastFrame + this.p.offsetTime >=
                           this.p.keyframes[this.p.keyframes.length - 1].t
                         ? ((D = this.p.getValueAtTime(
                             this.p.keyframes[this.p.keyframes.length - 1].t / S,
-                            0
+                            0,
                           )),
                           (T = this.p.getValueAtTime(
                             (this.p.keyframes[this.p.keyframes.length - 1].t -
                               0.05) /
                               S,
-                            0
+                            0,
                           )))
                         : ((D = this.p.pv),
                           (T = this.p.getValueAtTime(
@@ -4880,7 +4880,7 @@
                               this.p.offsetTime -
                               0.01) /
                               S,
-                            this.p.offsetTime
+                            this.p.offsetTime,
                           )));
                     else if (
                       this.px &&
@@ -4897,11 +4897,11 @@
                       M._caching.lastFrame + M.offsetTime <= M.keyframes[0].t
                         ? ((D[0] = M.getValueAtTime(
                             (M.keyframes[0].t + 0.01) / S,
-                            0
+                            0,
                           )),
                           (D[1] = E.getValueAtTime(
                             (E.keyframes[0].t + 0.01) / S,
-                            0
+                            0,
                           )),
                           (T[0] = M.getValueAtTime(M.keyframes[0].t / S, 0)),
                           (T[1] = E.getValueAtTime(E.keyframes[0].t / S, 0)))
@@ -4909,28 +4909,28 @@
                           M.keyframes[M.keyframes.length - 1].t
                         ? ((D[0] = M.getValueAtTime(
                             M.keyframes[M.keyframes.length - 1].t / S,
-                            0
+                            0,
                           )),
                           (D[1] = E.getValueAtTime(
                             E.keyframes[E.keyframes.length - 1].t / S,
-                            0
+                            0,
                           )),
                           (T[0] = M.getValueAtTime(
                             (M.keyframes[M.keyframes.length - 1].t - 0.01) / S,
-                            0
+                            0,
                           )),
                           (T[1] = E.getValueAtTime(
                             (E.keyframes[E.keyframes.length - 1].t - 0.01) / S,
-                            0
+                            0,
                           )))
                         : ((D = [M.pv, E.pv]),
                           (T[0] = M.getValueAtTime(
                             (M._caching.lastFrame + M.offsetTime - 0.01) / S,
-                            M.offsetTime
+                            M.offsetTime,
                           )),
                           (T[1] = E.getValueAtTime(
                             (E._caching.lastFrame + E.offsetTime - 0.01) / S,
-                            E.offsetTime
+                            E.offsetTime,
                           )));
                     } else D = T = u;
                     this.v.rotate(-Math.atan2(D[1] - T[1], D[0] - T[0]));
@@ -5010,7 +5010,7 @@
                       P.p || { k: [0, 0, 0] },
                       1,
                       0,
-                      this
+                      this,
                     )),
                 P.rx)
               ) {
@@ -5020,21 +5020,21 @@
                     P.rx,
                     0,
                     degToRads,
-                    this
+                    this,
                   )),
                   (this.ry = PropertyFactory.getProp(
                     u,
                     P.ry,
                     0,
                     degToRads,
-                    this
+                    this,
                   )),
                   (this.rz = PropertyFactory.getProp(
                     u,
                     P.rz,
                     0,
                     degToRads,
-                    this
+                    this,
                   )),
                   P.or.k[0].ti)
                 ) {
@@ -5048,7 +5048,7 @@
                   P.or,
                   1,
                   degToRads,
-                  this
+                  this,
                 )),
                   (this.or.sh = !0);
               } else
@@ -5057,7 +5057,7 @@
                   P.r || { k: 0 },
                   0,
                   degToRads,
-                  this
+                  this,
                 );
               P.sk &&
                 ((this.sk = PropertyFactory.getProp(
@@ -5065,28 +5065,28 @@
                   P.sk,
                   0,
                   degToRads,
-                  this
+                  this,
                 )),
                 (this.sa = PropertyFactory.getProp(
                   u,
                   P.sa,
                   0,
                   degToRads,
-                  this
+                  this,
                 ))),
                 (this.a = PropertyFactory.getProp(
                   u,
                   P.a || { k: [0, 0, 0] },
                   1,
                   0,
-                  this
+                  this,
                 )),
                 (this.s = PropertyFactory.getProp(
                   u,
                   P.s || { k: [100, 100, 100] },
                   1,
                   0.01,
-                  this
+                  this,
                 )),
                 P.o
                   ? (this.o = PropertyFactory.getProp(u, P.o, 0, 0.01, u))
@@ -5255,7 +5255,7 @@
               R - Math.sin(F) * M,
               L + Math.cos(I) * E,
               R - Math.sin(I) * E,
-              u.length()
+              u.length(),
             );
           }
           function getPerpendicularVector(u, P) {
@@ -5280,13 +5280,13 @@
               V =
                 2 === M
                   ? Math.sqrt(
-                      Math.pow(I[0] - L[0], 2) + Math.pow(I[1] - L[1], 2)
+                      Math.pow(I[0] - L[0], 2) + Math.pow(I[1] - L[1], 2),
                     )
                   : 0,
               O =
                 2 === M
                   ? Math.sqrt(
-                      Math.pow(I[0] - R[0], 2) + Math.pow(I[1] - R[1], 2)
+                      Math.pow(I[0] - R[0], 2) + Math.pow(I[1] - R[1], 2),
                     )
                   : 0;
             setPoint(
@@ -5297,7 +5297,7 @@
               D,
               O / ((T + 1) * 2),
               V / ((T + 1) * 2),
-              M
+              M,
             );
           }
           function zigZagSegment(u, P, S, D, T, M) {
@@ -5307,7 +5307,7 @@
                   2 === T
                     ? Math.sqrt(
                         Math.pow(P.points[3][0] - P.points[0][0], 2) +
-                          Math.pow(P.points[3][1] - P.points[0][1], 2)
+                          Math.pow(P.points[3][1] - P.points[0][1], 2),
                       )
                     : 0,
                 L = P.normalAngle(F);
@@ -5319,7 +5319,7 @@
                 S,
                 I / ((D + 1) * 2),
                 I / ((D + 1) * 2),
-                T
+                T,
               ),
                 (M = -M);
             }
@@ -5359,7 +5359,7 @@
                   M,
                   polarOffset(M, F + Math.PI / 2, 100),
                   E,
-                  polarOffset(E, F + Math.PI / 2, 100)
+                  polarOffset(E, F + Math.PI / 2, 100),
                 ),
                 R = L ? pointDistance(L, M) : pointDistance(M, E) / 2,
                 V = polarOffset(M, F, 2 * R * roundCorner);
@@ -5468,7 +5468,7 @@
           extendPrototype([ShapeModifier], RepeaterModifier),
             (RepeaterModifier.prototype.initModifierProperties = function (
               u,
-              P
+              P,
             ) {
               (this.getValue = this.processKeys),
                 (this.c = PropertyFactory.getProp(u, P.c, 0, null, this)),
@@ -5476,7 +5476,7 @@
                 (this.tr = TransformPropertyFactory.getTransformProperty(
                   u,
                   P.tr,
-                  this
+                  this,
                 )),
                 (this.so = PropertyFactory.getProp(u, P.tr.so, 0, 0.01, this)),
                 (this.eo = PropertyFactory.getProp(u, P.tr.eo, 0, 0.01, this)),
@@ -5495,7 +5495,7 @@
               S,
               D,
               T,
-              M
+              M,
             ) {
               var E = M ? -1 : 1,
                 F = D.s.v[0] + (1 - D.s.v[0]) * (1 - T),
@@ -5622,7 +5622,7 @@
                       this.sMatrix,
                       this.tr,
                       1,
-                      !1
+                      !1,
                     ),
                       (K += 1);
                   W &&
@@ -5632,7 +5632,7 @@
                       this.sMatrix,
                       this.tr,
                       W,
-                      !1
+                      !1,
                     ),
                     (K += W));
                 } else if (G < 0) {
@@ -5643,7 +5643,7 @@
                       this.sMatrix,
                       this.tr,
                       1,
-                      !0
+                      !0,
                     ),
                       (K -= 1);
                   W &&
@@ -5653,7 +5653,7 @@
                       this.sMatrix,
                       this.tr,
                       -W,
-                      !0
+                      !0,
                     ),
                     (K -= W));
                 }
@@ -5686,7 +5686,7 @@
                           this.sMatrix,
                           this.tr,
                           1,
-                          !1
+                          !1,
                         ),
                         this.matrix.transform(
                           X[0],
@@ -5704,7 +5704,7 @@
                           X[12],
                           X[13],
                           X[14],
-                          X[15]
+                          X[15],
                         ),
                         this.matrix.transform(
                           J[0],
@@ -5722,7 +5722,7 @@
                           J[12],
                           J[13],
                           J[14],
-                          J[15]
+                          J[15],
                         ),
                         this.matrix.transform(
                           H[0],
@@ -5740,7 +5740,7 @@
                           H[12],
                           H[13],
                           H[14],
-                          H[15]
+                          H[15],
                         ),
                         I = 0;
                       I < L;
@@ -5767,7 +5767,7 @@
             extendPrototype([ShapeModifier], RoundCornersModifier),
             (RoundCornersModifier.prototype.initModifierProperties = function (
               u,
-              P
+              P,
             ) {
               (this.getValue = this.processKeys),
                 (this.rd = PropertyFactory.getProp(u, P.r, 0, null, this)),
@@ -5802,7 +5802,7 @@
                     ? (0 !== S && S !== Y - 1) || u.c
                       ? ((E = 0 === S ? u.v[Y - 1] : u.v[S - 1]),
                         (I = (F = Math.sqrt(
-                          Math.pow(D[0] - E[0], 2) + Math.pow(D[1] - E[1], 2)
+                          Math.pow(D[0] - E[0], 2) + Math.pow(D[1] - E[1], 2),
                         ))
                           ? Math.min(F / 2, P) / F
                           : 0),
@@ -5814,7 +5814,7 @@
                         (H += 1),
                         (E = S === Y - 1 ? u.v[0] : u.v[S + 1]),
                         (I = (F = Math.sqrt(
-                          Math.pow(D[0] - E[0], 2) + Math.pow(D[1] - E[1], 2)
+                          Math.pow(D[0] - E[0], 2) + Math.pow(D[1] - E[1], 2),
                         ))
                           ? Math.min(F / 2, P) / F
                           : 0),
@@ -5833,7 +5833,7 @@
                         u.o[S][1],
                         u.i[S][0],
                         u.i[S][1],
-                        H
+                        H,
                       ),
                       (H += 1));
               return W;
@@ -5947,7 +5947,7 @@
                   0,
                   P,
                   D,
-                  S
+                  S,
                 ),
                 D
               );
@@ -5968,21 +5968,21 @@
                   P.s,
                   0,
                   null,
-                  this
+                  this,
                 )),
                 (this.frequency = PropertyFactory.getProp(
                   u,
                   P.r,
                   0,
                   null,
-                  this
+                  this,
                 )),
                 (this.pointsType = PropertyFactory.getProp(
                   u,
                   P.pt,
                   0,
                   null,
-                  this
+                  this,
                 )),
                 (this._isAnimated =
                   0 !== this.amplitude.effectsSequence.length ||
@@ -6039,7 +6039,7 @@
             extendPrototype([ShapeModifier], OffsetPathModifier),
             (OffsetPathModifier.prototype.initModifierProperties = function (
               u,
-              P
+              P,
             ) {
               (this.getValue = this.processKeys),
                 (this.amount = PropertyFactory.getProp(u, P.a, 0, null, this)),
@@ -6048,7 +6048,7 @@
                   P.ml,
                   0,
                   null,
-                  this
+                  this,
                 )),
                 (this.lineJoin = P.lj),
                 (this._isAnimated = 0 !== this.amount.effectsSequence.length);
@@ -6087,7 +6087,7 @@
                           E.points[1][0],
                           E.points[1][1],
                           "o",
-                          F.length() - 1
+                          F.length() - 1,
                         )
                       : F.setTripleAt(
                           E.points[0][0],
@@ -6096,7 +6096,7 @@
                           E.points[1][1],
                           E.points[0][0],
                           E.points[0][1],
-                          F.length()
+                          F.length(),
                         ),
                     F.setTripleAt(
                       E.points[3][0],
@@ -6105,7 +6105,7 @@
                       E.points[3][1],
                       E.points[2][0],
                       E.points[2][1],
-                      F.length()
+                      F.length(),
                     ),
                     (R = E.points[3]);
               }
@@ -6211,10 +6211,10 @@
                           ((M -= 1), (this.fonts[P].loaded = !0))),
                     this.fonts[P].loaded &&
                       (this.fonts[P].sansCase.parent.parentNode.removeChild(
-                        this.fonts[P].sansCase.parent
+                        this.fonts[P].sansCase.parent,
                       ),
                       this.fonts[P].monoCase.parent.parentNode.removeChild(
-                        this.fonts[P].monoCase.parent
+                        this.fonts[P].monoCase.parent,
                       )));
               0 !== M && Date.now() - this.initTime < u
                 ? setTimeout(this.checkLoadedFontsBinded, 20)
@@ -6288,7 +6288,7 @@
                           S[M].fFamily +
                           '"], style[f-origin="3"][f-family="' +
                           S[M].fFamily +
-                          '"]'
+                          '"]',
                       )).length > 0 && (I = !1),
                       I)
                     ) {
@@ -6309,7 +6309,7 @@
                     for (
                       F = 0,
                         E = document.querySelectorAll(
-                          'link[f-forigin="g"], link[f-origin="1"]'
+                          'link[f-forigin="g"], link[f-origin="1"]',
                         );
                       F < E.length;
                       F += 1
@@ -6328,7 +6328,7 @@
                     for (
                       F = 0,
                         E = document.querySelectorAll(
-                          'script[f-forigin="t"], script[f-origin="2"]'
+                          'script[f-forigin="t"], script[f-origin="2"]',
                         );
                       F < E.length;
                       F += 1
@@ -6391,7 +6391,7 @@
                     "Missing character from exported characters list: ",
                     u,
                     S,
-                    D
+                    D,
                   )),
                 P
               );
@@ -6517,7 +6517,7 @@
                 -1 !== this.renderableComponents.indexOf(u) &&
                   this.renderableComponents.splice(
                     this.renderableComponents.indexOf(u),
-                    1
+                    1,
                   );
               },
               prepareRenderableFrame: function (u) {
@@ -6652,7 +6652,7 @@
                 u.au && u.au.lv ? u.au.lv : { k: [100] },
                 1,
                 0.01,
-                this
+                this,
               ));
           }
           function BaseRenderer() {}
@@ -6725,7 +6725,7 @@
                     this.data.hasMask &&
                       this.maskManager &&
                       this.layerInterface.registerMaskInterface(
-                        this.maskManager
+                        this.maskManager,
                       );
                   var E = S.createEffectsInterface(this, this.layerInterface);
                   this.layerInterface.registerEffectsInterface(E),
@@ -6735,7 +6735,7 @@
                       ? ((this.layerInterface.shapeInterface = D(
                           this.shapesData,
                           this.itemsData,
-                          this.layerInterface
+                          this.layerInterface,
                         )),
                         (this.layerInterface.content =
                           this.layerInterface.shapeInterface))
@@ -6760,7 +6760,7 @@
                   (this.effectsManager = new EffectsManager(
                     this.data,
                     this,
-                    this.dynamicProperties
+                    this.dynamicProperties,
                   ));
               },
               getType: function () {
@@ -6793,7 +6793,7 @@
             (FootageElement.prototype.prepareFrame = function () {}),
             extendPrototype(
               [RenderableElement, BaseElement, FrameElement],
-              FootageElement
+              FootageElement,
             ),
             (FootageElement.prototype.getBaseElement = function () {
               return null;
@@ -6828,7 +6828,7 @@
             }),
             extendPrototype(
               [RenderableElement, BaseElement, FrameElement],
-              AudioElement
+              AudioElement,
             ),
             (AudioElement.prototype.renderFrame = function () {
               this.isInRange &&
@@ -6837,14 +6837,14 @@
                   ? (!this.audio.playing() ||
                       Math.abs(
                         this._currentTime / this.globalData.frameRate -
-                          this.audio.seek()
+                          this.audio.seek(),
                       ) > 0.1) &&
                     this.audio.seek(
-                      this._currentTime / this.globalData.frameRate
+                      this._currentTime / this.globalData.frameRate,
                     )
                   : (this.audio.play(),
                     this.audio.seek(
-                      this._currentTime / this.globalData.frameRate
+                      this._currentTime / this.globalData.frameRate,
                     ),
                     (this._isPlaying = !0)));
             }),
@@ -7053,12 +7053,12 @@
                     M[V].o,
                     0,
                     0.01,
-                    this.element
+                    this.element,
                   ),
                   prop: ShapePropertyFactory.getShapeProp(
                     this.element,
                     M[V],
-                    3
+                    3,
                   ),
                   elem: O,
                   lastPath: "",
@@ -7069,7 +7069,7 @@
                   ((E += 1),
                   O.setAttribute(
                     "fill",
-                    "s" === M[V].mode ? "#000000" : "#ffffff"
+                    "s" === M[V].mode ? "#000000" : "#ffffff",
                   ),
                   O.setAttribute("clip-rule", "nonzero"),
                   0 !== M[V].x.k
@@ -7080,13 +7080,13 @@
                         M[V].x,
                         0,
                         null,
-                        this.element
+                        this.element,
                       )),
                       (J = createElementID()),
                       (Y = createNS("filter")).setAttribute("id", J),
                       (H = createNS("feMorphology")).setAttribute(
                         "operator",
-                        "erode"
+                        "erode",
                       ),
                       H.setAttribute("in", "SourceGraphic"),
                       H.setAttribute("radius", "0"),
@@ -7094,7 +7094,7 @@
                       D.appendChild(Y),
                       O.setAttribute(
                         "stroke",
-                        "s" === M[V].mode ? "#000000" : "#ffffff"
+                        "s" === M[V].mode ? "#000000" : "#ffffff",
                       ))
                     : ((H = null), (X = null)),
                   (this.storedData[V] = {
@@ -7127,7 +7127,7 @@
                     D.appendChild(Z),
                     K.setAttribute(
                       "mask",
-                      "url(" + getLocationHref() + "#" + I + "_" + E + ")"
+                      "url(" + getLocationHref() + "#" + I + "_" + E + ")",
                     ),
                     (F.length = 0),
                     F.push(K);
@@ -7143,12 +7143,12 @@
                       M[V].o,
                       0,
                       0.01,
-                      this.element
+                      this.element,
                     ),
                     prop: ShapePropertyFactory.getShapeProp(
                       this.element,
                       M[V],
-                      3
+                      3,
                     ),
                     invRect: W,
                   }),
@@ -7156,7 +7156,7 @@
                     this.drawPath(
                       M[V],
                       this.viewData[V].prop.v,
-                      this.viewData[V]
+                      this.viewData[V],
                     );
               }
             for (
@@ -7169,7 +7169,7 @@
               (this.maskElement.setAttribute("id", I),
               this.element.maskedElement.setAttribute(
                 R,
-                "url(" + getLocationHref() + "#" + I + ")"
+                "url(" + getLocationHref() + "#" + I + ")",
               ),
               D.appendChild(this.maskElement)),
               this.viewData.length && this.element.addRenderableComponent(this);
@@ -7182,7 +7182,7 @@
                   ? TransformPropertyFactory.getTransformProperty(
                       this,
                       this.data.ks,
-                      this
+                      this,
                     )
                   : { o: 0 },
                 _matMdf: !1,
@@ -7274,7 +7274,7 @@
             searchEffectTransforms: function () {
               if (this.renderableEffectsManager) {
                 var u = this.renderableEffectsManager.getEffects(
-                  effectTypes.TRANSFORM_EFFECT
+                  effectTypes.TRANSFORM_EFFECT,
                 );
                 if (u.length) {
                   (this.localTransforms = []),
@@ -7316,19 +7316,19 @@
                     this.drawPath(
                       this.masksProperties[P],
                       this.viewData[P].prop.v,
-                      this.viewData[P]
+                      this.viewData[P],
                     ),
                   (this.viewData[P].op._mdf || u) &&
                     this.viewData[P].elem.setAttribute(
                       "fill-opacity",
-                      this.viewData[P].op.v
+                      this.viewData[P].op.v,
                     ),
                   "n" !== this.masksProperties[P].mode &&
                     (this.viewData[P].invRect &&
                       (this.element.finalTransform.mProp._mdf || u) &&
                       this.viewData[P].invRect.setAttribute(
                         "transform",
-                        S.getInverseMatrix().to2dCSS()
+                        S.getInverseMatrix().to2dCSS(),
                       ),
                     this.storedData[P].x && (this.storedData[P].x._mdf || u)))
                 ) {
@@ -7342,7 +7342,7 @@
                             getLocationHref() +
                             "#" +
                             this.storedData[P].filterId +
-                            ")"
+                            ")",
                         )),
                       T.setAttribute("radius", -this.storedData[P].x.v))
                     : ("dilate" !== this.storedData[P].lastOperator &&
@@ -7350,7 +7350,7 @@
                         this.storedData[P].elem.setAttribute("filter", null)),
                       this.storedData[P].elem.setAttribute(
                         "stroke-width",
-                        2 * this.storedData[P].x.v
+                        2 * this.storedData[P].x.v,
                       ));
                 }
             }),
@@ -7443,7 +7443,7 @@
                   u.setAttribute("color-interpolation-filters", "sRGB"),
                   u.setAttribute(
                     "values",
-                    "0 0 0 1 0  0 0 0 1 0  0 0 0 1 0  0 0 0 1 1"
+                    "0 0 0 1 0  0 0 0 1 0  0 0 0 1 0  0 0 0 1 1",
                   ),
                   u
                 );
@@ -7487,7 +7487,7 @@
                   u.effectsManager.effectElements[P],
                   u,
                   idPrefix + F,
-                  D
+                  D,
                 )),
                 (D = idPrefix + F),
                 registeredEffects$1[I].countsAsEffect && (F += 1)),
@@ -7497,7 +7497,7 @@
               (u.globalData.defs.appendChild(E),
               u.layerElement.setAttribute(
                 "filter",
-                "url(" + getLocationHref() + "#" + M + ")"
+                "url(" + getLocationHref() + "#" + M + ")",
               )),
               this.filters.length && u.addRenderableComponent(this);
           }
@@ -7579,7 +7579,7 @@
                       this.data.h +
                       " L0," +
                       this.data.h +
-                      "z"
+                      "z",
                   );
                   var T = createElementID();
                   if (
@@ -7591,7 +7591,7 @@
                     var M = createNS("g");
                     M.setAttribute(
                       "clip-path",
-                      "url(" + getLocationHref() + "#" + T + ")"
+                      "url(" + getLocationHref() + "#" + T + ")",
                     ),
                       M.appendChild(this.layerElement),
                       (this.transformedElement = M),
@@ -7601,7 +7601,7 @@
                   } else
                     this.layerElement.setAttribute(
                       "clip-path",
-                      "url(" + getLocationHref() + "#" + T + ")"
+                      "url(" + getLocationHref() + "#" + T + ")",
                     );
                 }
                 0 !== this.data.bm && this.setBlendMode();
@@ -7610,12 +7610,12 @@
                 this.finalTransform._localMatMdf &&
                   this.transformedElement.setAttribute(
                     "transform",
-                    this.finalTransform.localMat.to2dCSS()
+                    this.finalTransform.localMat.to2dCSS(),
                   ),
                   this.finalTransform._opMdf &&
                     this.transformedElement.setAttribute(
                       "opacity",
-                      this.finalTransform.localOpacity
+                      this.finalTransform.localOpacity,
                     );
               },
               destroyBaseElement: function () {
@@ -7630,7 +7630,7 @@
                 (this.maskManager = new MaskElement(
                   this.data,
                   this,
-                  this.globalData
+                  this.globalData,
                 )),
                   (this.renderableEffectsManager = new SVGEffects(this)),
                   this.searchEffectTransforms();
@@ -7650,12 +7650,12 @@
                     E.setAttribute("id", M),
                       E.setAttribute(
                         "mask-type",
-                        3 === u ? "luminance" : "alpha"
+                        3 === u ? "luminance" : "alpha",
                       ),
                       (D = createNS("use")).setAttributeNS(
                         "http://www.w3.org/1999/xlink",
                         "href",
-                        "#" + this.layerId
+                        "#" + this.layerId,
                       ),
                       E.appendChild(D),
                       this.globalData.defs.appendChild(E),
@@ -7666,13 +7666,13 @@
                         (S = filtersFactory.createFilter(P)),
                         this.globalData.defs.appendChild(S),
                         S.appendChild(
-                          filtersFactory.createAlphaToLuminanceFilter()
+                          filtersFactory.createAlphaToLuminanceFilter(),
                         ),
                         (T = createNS("g")).appendChild(D),
                         E.appendChild(T),
                         T.setAttribute(
                           "filter",
-                          "url(" + getLocationHref() + "#" + P + ")"
+                          "url(" + getLocationHref() + "#" + P + ")",
                         ));
                   } else if (2 === u) {
                     var F = createNS("mask");
@@ -7698,19 +7698,19 @@
                       V.setAttribute("opacity", "0"),
                       I.setAttribute(
                         "filter",
-                        "url(" + getLocationHref() + "#" + P + ")"
+                        "url(" + getLocationHref() + "#" + P + ")",
                       ),
                       I.appendChild(V),
                       (D = createNS("use")).setAttributeNS(
                         "http://www.w3.org/1999/xlink",
                         "href",
-                        "#" + this.layerId
+                        "#" + this.layerId,
                       ),
                       I.appendChild(D),
                       featureSupport.maskType ||
                         (F.setAttribute("mask-type", "luminance"),
                         S.appendChild(
-                          filtersFactory.createAlphaToLuminanceFilter()
+                          filtersFactory.createAlphaToLuminanceFilter(),
                         ),
                         (T = createNS("g")),
                         I.appendChild(V),
@@ -7726,7 +7726,7 @@
                 this.matteElement &&
                   this.matteElement.setAttribute(
                     "mask",
-                    "url(" + getLocationHref() + "#" + u + ")"
+                    "url(" + getLocationHref() + "#" + u + ")",
                   );
               },
             }),
@@ -7804,7 +7804,7 @@
                     },
                   }),
                 ],
-                RenderableDOMElement
+                RenderableDOMElement,
               );
             })(),
             extendPrototype(
@@ -7816,7 +7816,7 @@
                 FrameElement,
                 RenderableDOMElement,
               ],
-              IImageElement
+              IImageElement,
             ),
             (IImageElement.prototype.createContent = function () {
               var u = this.globalData.getAssetsPath(this.assetData);
@@ -7826,12 +7826,12 @@
                 this.innerElem.setAttribute(
                   "preserveAspectRatio",
                   this.assetData.pr ||
-                    this.globalData.renderConfig.imagePreserveAspectRatio
+                    this.globalData.renderConfig.imagePreserveAspectRatio,
                 ),
                 this.innerElem.setAttributeNS(
                   "http://www.w3.org/1999/xlink",
                   "href",
-                  u
+                  u,
                 ),
                 this.layerElement.appendChild(this.innerElem);
             }),
@@ -7923,7 +7923,7 @@
               (this.dashStr = ""),
               (this.dashArray = createTypedArray(
                 "float32",
-                P.length ? P.length - 1 : 0
+                P.length ? P.length - 1 : 0,
               )),
               (this.dashoffset = createTypedArray("float32", 1)),
               this.initDynamicPropertyContainer(D);
@@ -8083,7 +8083,7 @@
             (SVGGradientFillStyleData.prototype.initGradientData = function (
               u,
               P,
-              S
+              S,
             ) {
               (this.o = PropertyFactory.getProp(u, P.o, 0, 0.01, this)),
                 (this.s = PropertyFactory.getProp(u, P.s, 1, null, this)),
@@ -8093,14 +8093,14 @@
                   P.h || { k: 0 },
                   0,
                   0.01,
-                  this
+                  this,
                 )),
                 (this.a = PropertyFactory.getProp(
                   u,
                   P.a || { k: 0 },
                   0,
                   degToRads,
-                  this
+                  this,
                 )),
                 (this.g = new GradientProperty(u, P.g, this)),
                 (this.style = S),
@@ -8111,7 +8111,7 @@
             }),
             (SVGGradientFillStyleData.prototype.setGradientData = function (
               u,
-              P
+              P,
             ) {
               var S,
                 D,
@@ -8126,14 +8126,14 @@
                 (S = createNS("stop")), E.appendChild(S), F.push(S);
               u.setAttribute(
                 "gf" === P.ty ? "fill" : "stroke",
-                "url(" + getLocationHref() + "#" + M + ")"
+                "url(" + getLocationHref() + "#" + M + ")",
               ),
                 (this.gf = E),
                 (this.cst = F);
             }),
             (SVGGradientFillStyleData.prototype.setGradientOpacity = function (
               u,
-              P
+              P,
             ) {
               if (this.g._hasOpacity && !this.g._collapsable) {
                 var S,
@@ -8146,7 +8146,7 @@
                   I = createElementID();
                 M.setAttribute("id", I);
                 var L = createNS(
-                  1 === u.t ? "linearGradient" : "radialGradient"
+                  1 === u.t ? "linearGradient" : "radialGradient",
                 );
                 L.setAttribute("id", F),
                   L.setAttribute("spreadMethod", "pad"),
@@ -8156,13 +8156,13 @@
                 for (D = 4 * u.g.p; D < T; D += 2)
                   (S = createNS("stop")).setAttribute(
                     "stop-color",
-                    "rgb(255,255,255)"
+                    "rgb(255,255,255)",
                   ),
                     L.appendChild(S),
                     R.push(S);
                 E.setAttribute(
                   "gf" === u.ty ? "fill" : "stroke",
-                  "url(" + getLocationHref() + "#" + F + ")"
+                  "url(" + getLocationHref() + "#" + F + ")",
                 ),
                   "gs" === u.ty &&
                     (E.setAttribute("stroke-linecap", lineCapEnum[u.lc || 2]),
@@ -8177,11 +8177,11 @@
             }),
             extendPrototype(
               [DynamicPropertyContainer],
-              SVGGradientFillStyleData
+              SVGGradientFillStyleData,
             ),
             extendPrototype(
               [SVGGradientFillStyleData, DynamicPropertyContainer],
-              SVGGradientStrokeStyleData
+              SVGGradientStrokeStyleData,
             );
           var buildShapeString = function (u, P, S, D) {
               if (0 === P) return "";
@@ -8219,12 +8219,12 @@
                 (S || P.transform.op._mdf) &&
                   P.transform.container.setAttribute(
                     "opacity",
-                    P.transform.op.v
+                    P.transform.op.v,
                   ),
                   (S || P.transform.mProps._mdf) &&
                     P.transform.container.setAttribute(
                       "transform",
-                      P.transform.mProps.v.to2dCSS()
+                      P.transform.mProps.v.to2dCSS(),
                     );
               }
               function D() {}
@@ -8285,7 +8285,7 @@
                       bmFloor(P.c.v[1]) +
                       "," +
                       bmFloor(P.c.v[2]) +
-                      ")"
+                      ")",
                   ),
                   (P.o._mdf || S) &&
                     D.pElem.setAttribute("fill-opacity", P.o.v);
@@ -8329,7 +8329,7 @@
                           W[4 * T + 2] +
                           "," +
                           W[4 * T + 3] +
-                          ")"
+                          ")",
                       );
                 }
                 if (L && (P.g._omdf || S)) {
@@ -8355,7 +8355,7 @@
                 else if (
                   ((P.s._mdf || P.e._mdf || S) &&
                     ((F = Math.sqrt(
-                      Math.pow(R[0] - V[0], 2) + Math.pow(R[1] - V[1], 2)
+                      Math.pow(R[0] - V[0], 2) + Math.pow(R[1] - V[1], 2),
                     )),
                     I.setAttribute("r", F),
                     L && !P.g._collapsable && P.of.setAttribute("r", F)),
@@ -8363,7 +8363,7 @@
                 ) {
                   F ||
                     (F = Math.sqrt(
-                      Math.pow(R[0] - V[0], 2) + Math.pow(R[1] - V[1], 2)
+                      Math.pow(R[0] - V[0], 2) + Math.pow(R[1] - V[1], 2),
                     ));
                   var H = Math.atan2(V[1] - R[1], V[0] - R[0]),
                     X = P.h.v;
@@ -8396,7 +8396,7 @@
                         bmFloor(P.c.v[1]) +
                         "," +
                         bmFloor(P.c.v[2]) +
-                        ")"
+                        ")",
                     ),
                   (P.o._mdf || S) &&
                     D.pElem.setAttribute("stroke-opacity", P.o.v),
@@ -8508,7 +8508,7 @@
               FrameElement,
               RenderableDOMElement,
             ],
-            SVGShapeElement
+            SVGShapeElement,
           ),
             (SVGShapeElement.prototype.initSecondaryElement = function () {}),
             (SVGShapeElement.prototype.identityMatrix = new Matrix()),
@@ -8522,7 +8522,7 @@
                 this.layerElement,
                 0,
                 [],
-                !0
+                !0,
               ),
                 this.filterUniqueShapes();
             }),
@@ -8572,7 +8572,7 @@
                       this.globalData.defs.appendChild(S.of),
                       T.setAttribute(
                         "mask",
-                        "url(" + getLocationHref() + "#" + S.maskId + ")"
+                        "url(" + getLocationHref() + "#" + S.maskId + ")",
                       )))
                   : "no" === u.ty && (S = new SVGNoStyleData(this, u, D)),
                 ("st" === u.ty || "gs" === u.ty) &&
@@ -8600,12 +8600,12 @@
             }),
             (SVGShapeElement.prototype.createTransformElement = function (
               u,
-              P
+              P,
             ) {
               var S = TransformPropertyFactory.getTransformProperty(
                   this,
                   u,
-                  this
+                  this,
                 ),
                 D = new SVGTransformData(S, S.o, P);
               return this.addToAnimatedContents(u, D), D;
@@ -8658,7 +8658,7 @@
                   this.layerElement,
                   0,
                   [],
-                  !0
+                  !0,
                 ),
                   this.filterUniqueShapes(),
                   P = this.dynamicProperties.length,
@@ -8676,7 +8676,7 @@
               D,
               T,
               M,
-              E
+              E,
             ) {
               var F,
                 I,
@@ -8718,7 +8718,7 @@
                     P[F].gr,
                     T + 1,
                     N,
-                    E
+                    E,
                   ),
                     u[F]._render &&
                       P[F].gr.parentNode !== D &&
@@ -8744,7 +8744,7 @@
                         ? ((V = P[F]).closed = !1)
                         : ((V = ShapeModifiers.getModifier(u[F].ty)).init(
                             this,
-                            u[F]
+                            u[F],
                           ),
                           (P[F] = V),
                           this.shapeModifiers.push(V)),
@@ -8773,12 +8773,12 @@
                   (this.stylesList[u].msElem &&
                     (this.stylesList[u].msElem.setAttribute(
                       "d",
-                      this.stylesList[u].d
+                      this.stylesList[u].d,
                     ),
                     (this.stylesList[u].d = "M0 0" + this.stylesList[u].d)),
                   this.stylesList[u].pElem.setAttribute(
                     "d",
-                    this.stylesList[u].d || "M0 0"
+                    this.stylesList[u].d || "M0 0",
                   ));
             }),
             (SVGShapeElement.prototype.renderShape = function () {
@@ -9016,7 +9016,7 @@
                     ? ((U = P.getCharData(
                         tp,
                         O.fStyle,
-                        P.getFontByName(u.f).fFamily
+                        P.getFontByName(u.f).fFamily,
                       )),
                       (N = X ? 0 : (U.w * u.finalSize) / 100))
                     : (N = P.measureText(J, u.f, u.finalSize)),
@@ -9094,7 +9094,7 @@
                       ((tg = tc.anIndexes[K]),
                       (td = tl.splice(
                         Math.floor(Math.random() * tl.length),
-                        1
+                        1,
                       )[0])),
                       (tc.anIndexes[K] = td);
               }
@@ -9146,7 +9146,7 @@
                   P.s || { k: 0 },
                   0,
                   0,
-                  this
+                  this,
                 )),
                 "e" in P
                   ? (this.e = PropertyFactory.getProp(u, P.e, 0, 0, this))
@@ -9156,28 +9156,28 @@
                   P.o || { k: 0 },
                   0,
                   0,
-                  this
+                  this,
                 )),
                 (this.xe = PropertyFactory.getProp(
                   u,
                   P.xe || { k: 0 },
                   0,
                   0,
-                  this
+                  this,
                 )),
                 (this.ne = PropertyFactory.getProp(
                   u,
                   P.ne || { k: 0 },
                   0,
                   0,
-                  this
+                  this,
                 )),
                 (this.sm = PropertyFactory.getProp(
                   u,
                   P.sm || { k: 100 },
                   0,
                   0,
-                  this
+                  this,
                 )),
                 (this.a = PropertyFactory.getProp(u, P.a, 0, 0.01, this)),
                 this.dynamicProperties.length || this.getValue();
@@ -9210,7 +9210,7 @@
                           ? D >= V
                             ? 1
                             : 0
-                          : u(0, P(0.5 / (V - R) + (D - R) / (V - R), 1)))
+                          : u(0, P(0.5 / (V - R) + (D - R) / (V - R), 1))),
                     );
                   else if (3 === O)
                     L = I(
@@ -9219,7 +9219,7 @@
                           ? D >= V
                             ? 0
                             : 1
-                          : 1 - u(0, P(0.5 / (V - R) + (D - R) / (V - R), 1)))
+                          : 1 - u(0, P(0.5 / (V - R) + (D - R) / (V - R), 1))),
                     );
                   else if (4 === O)
                     V === R
@@ -9250,9 +9250,9 @@
                                       (2 *
                                         Math.PI *
                                         (D = P(u(0, D + 0.5 - R), V - R))) /
-                                        (V - R)
+                                        (V - R),
                                   )) /
-                                2)
+                                2),
                         ))
                       : (D >= S(R) &&
                           (L =
@@ -9345,7 +9345,7 @@
                 (this._animatorsData[u] = new TextAnimatorDataProperty(
                   this._elem,
                   P,
-                  this
+                  this,
                 ));
             this._textData.p && "m" in this._textData.p
               ? ((this._pathData = {
@@ -9363,7 +9363,7 @@
                 this._textData.m.a,
                 1,
                 0,
-                this
+                this,
               ));
           }),
             (TextAnimatorProperty.prototype.getMeasures = function (u, P) {
@@ -9441,7 +9441,7 @@
                         [
                           tA.i[ta + 1][0] - tA.v[ta + 1][0],
                           tA.i[ta + 1][1] - tA.v[ta + 1][1],
-                        ]
+                        ],
                       )),
                         (th.tLength += tP.segmentLength),
                         th.segments.push(tP),
@@ -9455,7 +9455,7 @@
                             tA.o[ta][0] - tA.v[ta][0],
                             tA.o[ta][1] - tA.v[ta][1],
                           ],
-                          [tA.i[0][0] - tA.v[0][0], tA.i[0][1] - tA.v[0][1]]
+                          [tA.i[0][0] - tA.v[0][0], tA.i[0][1] - tA.v[0][1]],
                         )),
                         (th.tLength += tP.segmentLength),
                         th.segments.push(tP),
@@ -9514,7 +9514,7 @@
                           (tN && 2 === u.j && (tR += S.t.v * tV),
                           (F = (D = Z[T].s).getMult(
                             te[ta].anIndexes[T],
-                            U.a[T].s.totalChars
+                            U.a[T].s.totalChars,
                           )).length
                             ? (tB += S.t.v * F[0] * tV)
                             : (tB += S.t.v * F * tV));
@@ -9562,14 +9562,14 @@
                         (S = Z[T].a).p.propType &&
                           ((F = (D = Z[T].s).getMult(
                             te[ta].anIndexes[T],
-                            U.a[T].s.totalChars
+                            U.a[T].s.totalChars,
                           )).length
                             ? (tG += S.p.v[0] * F[0])
                             : (tG += S.p.v[0] * F)),
                           S.a.propType &&
                             ((F = (D = Z[T].s).getMult(
                               te[ta].anIndexes[T],
-                              U.a[T].s.totalChars
+                              U.a[T].s.totalChars,
                             )).length
                               ? (tG += S.a.v[0] * F[0])
                               : (tG += S.a.v[0] * F));
@@ -9596,7 +9596,7 @@
                               td.point[1] + (tp.point[1] - td.point[1]) * tk),
                             Q.translate(
                               -K[0] * te[ta].an * 0.005,
-                              -(0.01 * (K[1] * tw))
+                              -(0.01 * (K[1] * tw)),
                             ),
                             (tc = !1))
                           : tg &&
@@ -9617,13 +9617,13 @@
                         Q.translate(
                           -K[0] * te[ta].an * 0.005,
                           -K[1] * tw * 0.01,
-                          0
+                          0,
                         );
                     for (T = 0; T < M; T += 1)
                       (S = Z[T].a).t.propType &&
                         ((F = (D = Z[T].s).getMult(
                           te[ta].anIndexes[T],
-                          U.a[T].s.totalChars
+                          U.a[T].s.totalChars,
                         )),
                         (0 !== ts || 0 !== u.j) &&
                           (this._hasMaskedPath
@@ -9647,40 +9647,40 @@
                       (S = Z[T].a).a.propType &&
                         ((F = (D = Z[T].s).getMult(
                           te[ta].anIndexes[T],
-                          U.a[T].s.totalChars
+                          U.a[T].s.totalChars,
                         )).length
                           ? Q.translate(
                               -S.a.v[0] * F[0],
                               -S.a.v[1] * F[1],
-                              S.a.v[2] * F[2]
+                              S.a.v[2] * F[2],
                             )
                           : Q.translate(
                               -S.a.v[0] * F,
                               -S.a.v[1] * F,
-                              S.a.v[2] * F
+                              S.a.v[2] * F,
                             ));
                     for (T = 0; T < M; T += 1)
                       (S = Z[T].a).s.propType &&
                         ((F = (D = Z[T].s).getMult(
                           te[ta].anIndexes[T],
-                          U.a[T].s.totalChars
+                          U.a[T].s.totalChars,
                         )).length
                           ? Q.scale(
                               1 + (S.s.v[0] - 1) * F[0],
                               1 + (S.s.v[1] - 1) * F[1],
-                              1
+                              1,
                             )
                           : Q.scale(
                               1 + (S.s.v[0] - 1) * F,
                               1 + (S.s.v[1] - 1) * F,
-                              1
+                              1,
                             ));
                     for (T = 0; T < M; T += 1) {
                       if (
                         ((S = Z[T].a),
                         (F = (D = Z[T].s).getMult(
                           te[ta].anIndexes[T],
-                          U.a[T].s.totalChars
+                          U.a[T].s.totalChars,
                         )),
                         S.sk.propType &&
                           (F.length
@@ -9735,7 +9735,7 @@
                       (S = Z[T].a).p.propType &&
                         ((F = (D = Z[T].s).getMult(
                           te[ta].anIndexes[T],
-                          U.a[T].s.totalChars
+                          U.a[T].s.totalChars,
                         )),
                         this._hasMaskedPath
                           ? F.length
@@ -9745,12 +9745,12 @@
                           ? Q.translate(
                               S.p.v[0] * F[0],
                               S.p.v[1] * F[1],
-                              -S.p.v[2] * F[2]
+                              -S.p.v[2] * F[2],
                             )
                           : Q.translate(
                               S.p.v[0] * F,
                               S.p.v[1] * F,
-                              -S.p.v[2] * F
+                              -S.p.v[2] * F,
                             ));
                     if (
                       (u.strokeWidthAnim && (Y = N < 0 ? 0 : N),
@@ -9784,7 +9784,7 @@
                           (180 *
                             Math.atan(
                               (tp.point[1] - td.point[1]) /
-                                (tp.point[0] - td.point[0])
+                                (tp.point[0] - td.point[0]),
                             )) /
                           Math.PI;
                         tp.point[0] < td.point[0] && (tj += 180),
@@ -9807,7 +9807,7 @@
                               u.justifyOffset +
                               (u.boxWidth - u.lineWidths[te[ta].line]),
                             0,
-                            0
+                            0,
                           );
                           break;
                         case 2:
@@ -9816,7 +9816,7 @@
                               u.justifyOffset +
                               (u.boxWidth - u.lineWidths[te[ta].line]) / 2,
                             0,
-                            0
+                            0,
                           );
                       }
                       Q.translate(0, -u.ls),
@@ -9824,7 +9824,7 @@
                         Q.translate(
                           K[0] * te[ta].an * 0.005,
                           K[1] * tw * 0.01,
-                          0
+                          0,
                         ),
                         (ts += te[ta].l + 0.001 * u.tr * u.finalSize);
                     }
@@ -9879,12 +9879,12 @@
                 (this.textProperty = new TextProperty(
                   this,
                   u.t,
-                  this.dynamicProperties
+                  this.dynamicProperties,
                 )),
                 (this.textAnimator = new TextAnimatorProperty(
                   u.t,
                   this.renderType,
-                  this
+                  this,
                 )),
                 this.initTransform(u, P, S),
                 this.initHierarchy(),
@@ -9925,7 +9925,7 @@
               P,
               S,
               D,
-              T
+              T,
             ) {
               switch (
                 (u.ps && P.translate(u.ps[0], u.ps[1] + u.ascent, 0),
@@ -9936,14 +9936,14 @@
                   P.translate(
                     u.justifyOffset + (u.boxWidth - u.lineWidths[S]),
                     0,
-                    0
+                    0,
                   );
                   break;
                 case 2:
                   P.translate(
                     u.justifyOffset + (u.boxWidth - u.lineWidths[S]) / 2,
                     0,
-                    0
+                    0,
                   );
               }
               P.translate(D, T, 0);
@@ -10076,7 +10076,7 @@
               RenderableDOMElement,
               ITextElement,
             ],
-            SVGTextLottieElement
+            SVGTextLottieElement,
           ),
             (SVGTextLottieElement.prototype.createContent = function () {
               this.data.singleShape &&
@@ -10108,13 +10108,13 @@
                 u.fc
                   ? this.layerElement.setAttribute(
                       "fill",
-                      this.buildColor(u.fc)
+                      this.buildColor(u.fc),
                     )
                   : this.layerElement.setAttribute("fill", "rgba(0,0,0,0)"),
                 u.sc &&
                   (this.layerElement.setAttribute(
                     "stroke",
-                    this.buildColor(u.sc)
+                    this.buildColor(u.sc),
                   ),
                   this.layerElement.setAttribute("stroke-width", u.sw)),
                 this.layerElement.setAttribute("font-size", u.finalSize);
@@ -10186,7 +10186,7 @@
                       (X = this.globalData.fontManager.getCharData(
                         u.finalText[W],
                         P.fStyle,
-                        this.globalData.fontManager.getFontByName(u.f).fFamily
+                        this.globalData.fontManager.getFontByName(u.f).fFamily,
                       )).t
                     )
                       J = new SVGCompElement(X.data, this.globalData, this);
@@ -10219,19 +10219,19 @@
                             u.finalSize / 100 +
                             "," +
                             u.finalSize / 100 +
-                            ")"
+                            ")",
                         );
                   } else
                     I &&
                       H.setAttribute(
                         "transform",
-                        "translate(" + E.props[12] + "," + E.props[13] + ")"
+                        "translate(" + E.props[12] + "," + E.props[13] + ")",
                       ),
                       (H.textContent = T[W].val),
                       H.setAttributeNS(
                         "http://www.w3.org/XML/1998/namespace",
                         "xml:space",
-                        "preserve"
+                        "preserve",
                       );
                 }
                 I && H && H.setAttribute("d", F);
@@ -10309,7 +10309,7 @@
                 (!this.data.singleShape || this._mdf) &&
                   (this.textAnimator.getMeasures(
                     this.textProperty.currentData,
-                    this.lettersChangedFlag
+                    this.lettersChangedFlag,
                   ),
                   this.lettersChangedFlag ||
                     this.textAnimator.lettersChangedFlag))
@@ -10354,7 +10354,7 @@
             (NullElement.prototype.hide = function () {}),
             extendPrototype(
               [BaseElement, TransformElement, HierarchyElement, FrameElement],
-              NullElement
+              NullElement,
             ),
             extendPrototype([BaseRenderer], SVGRendererBase),
             (SVGRendererBase.prototype.createNull = function (u) {
@@ -10375,20 +10375,20 @@
             (SVGRendererBase.prototype.configAnimation = function (u) {
               this.svgElement.setAttribute(
                 "xmlns",
-                "http://www.w3.org/2000/svg"
+                "http://www.w3.org/2000/svg",
               ),
                 this.svgElement.setAttribute(
                   "xmlns:xlink",
-                  "http://www.w3.org/1999/xlink"
+                  "http://www.w3.org/1999/xlink",
                 ),
                 this.renderConfig.viewBoxSize
                   ? this.svgElement.setAttribute(
                       "viewBox",
-                      this.renderConfig.viewBoxSize
+                      this.renderConfig.viewBoxSize,
                     )
                   : this.svgElement.setAttribute(
                       "viewBox",
-                      "0 0 " + u.w + " " + u.h
+                      "0 0 " + u.w + " " + u.h,
                     ),
                 this.renderConfig.viewBoxOnly ||
                   (this.svgElement.setAttribute("width", u.w),
@@ -10401,28 +10401,28 @@
                 this.renderConfig.width &&
                   this.svgElement.setAttribute(
                     "width",
-                    this.renderConfig.width
+                    this.renderConfig.width,
                   ),
                 this.renderConfig.height &&
                   this.svgElement.setAttribute(
                     "height",
-                    this.renderConfig.height
+                    this.renderConfig.height,
                   ),
                 this.renderConfig.className &&
                   this.svgElement.setAttribute(
                     "class",
-                    this.renderConfig.className
+                    this.renderConfig.className,
                   ),
                 this.renderConfig.id &&
                   this.svgElement.setAttribute("id", this.renderConfig.id),
                 void 0 !== this.renderConfig.focusable &&
                   this.svgElement.setAttribute(
                     "focusable",
-                    this.renderConfig.focusable
+                    this.renderConfig.focusable,
                   ),
                 this.svgElement.setAttribute(
                   "preserveAspectRatio",
-                  this.renderConfig.preserveAspectRatio
+                  this.renderConfig.preserveAspectRatio,
                 ),
                 this.animationItem.wrapper.appendChild(this.svgElement);
               var P = this.globalData.defs;
@@ -10441,7 +10441,7 @@
                 S.appendChild(D),
                 this.layerElement.setAttribute(
                   "clip-path",
-                  "url(" + getLocationHref() + "#" + T + ")"
+                  "url(" + getLocationHref() + "#" + T + ")",
                 ),
                 P.appendChild(S),
                 (this.layers = u.layers),
@@ -10566,7 +10566,7 @@
                 FrameElement,
                 RenderableDOMElement,
               ],
-              ICompElement
+              ICompElement,
             ),
             (ICompElement.prototype.initElement = function (u, P, S) {
               this.initFrame(),
@@ -10603,7 +10603,7 @@
                 )
                   (this.completeLayers || this.elements[P]) &&
                     (this.elements[P].prepareFrame(
-                      this.renderedFrame - this.layers[P].st
+                      this.renderedFrame - this.layers[P].st,
                     ),
                     this.elements[P]._mdf && (this._mdf = !0));
               }
@@ -10632,7 +10632,7 @@
             }),
             extendPrototype(
               [SVGRendererBase, ICompElement, SVGBaseElement],
-              SVGCompElement
+              SVGCompElement,
             ),
             (SVGCompElement.prototype.createComp = function (u) {
               return new SVGCompElement(u, this.globalData, this);
@@ -10671,7 +10671,7 @@
                 if (T)
                   for (u.finalTransform.reset(), S = D - 1; S >= 0; S -= 1)
                     u.finalTransform.multiply(
-                      u.transforms[S].transform.mProps.v
+                      u.transforms[S].transform.mProps.v,
                     );
                 u._mdf = T;
               },
@@ -10703,7 +10703,7 @@
                 D.setAttribute("color-interpolation-filters", "sRGB"),
                 D.setAttribute(
                   "values",
-                  "0.3, 0.3, 0.3, 0, 0, 0.3, 0.3, 0.3, 0, 0, 0.3, 0.3, 0.3, 0, 0, 0.3, 0.3, 0.3, 0, 0"
+                  "0.3, 0.3, 0.3, 0, 0, 0.3, 0.3, 0.3, 0, 0, 0.3, 0.3, 0.3, 0, 0, 0.3, 0.3, 0.3, 0, 0",
                 ),
                 S.appendChild(D),
                 P.appendChild(S),
@@ -10756,7 +10756,7 @@
               registeredEffects[T] &&
                 (S = new registeredEffects[T].effect(
                   u.effectsManager.effectElements[P],
-                  u
+                  u,
                 )),
                 S && this.filters.push(S);
             }
@@ -10778,7 +10778,7 @@
                 (this.viewData[S] = ShapePropertyFactory.getShapeProp(
                   this.element,
                   this.masksProperties[S],
-                  3
+                  3,
                 ));
             (this.hasMasks = T), T && this.element.addRenderableComponent(this);
           }
@@ -10808,7 +10808,7 @@
                       P.lineTo(this.element.globalData.compSize.w, 0),
                       P.lineTo(
                         this.element.globalData.compSize.w,
-                        this.element.globalData.compSize.h
+                        this.element.globalData.compSize.h,
                       ),
                       P.lineTo(0, this.element.globalData.compSize.h),
                       P.lineTo(0, 0)),
@@ -10982,35 +10982,35 @@
               (this.rendererType = "canvas"),
               this.renderConfig.clearCanvas &&
                 ((this.ctxTransform = this.contextData.transform.bind(
-                  this.contextData
+                  this.contextData,
                 )),
                 (this.ctxOpacity = this.contextData.opacity.bind(
-                  this.contextData
+                  this.contextData,
                 )),
                 (this.ctxFillStyle = this.contextData.fillStyle.bind(
-                  this.contextData
+                  this.contextData,
                 )),
                 (this.ctxStrokeStyle = this.contextData.strokeStyle.bind(
-                  this.contextData
+                  this.contextData,
                 )),
                 (this.ctxLineWidth = this.contextData.lineWidth.bind(
-                  this.contextData
+                  this.contextData,
                 )),
                 (this.ctxLineCap = this.contextData.lineCap.bind(
-                  this.contextData
+                  this.contextData,
                 )),
                 (this.ctxLineJoin = this.contextData.lineJoin.bind(
-                  this.contextData
+                  this.contextData,
                 )),
                 (this.ctxMiterLimit = this.contextData.miterLimit.bind(
-                  this.contextData
+                  this.contextData,
                 )),
                 (this.ctxFill = this.contextData.fill.bind(this.contextData)),
                 (this.ctxFillRect = this.contextData.fillRect.bind(
-                  this.contextData
+                  this.contextData,
                 )),
                 (this.ctxStroke = this.contextData.stroke.bind(
-                  this.contextData
+                  this.contextData,
                 )),
                 (this.save = this.contextData.save.bind(this.contextData)));
           }
@@ -11155,7 +11155,7 @@
                 this.buffers.push(P);
                 var S = assetLoader.createCanvas(
                   u.canvas.width,
-                  u.canvas.height
+                  u.canvas.height,
                 );
                 this.buffers.push(S),
                   this.data.tt >= 3 &&
@@ -11180,7 +11180,7 @@
               (this.maskManager = new CVMaskElement(this.data, this)),
                 (this.transformEffects =
                   this.renderableEffectsManager.getEffects(
-                    effectTypes.TRANSFORM_EFFECT
+                    effectTypes.TRANSFORM_EFFECT,
                   ));
             },
             hideElement: function () {
@@ -11200,7 +11200,7 @@
                 this.transformCanvas.tx,
                 this.transformCanvas.ty,
                 this.transformCanvas.w * this.transformCanvas.sx,
-                this.transformCanvas.h * this.transformCanvas.sy
+                this.transformCanvas.h * this.transformCanvas.sy,
               );
             },
             prepareLayer: function () {
@@ -11226,7 +11226,7 @@
                   this.canvasContext.setTransform(this.currentTransform),
                   this.comp
                     .getElementById(
-                      "tp" in this.data ? this.data.tp : this.data.ind - 1
+                      "tp" in this.data ? this.data.tp : this.data.ind - 1,
                     )
                     .renderFrame(!0),
                   this.canvasContext.setTransform(1, 0, 0, 1, 0, 0),
@@ -11257,10 +11257,10 @@
                 this.prepareLayer(),
                   this.globalData.renderer.save(P),
                   this.globalData.renderer.ctxTransform(
-                    this.finalTransform.localMat.props
+                    this.finalTransform.localMat.props,
                   ),
                   this.globalData.renderer.ctxOpacity(
-                    this.finalTransform.localOpacity
+                    this.finalTransform.localOpacity,
                   ),
                   this.renderInnerContent(),
                   this.globalData.renderer.restore(P),
@@ -11294,7 +11294,7 @@
                 FrameElement,
                 RenderableElement,
               ],
-              CVShapeElement
+              CVShapeElement,
             ),
             (CVShapeElement.prototype.initElement =
               RenderableDOMElement.prototype.initElement),
@@ -11309,7 +11309,7 @@
                 this.itemsData,
                 this.prevViewData,
                 !0,
-                []
+                [],
               );
             }),
             (CVShapeElement.prototype.createStyleElement = function (u, P) {
@@ -11342,14 +11342,14 @@
                       u.h || { k: 0 },
                       0,
                       0.01,
-                      this
+                      this,
                     )),
                     (D.a = PropertyFactory.getProp(
                       this,
                       u.a || { k: 0 },
                       0,
                       degToRads,
-                      this
+                      this,
                     )),
                     (D.g = new GradientProperty(this, u.g, this))),
                 (D.o = PropertyFactory.getProp(this, u.o, 0, 0.01, this)),
@@ -11384,7 +11384,7 @@
                   mProps: TransformPropertyFactory.getTransformProperty(
                     this,
                     u,
-                    this
+                    this,
                   ),
                 },
               };
@@ -11394,7 +11394,7 @@
                 this,
                 u,
                 this.stylesList,
-                this.transformsManager
+                this.transformsManager,
               );
               return this.shapes.push(P), this.addShapeToModifiers(P), P;
             }),
@@ -11410,7 +11410,7 @@
                   this.itemsData,
                   this.prevViewData,
                   !0,
-                  []
+                  [],
                 ),
                   P = this.dynamicProperties.length,
                   u = 0;
@@ -11492,7 +11492,7 @@
                         ? ((L = P[M]).closed = !1)
                         : ((L = ShapeModifiers.getModifier(u[M].ty)).init(
                             this,
-                            u[M]
+                            u[M],
                           ),
                           (P[M] = L),
                           this.shapeModifiers.push(L)),
@@ -11527,7 +11527,7 @@
                   this.transformHelper,
                   this.shapesData,
                   this.itemsData,
-                  !0
+                  !0,
                 );
             }),
             (CVShapeElement.prototype.renderShapeTransform = function (u, P) {
@@ -11597,7 +11597,7 @@
                             E[D].pts[2],
                             E[D].pts[3],
                             E[D].pts[4],
-                            E[D].pts[5]
+                            E[D].pts[5],
                           )
                         : V.closePath();
                     ("st" === F || "gs" === F) &&
@@ -11656,7 +11656,7 @@
                           pts: I.applyToTriplePoints(
                             L.o[S - 1],
                             L.i[S],
-                            L.v[S]
+                            L.v[S],
                           ),
                         });
                     1 === D &&
@@ -11671,7 +11671,7 @@
                           pts: I.applyToTriplePoints(
                             L.o[S - 1],
                             L.i[0],
-                            L.v[0]
+                            L.v[0],
                           ),
                         }),
                         M.push({ t: "z" }));
@@ -11720,7 +11720,7 @@
                   T = E.createLinearGradient(F[0], F[1], I[0], I[1]);
                 else {
                   var L = Math.sqrt(
-                      Math.pow(F[0] - I[0], 2) + Math.pow(F[1] - I[1], 2)
+                      Math.pow(F[0] - I[0], 2) + Math.pow(F[1] - I[1], 2),
                     ),
                     R = Math.atan2(I[1] - F[1], I[0] - F[0]),
                     V = P.h.v;
@@ -11745,7 +11745,7 @@
                         Y[4 * M + 3] +
                         "," +
                         H +
-                        ")"
+                        ")",
                     );
                 D.grd = T;
               }
@@ -11787,7 +11787,7 @@
                 RenderableElement,
                 ITextElement,
               ],
-              CVTextElement
+              CVTextElement,
             ),
             (CVTextElement.prototype.tHelper =
               createTag("canvas").getContext("2d")),
@@ -11836,7 +11836,7 @@
                   ((S = this.globalData.fontManager.getCharData(
                     O.finalText[u],
                     W.fStyle,
-                    this.globalData.fontManager.getFontByName(O.f).fFamily
+                    this.globalData.fontManager.getFontByName(O.f).fFamily,
                   )) &&
                     S.data) ||
                   {}),
@@ -11859,7 +11859,7 @@
                       1 === T &&
                         V.push(
                           H.applyToX(L.v[0][0], L.v[0][1], 0),
-                          H.applyToY(L.v[0][0], L.v[0][1], 0)
+                          H.applyToY(L.v[0][0], L.v[0][1], 0),
                         ),
                         V.push(
                           H.applyToX(L.o[T - 1][0], L.o[T - 1][1], 0),
@@ -11867,7 +11867,7 @@
                           H.applyToX(L.i[T][0], L.i[T][1], 0),
                           H.applyToY(L.i[T][0], L.i[T][1], 0),
                           H.applyToX(L.v[T][0], L.v[T][1], 0),
-                          H.applyToY(L.v[T][0], L.v[T][1], 0)
+                          H.applyToY(L.v[T][0], L.v[T][1], 0),
                         );
                     V.push(
                       H.applyToX(L.o[T - 1][0], L.o[T - 1][1], 0),
@@ -11875,7 +11875,7 @@
                       H.applyToX(L.i[0][0], L.i[0][1], 0),
                       H.applyToY(L.i[0][0], L.i[0][1], 0),
                       H.applyToX(L.v[0][0], L.v[0][1], 0),
-                      H.applyToY(L.v[0][0], L.v[0][1], 0)
+                      H.applyToY(L.v[0][0], L.v[0][1], 0),
                     ),
                       (R[$] = V),
                       ($ += 1);
@@ -11896,7 +11896,7 @@
                 this.data.singleShape ||
                   this.textAnimator.getMeasures(
                     this.textProperty.currentData,
-                    this.lettersChangedFlag
+                    this.lettersChangedFlag,
                   );
               var u,
                 P,
@@ -11946,7 +11946,7 @@
                           I[T + 2],
                           I[T + 3],
                           I[T + 4],
-                          I[T + 5]
+                          I[T + 5],
                         );
                     this.globalData.canvasContext.closePath(), G.ctxFill();
                   }
@@ -11981,7 +11981,7 @@
                           I[T + 2],
                           I[T + 3],
                           I[T + 4],
-                          I[T + 5]
+                          I[T + 5],
                         );
                     this.globalData.canvasContext.closePath(), G.ctxStroke();
                   }
@@ -11997,7 +11997,7 @@
                 FrameElement,
                 RenderableElement,
               ],
-              CVImageElement
+              CVImageElement,
             ),
             (CVImageElement.prototype.initElement =
               SVGShapeElement.prototype.initElement),
@@ -12034,7 +12034,7 @@
                     0,
                     0,
                     this.assetData.w,
-                    this.assetData.h
+                    this.assetData.h,
                   ),
                   (this.img = S);
               }
@@ -12054,7 +12054,7 @@
                 FrameElement,
                 RenderableElement,
               ],
-              CVSolidElement
+              CVSolidElement,
             ),
             (CVSolidElement.prototype.initElement =
               SVGShapeElement.prototype.initElement),
@@ -12066,7 +12066,7 @@
                   0,
                   0,
                   this.data.sw,
-                  this.data.sh
+                  this.data.sh,
                 );
             }),
             extendPrototype([BaseRenderer], CanvasRendererBase),
@@ -12097,7 +12097,7 @@
                   u[4],
                   u[5],
                   u[12],
-                  u[13]
+                  u[13],
                 );
             }),
             (CanvasRendererBase.prototype.ctxOpacity = function (u) {
@@ -12160,19 +12160,19 @@
                   (P["-webkit-transform"] = S),
                   (P.contentVisibility = this.renderConfig.contentVisibility),
                   this.animationItem.wrapper.appendChild(
-                    this.animationItem.container
+                    this.animationItem.container,
                   ),
                   (this.canvasContext =
                     this.animationItem.container.getContext("2d")),
                   this.renderConfig.className &&
                     this.animationItem.container.setAttribute(
                       "class",
-                      this.renderConfig.className
+                      this.renderConfig.className,
                     ),
                   this.renderConfig.id &&
                     this.animationItem.container.setAttribute(
                       "id",
-                      this.renderConfig.id
+                      this.renderConfig.id,
                     );
               } else this.canvasContext = this.renderConfig.context;
               this.contextData.setContext(this.canvasContext),
@@ -12198,7 +12198,7 @@
             }),
             (CanvasRendererBase.prototype.updateContainerSize = function (
               u,
-              P
+              P,
             ) {
               if (
                 (this.reset(),
@@ -12308,7 +12308,7 @@
                   0,
                   0,
                   this.transformCanvas.w,
-                  this.transformCanvas.h
+                  this.transformCanvas.h,
                 ),
                 this.canvasContext.closePath(),
                 this.canvasContext.clip(),
@@ -12362,7 +12362,7 @@
                           0,
                           0,
                           this.transformCanvas.w,
-                          this.transformCanvas.h
+                          this.transformCanvas.h,
                         )
                       : this.save(),
                       S = D - 1;
@@ -12427,7 +12427,7 @@
                 D[4],
                 D[5],
                 D[12],
-                D[13]
+                D[13],
               ),
                 (u ||
                   (-1 !== S.opacity && this.currentOpacity !== S.opacity)) &&
@@ -12505,7 +12505,7 @@
                 S[4],
                 S[5],
                 S[12],
-                S[13]
+                S[13],
               );
             }),
             (CVContextData.prototype.opacity = function (u) {
@@ -12549,7 +12549,7 @@
             }),
             extendPrototype(
               [CanvasRendererBase, ICompElement, CVBaseElement],
-              CVCompElement
+              CVCompElement,
             ),
             (CVCompElement.prototype.renderInnerContent = function () {
               var u,
@@ -12636,7 +12636,7 @@
                 this.maskManager = new MaskElement(
                   this.data,
                   this,
-                  this.globalData
+                  this.globalData,
                 );
               },
               addEffects: function () {},
@@ -12657,7 +12657,7 @@
                 FrameElement,
                 RenderableDOMElement,
               ],
-              HSolidElement
+              HSolidElement,
             ),
             (HSolidElement.prototype.createContent = function () {
               var u;
@@ -12683,7 +12683,7 @@
                 FrameElement,
                 RenderableElement,
               ],
-              HShapeElement
+              HShapeElement,
             ),
             (HShapeElement.prototype._renderShapeFrame =
               HShapeElement.prototype.renderInnerContent),
@@ -12709,7 +12709,7 @@
                 this.shapesContainer,
                 0,
                 [],
-                !0
+                !0,
               ),
                 this.filterUniqueShapes(),
                 (this.shapeCont = u);
@@ -12723,7 +12723,7 @@
             }),
             (HShapeElement.prototype.calculateShapeBoundingBox = function (
               u,
-              P
+              P,
             ) {
               var S,
                 D,
@@ -12892,7 +12892,7 @@
                           " " +
                           this.currentBBox.w +
                           " " +
-                          this.currentBBox.h
+                          this.currentBBox.h,
                       );
                     var D = this.shapeCont.style,
                       T =
@@ -12916,7 +12916,7 @@
                 RenderableDOMElement,
                 ITextElement,
               ],
-              HTextElement
+              HTextElement,
             ),
             (HTextElement.prototype.createContent = function () {
               if (((this.isMasked = this.checkMasks()), this.isMasked)) {
@@ -12969,7 +12969,7 @@
                         ? (O = this.textPaths[L])
                         : ((O = createNS("path")).setAttribute(
                             "stroke-linecap",
-                            lineCapEnum[1]
+                            lineCapEnum[1],
                           ),
                           O.setAttribute("stroke-linejoin", lineJoinEnum[2]),
                           O.setAttribute("stroke-miterlimit", "4")),
@@ -13000,7 +13000,7 @@
                     H = this.globalData.fontManager.getCharData(
                       u.finalText[R],
                       D.fStyle,
-                      this.globalData.fontManager.getFontByName(u.f).fFamily
+                      this.globalData.fontManager.getFontByName(u.f).fFamily,
                     );
                   if (
                     ((Y = H ? H.data : null),
@@ -13030,7 +13030,7 @@
                             " " +
                             (X.width + 2) +
                             " " +
-                            (X.height + 2)
+                            (X.height + 2),
                         );
                       var J = G.style,
                         K =
@@ -13047,7 +13047,7 @@
                   O.setAttributeNS(
                     "http://www.w3.org/XML/1998/namespace",
                     "xml:space",
-                    "preserve"
+                    "preserve",
                   ),
                   this.isMasked)
                 )
@@ -13080,7 +13080,7 @@
                       " " +
                       this.compW +
                       " " +
-                      this.compH
+                      this.compH,
                   ),
                     (u = this.svgElement.style);
                   var u,
@@ -13101,7 +13101,7 @@
               if (
                 (this.textAnimator.getMeasures(
                   this.textProperty.currentData,
-                  this.lettersChangedFlag
+                  this.lettersChangedFlag,
                 ),
                 this.lettersChangedFlag || this.textAnimator.lettersChangedFlag)
               ) {
@@ -13157,7 +13157,7 @@
                           " " +
                           this.currentBBox.w +
                           " " +
-                          this.currentBBox.h
+                          this.currentBBox.h,
                       ),
                       (u = this.svgElement.style);
                     var O =
@@ -13173,7 +13173,7 @@
             }),
             extendPrototype(
               [BaseElement, FrameElement, HierarchyElement],
-              HCameraElement
+              HCameraElement,
             ),
             (HCameraElement.prototype.setup = function () {
               var u,
@@ -13234,7 +13234,7 @@
                     ? this.mat.translate(
                         -this.p.v[0],
                         -this.p.v[1],
-                        this.p.v[2]
+                        this.p.v[2],
                       )
                     : this.mat.translate(-this.px.v, -this.py.v, this.pz.v),
                   this.a)
@@ -13255,10 +13255,10 @@
                               this.py.v - this.a.v[1],
                               this.pz.v - this.a.v[2],
                             ])[0],
-                        2
+                        2,
                       ) +
                         Math.pow(T[1], 2) +
-                        Math.pow(T[2], 2)
+                        Math.pow(T[2], 2),
                     ),
                     E = [T[0] / M, T[1] / M, T[2] / M],
                     F = Math.sqrt(E[2] * E[2] + E[0] * E[0]),
@@ -13277,7 +13277,7 @@
                   this.mat.translate(
                     this.globalData.compSize.w / 2,
                     this.globalData.compSize.h / 2,
-                    0
+                    0,
                   ),
                   this.mat.translate(0, 0, this.pe.v);
                 var R = !this._prevMat.equals(this.mat);
@@ -13323,7 +13323,7 @@
                 FrameElement,
                 RenderableElement,
               ],
-              HImageElement
+              HImageElement,
             ),
             (HImageElement.prototype.createContent = function () {
               var u = this.globalData.getAssetsPath(this.assetData),
@@ -13333,12 +13333,12 @@
                   this.imageElem.setAttribute("width", this.assetData.w + "px"),
                   this.imageElem.setAttribute(
                     "height",
-                    this.assetData.h + "px"
+                    this.assetData.h + "px",
                   ),
                   this.imageElem.setAttributeNS(
                     "http://www.w3.org/1999/xlink",
                     "href",
-                    u
+                    u,
                   ),
                   this.layerElement.appendChild(this.imageElem),
                   this.baseElement.setAttribute("width", this.assetData.w),
@@ -13410,7 +13410,7 @@
             (HybridRendererBase.prototype.createNull =
               SVGRenderer.prototype.createNull),
             (HybridRendererBase.prototype.getThreeDContainerByPos = function (
-              u
+              u,
             ) {
               for (var P = 0, S = this.threeDElements.length; P < S; ) {
                 if (
@@ -13424,7 +13424,7 @@
             }),
             (HybridRendererBase.prototype.createThreeDContainer = function (
               u,
-              P
+              P,
             ) {
               var S,
                 D,
@@ -13466,7 +13466,7 @@
                     (P.endPos = Math.max(P.endPos, u)));
               for (u = (S = this.threeDElements.length) - 1; u >= 0; u -= 1)
                 this.resizerElem.appendChild(
-                  this.threeDElements[u].perspectiveElem
+                  this.threeDElements[u].perspectiveElem,
                 );
             }),
             (HybridRendererBase.prototype.addTo3dContainer = function (u, P) {
@@ -13592,7 +13592,7 @@
               }
             }),
             (HybridRendererBase.prototype.searchExtraCompositions = function (
-              u
+              u,
             ) {
               var P,
                 S = u.length,
@@ -13606,7 +13606,7 @@
             }),
             extendPrototype(
               [HybridRendererBase, ICompElement, HBaseElement],
-              HCompElement
+              HCompElement,
             ),
             (HCompElement.prototype._createBaseContainerElements =
               HCompElement.prototype.createContainerElements),
@@ -13698,9 +13698,9 @@
                       : null === S
                       ? H()
                       : S,
-                    3
+                    3,
                   ),
-                  V
+                  V,
                 ),
                 J = new N(V),
                 K = function () {
@@ -13851,21 +13851,21 @@
                   0,
                   0.833,
                   0.833,
-                  "easeIn"
+                  "easeIn",
                 ).get,
                 easeOutBez = BezierFactory.getBezierEasing(
                   0.167,
                   0.167,
                   0.667,
                   1,
-                  "easeOut"
+                  "easeOut",
                 ).get,
                 easeInOutBez = BezierFactory.getBezierEasing(
                   0.33,
                   0,
                   0.667,
                   1,
-                  "easeInOut"
+                  "easeInOut",
                 ).get;
               function sum(u, P) {
                 var S = _typeof$1(u),
@@ -14127,7 +14127,7 @@
                       M[0] + u[T][0],
                       M[1] + u[T][1],
                       T,
-                      !0
+                      !0,
                     );
                 return I;
               }
@@ -14190,7 +14190,7 @@
                   expression_function = eval(
                     "[function _expression_function(){" +
                       val +
-                      ";scoped_bm_rt=$bm_rt}]"
+                      ";scoped_bm_rt=$bm_rt}]",
                   )[0],
                   numKeys = property.kf ? data.k.length : 0,
                   active = !this.data || !0 !== this.data.hd,
@@ -14237,7 +14237,7 @@
                   this.getVelocityAtTime &&
                     (velocityAtTime = this.getVelocityAtTime.bind(this));
                 var comp = elem.comp.globalData.projectInterface.bind(
-                  elem.comp.globalData.projectInterface
+                  elem.comp.globalData.projectInterface,
                 );
                 function lookAt(u, P) {
                   var S = [P[0] - u[0], P[1] - u[1], P[2] - u[2]],
@@ -14352,7 +14352,7 @@
                 }
                 function posterizeTime(u) {
                   value = valueAtTime(
-                    (time = 0 === u ? 0 : Math.floor(time * u) / u)
+                    (time = 0 === u ? 0 : Math.floor(time * u) / u),
                   );
                 }
                 var index = elem.data.ind,
@@ -14508,10 +14508,10 @@
                   S.length = 0;
                 }
                 (u.renderer.compInterface = CompExpressionInterface(
-                  u.renderer
+                  u.renderer,
                 )),
                   u.renderer.globalData.projectInterface.registerComposition(
-                    u.renderer
+                    u.renderer,
                   ),
                   (u.renderer.globalData.pushExpression = D),
                   (u.renderer.globalData.popExpression = T),
@@ -14781,7 +14781,7 @@
                     D = this._elem.hierarchy.length;
                   for (S = 0; S < D; S += 1)
                     this._elem.hierarchy[S].finalTransform.mProp.applyToMatrix(
-                      u
+                      u,
                     );
                 }
                 return u.applyToPointArray(P[0], P[1], P[2] || 0);
@@ -14792,7 +14792,7 @@
                     D = this._elem.hierarchy.length;
                   for (S = 0; S < D; S += 1)
                     this._elem.hierarchy[S].finalTransform.mProp.applyToMatrix(
-                      u
+                      u,
                     );
                 }
                 return u.inversePoint(P);
@@ -14808,7 +14808,7 @@
                     D = this._elem.hierarchy.length;
                   for (S = 0; S < D; S += 1)
                     this._elem.hierarchy[S].finalTransform.mProp.applyToMatrix(
-                      P
+                      P,
                     );
                 }
                 return P.inversePoint(u);
@@ -14861,7 +14861,7 @@
                 var N,
                   G = getDescriptor(
                     (N = TransformExpressionInterface(L.finalTransform.mProp)),
-                    "anchorPoint"
+                    "anchorPoint",
                   );
                 return (
                   Object.defineProperties(O, {
@@ -14944,8 +14944,8 @@
                           S.ef[F],
                           D.effectElements[F],
                           D.effectElements[F].propertyGroup,
-                          M
-                        )
+                          M,
+                        ),
                       )
                     : L.push(P(D.effectElements[F], S.ef[F].ty, M, I));
                 return (
@@ -15102,7 +15102,7 @@
                 var E = I(
                   P.it[P.it.length - 1],
                   S.it[S.it.length - 1],
-                  M.propertyGroup
+                  M.propertyGroup,
                 );
                 return (
                   (M.transform = E),
@@ -15127,7 +15127,7 @@
                   E = I(
                     u.it[u.it.length - 1],
                     S.it[S.it.length - 1],
-                    T.propertyGroup
+                    T.propertyGroup,
                   );
                 return (
                   (T.content = M),
@@ -15290,29 +15290,29 @@
                 var T = propertyGroupFactory(D, S);
                 return (
                   P.transform.mProps.o.setGroupProperty(
-                    PropertyInterface("Opacity", T)
+                    PropertyInterface("Opacity", T),
                   ),
                   P.transform.mProps.p.setGroupProperty(
-                    PropertyInterface("Position", T)
+                    PropertyInterface("Position", T),
                   ),
                   P.transform.mProps.a.setGroupProperty(
-                    PropertyInterface("Anchor Point", T)
+                    PropertyInterface("Anchor Point", T),
                   ),
                   P.transform.mProps.s.setGroupProperty(
-                    PropertyInterface("Scale", T)
+                    PropertyInterface("Scale", T),
                   ),
                   P.transform.mProps.r.setGroupProperty(
-                    PropertyInterface("Rotation", T)
+                    PropertyInterface("Rotation", T),
                   ),
                   P.transform.mProps.sk &&
                     (P.transform.mProps.sk.setGroupProperty(
-                      PropertyInterface("Skew", T)
+                      PropertyInterface("Skew", T),
                     ),
                     P.transform.mProps.sa.setGroupProperty(
-                      PropertyInterface("Skew Angle", T)
+                      PropertyInterface("Skew Angle", T),
                     )),
                   P.transform.op.setGroupProperty(
-                    PropertyInterface("Opacity", T)
+                    PropertyInterface("Opacity", T),
                   ),
                   Object.defineProperties(D, {
                     opacity: {
@@ -15392,17 +15392,17 @@
                   (D.propertyIndex = u.ix),
                   M.or.setGroupProperty(PropertyInterface("Outer Radius", T)),
                   M.os.setGroupProperty(
-                    PropertyInterface("Outer Roundness", T)
+                    PropertyInterface("Outer Roundness", T),
                   ),
                   M.pt.setGroupProperty(PropertyInterface("Points", T)),
                   M.p.setGroupProperty(PropertyInterface("Position", T)),
                   M.r.setGroupProperty(PropertyInterface("Rotation", T)),
                   u.ir &&
                     (M.ir.setGroupProperty(
-                      PropertyInterface("Inner Radius", T)
+                      PropertyInterface("Inner Radius", T),
                     ),
                     M.is.setGroupProperty(
-                      PropertyInterface("Inner Roundness", T)
+                      PropertyInterface("Inner Roundness", T),
                     )),
                   Object.defineProperties(D, {
                     position: { get: ExpressionPropertyInterface(M.p) },
@@ -15609,7 +15609,7 @@
                   (S.x = !0),
                   (S.initiateExpression = ExpressionManager.initiateExpression),
                   S.effectsSequence.push(
-                    S.initiateExpression(u, P, S).bind(S)
+                    S.initiateExpression(u, P, S).bind(S),
                   ));
               },
               getSpeedAtTime: function (u) {
@@ -15652,7 +15652,7 @@
                         : 0),
                     (this._cachingAtTime.value = this.interpolateValue(
                       u,
-                      this._cachingAtTime
+                      this._cachingAtTime,
                     )),
                     (this._cachingAtTime.lastFrame = u)),
                   this._cachingAtTime.value
@@ -15692,20 +15692,20 @@
                 if (Math.floor((I - T) / D) % 2 != 0)
                   return this.getValueAtTime(
                     (D - ((I - T) % D) + T) / this.comp.globalData.frameRate,
-                    0
+                    0,
                   );
               } else if ("offset" === u) {
                 var V = this.getValueAtTime(
                     T / this.comp.globalData.frameRate,
-                    0
+                    0,
                   ),
                   O = this.getValueAtTime(
                     R / this.comp.globalData.frameRate,
-                    0
+                    0,
                   ),
                   N = this.getValueAtTime(
                     (((I - T) % D) + T) / this.comp.globalData.frameRate,
-                    0
+                    0,
                   ),
                   G = Math.floor((I - T) / D);
                 if (this.pv.length) {
@@ -15717,11 +15717,11 @@
               } else if ("continue" === u) {
                 var W = this.getValueAtTime(
                     R / this.comp.globalData.frameRate,
-                    0
+                    0,
                   ),
                   Y = this.getValueAtTime(
                     (R - 0.001) / this.comp.globalData.frameRate,
-                    0
+                    0,
                   );
                 if (this.pv.length) {
                   for (M = 0, E = (F = Array(W.length)).length; M < E; M += 1)
@@ -15736,7 +15736,7 @@
               }
               return this.getValueAtTime(
                 (((I - T) % D) + T) / this.comp.globalData.frameRate,
-                0
+                0,
               );
             }
             function P(u, P, S) {
@@ -15764,20 +15764,20 @@
                 if (Math.floor((R - I) / D) % 2 == 0)
                   return this.getValueAtTime(
                     (((R - I) % D) + R) / this.comp.globalData.frameRate,
-                    0
+                    0,
                   );
               } else if ("offset" === u) {
                 var V = this.getValueAtTime(
                     R / this.comp.globalData.frameRate,
-                    0
+                    0,
                   ),
                   O = this.getValueAtTime(
                     T / this.comp.globalData.frameRate,
-                    0
+                    0,
                   ),
                   N = this.getValueAtTime(
                     (D - ((R - I) % D) + R) / this.comp.globalData.frameRate,
-                    0
+                    0,
                   ),
                   G = Math.floor((R - I) / D) + 1;
                 if (this.pv.length) {
@@ -15789,11 +15789,11 @@
               } else if ("continue" === u) {
                 var W = this.getValueAtTime(
                     R / this.comp.globalData.frameRate,
-                    0
+                    0,
                   ),
                   Y = this.getValueAtTime(
                     (R + 0.001) / this.comp.globalData.frameRate,
-                    0
+                    0,
                   );
                 if (this.pv.length) {
                   for (M = 0, E = (F = Array(W.length)).length; M < E; M += 1)
@@ -15804,7 +15804,7 @@
               }
               return this.getValueAtTime(
                 (D - (((R - I) % D) + R)) / this.comp.globalData.frameRate,
-                0
+                0,
               );
             }
             function S(u, P) {
@@ -15850,7 +15850,7 @@
                 P.translate(
                   -S[0] * this.a.mult,
                   -S[1] * this.a.mult,
-                  S[2] * this.a.mult
+                  S[2] * this.a.mult,
                 );
               }
               if (this.appliedTransformations < 2) {
@@ -15858,7 +15858,7 @@
                 P.scale(
                   D[0] * this.s.mult,
                   D[1] * this.s.mult,
-                  D[2] * this.s.mult
+                  D[2] * this.s.mult,
                 );
               }
               if (this.sk && this.appliedTransformations < 3) {
@@ -15889,7 +15889,7 @@
                   P.translate(
                     V * this.px.mult,
                     O * this.py.mult,
-                    -N * this.pz.mult
+                    -N * this.pz.mult,
                   );
                 } else P.translate(V * this.px.mult, O * this.py.mult, 0);
               } else {
@@ -15897,7 +15897,7 @@
                 P.translate(
                   G[0] * this.p.mult,
                   G[1] * this.p.mult,
-                  -G[2] * this.p.mult
+                  -G[2] * this.p.mult,
                 );
               }
               return P;
@@ -15935,7 +15935,7 @@
                   this.interpolateShape(
                     u,
                     this._cachingAtTime.shapeValue,
-                    this._cachingAtTime
+                    this._cachingAtTime,
                   )),
                 this._cachingAtTime.shapeValue
               );
@@ -15960,7 +15960,7 @@
                 0 !== M &&
                   (R = createTypedArray(
                     "float32",
-                    1 === T.a ? T.k[0].s.length : T.k.length
+                    1 === T.a ? T.k[0].s.length : T.k.length,
                   )),
                 (L._cachingAtTime = {
                   lastFrame: initialDefaultFrame,
@@ -16029,7 +16029,7 @@
                       D.o[R],
                       D.i[V],
                       O,
-                      M[F]
+                      M[F],
                     );
                     break;
                   }
@@ -16094,7 +16094,7 @@
                     ExpressionManager.initiateExpression.bind(this)(
                       this.elem,
                       this.data.d,
-                      this
+                      this,
                     )),
                   this.addEffect(this.getExpressionValue.bind(this)),
                   !0)
@@ -16151,7 +16151,7 @@
               M.setAttribute("color-interpolation-filters", "sRGB"),
               M.setAttribute(
                 "values",
-                "1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"
+                "1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0",
               ),
               M.setAttribute("result", D + "_tint_2"),
               u.appendChild(M),
@@ -16166,7 +16166,7 @@
               T.setAttribute("color-interpolation-filters", "sRGB"),
               T.setAttribute(
                 "values",
-                "1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"
+                "1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0",
               ),
               T.setAttribute("result", D),
               u.appendChild(T),
@@ -16185,7 +16185,7 @@
               T.setAttribute("color-interpolation-filters", "linearRGB"),
               T.setAttribute(
                 "values",
-                "0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"
+                "0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0",
               ),
               u.appendChild(T);
             var M = createNS("feComponentTransfer");
@@ -16269,7 +16269,7 @@
                 1 !== T[7].p.v) &&
                 ((M = createNS("feComponentTransfer")).setAttribute(
                   "color-interpolation-filters",
-                  "sRGB"
+                  "sRGB",
                 ),
                 M.setAttribute("result", D),
                 u.appendChild(M),
@@ -16321,7 +16321,7 @@
                   D = this.filterManager.effectElements[2].p.v / 100;
                 this.linearFilter.setAttribute(
                   "values",
-                  linearFilterValue + " " + D + " 0"
+                  linearFilterValue + " " + D + " 0",
                 ),
                   this.matrixFilter.setAttribute(
                     "values",
@@ -16337,7 +16337,7 @@
                       (S[2] - P[2]) +
                       " 0 0 0 " +
                       P[2] +
-                      " 0 0 0 1 0"
+                      " 0 0 0 1 0",
                   );
               }
             }),
@@ -16355,7 +16355,7 @@
                     P[2] +
                     " 0 0 0 " +
                     S +
-                    " 0"
+                    " 0",
                 );
               }
             }),
@@ -16393,7 +16393,7 @@
                 for (
                   F.setAttribute(
                     "mask",
-                    "url(" + getLocationHref() + "#" + E + ")"
+                    "url(" + getLocationHref() + "#" + E + ")",
                   );
                   T[0];
 
@@ -16451,13 +16451,13 @@
                         0.01 *
                         Math.min(
                           this.filterManager.effectElements[7].p.v,
-                          this.filterManager.effectElements[8].p.v
+                          this.filterManager.effectElements[8].p.v,
                         ),
                       I =
                         0.01 *
                         Math.max(
                           this.filterManager.effectElements[7].p.v,
-                          this.filterManager.effectElements[8].p.v
+                          this.filterManager.effectElements[8].p.v,
                         ),
                       L = T.getTotalLength();
                     M = "0 0 0 " + L * F + " ";
@@ -16467,7 +16467,7 @@
                           2 *
                             this.filterManager.effectElements[4].p.v *
                             this.filterManager.effectElements[9].p.v *
-                            0.01)
+                            0.01),
                     );
                     for (E = 0; E < R; E += 1)
                       M +=
@@ -16491,12 +16491,12 @@
                 ((u || this.filterManager.effectElements[4].p._mdf) &&
                   this.pathMasker.setAttribute(
                     "stroke-width",
-                    2 * this.filterManager.effectElements[4].p.v
+                    2 * this.filterManager.effectElements[4].p.v,
                   ),
                 (u || this.filterManager.effectElements[6].p._mdf) &&
                   this.pathMasker.setAttribute(
                     "opacity",
-                    this.filterManager.effectElements[6].p.v
+                    this.filterManager.effectElements[6].p.v,
                   ),
                 (1 === this.filterManager.effectElements[10].p.v ||
                   2 === this.filterManager.effectElements[10].p.v) &&
@@ -16511,7 +16511,7 @@
                     bmFloor(255 * V[1]) +
                     "," +
                     bmFloor(255 * V[2]) +
-                    ")"
+                    ")",
                 );
               }
             }),
@@ -16537,7 +16537,7 @@
               P,
               S,
               D,
-              T
+              T,
             ) {
               for (
                 var M,
@@ -16584,7 +16584,7 @@
                     S[4].p.v,
                     S[5].p.v,
                     S[6].p.v,
-                    S[7].p.v
+                    S[7].p.v,
                   )),
                   this.feFuncRComposed.setAttribute("tableValues", P),
                   this.feFuncGComposed.setAttribute("tableValues", P),
@@ -16601,7 +16601,7 @@
                       S[11].p.v,
                       S[12].p.v,
                       S[13].p.v,
-                      S[14].p.v
+                      S[14].p.v,
                     )),
                     this.feFuncR.setAttribute("tableValues", P)),
                   this.feFuncG &&
@@ -16616,7 +16616,7 @@
                       S[18].p.v,
                       S[19].p.v,
                       S[20].p.v,
-                      S[21].p.v
+                      S[21].p.v,
                     )),
                     this.feFuncG.setAttribute("tableValues", P)),
                   this.feFuncB &&
@@ -16631,7 +16631,7 @@
                       S[25].p.v,
                       S[26].p.v,
                       S[27].p.v,
-                      S[28].p.v
+                      S[28].p.v,
                     )),
                     this.feFuncB.setAttribute("tableValues", P)),
                   this.feFuncA &&
@@ -16646,7 +16646,7 @@
                       S[32].p.v,
                       S[33].p.v,
                       S[34].p.v,
-                      S[35].p.v
+                      S[35].p.v,
                     )),
                     this.feFuncA.setAttribute("tableValues", P));
               }
@@ -16658,7 +16658,7 @@
                   ((u || this.filterManager.effectElements[4].p._mdf) &&
                     this.feGaussianBlur.setAttribute(
                       "stdDeviation",
-                      this.filterManager.effectElements[4].p.v / 4
+                      this.filterManager.effectElements[4].p.v / 4,
                     ),
                   u || this.filterManager.effectElements[0].p._mdf)
                 ) {
@@ -16668,15 +16668,15 @@
                     rgbToHex(
                       Math.round(255 * P[0]),
                       Math.round(255 * P[1]),
-                      Math.round(255 * P[2])
-                    )
+                      Math.round(255 * P[2]),
+                    ),
                   );
                 }
                 if (
                   ((u || this.filterManager.effectElements[1].p._mdf) &&
                     this.feFlood.setAttribute(
                       "flood-opacity",
-                      this.filterManager.effectElements[1].p.v / 255
+                      this.filterManager.effectElements[1].p.v / 255,
                     ),
                   u ||
                     this.filterManager.effectElements[2].p._mdf ||
@@ -16830,7 +16830,7 @@
                   this.matrix.rotate(-L * degToRads),
                   this.matrix.skewFromAxis(
                     -F * degToRads,
-                    (I + 90) * degToRads
+                    (I + 90) * degToRads,
                   ),
                   this.matrix.translate(D[0], D[1], 0),
                   (this._mdf = !0),

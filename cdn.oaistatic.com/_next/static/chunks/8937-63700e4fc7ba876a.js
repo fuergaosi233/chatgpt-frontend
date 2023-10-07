@@ -43,7 +43,7 @@
             function () {
               d.o.logEvent(u.a.closeAccountPaymentModal), a();
             },
-            [a]
+            [a],
           ),
           _ = (0, g.useCallback)(
             (0, s._)(function () {
@@ -75,7 +75,7 @@
                 }
               });
             }),
-            [p, M]
+            [p, M],
           ),
           I = (0, g.useCallback)(
             (0, s._)(function () {
@@ -108,7 +108,7 @@
                 }
               });
             }),
-            [p, M]
+            [p, M],
           ),
           E = (0, g.useCallback)(function () {
             d.o.logEvent(u.a.clickAccountPaymentGetHelp);
@@ -146,7 +146,7 @@
                       (0, l.jsx)(
                         j.Cu,
                         { text: P.S.free.name },
-                        "row-free-plan-name"
+                        "row-free-plan-name",
                       ),
                       (0, l.jsx)(
                         j.hi,
@@ -155,17 +155,17 @@
                           disabled: !0,
                           text: P.S.free.callToAction.active,
                         },
-                        "row-free-plan-button"
+                        "row-free-plan-button",
                       ),
                       (0, l.jsx)(
                         j.G,
                         { variant: "secondary", text: P.S.free.demandAccess },
-                        "row-free-plan-demand"
+                        "row-free-plan-demand",
                       ),
                       (0, l.jsx)(
                         j.G,
                         { variant: "secondary", text: P.S.free.responseSpeed },
-                        "row-free-plan-speed"
+                        "row-free-plan-speed",
                       ),
                       (0, l.jsx)(
                         j.G,
@@ -174,7 +174,7 @@
                           variant: "secondary",
                           text: P.S.free.modelFeatures,
                         },
-                        "row-free-plan-updates"
+                        "row-free-plan-updates",
                       ),
                     ],
                   }),
@@ -191,11 +191,11 @@
                             className: "font-semibold text-gray-500",
                             children: (0, l.jsx)(
                               h.Z,
-                              (0, t._)({}, P.S.plus.costInDollars)
+                              (0, t._)({}, P.S.plus.costInDollars),
                             ),
                           }),
                         },
-                        "row-plus-plan-title"
+                        "row-plus-plan-title",
                       ),
                       (0, l.jsx)(
                         j.hi,
@@ -209,17 +209,17 @@
                           onClick: _,
                           text: P.S.plus.callToAction.inactivePayment,
                         },
-                        "row-plus-plan-button"
+                        "row-plus-plan-button",
                       ),
                       (0, l.jsx)(
                         j.G,
                         { variant: "primary", text: P.S.plus.demandAccess },
-                        "row-plus-plan-demand"
+                        "row-plus-plan-demand",
                       ),
                       (0, l.jsx)(
                         j.G,
                         { variant: "primary", text: P.S.plus.responseSpeed },
-                        "row-plus-plan-speed"
+                        "row-plus-plan-speed",
                       ),
                       (0, l.jsx)(
                         j.G,
@@ -228,7 +228,7 @@
                           variant: "primary",
                           text: P.S.plus.modelFeatures,
                         },
-                        "row-plus-plan-updates"
+                        "row-plus-plan-updates",
                       ),
                       Z &&
                         (0, l.jsx)(
@@ -239,7 +239,7 @@
                             text: P.S.manageSubscriptionWeb.callToAction,
                             onClick: I,
                           },
-                          "row-plus-plan-manage"
+                          "row-plus-plan-manage",
                         ),
                       (0, l.jsx)(
                         m(),
@@ -256,10 +256,10 @@
                               isTextOnly: !0,
                               text: P.S.getHelp.callToAction,
                             },
-                            "row-plus-plan-help"
+                            "row-plus-plan-help",
                           ),
                         },
-                        "row-plus-plan-help-link"
+                        "row-plus-plan-help-link",
                       ),
                     ],
                   }),
@@ -520,7 +520,7 @@
                   ],
                 });
               },
-              [t, a]
+              [t, a],
             );
           return (0, r.jsx)(P, {
             className: n,

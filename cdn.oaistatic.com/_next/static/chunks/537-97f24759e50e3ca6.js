@@ -54,7 +54,7 @@
             function () {
               c || i(void 0);
             },
-            [c]
+            [c],
           ),
           !c)
         )
@@ -79,7 +79,7 @@
                   N.Z,
                   (0, k._)((0, b._)({}, _.title), {
                     values: { workspaceName: e.accountName },
-                  })
+                  }),
                 ),
               }),
               (0, r.jsx)("div", {
@@ -124,7 +124,7 @@
                       (0, j.signOut)({
                         redirect: !1,
                         callbackUrl: "/auth/login?next=".concat(
-                          encodeURIComponent(t.asPath)
+                          encodeURIComponent(t.asPath),
                         ),
                       }),
                     ];
@@ -149,7 +149,7 @@
                         children: e.userEmail,
                       }),
                     },
-                  })
+                  }),
                 ),
               }),
               (0, r.jsx)("div", {
@@ -158,7 +158,7 @@
                       N.Z,
                       (0, k._)((0, b._)({}, _.activeRequestMessage), {
                         values: { email: l },
-                      })
+                      }),
                     )
                   : "requesting" === n
                   ? (0, r.jsx)(B.Z, {})
@@ -167,7 +167,7 @@
                       N.Z,
                       (0, k._)((0, b._)({}, _.contactWorkspaceAdminEmail), {
                         values: { email: l },
-                      })
+                      }),
                     )
                   : null,
               }),
@@ -262,7 +262,7 @@
                 return l(!0), f.w_.setCurrentWorkspace(t), d(), (0, P.M)(), [2];
               });
             }),
-            [t, d]
+            [t, d],
           ),
           h = (0, U.GA)(t),
           p = (0, r.jsx)("div", {
@@ -374,7 +374,7 @@
                       }),
                       numWorkspaces: o.length,
                     },
-                  })
+                  }),
                 ),
               }),
             ],
@@ -408,10 +408,10 @@
                   year: "numeric",
                   month: "2-digit",
                   day: "2-digit",
-                })
+                }),
               );
             },
-            [e]
+            [e],
           ),
           a = (0, o._)((0, u.useState)(null), 2),
           s = a[0],
@@ -421,19 +421,19 @@
             var t = J.m.getItem("".concat(Y, "/").concat(e));
             n(!!t && t);
           },
-          [e]
+          [e],
         );
         var r = (0, u.useCallback)(
           function () {
             return s ? new Date(!0 === s ? "2022-12-14" : s) : s;
           },
-          [s]
+          [s],
         );
         return (0, u.useMemo)(
           function () {
             return { setHasSeenOnboarding: t, getHasSeenOnboardingDate: r };
           },
-          [r, t]
+          [r, t],
         );
       };
       function V(e) {
@@ -444,7 +444,7 @@
             function () {
               t(!0), s();
             },
-            [t, s]
+            [t, s],
           );
         return a === n.Personal
           ? (0, r.jsx)(et, { onSubmit: o })
@@ -504,7 +504,7 @@
                         });
                       },
                     },
-                  })
+                  }),
                 ),
               }),
               (0, r.jsx)(ee, {
@@ -543,19 +543,19 @@
                             N.Z,
                             (0, b._)(
                               { values: { workspaceName: n } },
-                              es.workspaceWelcome
-                            )
+                              es.workspaceWelcome,
+                            ),
                           )
                         : (0, r.jsx)(
                             N.Z,
-                            (0, b._)({}, es.workspaceWelcomeNoName)
+                            (0, b._)({}, es.workspaceWelcomeNoName),
                           ),
                   }),
                   (0, r.jsx)("div", {
                     className: "text-sm text-token-text-secondary",
                     children: (0, r.jsx)(
                       N.Z,
-                      (0, b._)({}, es.workspaceWelcomeBody)
+                      (0, b._)({}, es.workspaceWelcomeBody),
                     ),
                   }),
                 ],
@@ -728,7 +728,7 @@
                 },
               ];
             },
-            [s, i, c, l, d, h]
+            [s, i, c, l, d, h],
           );
         (0, u.useEffect)(
           function () {
@@ -737,10 +737,10 @@
               a(
                 p.findIndex(function (e) {
                   return "hide" !== e.getModalState();
-                })
+                }),
               );
           },
-          [t, p]
+          [t, p],
         );
         var m = p[t];
         if (null == m) return null;
@@ -782,15 +782,18 @@
                   className: "truncate",
                   children: (0, r.jsx)(
                     N.Z,
-                    (0, b._)({}, t.actionMessageDescriptor)
+                    (0, b._)({}, t.actionMessageDescriptor),
                   ),
                 }),
               }),
               (0, r.jsx)("div", {
                 className: "ml-3 flex flex-row gap-2",
                 children: (0, ed.A3)(t.keyboardBinding).map(function (e, a) {
-                  return (0,
-                  r.jsx)(eg, { keyName: e }, "".concat(t.key, "-").concat(a));
+                  return (0, r.jsx)(
+                    eg,
+                    { keyName: e },
+                    "".concat(t.key, "-").concat(a),
+                  );
                 }),
               }),
             ],
@@ -799,7 +802,7 @@
         eg = function (e) {
           var t = e.keyName,
             a = (0, q.default)(
-              "my-2 flex h-8 items-center justify-center rounded-[4px] border border-black/10 capitalize text-gray-600 dark:border-white/10 dark:text-gray-300"
+              "my-2 flex h-8 items-center justify-center rounded-[4px] border border-black/10 capitalize text-gray-600 dark:border-white/10 dark:text-gray-300",
             );
           return t.length > 1
             ? t.length > 3
@@ -846,7 +849,7 @@
                 var e = Math.ceil(s.length / 2);
                 return [s.slice(0, e), s.slice(e)];
               },
-              [s]
+              [s],
             );
           return (0, r.jsx)(S.Z, {
             isOpen: t,
@@ -869,7 +872,7 @@
                         return (0, r.jsx)(eu, { action: e }, e.key);
                       }),
                     },
-                    "col-".concat(t)
+                    "col-".concat(t),
                   );
                 }),
               }),
@@ -897,7 +900,7 @@
             (0, u.useState)(function () {
               return void 0 !== t ? t : void 0 !== a ? a : (0, h.OX)();
             }),
-            2
+            2,
           ),
           x = m[0],
           y = m[1];
@@ -916,13 +919,13 @@
           function () {
             M && (d.Z.setPrefetchEnabled(C), d.Z.gatherData());
           },
-          [M, C]
+          [M, C],
         ),
           (0, u.useEffect)(
             function () {
               void 0 !== s && w("isUserInCanPayGroup", s);
             },
-            [w, s]
+            [w, s],
           ),
           (0, u.useEffect)(
             function () {
@@ -930,7 +933,7 @@
                 !1 === b &&
                 i.m.warning(n.message, { hasCloseButton: !0, duration: 5 });
             },
-            [b, null == n ? void 0 : n.message, null == n ? void 0 : n.type]
+            [b, null == n ? void 0 : n.message, null == n ? void 0 : n.type],
           );
         var N = (0, u.useRef)(!1);
         return (
@@ -959,7 +962,7 @@
                 }
               }
             },
-            [p, v, b]
+            [p, v, b],
           ),
           (0, r.jsxs)(l.gB.Provider, {
             value: null,
@@ -1033,13 +1036,13 @@
               }
             );
           },
-          [a, E]
+          [a, E],
         ),
           (0, i.useEffect)(
             function () {
               h.vm.closeSharingModal();
             },
-            [a, b]
+            [a, b],
           );
         var R = (0, i.useCallback)(
           function () {
@@ -1047,10 +1050,10 @@
               _.replace(
                 q.tags.includes(A.S.GPT_4) ? "/" : "/?model=".concat(q.id),
                 void 0,
-                { shallow: !0 }
+                { shallow: !0 },
               );
           },
-          [s, q.tags, q.id, _]
+          [s, q.tags, q.id, _],
         );
         (0, x.yx)({ resetThreadAction: R, clientThreadId: a });
         var D = (0, h.tN)(function (e) {
@@ -1063,7 +1066,7 @@
               k.hx.abortAllRequests();
             };
           },
-          [a]
+          [a],
         ),
           (t = (0, f.hz)().has("debug")),
           (0, i.useEffect)(
@@ -1073,14 +1076,14 @@
                   keydown: function (e) {
                     (e.target instanceof HTMLElement &&
                       ["input", "textarea", "select", "button"].includes(
-                        e.target.tagName.toLowerCase()
+                        e.target.tagName.toLowerCase(),
                       )) ||
                       "\\" !== e.key ||
                       h.vm.toggleActiveSidebar("debug");
                   },
                 });
             },
-            [t]
+            [t],
           );
         var K = (0, B.iF)(),
           L = (0, i.useCallback)(
@@ -1092,7 +1095,7 @@
                 "/" !== _.asPath &&
                   _.replace({ pathname: "/" }, void 0, { shallow: !0 });
             },
-            [R, K, _]
+            [R, K, _],
           ),
           U = (0, i.useRef)(W.threadId);
         return (
@@ -1102,7 +1105,7 @@
                 (h.vm.setActiveSidebar(!1), (U.current = W.threadId)),
                 k.hx.clear();
             },
-            [W.threadId]
+            [W.threadId],
           ),
           (0, n.jsxs)(N.Z, {
             showNavigation: !v,
@@ -1130,7 +1133,7 @@
                   initiallyHighlightedMessageId: l,
                   continueConversationUrl: d,
                 },
-                a
+                a,
               ),
               (0, n.jsxs)(N.Z.Sidebars, {
                 children: [
@@ -1242,7 +1245,7 @@
             S.Mod,
             /Mac|iPod|iPhone|iPad/.test(window.navigator.platform)
               ? "⌘"
-              : "Ctrl"
+              : "Ctrl",
           ),
           (0, r._)(o, S.Comma, ","),
           (0, r._)(o, S.Enter, "⏎"),
@@ -1460,7 +1463,7 @@
                   );
                 }
               },
-              [e, a]
+              [e, a],
             )
           );
         },
@@ -1483,7 +1486,7 @@
                 return void 0 === t || t;
               });
             },
-            [a, s, t]
+            [a, s, t],
           );
         },
         I = function (e) {
@@ -1491,7 +1494,7 @@
             W({
               resetThreadAction: e.resetThreadAction,
               clientThreadId: e.clientThreadId,
-            })
+            }),
           );
         };
     },

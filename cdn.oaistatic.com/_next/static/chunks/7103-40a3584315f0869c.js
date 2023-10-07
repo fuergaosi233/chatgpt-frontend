@@ -177,7 +177,7 @@
               boundary: d,
               rootBoundary: f,
               strategy: u,
-            })
+            }),
           ),
           w = "floating" === p ? { ...i.floating, x: r, y: o } : i.reference,
           x = await (null == l.getOffsetParent
@@ -195,7 +195,7 @@
                   offsetParent: x,
                   strategy: u,
                 })
-              : w
+              : w,
           );
         return {
           top: (y.top - E.top + v.top) / b.y,
@@ -323,7 +323,7 @@
                         t && (a = a.concat(a.map(w)))),
                       a
                     );
-                  })(m, C, S, L)
+                  })(m, C, S, L),
                 );
               let k = [m, ...D],
                 A = await d(t, P),
@@ -364,7 +364,7 @@
                 let n =
                   null ==
                   (u = M.filter((e) => e.overflows[0] <= 0).sort(
-                    (e, t) => e.overflows[1] - t.overflows[1]
+                    (e, t) => e.overflows[1] - t.overflows[1],
                   )[0])
                     ? void 0
                     : u.placement;
@@ -418,7 +418,7 @@
                   case "referenceHidden": {
                     let e = b(
                       await d(t, { ...r, elementContext: "reference" }),
-                      o.reference
+                      o.reference,
                     );
                     return {
                       data: {
@@ -430,7 +430,7 @@
                   case "escaped": {
                     let e = b(
                       await d(t, { ...r, altBoundary: !0 }),
-                      o.floating
+                      o.floating,
                     );
                     return { data: { escapedOffsets: e, escaped: E(e) } };
                   }
@@ -515,12 +515,12 @@
                 a &&
                   (y = p(
                     y + h["y" === v ? "top" : "left"],
-                    f(y, y - h["y" === v ? "bottom" : "right"])
+                    f(y, y - h["y" === v ? "bottom" : "right"]),
                   )),
                   u &&
                     (w = p(
                       w + h["y" === g ? "top" : "left"],
-                      f(w, w - h["y" === g ? "bottom" : "right"])
+                      f(w, w - h["y" === g ? "bottom" : "right"]),
                     ));
                 let x = s.fn({ ...t, [v]: y, [g]: w });
                 return { ...x, data: { x: x.x - n, y: x.y - r } };
@@ -692,10 +692,10 @@
           (!t && !!n.backdropFilter && "none" !== n.backdropFilter) ||
           (!t && !!n.filter && "none" !== n.filter) ||
           ["transform", "perspective", "filter"].some((e) =>
-            (n.willChange || "").includes(e)
+            (n.willChange || "").includes(e),
           ) ||
           ["paint", "layout", "strict", "content"].some((e) =>
-            (n.contain || "").includes(e)
+            (n.contain || "").includes(e),
           )
         );
       }
@@ -841,7 +841,7 @@
                 t.scrollHeight,
                 t.clientHeight,
                 r.scrollHeight,
-                r.clientHeight
+                r.clientHeight,
               ),
               a = -n.scrollLeft + T(e),
               u = -n.scrollTop;
@@ -946,16 +946,19 @@
                 : [].concat(n),
             u = [...i, r],
             c = u[0],
-            p = u.reduce((e, n) => {
-              let r = k(t, n, o);
-              return (
-                (e.top = v(r.top, e.top)),
-                (e.right = h(r.right, e.right)),
-                (e.bottom = h(r.bottom, e.bottom)),
-                (e.left = v(r.left, e.left)),
-                e
-              );
-            }, k(t, c, o));
+            p = u.reduce(
+              (e, n) => {
+                let r = k(t, n, o);
+                return (
+                  (e.top = v(r.top, e.top)),
+                  (e.right = h(r.right, e.right)),
+                  (e.bottom = h(r.bottom, e.bottom)),
+                  (e.left = v(r.left, e.left)),
+                  e
+                );
+              },
+              k(t, c, o),
+            );
           return {
             width: p.right - p.left,
             height: p.bottom - p.top,
@@ -1177,7 +1180,7 @@
             O = k >= D,
             M = (function (
               e,
-              t = null == globalThis ? void 0 : globalThis.document
+              t = null == globalThis ? void 0 : globalThis.document,
             ) {
               let n = (0, v.W)(e),
                 r = (0, i.useRef)(!1),
@@ -1224,7 +1227,7 @@
             }, C),
             _ = (function (
               e,
-              t = null == globalThis ? void 0 : globalThis.document
+              t = null == globalThis ? void 0 : globalThis.document,
             ) {
               let n = (0, v.W)(e),
                 r = (0, i.useRef)(!1);
@@ -1237,7 +1240,7 @@
                         "dismissableLayer.focusOutside",
                         n,
                         { originalEvent: e },
-                        { discrete: !1 }
+                        { discrete: !1 },
                       );
                   };
                   return (
@@ -1261,7 +1264,7 @@
           return (
             !(function (
               e,
-              t = null == globalThis ? void 0 : globalThis.document
+              t = null == globalThis ? void 0 : globalThis.document,
             ) {
               let n = (0, v.W)(e);
               (0, i.useEffect)(() => {
@@ -1303,7 +1306,7 @@
                   w.layersWithOutsidePointerEventsDisabled.delete(E),
                   x());
               },
-              [E, w]
+              [E, w],
             ),
             (0, i.useEffect)(() => {
               let e = () => P({});
@@ -1324,9 +1327,9 @@
                 onBlurCapture: (0, s.M)(e.onBlurCapture, _.onBlurCapture),
                 onPointerDownCapture: (0, s.M)(
                   e.onPointerDownCapture,
-                  M.onPointerDownCapture
+                  M.onPointerDownCapture,
                 ),
-              })
+              }),
             )
           );
         });
@@ -1426,7 +1429,7 @@
                             return;
                       })(
                         L(u).filter((e) => "A" !== e.tagName),
-                        { select: !0 }
+                        { select: !0 },
                       ),
                       document.activeElement === e && k(u));
                 }
@@ -1466,11 +1469,11 @@
                   : o === t && e.preventDefault();
               }
             },
-            [n, r, y.paused]
+            [n, r, y.paused],
           );
           return (0, i.createElement)(
             h.WV.div,
-            (0, m.Z)({ tabIndex: -1 }, a, { ref: g, onKeyDown: w })
+            (0, m.Z)({ tabIndex: -1 }, a, { ref: g, onKeyDown: w }),
           );
         });
       function L(e) {
@@ -1603,7 +1606,7 @@
           }),
           e.asChild
             ? n
-            : (0, i.createElement)("polygon", { points: "0,0 30,0 15,10" })
+            : (0, i.createElement)("polygon", { points: "0,0 30,0 15,10" }),
         );
       });
       var Z = n(90671),
@@ -1617,7 +1620,7 @@
           return (0, i.createElement)(
             q,
             { scope: t, anchor: r, onAnchorChange: o },
-            n
+            n,
           );
         },
         J = (0, i.forwardRef)((e, t) => {
@@ -1707,13 +1710,13 @@
                   (e) => {
                     e != C.current && ((C.current = e), g(e));
                   },
-                  [g]
+                  [g],
                 ),
                 b = i.useCallback(
                   (e) => {
                     e !== P.current && ((P.current = e), w(e));
                   },
-                  [w]
+                  [w],
                 ),
                 E = l || v,
                 S = u || y,
@@ -1750,7 +1753,7 @@
                     k.current = !1;
                   }
                 ),
-                []
+                [],
               ),
                 H(() => {
                   if ((E && (C.current = E), S && (P.current = S), E && S)) {
@@ -1765,7 +1768,7 @@
                     setReference: x,
                     setFloating: b,
                   }),
-                  [x, b]
+                  [x, b],
                 ),
                 O = i.useMemo(() => ({ reference: E, floating: S }), [E, S]),
                 M = i.useMemo(() => {
@@ -1791,7 +1794,7 @@
                   elements: O,
                   floatingStyles: M,
                 }),
-                [f, D, A, O, M]
+                [f, D, A, O, M],
               );
             })({
               strategy: "fixed",
@@ -1821,7 +1824,7 @@
                     i.setProperty("--radix-popper-available-width", `${n}px`),
                       i.setProperty(
                         "--radix-popper-available-height",
-                        `${r}px`
+                        `${r}px`,
                       ),
                       i.setProperty("--radix-popper-anchor-width", `${o}px`),
                       i.setProperty("--radix-popper-anchor-height", `${l}px`);
@@ -1893,9 +1896,9 @@
                           ? 0
                           : void 0,
                     },
-                  })
-                )
-              )
+                  }),
+                ),
+              ),
             )
           );
         }),
@@ -1963,7 +1966,7 @@
         return r
           ? a.createPortal(
               (0, i.createElement)(h.WV.div, (0, m.Z)({}, o, { ref: t })),
-              r
+              r,
             )
           : null;
       });
@@ -2050,8 +2053,8 @@
                       });
                     }, []),
                   },
-                  n
-                )
+                  n,
+                ),
               ),
               D
                 ? (0, i.createElement)(
@@ -2070,10 +2073,10 @@
                     void 0 === R
                       ? (0, i.createElement)("option", { value: "" })
                       : null,
-                    Array.from(k)
+                    Array.from(k),
                   )
-                : null
-            )
+                : null,
+            ),
           );
         },
         eT = (0, i.forwardRef)((e, t) => {
@@ -2138,9 +2141,9 @@
                         ep.includes(e.key) &&
                         (y(), e.preventDefault());
                   }),
-                }
-              )
-            )
+                },
+              ),
+            ),
           );
         }),
         eL = (0, i.forwardRef)((e, t) => {
@@ -2163,7 +2166,7 @@
             (0, i.createElement)(
               h.WV.span,
               (0, l.Z)({}, s, { ref: m, style: { pointerEvents: "none" } }),
-              void 0 === c.value && void 0 !== u ? u : a
+              void 0 === c.value && void 0 !== u ? u : a,
             )
           );
         }),
@@ -2172,7 +2175,7 @@
           return (0, i.createElement)(
             h.WV.span,
             (0, l.Z)({ "aria-hidden": !0 }, o, { ref: t }),
-            r || "▼"
+            r || "▼",
           );
         }),
         ek = (e) => (0, i.createElement)(ei, (0, l.Z)({ asChild: !0 }, e)),
@@ -2193,10 +2196,10 @@
                   (0, i.createElement)(
                     ev.Slot,
                     { scope: e.__scopeSelect },
-                    (0, i.createElement)("div", null, e.children)
-                  )
+                    (0, i.createElement)("div", null, e.children),
+                  ),
                 ),
-                r
+                r,
               )
             : null;
         }),
@@ -2238,11 +2241,11 @@
               return (
                 document.body.insertAdjacentElement(
                   "afterbegin",
-                  null !== (e = n[0]) && void 0 !== e ? e : S()
+                  null !== (e = n[0]) && void 0 !== e ? e : S(),
                 ),
                 document.body.insertAdjacentElement(
                   "beforeend",
-                  null !== (t = n[1]) && void 0 !== t ? t : S()
+                  null !== (t = n[1]) && void 0 !== t ? t : S(),
                 ),
                 E++,
                 () => {
@@ -2270,7 +2273,7 @@
                   )
                     return;
               },
-              [I, D]
+              [I, D],
             ),
             N = (0, i.useCallback)(() => B([O, R]), [B, O, R]);
           (0, i.useEffect)(() => {
@@ -2291,7 +2294,7 @@
                               ? void 0
                               : r.x) && void 0 !== n
                           ? n
-                          : 0)
+                          : 0),
                     ),
                     y: Math.abs(
                       Math.round(t.pageY) -
@@ -2301,7 +2304,7 @@
                               ? void 0
                               : l.y) && void 0 !== o
                           ? o
-                          : 0)
+                          : 0),
                     ),
                   };
                 },
@@ -2351,7 +2354,7 @@
                   o = void 0 !== P.value && P.value === t;
                 (o || r) && (M(e), r && (F.current = !0));
               },
-              [P.value]
+              [P.value],
             ),
             U = (0, i.useCallback)(() => (null == R ? void 0 : R.focus()), [R]),
             q = (0, i.useCallback)(
@@ -2360,7 +2363,7 @@
                   o = void 0 !== P.value && P.value === t;
                 (o || r) && W(e);
               },
-              [P.value]
+              [P.value],
             ),
             Y = "popper" === r ? eH : eI;
           return (0, i.createElement)(
@@ -2449,7 +2452,7 @@
                             ("Tab" === e.key && e.preventDefault(),
                             t || 1 !== e.key.length || $(e.key),
                             ["ArrowUp", "ArrowDown", "Home", "End"].includes(
-                              e.key
+                              e.key,
                             ))
                           ) {
                             let t = I().filter((e) => !e.disabled),
@@ -2466,12 +2469,12 @@
                             setTimeout(() => B(n)), e.preventDefault();
                           }
                         }),
-                      }
-                    )
-                  )
-                )
-              )
-            )
+                      },
+                    ),
+                  ),
+                ),
+              ),
+            ),
           );
         }),
         eI = (0, i.forwardRef)((e, t) => {
@@ -2563,7 +2566,7 @@
                 !0 === w.current &&
                 (C(), null == S || S(), (w.current = !1));
             },
-            [C, S]
+            [C, S],
           );
           return (0, i.createElement)(
             eV,
@@ -2593,9 +2596,9 @@
                     maxHeight: "100%",
                     ...o.style,
                   },
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
         }),
         eH = (0, i.forwardRef)((e, t) => {
@@ -2626,7 +2629,7 @@
                 "--radix-select-trigger-height":
                   "var(--radix-popper-anchor-height)",
               },
-            })
+            }),
           );
         }),
         [eV, eF] = ew(eA, {}),
@@ -2685,10 +2688,10 @@
                       }
                       c.current = t.scrollTop;
                     }),
-                  }
-                )
-              )
-            )
+                  },
+                ),
+              ),
+            ),
           );
         }),
         [eK, eZ] = ew("SelectGroup"),
@@ -2787,10 +2790,10 @@
                         (em.includes(e.key) && b(),
                         " " === e.key && e.preventDefault());
                     }),
-                  }
-                )
-              )
-            )
+                  },
+                ),
+              ),
+            ),
           );
         }),
         eq = "SelectItemText",
@@ -2810,7 +2813,7 @@
                 return null === (t = c.itemTextRefCallback) || void 0 === t
                   ? void 0
                   : t.call(c, e, f.value, f.disabled);
-              }
+              },
             ),
             y = null == m ? void 0 : m.textContent,
             w = (0, i.useMemo)(
@@ -2818,9 +2821,9 @@
                 (0, i.createElement)(
                   "option",
                   { key: f.value, value: f.value, disabled: f.disabled },
-                  y
+                  y,
                 ),
-              [f.disabled, f.value, y]
+              [f.disabled, f.value, y],
             ),
             { onNativeOptionAdd: x, onNativeOptionRemove: b } = p;
           return (
@@ -2830,11 +2833,11 @@
               null,
               (0, i.createElement)(
                 h.WV.span,
-                (0, l.Z)({ id: f.textId }, u, { ref: g })
+                (0, l.Z)({ id: f.textId }, u, { ref: g }),
               ),
               f.isSelected && s.valueNode && !s.valueNodeHasChildren
                 ? (0, a.createPortal)(u.children, s.valueNode)
-                : null
+                : null,
             )
           );
         }),
@@ -2868,7 +2871,7 @@
                       let { viewport: e, selectedItem: t } = n;
                       e && t && (e.scrollTop = e.scrollTop - t.offsetHeight);
                     },
-                  })
+                  }),
                 )
               : null
           );
@@ -2904,7 +2907,7 @@
                       let { viewport: e, selectedItem: t } = n;
                       e && t && (e.scrollTop = e.scrollTop + t.offsetHeight);
                     },
-                  })
+                  }),
                 )
               : null
           );
@@ -2945,7 +2948,7 @@
                 onPointerLeave: (0, s.M)(o.onPointerLeave, () => {
                   d();
                 }),
-              })
+              }),
             )
           );
         }),
@@ -2970,8 +2973,8 @@
               { asChild: !0 },
               (0, i.createElement)(
                 "select",
-                (0, l.Z)({}, r, { ref: a, defaultValue: n })
-              )
+                (0, l.Z)({}, r, { ref: a, defaultValue: n }),
+              ),
             )
           );
         });
@@ -2990,7 +2993,7 @@
                       (r.current = window.setTimeout(() => e(""), 1e3));
                 })(o);
             },
-            [t]
+            [t],
           ),
           l = (0, i.useCallback)(() => {
             (n.current = ""), window.clearTimeout(r.current);
@@ -3009,7 +3012,7 @@
           u = 1 === l.length;
         u && (a = a.filter((e) => e !== n));
         let s = a.find((e) =>
-          e.textValue.toLowerCase().startsWith(l.toLowerCase())
+          e.textValue.toLowerCase().startsWith(l.toLowerCase()),
         );
         return s !== n ? s : void 0;
       }

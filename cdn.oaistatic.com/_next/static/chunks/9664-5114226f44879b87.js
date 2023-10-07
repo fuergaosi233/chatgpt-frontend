@@ -49,18 +49,18 @@
               n.map(function (e) {
                 return e.lastTokenDuration;
               }),
-              0.95
+              0.95,
             ),
             l = o(
               n.map(function (e) {
                 return e.lastTokenDuration;
               }),
-              0.99
+              0.99,
             ),
             d = (0, i.mean)(
               n.map(function (e) {
                 return e.lastTokenDuration;
-              })
+              }),
             ),
             u = (function (e) {
               if (0 === e.length) return null;
@@ -72,7 +72,7 @@
             })(
               n.map(function (e) {
                 return e.lastTokenDuration;
-              })
+              }),
             ),
             c = n
               .filter(function (e) {
@@ -96,12 +96,12 @@
               return Math.sqrt(
                 e.reduce(function (e, t) {
                   return e + Math.pow(t - n, 2);
-                }, 0) / t
+                }, 0) / t,
               );
             })(
               n.map(function (e) {
                 return e.lastTokenDuration;
-              })
+              }),
             ),
             g =
               null === (t = e[e.length - 1]) || void 0 === t
@@ -247,15 +247,38 @@
         m = u.setState,
         f = function (e, t, n, s) {
           m(function (o) {
-            return (0,
-            i._)((0, r._)({}, o), { activeNodeId: e, ui: { focusedNodeId: e }, messagesDevData: (0, i._)((0, r._)({}, o.messagesDevData), (0, a._)({}, e, { status: "active", data: [], model: t, serverRequestId: n, preflightTime: s })) });
+            return (0, i._)((0, r._)({}, o), {
+              activeNodeId: e,
+              ui: { focusedNodeId: e },
+              messagesDevData: (0, i._)(
+                (0, r._)({}, o.messagesDevData),
+                (0, a._)({}, e, {
+                  status: "active",
+                  data: [],
+                  model: t,
+                  serverRequestId: n,
+                  preflightTime: s,
+                }),
+              ),
+            });
           });
         },
         g = function (e, t) {
           m(function (n) {
             var o = n.messagesDevData[e];
-            return (0,
-            i._)((0, r._)({}, n), { activeNodeId: e, messagesDevData: (0, i._)((0, r._)({}, n.messagesDevData), (0, a._)({}, e, (0, i._)((0, r._)({}, o), { data: (0, s._)(o.data).concat([t]) }))) });
+            return (0, i._)((0, r._)({}, n), {
+              activeNodeId: e,
+              messagesDevData: (0, i._)(
+                (0, r._)({}, n.messagesDevData),
+                (0, a._)(
+                  {},
+                  e,
+                  (0, i._)((0, r._)({}, o), {
+                    data: (0, s._)(o.data).concat([t]),
+                  }),
+                ),
+              ),
+            });
           });
         },
         h = function (e, t) {
@@ -293,14 +316,19 @@
             var n = (0, i._)((0, r._)({}, t.messagesDevData[e]), {
               status: "finished",
             });
-            return (0,
-            i._)((0, r._)({}, t), { messagesDevData: (0, i._)((0, r._)({}, t.messagesDevData), (0, a._)({}, e, n)) });
+            return (0, i._)((0, r._)({}, t), {
+              messagesDevData: (0, i._)(
+                (0, r._)({}, t.messagesDevData),
+                (0, a._)({}, e, n),
+              ),
+            });
           });
         },
         v = function (e) {
           return m(function (t) {
-            return (0,
-            i._)((0, r._)({}, t), { ui: (0, i._)((0, r._)({}, t.ui), { focusedNodeId: e }) });
+            return (0, i._)((0, r._)({}, t), {
+              ui: (0, i._)((0, r._)({}, t.ui), { focusedNodeId: e }),
+            });
           });
         };
       function b(e) {
@@ -703,7 +731,7 @@
                 }
               }
             },
-            [r]
+            [r],
           ),
           u =
             null === (n = r[0].message.metadata) || void 0 === n
@@ -732,7 +760,9 @@
             var n = (0, et.rH)(t.message);
             if (n === et.Cs.Plugin || n === et.Cs.PluginTool) {
               var a = (0, et.Lx)(
-                n === et.Cs.Plugin ? t.message.recipient : t.message.author.name
+                n === et.Cs.Plugin
+                  ? t.message.recipient
+                  : t.message.author.name,
               );
               return e.find(function (e) {
                 return e.namespace === (null == a ? void 0 : a.namespace);
@@ -954,10 +984,44 @@
                 }),
                   null == l || l();
               },
-              [l]
+              [l],
             );
-          return (0,
-          j.jsxs)(eJ, { children: [(0, j.jsxs)(e$, { $complete: n, children: [(0, j.jsx)("div", { children: t }), !n && (0, j.jsx)(eV.Z, { className: (0, ec.default)("shrink-0", null != s ? "ml-1" : "ml-12") }), null != s && (0, j.jsxs)("div", { className: "ml-12 flex items-center gap-2", role: "button", onClick: m, children: [null != r && null != a && (0, j.jsx)("div", { className: "text-xs text-gray-600", children: u ? r : a }), !u && i, u ? (0, j.jsx)(E.rH8, { className: "icon-sm" }) : (0, j.jsx)(E.bTu, { className: "icon-sm" })] })] }), u && s] });
+          return (0, j.jsxs)(eJ, {
+            children: [
+              (0, j.jsxs)(e$, {
+                $complete: n,
+                children: [
+                  (0, j.jsx)("div", { children: t }),
+                  !n &&
+                    (0, j.jsx)(eV.Z, {
+                      className: (0, ec.default)(
+                        "shrink-0",
+                        null != s ? "ml-1" : "ml-12",
+                      ),
+                    }),
+                  null != s &&
+                    (0, j.jsxs)("div", {
+                      className: "ml-12 flex items-center gap-2",
+                      role: "button",
+                      onClick: m,
+                      children: [
+                        null != r &&
+                          null != a &&
+                          (0, j.jsx)("div", {
+                            className: "text-xs text-gray-600",
+                            children: u ? r : a,
+                          }),
+                        !u && i,
+                        u
+                          ? (0, j.jsx)(E.rH8, { className: "icon-sm" })
+                          : (0, j.jsx)(E.bTu, { className: "icon-sm" }),
+                      ],
+                    }),
+                ],
+              }),
+              u && s,
+            ],
+          });
         }),
         eJ = z.Z.div(eQ()),
         e$ = z.Z.div(eH(), function (e) {
@@ -998,7 +1062,7 @@
                   (1 -
                     Math.sin(
                       (2 * (1900 * e7((a - 250) / 1900)) * Math.PI) / 1900 -
-                        Math.PI / 2
+                        Math.PI / 2,
                     ))) /
                   2 +
                   t;
@@ -1019,7 +1083,7 @@
             m = (0, O.Z)(),
             f = (0, ec.default)(
               "bg-white dark:bg-gray-600 rounded-xl max-w-full overflow-hidden",
-              n ? "border-black/10 border-[0.5px] shadow-xxs" : ""
+              n ? "border-black/10 border-[0.5px] shadow-xxs" : "",
             ),
             g = (0, j.jsx)(tt, {
               className: (0, ec.default)(f, "w-[280px]"),
@@ -1316,15 +1380,18 @@
             r = tw(
               t.map(function (e) {
                 return e.message;
-              })
+              }),
             ),
             i = [(0, j.jsx)(tg, { isRetrieval: a }, "starting")].concat(
               (0, eu._)(
                 r.map(function (e, t) {
-                  return (0,
-                  j.jsx)(ts, { command: e, citationMetadata: tj(r, t), isRetrieval: a }, t);
-                })
-              )
+                  return (0, j.jsx)(
+                    ts,
+                    { command: e, citationMetadata: tj(r, t), isRetrieval: a },
+                    t,
+                  );
+                }),
+              ),
             ),
             s = null;
           return (
@@ -1454,7 +1521,7 @@
                     },
                     searchQuery: t,
                   },
-                })
+                }),
               )
             : (0, j.jsx)(
                 U.Z,
@@ -1468,7 +1535,7 @@
                     },
                     searchQuery: t,
                   },
-                })
+                }),
               ),
         });
       }
@@ -1499,7 +1566,7 @@
               link: n ? tk(n) : void 0,
               children: (0, j.jsx)(
                 U.Z,
-                (0, x._)((0, p._)({}, r), { values: { url: s } })
+                (0, x._)((0, p._)({}, r), { values: { url: s } }),
               ),
             })
           );
@@ -1534,7 +1601,7 @@
                                   void 0 !== e
                                     ? e
                                     : "",
-                              }
+                              },
                             );
                           }
                         },
@@ -1561,7 +1628,7 @@
             isRetrieval: a,
             children: (0, j.jsx)(
               U.Z,
-              (0, x._)((0, p._)({}, i), { values: { pageTitle: s } })
+              (0, x._)((0, p._)({}, i), { values: { pageTitle: s } }),
             ),
           })
         );
@@ -1777,7 +1844,7 @@
         return (0, j.jsxs)("div", {
           className: (0, ec.default)(
             "flex items-center gap-2",
-            !0 !== a && "min-h-[24px]"
+            !0 !== a && "min-h-[24px]",
           ),
           children: [
             null != n && (0, j.jsx)(n, { className: "icon-sm shrink-0" }),
@@ -1844,7 +1911,7 @@
       }
       var tM = n(70737),
         t_ = JSON.parse(
-          '{"v":"5.7.5","fr":100,"ip":0,"op":200,"w":20,"h":20,"nm":"Comp 1","ddd":0,"assets":[],"layers":[{"ddd":0,"ind":1,"ty":4,"nm":"dot","sr":1,"ks":{"o":{"a":0,"k":100,"ix":2},"r":{"a":0,"k":0,"ix":2},"p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":2},"s":{"a":0,"k":[100,100],"ix":2}},"ao":0,"hd":false,"shapes":[{"ty":"gr","hd":false,"it":[{"ty":"rc","hd":false,"d":1,"s":{"a":0,"k":[3.5,3.5],"ix":2},"p":{"a":0,"k":[0,0],"ix":2},"r":{"a":0,"k":1.75,"ix":2}},{"ty":"fl","c":{"a":0,"k":[0.6941176470588235,0.3803921568627451,0.9921568627450981],"ix":2},"o":{"a":0,"k":100,"ix":2},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tm","s":{"a":0,"k":0,"ix":2},"e":{"a":0,"k":100,"ix":2},"o":{"a":0,"k":0,"ix":2},"m":1,"hd":false},{"ty":"tr","hd":false,"p":{"a":0,"k":[10.00000762939453,9.997123718261719],"ix":2},"a":{"a":0,"k":[0,0],"ix":2},"s":{"a":0,"k":[100,100],"ix":2},"r":{"a":0,"k":0,"ix":2},"o":{"a":0,"k":100,"ix":2},"sk":{"a":0,"k":0,"ix":2},"sa":{"a":0,"k":0,"ix":2}}]}],"ip":0,"op":200,"st":0,"bm":0},{"ddd":0,"ind":2,"ty":3,"nm":"","sr":1,"ks":{"o":{"a":0,"k":100,"ix":2},"r":{"a":1,"k":[{"t":100,"s":[0],"i":{"x":[0.2],"y":[1]},"o":{"x":[0.5],"y":[-0.5]}},{"t":160,"s":[410],"i":{"x":[0.5],"y":[1.5]},"o":{"x":[0.8],"y":[0]}},{"t":200,"s":[360],"i":{"x":[0.2],"y":[1]},"o":{"x":[0.5],"y":[-0.5]}}],"ix":2},"p":{"a":0,"k":[10,10],"ix":2},"a":{"a":0,"k":[0,0],"ix":2},"s":{"a":0,"k":[100,100],"ix":2}},"ao":0,"ip":0,"op":200,"st":0,"bm":0,"hd":false},{"ddd":0,"ind":3,"ty":4,"nm":"compass","sr":1,"ks":{"o":{"a":0,"k":100,"ix":2},"r":{"a":0,"k":0,"ix":2},"p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":2},"s":{"a":0,"k":[100,100],"ix":2}},"ao":0,"hd":false,"parent":2,"shapes":[{"ty":"gr","hd":false,"it":[{"ty":"sh","hd":false,"d":1,"ks":{"a":0,"k":{"c":false,"v":[[3.897755676788864,2.156718939201098],[9.466585676788863,0.04442893920109814],[10.31768567678886,0.895618939201098],[8.205185676788863,6.464308939201097],[6.464305676788864,8.205198939201097],[0.8956156767888639,10.3176989392011],[0.04442567678886356,9.466498939201099],[2.156725676788863,3.897748939201098],[3.897755676788864,2.156718939201098],[3.897755676788864,2.156718939201098],[3.897755676788864,2.156718939201098]],"i":[[0,0],[-1.856276666666666,0.7040966666666666],[0.2018000000000004,-0.5320100000000001],[0.7041666666666675,-1.85623],[0.8026800000000005,-0.3044999999999982],[1.85623,-0.7041666666666657],[-0.2018,0.5320999999999998],[-0.7040999999999995,1.8562499999999993],[-0.80274,0.3044900000000004],[0,0],[0,0]],"o":[[1.856276666666667,-0.7040966666666666],[0.532,-0.20181],[-0.7041666666666675,1.8562299999999992],[-0.3044999999999991,0.8025900000000004],[-1.85623,0.7041666666666693],[-0.5320100000000001,0.2018000000000022],[0.7041,-1.85625],[0.3044800000000008,-0.8027300000000004],[0,0],[0,0],[1.856276666666667,-0.7040966666666666]]}}},{"ty":"fl","c":{"a":0,"k":[1,1,1],"ix":2},"o":{"a":0,"k":100,"ix":2},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tm","s":{"a":0,"k":0,"ix":2},"e":{"a":0,"k":100,"ix":2},"o":{"a":0,"k":0,"ix":2},"m":1,"hd":false},{"ty":"tr","hd":false,"p":{"a":0,"k":[-5.181057929992676,-5.181064605712891],"ix":2},"a":{"a":0,"k":[0,0],"ix":2},"s":{"a":0,"k":[100,100],"ix":2},"r":{"a":0,"k":0,"ix":2},"o":{"a":0,"k":100,"ix":2},"sk":{"a":0,"k":0,"ix":2},"sa":{"a":0,"k":0,"ix":2}}]}],"ip":0,"op":200,"st":0,"bm":0}],"markers":[]}'
+          '{"v":"5.7.5","fr":100,"ip":0,"op":200,"w":20,"h":20,"nm":"Comp 1","ddd":0,"assets":[],"layers":[{"ddd":0,"ind":1,"ty":4,"nm":"dot","sr":1,"ks":{"o":{"a":0,"k":100,"ix":2},"r":{"a":0,"k":0,"ix":2},"p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":2},"s":{"a":0,"k":[100,100],"ix":2}},"ao":0,"hd":false,"shapes":[{"ty":"gr","hd":false,"it":[{"ty":"rc","hd":false,"d":1,"s":{"a":0,"k":[3.5,3.5],"ix":2},"p":{"a":0,"k":[0,0],"ix":2},"r":{"a":0,"k":1.75,"ix":2}},{"ty":"fl","c":{"a":0,"k":[0.6941176470588235,0.3803921568627451,0.9921568627450981],"ix":2},"o":{"a":0,"k":100,"ix":2},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tm","s":{"a":0,"k":0,"ix":2},"e":{"a":0,"k":100,"ix":2},"o":{"a":0,"k":0,"ix":2},"m":1,"hd":false},{"ty":"tr","hd":false,"p":{"a":0,"k":[10.00000762939453,9.997123718261719],"ix":2},"a":{"a":0,"k":[0,0],"ix":2},"s":{"a":0,"k":[100,100],"ix":2},"r":{"a":0,"k":0,"ix":2},"o":{"a":0,"k":100,"ix":2},"sk":{"a":0,"k":0,"ix":2},"sa":{"a":0,"k":0,"ix":2}}]}],"ip":0,"op":200,"st":0,"bm":0},{"ddd":0,"ind":2,"ty":3,"nm":"","sr":1,"ks":{"o":{"a":0,"k":100,"ix":2},"r":{"a":1,"k":[{"t":100,"s":[0],"i":{"x":[0.2],"y":[1]},"o":{"x":[0.5],"y":[-0.5]}},{"t":160,"s":[410],"i":{"x":[0.5],"y":[1.5]},"o":{"x":[0.8],"y":[0]}},{"t":200,"s":[360],"i":{"x":[0.2],"y":[1]},"o":{"x":[0.5],"y":[-0.5]}}],"ix":2},"p":{"a":0,"k":[10,10],"ix":2},"a":{"a":0,"k":[0,0],"ix":2},"s":{"a":0,"k":[100,100],"ix":2}},"ao":0,"ip":0,"op":200,"st":0,"bm":0,"hd":false},{"ddd":0,"ind":3,"ty":4,"nm":"compass","sr":1,"ks":{"o":{"a":0,"k":100,"ix":2},"r":{"a":0,"k":0,"ix":2},"p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":2},"s":{"a":0,"k":[100,100],"ix":2}},"ao":0,"hd":false,"parent":2,"shapes":[{"ty":"gr","hd":false,"it":[{"ty":"sh","hd":false,"d":1,"ks":{"a":0,"k":{"c":false,"v":[[3.897755676788864,2.156718939201098],[9.466585676788863,0.04442893920109814],[10.31768567678886,0.895618939201098],[8.205185676788863,6.464308939201097],[6.464305676788864,8.205198939201097],[0.8956156767888639,10.3176989392011],[0.04442567678886356,9.466498939201099],[2.156725676788863,3.897748939201098],[3.897755676788864,2.156718939201098],[3.897755676788864,2.156718939201098],[3.897755676788864,2.156718939201098]],"i":[[0,0],[-1.856276666666666,0.7040966666666666],[0.2018000000000004,-0.5320100000000001],[0.7041666666666675,-1.85623],[0.8026800000000005,-0.3044999999999982],[1.85623,-0.7041666666666657],[-0.2018,0.5320999999999998],[-0.7040999999999995,1.8562499999999993],[-0.80274,0.3044900000000004],[0,0],[0,0]],"o":[[1.856276666666667,-0.7040966666666666],[0.532,-0.20181],[-0.7041666666666675,1.8562299999999992],[-0.3044999999999991,0.8025900000000004],[-1.85623,0.7041666666666693],[-0.5320100000000001,0.2018000000000022],[0.7041,-1.85625],[0.3044800000000008,-0.8027300000000004],[0,0],[0,0],[1.856276666666667,-0.7040966666666666]]}}},{"ty":"fl","c":{"a":0,"k":[1,1,1],"ix":2},"o":{"a":0,"k":100,"ix":2},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tm","s":{"a":0,"k":0,"ix":2},"e":{"a":0,"k":100,"ix":2},"o":{"a":0,"k":0,"ix":2},"m":1,"hd":false},{"ty":"tr","hd":false,"p":{"a":0,"k":[-5.181057929992676,-5.181064605712891],"ix":2},"a":{"a":0,"k":[0,0],"ix":2},"s":{"a":0,"k":[100,100],"ix":2},"r":{"a":0,"k":0,"ix":2},"o":{"a":0,"k":100,"ix":2},"sk":{"a":0,"k":0,"ix":2},"sa":{"a":0,"k":0,"ix":2}}]}],"ip":0,"op":200,"st":0,"bm":0}],"markers":[]}',
         ),
         tT = n(68233),
         tN = n.n(tT);
@@ -1858,7 +1925,7 @@
               var e;
               null === (e = a.current) || void 0 === e || e.goToAndPlay(0);
             },
-            [n]
+            [n],
           ),
           (0, j.jsx)(tN(), {
             animationData: t,
@@ -1882,7 +1949,7 @@
           (0, x._)(
             (0, p._)(
               { width: "8", height: "9", viewBox: "0 0 8 9", fill: "none" },
-              e
+              e,
             ),
             {
               children: (0, j.jsx)("path", {
@@ -1891,8 +1958,8 @@
                 d: "M7.66607 0.376042C8.01072 0.605806 8.10385 1.07146 7.87408 1.4161L3.54075 7.9161C3.40573 8.11863 3.18083 8.24304 2.93752 8.24979C2.69421 8.25654 2.46275 8.1448 2.31671 7.95008L0.150044 5.06119C-0.098484 4.72982 -0.0313267 4.25972 0.300044 4.01119C0.631415 3.76266 1.10152 3.82982 1.35004 4.16119L2.88068 6.20204L6.62601 0.584055C6.85577 0.239408 7.32142 0.146278 7.66607 0.376042Z",
                 fill: "currentColor",
               }),
-            }
-          )
+            },
+          ),
         );
       }
       function tZ(e) {
@@ -1901,7 +1968,7 @@
           (0, x._)(
             (0, p._)(
               { width: "4", height: "12", viewBox: "0 0 4 12", fill: "none" },
-              e
+              e,
             ),
             {
               children: [
@@ -1926,8 +1993,8 @@
                   mask: "url(#path-1-inside-1_1975_4008)",
                 }),
               ],
-            }
-          )
+            },
+          ),
         );
       }
       function tL(e) {
@@ -1936,7 +2003,7 @@
           (0, x._)(
             (0, p._)(
               { width: "8", height: "9", viewBox: "0 0 8 9", fill: "none" },
-              e
+              e,
             ),
             {
               children: (0, j.jsx)("path", {
@@ -1945,8 +2012,8 @@
                 d: "M7.32256 1.48447C7.59011 1.16827 7.55068 0.695034 7.23447 0.427476C6.91827 0.159918 6.44503 0.199354 6.17748 0.515559L4.00002 3.08892L1.82256 0.515559C1.555 0.199354 1.08176 0.159918 0.765559 0.427476C0.449355 0.695034 0.409918 1.16827 0.677476 1.48447L3.01755 4.25002L0.677476 7.01556C0.409918 7.33176 0.449354 7.805 0.765559 8.07256C1.08176 8.34011 1.555 8.30068 1.82256 7.98447L4.00002 5.41111L6.17748 7.98447C6.44503 8.30068 6.91827 8.34011 7.23447 8.07256C7.55068 7.805 7.59011 7.33176 7.32256 7.01556L4.98248 4.25002L7.32256 1.48447Z",
                 fill: "currentColor",
               }),
-            }
-          )
+            },
+          ),
         );
       }
       function tD(e) {
@@ -1972,7 +2039,7 @@
             function () {
               n.current = t;
             },
-            [t]
+            [t],
           ),
           (0, F.useEffect)(
             function () {
@@ -1983,7 +2050,7 @@
                 return clearInterval(e);
               };
             },
-            [2e3]
+            [2e3],
           ),
           (0, j.jsxs)("div", {
             className: (0, ec.default)("flex items-center gap-2", o && "mt-2"),
@@ -2038,7 +2105,7 @@
               {
                 className: (0, ec.default)(
                   "absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-full text-white",
-                  n
+                  n,
                 ),
                 initial: o,
                 animate: { opacity: 1, scale: 1, rotate: 0, x: 0 },
@@ -2046,7 +2113,7 @@
                 transition: d,
                 children: t,
               },
-              r
+              r,
             ),
           })
         );
@@ -2064,13 +2131,13 @@
           function () {
             d({ message: n, values: a });
           },
-          [r]
+          [r],
         ),
           (0, F.useEffect)(
             function () {
               t !== l.Running && d({ message: n, values: a });
             },
-            [t]
+            [t],
           );
         var u = { opacity: 0, x: 0, y: 15 },
           c = {
@@ -2096,7 +2163,7 @@
               "-mt-[0.75px]",
               t === l.Running
                 ? "text-token-text-secondary"
-                : "text-token-text-tertiary"
+                : "text-token-text-tertiary",
             ),
             children: (0, j.jsx)(tM.M, {
               children: (0, j.jsx)(
@@ -2109,10 +2176,10 @@
                   transition: c,
                   children: (0, j.jsx)(
                     U.Z,
-                    (0, x._)((0, p._)({}, o.message), { values: o.values })
+                    (0, x._)((0, p._)({}, o.message), { values: o.values }),
                   ),
                 },
-                o.message.id
+                o.message.id,
               ),
             }),
           })
@@ -2298,8 +2365,15 @@
                 (0, j.jsx)(tV, {
                   label: "STDOUT/STDERR",
                   output: s.map(function (e, t) {
-                    return (0,
-                    j.jsx)("span", { className: "stderr" === e.stream_name ? "text-red-500" : "", children: e.text }, "".concat(t));
+                    return (0, j.jsx)(
+                      "span",
+                      {
+                        className:
+                          "stderr" === e.stream_name ? "text-red-500" : "",
+                        children: e.text,
+                      },
+                      "".concat(t),
+                    );
                   }),
                 }),
               l &&
@@ -2325,8 +2399,14 @@
                 }),
               u &&
                 i.messages.filter(tG).map(function (e, t) {
-                  return (0,
-                  j.jsx)("div", { className: "empty:hidden", children: (0, j.jsx)(tY, { jupyterMessage: e }) }, t);
+                  return (0, j.jsx)(
+                    "div",
+                    {
+                      className: "empty:hidden",
+                      children: (0, j.jsx)(tY, { jupyterMessage: e }),
+                    },
+                    t,
+                  );
                 }),
             ],
           });
@@ -2468,9 +2548,9 @@
                               e.attempt(
                                 { tokenize: s, partial: !0 },
                                 i,
-                                d ? (0, t4.f)(e, t, t7.V.linePrefix, d + 1) : t
+                                d ? (0, t4.f)(e, t, t7.V.linePrefix, d + 1) : t,
                               ),
-                              i
+                              i,
                             )(n)
                           : (e.enter("mathFlowValue"),
                             (function n(a) {
@@ -2505,7 +2585,7 @@
                     );
                   },
                   t7.V.linePrefix,
-                  t6._.tabSize
+                  t6._.tabSize,
                 );
                 function r(a) {
                   return a === t5.q.eof || (0, t3.Ch)(a)
@@ -2590,9 +2670,9 @@
                               e.attempt(
                                 { tokenize: s, partial: !0 },
                                 i,
-                                d ? (0, t4.f)(e, t, t7.V.linePrefix, d + 1) : t
+                                d ? (0, t4.f)(e, t, t7.V.linePrefix, d + 1) : t,
                               ),
-                              i
+                              i,
                             )(n)
                           : (e.enter("mathFlowValue"),
                             (function n(a) {
@@ -2625,7 +2705,7 @@
                     );
                   },
                   t7.V.linePrefix,
-                  t6._.tabSize
+                  t6._.tabSize,
                 );
                 function r(a) {
                   return a === t5.q.eof || (0, t3.Ch)(a)
@@ -2848,7 +2928,7 @@
             function () {
               (0, nh.S)(r);
             },
-            [r]
+            [r],
           );
         return (0, j.jsx)(n_, {
           title: a,
@@ -2950,7 +3030,7 @@
             function (e) {
               return a.apply(this, arguments);
             }),
-            [i, C, d, r, f, k]
+            [i, C, d, r, f, k],
           );
         return (0, j.jsx)(eZ.u, {
           closeOnOutsideClick: !1,
@@ -2973,7 +3053,7 @@
               onClick: function (e) {
                 return !c && M(e);
               },
-            })
+            }),
           ),
         });
       }
@@ -2992,7 +3072,7 @@
             (0, x._)((0, p._)({}, e), {
               className:
                 "font-semibold text-gray-500 underline dark:text-gray-300",
-            })
+            }),
           ),
         });
       }
@@ -3311,7 +3391,7 @@
                 ? (0, j.jsx)(eE, { displayInfo: s })
                 : (0, j.jsx)(
                     "code",
-                    (0, x._)((0, p._)({ className: a }, i), { children: r })
+                    (0, x._)((0, p._)({ className: a }, i), { children: r }),
                   );
             }
             var o,
@@ -3355,7 +3435,7 @@
                       : o
                       ? (0, j.jsx)(
                           nI,
-                          (0, p._)({ clientThreadId: r, messageId: i }, n)
+                          (0, p._)({ clientThreadId: r, messageId: i }, n),
                         )
                       : null
                     : (0, j.jsx)("a", (0, p._)({}, n));
@@ -3370,7 +3450,7 @@
                 },
               });
             },
-            [r, o, l, i]
+            [r, o, l, i],
           );
         return (0, j.jsx)(tX.S, {
           name: "formatted_text_error",
@@ -3385,7 +3465,7 @@
               a,
               "markdown prose w-full break-words dark:prose-invert",
               "dark" === s ? "dark" : "light",
-              "small" === (void 0 === t ? "medium" : t) && "prose-xs"
+              "small" === (void 0 === t ? "medium" : t) && "prose-xs",
             ),
             transformLinkUri: nZ,
             components: d,
@@ -3411,7 +3491,7 @@
               }),
               (nE[t.message.id] = !0));
           },
-          [t, r]
+          [t, r],
         );
         var o = (0, F.useCallback)(
             function () {
@@ -3422,7 +3502,7 @@
                 }),
                 (nq[t.message.id] = !0));
             },
-            [t, r]
+            [t, r],
           ),
           l = (0, j.jsxs)(j.Fragment, {
             children: [
@@ -3433,7 +3513,7 @@
                   messageId: t.message.id,
                   className: (0, ec.default)(
                     "markdown prose w-full break-words dark:prose-invert",
-                    "dark" === s ? "dark" : "light"
+                    "dark" === s ? "dark" : "light",
                   ),
                   children: (function (e) {
                     var t = function (e, t) {
@@ -3523,9 +3603,9 @@
             className: (0, ec.default)(
               e.className,
               "transition-opacity duration-300",
-              n ? "opacity-100" : "opacity-0"
+              n ? "opacity-100" : "opacity-0",
             ),
-          })
+          }),
         );
       }
       function nJ(e, t) {
@@ -3559,7 +3639,7 @@
               (e.onerror = function () {}),
               (e.src = d.url);
           },
-          [d]
+          [d],
         );
         var m = (0, F.useCallback)(
             function () {
@@ -3571,7 +3651,7 @@
                 e.images.length;
               u(e.images[t]);
             },
-            [e.images, d]
+            [e.images, d],
           ),
           f = (0, F.useCallback)(
             function () {
@@ -3581,13 +3661,13 @@
                 n = t > 0 ? (t - 1) % e.images.length : e.images.length - 1;
               u(e.images[n]);
             },
-            [e.images, d]
+            [e.images, d],
           ),
           g = (0, F.useCallback)(
             function (e) {
               "ArrowLeft" === e.key ? f() : "ArrowRight" === e.key && m();
             },
-            [m, f]
+            [m, f],
           );
         return (
           (0, F.useEffect)(
@@ -3599,7 +3679,7 @@
                 }
               );
             },
-            [e.images, g]
+            [e.images, g],
           ),
           (0, j.jsxs)(n$.fC, {
             onOpenChange: function (t) {
@@ -3618,13 +3698,13 @@
                     "fixed inset-0 flex items-center justify-center bg-black/90 backdrop-blur-xl radix-state-open:animate-show",
                   children: (0, j.jsxs)(n$.VY, {
                     className: (0, ec.default)(
-                      "relative flex h-screen w-screen justify-stretch divide-x divide-white/10 focus:outline-none radix-state-open:animate-contentShow"
+                      "relative flex h-screen w-screen justify-stretch divide-x divide-white/10 focus:outline-none radix-state-open:animate-contentShow",
                     ),
                     children: [
                       (0, j.jsx)("div", {
                         className: (0, ec.default)(
                           "flex flex-1 transition-[flex-basis]",
-                          s ? "basis-[75vw]" : ""
+                          s ? "basis-[75vw]" : "",
                         ),
                         children: (0, j.jsxs)("div", {
                           className: "flex flex-1 flex-col p-6",
@@ -3705,14 +3785,14 @@
                                         "h-12 w-12 cursor-pointer rounded object-cover transition duration-300 hover:opacity-100",
                                         e.url === d.url
                                           ? "ring-2 ring-white ring-offset-4 ring-offset-black"
-                                          : "opacity-25"
+                                          : "opacity-25",
                                       ),
                                       onClick: function () {
                                         return u(e);
                                       },
                                       role: "button",
                                     },
-                                    n
+                                    n,
                                   );
                                 }),
                                 (0, j.jsx)(er.z, {
@@ -3731,7 +3811,7 @@
                       (0, j.jsx)("div", {
                         className: (0, ec.default)(
                           "flex items-center justify-start overflow-hidden bg-gray-900 text-white transition-[flex-basis] duration-500",
-                          s ? "basis-[25vw]" : "basis-0"
+                          s ? "basis-[25vw]" : "basis-0",
                         ),
                         children: (0, j.jsx)("div", {
                           className: "w-[25vw]",
@@ -3877,7 +3957,7 @@
                       title: "DALL\xb7E 3",
                       subtitle: (0, j.jsx)(
                         U.Z,
-                        (0, x._)((0, p._)({}, N), { values: s })
+                        (0, x._)((0, p._)({}, N), { values: s }),
                       ),
                     }),
                   }),
@@ -3918,7 +3998,7 @@
                         (0, j.jsx)("div", {
                           className: (0, ec.default)(
                             "pt-4",
-                            !d && "result-streaming"
+                            !d && "result-streaming",
                           ),
                           children: (0, j.jsx)("span", { children: l }),
                         }),
@@ -3933,8 +4013,8 @@
                   }),
                 }),
               },
-              o
-            )
+              o,
+            ),
           );
         }
         return (0, j.jsx)(n6, { $numItems: t, children: s });
@@ -3976,9 +4056,9 @@
                                 (console.error(
                                   "Could not fetch file with ID ".concat(
                                     t,
-                                    " from file service"
+                                    " from file service",
                                   ),
-                                  e.message
+                                  e.message,
                                 ),
                                 e)
                               );
@@ -3990,15 +4070,15 @@
                               (console.error(
                                 "Could not fetch file with ID ".concat(
                                   t,
-                                  " from file service"
+                                  " from file service",
                                 ),
-                                a
+                                a,
                               ),
                               Error(
                                 "Could not fetch file with ID ".concat(
                                   t,
-                                  " from file service"
-                                )
+                                  " from file service",
+                                ),
                               ))
                             );
                           return [
@@ -4067,7 +4147,7 @@
               return (0, j.jsx)(
                 n4,
                 { shape: r, className: "animate-pulse bg-gray-100" },
-                t
+                t,
               );
             if (null != m || (null == c ? void 0 : c.url) == null)
               return (0, j.jsx)(
@@ -4091,7 +4171,7 @@
                     }),
                   }),
                 },
-                t
+                t,
               );
             var f = (0, x._)((0, p._)({}, c), {
               alt:
@@ -4120,8 +4200,18 @@
                       n,
                       a,
                       r = e.data;
-                    return (0,
-                    x._)((0, p._)({}, r), { alt: null !== (a = null === (t = r.metadata) || void 0 === t ? void 0 : null === (n = t.dalle) || void 0 === n ? void 0 : n.prompt) && void 0 !== a ? a : "" });
+                    return (0, x._)((0, p._)({}, r), {
+                      alt:
+                        null !==
+                          (a =
+                            null === (t = r.metadata) || void 0 === t
+                              ? void 0
+                              : null === (n = t.dalle) || void 0 === n
+                              ? void 0
+                              : n.prompt) && void 0 !== a
+                          ? a
+                          : "",
+                    });
                   }),
                 metadataRenderer: function (e) {
                   return (0, j.jsx)(n5, { image: e });
@@ -4136,7 +4226,7 @@
                   },
                 }),
               },
-              t
+              t,
             );
           }),
         });
@@ -4214,7 +4304,7 @@
             a,
             n === d.WIDE && "aspect-[7/4]",
             n === d.SQUARE && "aspect-square max-w-[400px]",
-            n === d.TALL && "aspect-[4/7] max-w-xs"
+            n === d.TALL && "aspect-[4/7] max-w-xs",
           ),
           children: [
             (0, j.jsx)("div", {
@@ -4222,7 +4312,7 @@
                 "pointer-events-none absolute inset-0 blur-xl",
                 "light" === i && "bg-black/[.04]",
                 "medium" === i && "bg-black/[.08]",
-                "dark" === i && "bg-black/[.12]"
+                "dark" === i && "bg-black/[.12]",
               ),
             }),
             (0, j.jsx)("div", { className: "relative h-full", children: t }),
@@ -4439,7 +4529,7 @@
                   t,
                   V.uU.User,
                   void 0,
-                  l ? { attachments: l } : void 0
+                  l ? { attachments: l } : void 0,
                 );
               }),
                 r(u),
@@ -4447,7 +4537,7 @@
                 i(),
                 N.o.logEvent(I.a.changeNode, { intent: "edit_save" });
             },
-            [l, n, a, u, m, r, s, i]
+            [l, n, a, u, m, r, s, i],
           ),
           v = (0, F.useCallback)(
             function () {
@@ -4458,7 +4548,7 @@
                   threadId: Y.tQ.getServerThreadId(n),
                 });
             },
-            [a, r, i, n]
+            [a, r, i, n],
           );
         (0, F.useEffect)(
           function () {
@@ -4475,7 +4565,7 @@
               }
             );
           },
-          [v, x]
+          [v, x],
         );
         var w = l && l.length > 0;
         return (0, j.jsxs)(j.Fragment, {
@@ -4547,7 +4637,7 @@
             function () {
               N.o.logEvent(I.a.carouselCardClick, { content: a });
             },
-            [a]
+            [a],
           );
         try {
           t = ez.get(new URL(a).hostname);
@@ -4557,7 +4647,7 @@
         return (0, j.jsxs)(a ? "a" : "div", {
           className: (0, ec.default)(
             "flex h-full w-full flex-col overflow-hidden rounded-md border border-black/10 bg-gray-50 shadow-[0_2px_24px_rgba(0,0,0,0.05)]",
-            s
+            s,
           ),
           href: a,
           target: a ? "_blank" : "",
@@ -4634,7 +4724,7 @@
             void 0 !== a && a
               ? "left-1/2 -translate-x-[calc(100%+4px)] lg:-left-3 lg:-translate-x-full"
               : "left-1/2 translate-x-1 lg:-right-3 lg:left-auto lg:translate-x-full",
-            t && "lg:hidden"
+            t && "lg:hidden",
           ),
           children: r,
         });
@@ -4646,7 +4736,7 @@
           return (0, j.jsx)(e4.E.div, {
             className: (0, ec.default)(
               "mr-3 h-full w-full flex-none sm:w-[calc((100%-12px)/2)] lg:w-[calc((100%-24px)/3)]",
-              a
+              a,
             ),
             style: { x: t },
             children: n,
@@ -4654,8 +4744,14 @@
         },
         aw = { type: "spring", bounce: 0 },
         ay = (0, F.forwardRef)(function (e, t) {
-          return (0,
-          j.jsx)("div", { ref: t, className: (0, ec.default)("relative flex h-full w-full overflow-hidden", e.className), children: e.children });
+          return (0, j.jsx)("div", {
+            ref: t,
+            className: (0, ec.default)(
+              "relative flex h-full w-full overflow-hidden",
+              e.className,
+            ),
+            children: e.children,
+          });
         });
       ay.displayName = "CarouselContainer";
       var aj =
@@ -4688,7 +4784,7 @@
                     : e.clientWidth;
               return t ? -Math.floor(l / u) * (t + 12) : 0;
             },
-            [u, l]
+            [u, l],
           ),
           g = (0, F.useCallback)(
             function (e) {
@@ -4701,19 +4797,19 @@
                     return ax()(e + t, 0, m.length - 1);
                   });
             },
-            [m.length, a, u]
+            [m.length, a, u],
           ),
           h = (0, F.useCallback)(
             function () {
               g(1);
             },
-            [g]
+            [g],
           ),
           p = (0, F.useCallback)(
             function () {
               g(-1);
             },
-            [g]
+            [g],
           ),
           x = (0, b._)(
             (0, F.useMemo)(
@@ -4722,9 +4818,9 @@
                 var e = l < m.length - u;
                 return [l > 0, e];
               },
-              [m.length, l, a, u]
+              [m.length, l, a, u],
             ),
-            2
+            2,
           ),
           v = x[0],
           w = x[1];
@@ -4733,13 +4829,13 @@
             function () {
               return (0, ah.j)(i, f(), aw).stop;
             },
-            [f, l, i]
+            [f, l, i],
           ),
           (0, j.jsxs)("div", {
             className: (0, ec.default)(
               "relative h-full w-full",
               r,
-              c && "mb-12 lg:mb-0"
+              c && "mb-12 lg:mb-0",
             ),
             children: [
               (0, j.jsx)(ay, {
@@ -4837,7 +4933,7 @@
                     })
                     .filter(Boolean);
                 },
-                [t, a]
+                [t, a],
               )),
             s = (0, F.useMemo)(
               function () {
@@ -4845,7 +4941,7 @@
                   return !!(null == e ? void 0 : e.imageUrl);
                 });
               },
-              [i]
+              [i],
             ),
             o = (0, F.useMemo)(
               function () {
@@ -4853,7 +4949,7 @@
                   return (e[ez.get(t.domain)] = t.manifest.logo_url), e;
                 }, {});
               },
-              [r]
+              [r],
             ),
             l = (0, F.useMemo)(
               function () {
@@ -4876,12 +4972,12 @@
                         logoUrl: n,
                         mini: s,
                       },
-                      e.url
+                      e.url,
                     )
                   );
                 });
               },
-              [i, s, o]
+              [i, s, o],
             );
           return 0 === i.length
             ? null
@@ -4922,7 +5018,7 @@
                 ? r.message.content.parts
                 : [(0, et.RR)(r.message)];
             },
-            [r]
+            [r],
           );
         return i
           ? (0, j.jsx)(
@@ -4936,8 +5032,8 @@
                       ? void 0
                       : a.attachments,
                 },
-                c
-              )
+                c,
+              ),
             )
           : (0, j.jsx)(aS, {
               parts: m,
@@ -5000,7 +5096,7 @@
                 var e = n.match(a_);
                 return Array.from(new Set(e));
               },
-              [a, n]
+              [a, n],
             )),
           C = r && r.length > 0 && !u,
           M = "danger" !== b && c,
@@ -5022,14 +5118,22 @@
             s,
             "flex flex-col items-start gap-3 overflow-x-auto whitespace-pre-wrap break-words",
             "danger" === b && "text-red-500",
-            "warning" === b && "text-orange-500"
+            "warning" === b && "text-orange-500",
           ),
           children: [
             C &&
               (0, j.jsx)(aP, {
                 children: r.map(function (e) {
-                  return (0,
-                  j.jsx)(ae.Z, { file: e.name, fileId: e.id, width: "wide", alwaysShowData: !0 }, e.id);
+                  return (0, j.jsx)(
+                    ae.Z,
+                    {
+                      file: e.name,
+                      fileId: e.id,
+                      width: "wide",
+                      alwaysShowData: !0,
+                    },
+                    e.id,
+                  );
                 }),
               }),
             _.map(function (e, t) {
@@ -5039,7 +5143,7 @@
                   ? (0, j.jsx)(
                       "div",
                       { className: "empty:hidden", children: n },
-                      t
+                      t,
                     )
                   : (0, j.jsx)(
                       nF,
@@ -5050,7 +5154,7 @@
                         className: (0, ec.default)(
                           M && "result-streaming",
                           "danger" === b && "text-red-500",
-                          "warning" === b && "text-orange-500"
+                          "warning" === b && "text-orange-500",
                         ),
                         children:
                           "" === e.value
@@ -5108,7 +5212,7 @@
                                 return e;
                               })(e.value, i),
                       },
-                      t
+                      t,
                     );
               }
               var a = e.value.length > 1;
@@ -5116,13 +5220,13 @@
                 "div",
                 {
                   className: (0, ec.default)(
-                    a && "grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+                    a && "grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4",
                   ),
                   children: e.value.map(function (e, t) {
                     return (0, j.jsx)(aR, { asset: e, showAsGrid: a }, t);
                   }),
                 },
-                t
+                t,
               );
             }),
             (0, j.jsx)(ew.ZP, {
@@ -5176,9 +5280,9 @@
                             (console.error(
                               "Could not fetch file with ID ".concat(
                                 i,
-                                " from file service"
+                                " from file service",
                               ),
-                              e.message
+                              e.message,
                             ),
                             e)
                           );
@@ -5212,7 +5316,7 @@
         return (0, j.jsx)("div", {
           className: (0, ec.default)(
             "relative flex h-auto w-full max-w-lg items-center justify-center overflow-hidden rounded-md bg-gray-100 text-gray-500 dark:bg-gray-700 dark:text-gray-400",
-            m && "aspect-square"
+            m && "aspect-square",
           ),
           children:
             null !== w
@@ -5223,7 +5327,7 @@
                     alt: x.formatMessage(aZ.imageAltText),
                     className: (0, ec.default)(
                       "max-w-full",
-                      m && "aspect-square object-cover"
+                      m && "aspect-square object-cover",
                     ),
                     src: w,
                     width: k,
@@ -5281,7 +5385,7 @@
                 }, ""),
               ];
             },
-            [t]
+            [t],
           );
         return (0, j.jsx)(aS, {
           clientThreadId: n,
@@ -5342,7 +5446,7 @@
                 Object.values(d).reduce(function (e, t) {
                   var n = t.task_index;
                   return null == e[n] && (e[n] = []), e[n].push(t), e;
-                }, {})
+                }, {}),
               )
                 .map(function (e) {
                   return (0, x._)((0, p._)({}, e[0]), {
@@ -5431,13 +5535,13 @@
               : (0, j.jsx)(eW.Wp, { className: "icon-2xl text-brand-purple" }),
             title: (0, j.jsx)(
               U.Z,
-              (0, p._)({}, y ? aF.finishedTitle : aF.inProgressTitle)
+              (0, p._)({}, y ? aF.finishedTitle : aF.inProgressTitle),
             ),
             subtitle: (0, j.jsx)(
               U.Z,
               (0, x._)((0, p._)({}, g), {
                 values: { numTasks: w.numTotalSubAgents },
-              })
+              }),
             ),
           }),
         });
@@ -5647,8 +5751,8 @@
                   }),
                 }),
               },
-              s
-            )
+              s,
+            ),
           );
         }
         return (0, j.jsx)(aQ, { $numItems: t, children: i });
@@ -5675,7 +5779,7 @@
             a,
             n === m.WIDE && "aspect-[7/4]",
             n === m.SQUARE && "aspect-square max-w-[400px]",
-            n === m.TALL && "aspect-[4/7] max-w-xs"
+            n === m.TALL && "aspect-[4/7] max-w-xs",
           ),
           children: [
             (0, j.jsx)("div", {
@@ -5683,7 +5787,7 @@
                 "pointer-events-none absolute inset-0 blur-xl",
                 "light" === i && "bg-black/[.04]",
                 "medium" === i && "bg-black/[.08]",
-                "dark" === i && "bg-black/[.12]"
+                "dark" === i && "bg-black/[.12]",
               ),
             }),
             t,
@@ -5802,7 +5906,7 @@
                     U.Z,
                     (0, x._)((0, p._)({}, a3.used), {
                       values: { pluginName: m },
-                    })
+                    }),
                   ),
                 })
               : c
@@ -5811,7 +5915,7 @@
                     U.Z,
                     (0, x._)((0, p._)({}, a3.triedToUse), {
                       values: { pluginName: m },
-                    })
+                    }),
                   ),
                 })
               : (0, j.jsx)("div", {
@@ -5819,7 +5923,7 @@
                     U.Z,
                     (0, x._)((0, p._)({}, a3.using), {
                       values: { pluginName: m },
-                    })
+                    }),
                   ),
                 });
         return (
@@ -6026,11 +6130,40 @@
               x = g === t.length - 1;
             switch (e.type) {
               case f.Text:
-                return (0,
-                j.jsx)(aI, { className: "min-h-[20px]", message: e.message, isEditing: a, format: r, isCompletionInProgress: x && i, clientThreadId: n, onChangeItemInView: d, onRequestCompletion: c, onExitEdit: l, disabled: o, isCompletion: r, onRequestMoreCompletions: u, isResponseToPluginMessage: (null === (h = t[g - 1]) || void 0 === h ? void 0 : h.type) === f.Plugin }, e.message.nodeId);
+                return (0, j.jsx)(
+                  aI,
+                  {
+                    className: "min-h-[20px]",
+                    message: e.message,
+                    isEditing: a,
+                    format: r,
+                    isCompletionInProgress: x && i,
+                    clientThreadId: n,
+                    onChangeItemInView: d,
+                    onRequestCompletion: c,
+                    onExitEdit: l,
+                    disabled: o,
+                    isCompletion: r,
+                    onRequestMoreCompletions: u,
+                    isResponseToPluginMessage:
+                      (null === (h = t[g - 1]) || void 0 === h
+                        ? void 0
+                        : h.type) === f.Plugin,
+                  },
+                  e.message.nodeId,
+                );
               case f.MultiText:
-                return (0,
-                j.jsx)(aL, { clientThreadId: n, messages: e.messages, isCompletionInProgress: x && i, isCompletion: r, onRequestMoreCompletions: u }, g);
+                return (0, j.jsx)(
+                  aL,
+                  {
+                    clientThreadId: n,
+                    messages: e.messages,
+                    isCompletionInProgress: x && i,
+                    isCompletion: r,
+                    onRequestMoreCompletions: u,
+                  },
+                  g,
+                );
               case f.Browsing:
               case f.RetrievalBrowsing:
                 var v = e.messages[e.messages.length - 1],
@@ -6044,7 +6177,7 @@
                         isLastMessageInTurn: x,
                         isRequestActive: o,
                       },
-                      e.messages[0].nodeId
+                      e.messages[0].nodeId,
                     )
                   : (0, j.jsx)(
                       ti,
@@ -6053,28 +6186,62 @@
                         isComplete: !s || !x || !o || tE(v.message),
                         isRetrieval: e.type === f.RetrievalBrowsing,
                       },
-                      e.messages[0].nodeId
+                      e.messages[0].nodeId,
                     );
               case f.ParallelBrowsing:
-                return (0,
-                j.jsx)(aB, { messages: e.messages }, e.messages[0].nodeId);
+                return (0, j.jsx)(
+                  aB,
+                  { messages: e.messages },
+                  e.messages[0].nodeId,
+                );
               case f.Code:
                 var w,
                   y,
                   k = t[g + 1],
                   C =
                     k && k.type === f.CodeExecutionOutput ? k.message : void 0;
-                return (0,
-                j.jsx)(nA, { clientThreadId: n, message: e.message, outputMessage: C, isComplete: !s || !x || !o || ((null == (y = null === (w = null == C ? void 0 : C.message.metadata) || void 0 === w ? void 0 : w.aggregate_result) ? void 0 : y.status) !== void 0 && (null == y ? void 0 : y.status) !== "running") || tE(e.message.message) }, e.message.nodeId);
+                return (0, j.jsx)(
+                  nA,
+                  {
+                    clientThreadId: n,
+                    message: e.message,
+                    outputMessage: C,
+                    isComplete:
+                      !s ||
+                      !x ||
+                      !o ||
+                      ((null ==
+                      (y =
+                        null ===
+                          (w = null == C ? void 0 : C.message.metadata) ||
+                        void 0 === w
+                          ? void 0
+                          : w.aggregate_result)
+                        ? void 0
+                        : y.status) !== void 0 &&
+                        (null == y ? void 0 : y.status) !== "running") ||
+                      tE(e.message.message),
+                  },
+                  e.message.nodeId,
+                );
               case f.CodeExecutionOutput:
-                return (0,
-                j.jsx)(tW, { message: e.message, isCollapsed: !1 }, e.message.nodeId);
+                return (0, j.jsx)(
+                  tW,
+                  { message: e.message, isCollapsed: !1 },
+                  e.message.nodeId,
+                );
               case f.Plugin:
-                return (0,
-                j.jsx)(a2, { clientThreadId: n, messages: e.messages }, e.messages[0].nodeId);
+                return (0, j.jsx)(
+                  a2,
+                  { clientThreadId: n, messages: e.messages },
+                  e.messages[0].nodeId,
+                );
               case f.Dalle:
-                return (0,
-                j.jsx)(n0, { messages: e.messages, isFirstMessageInTurn: p }, e.messages[0].nodeId);
+                return (0, j.jsx)(
+                  n0,
+                  { messages: e.messages, isFirstMessageInTurn: p },
+                  e.messages[0].nodeId,
+                );
               default:
                 return null;
             }
@@ -6178,13 +6345,13 @@
                 ? 1e3 * n.message.create_time
                 : Date.now();
             }),
-            1
+            1,
           )[0],
           l = (0, b._)(
             (0, F.useState)(function () {
               return Date.now();
             }),
-            1
+            1,
           )[0];
         return (0, j.jsxs)(ri, {
           children: [
@@ -6368,7 +6535,7 @@
               className: "text-center text-sm text-token-text-tertiary",
               children: (0, j.jsx)(
                 U.Z,
-                (0, p._)({}, rk.responsePromptExplanation)
+                (0, p._)({}, rk.responsePromptExplanation),
               ),
             }),
           ],
@@ -6384,7 +6551,7 @@
             (0, F.useState)(function () {
               return Date.now();
             }),
-            1
+            1,
           )[0],
           s = (0, ei.B$)(),
           o = (0, b._)(
@@ -6392,9 +6559,9 @@
               function () {
                 return (0, rf.shuffle)([0, 1]);
               },
-              [n[0], n[1]]
+              [n[0], n[1]],
             ),
-            2
+            2,
           ),
           l = o[0],
           d = o[1],
@@ -6424,7 +6591,7 @@
               }
             );
           },
-          [C]
+          [C],
         ),
           (0, F.useEffect)(
             function () {
@@ -6472,7 +6639,7 @@
                 },
               });
             },
-            [v, w, t, i, M, c, y.messages, k.messages]
+            [v, w, t, i, M, c, y.messages, k.messages],
           );
         var _ = function (e) {
             var n,
@@ -6494,13 +6661,13 @@
               rx(
                 t,
                 y.messages[y.messages.length - 1].nodeId,
-                l ? "original" : "new"
+                l ? "original" : "new",
               ),
               k.messages.length > 0 &&
                 rx(
                   t,
                   k.messages[k.messages.length - 1].nodeId,
-                  l ? "original" : "new"
+                  l ? "original" : "new",
                 ),
               null != d &&
                 null != f &&
@@ -6542,17 +6709,17 @@
             function () {
               return a7(v.messages);
             },
-            [v.messages]
+            [v.messages],
           ),
           L = (0, F.useMemo)(
             function () {
               return a7(w.messages);
             },
-            [w.messages]
+            [w.messages],
           );
         return (0, j.jsx)("div", {
           className: (0, ec.default)(
-            "relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]"
+            "relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]",
           ),
           children: (0, j.jsxs)("div", {
             className: "relative mt-3 flex gap-1 md:gap-3",
@@ -6577,7 +6744,7 @@
                           U.Z,
                           (0, x._)((0, p._)({}, rk.responseNumber), {
                             values: { responseIndex: 1 },
-                          })
+                          }),
                         ),
                       }),
                     ],
@@ -6591,7 +6758,7 @@
                       isCompletionRequestInProgress: S,
                       hasActiveRequest: s,
                       handleExitEdit: rf.noop,
-                    })
+                    }),
                   ),
                 ],
               }),
@@ -6615,7 +6782,7 @@
                           U.Z,
                           (0, x._)((0, p._)({}, rk.responseNumber), {
                             values: { responseIndex: 2 },
-                          })
+                          }),
                         ),
                       }),
                     ],
@@ -6629,7 +6796,7 @@
                       isCompletionRequestInProgress: R,
                       hasActiveRequest: s,
                       handleExitEdit: rf.noop,
-                    })
+                    }),
                   ),
                 ],
               }),
@@ -6833,7 +7000,7 @@
                   void 0 === e ||
                   e.scrollIntoView({ behavior: "auto" }));
             },
-            [m]
+            [m],
           );
           var B = w[w.length - 1],
             q = B.rating,
@@ -6846,7 +7013,7 @@
                   c
                 );
               },
-              [P, w, c]
+              [P, w, c],
             ),
             U = (0, F.useCallback)(
               function () {
@@ -6857,7 +7024,7 @@
                   }),
                   T(!0));
               },
-              [w, s]
+              [w, s],
             ),
             O = (0, F.useCallback)(function () {
               T(!1);
@@ -6866,25 +7033,25 @@
               function () {
                 Y.tQ.copyMessageToClipboard(s, a);
               },
-              [s, a]
+              [s, a],
             ),
             W = (0, F.useCallback)(
               function (e) {
                 l(B.nodeId, B.message.id, e);
               },
-              [B, l]
+              [B, l],
             ),
             Q = (0, b._)(
               (0, F.useState)(function () {
                 return Date.now();
               }),
-              1
+              1,
             )[0],
             H = (0, F.useMemo)(
               function () {
                 return eh.Cv.getRequestIdFromConversationTurn(v);
               },
-              [v]
+              [v],
             ),
             G = (0, ei.Yk)(H),
             $ = (0, ei.B$)(),
@@ -6916,13 +7083,13 @@
                 }
                 return null;
               },
-              [A, P, w, s]
+              [A, P, w, s],
             ),
             ea = (0, F.useMemo)(
               function () {
                 return a7(w);
               },
-              [w]
+              [w],
             ),
             er = (0, Y.r7)(s),
             es = !h && !g && !er && !R && C && P,
@@ -6968,7 +7135,7 @@
               ? (0, j.jsx)(rW, {
                   onClick: U,
                   className: (0, ec.default)(
-                    C && "md:invisible md:group-hover:visible"
+                    C && "md:invisible md:group-hover:visible",
                   ),
                   children: (0, j.jsx)(E.vPQ, { className: "icon-sm" }),
                 })
@@ -6978,7 +7145,7 @@
                 ? (0, j.jsx)(np.Z, {
                     onCopy: z,
                     className: (0, ec.default)(
-                      "rounded-md p-1 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400"
+                      "rounded-md p-1 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400",
                     ),
                   })
                 : null,
@@ -6998,13 +7165,13 @@
                             disabled: "thumbsUp" === q,
                             className: (0, ec.default)(
                               "thumbsUp" === q &&
-                                "!dark:text-gray-200 bg-gray-100 text-gray-700 dark:bg-gray-700"
+                                "!dark:text-gray-200 bg-gray-100 text-gray-700 dark:bg-gray-700",
                             ),
                             children: (0, j.jsx)(E.fmn, {
                               className: "icon-sm",
                             }),
                           },
-                          "thumbsUp:".concat(B.nodeId)
+                          "thumbsUp:".concat(B.nodeId),
                         ),
                       "thumbsUp" !== q &&
                         !R &&
@@ -7017,13 +7184,13 @@
                             disabled: "thumbsDown" === q,
                             className: (0, ec.default)(
                               "thumbsDown" === q &&
-                                "!dark:text-gray-200 bg-gray-100 text-gray-700 dark:bg-gray-700"
+                                "!dark:text-gray-200 bg-gray-100 text-gray-700 dark:bg-gray-700",
                             ),
                             children: (0, j.jsx)(E.oLd, {
                               className: "icon-sm",
                             }),
                           },
-                          "thumbsDown:".concat(B.nodeId)
+                          "thumbsDown:".concat(B.nodeId),
                         ),
                     ],
                   })
@@ -7036,8 +7203,135 @@
                   conversationTurnMountTime: Q,
                 })
               : null;
-          return (0,
-          j.jsxs)(rq, { className: (0, ec.default)("group", "w-full text-token-text-primary", (0, ec.default)(!u && "border-b border-black/10 gizmo:border-0 dark:border-gray-900/50 gizmo:dark:border-0", P ? "bg-gray-50 gizmo:bg-transparent dark:bg-[#444654] gizmo:dark:bg-transparent" : "gizmo:bg-transparent dark:bg-gray-800 gizmo:dark:bg-transparent")), ref: D, style: { "--avatar-color": f }, "data-testid": "conversation-turn-".concat(a), children: [en && (0, j.jsx)(rQ, { children: en }), (0, j.jsxs)(rA, { $isStaticSharedThread: g, className: (0, ec.default)(u ? "ml-5" : "m-auto"), children: [(0, j.jsx)(rU, { $isDesktopNavCollapsed: Z, children: ed ? (0, j.jsx)(rv, {}) : (0, j.jsxs)(j.Fragment, { children: [(0, j.jsxs)(rz, { children: [(0, j.jsx)(eP, { isCompletionRequestInProgress: G, messages: w, clientThreadId: s, isCompletion: P, avatarColor: f, showInlineEmbeddedDisplay: u }), ef && C && (0, j.jsx)(rT.h, { currentPage: S, onChangeIndex: ep, length: y.length, className: (0, ec.default)("absolute left-0 top-2 -ml-4 -translate-x-full", y.length > 1 ? "group:hover-visible visible" : "invisible") })] }), (0, j.jsxs)("div", { className: (0, ec.default)("relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]"), children: [(0, j.jsx)(a8, (0, x._)((0, p._)({ groupedMessages: ea }, e), { isEditing: _, isCompletion: P, isCompletionRequestInProgress: G, isFinalTurn: i, hasActiveRequest: $, handleExitEdit: O })), eg && C && (0, j.jsx)(rV, { $hidden: $, children: ex }), eu && (0, j.jsx)(rM, { oauthMetadata: eu }), (em || ef) && (0, j.jsxs)("div", { className: "flex justify-between lg:block", children: [!C && ef && (0, j.jsx)(rT.h, { currentPage: S, onChangeIndex: ep, length: y.length, className: (0, ec.default)("self-center pt-2", y.length > 1 ? "visible" : "!invisible") }), eg && !C && (0, j.jsx)(rV, { $hidden: G, children: ex }), em && (0, j.jsxs)(rV, { $hidden: G, children: [ev, eb] }), eo && ew] })] })] }) }), ed && (0, j.jsx)(rO, { children: (0, j.jsx)(rb, (0, p._)({ variantIds: y, variantsInStreamInfo: k, conversationTurnMountTime: Q }, e)) })] })] });
+          return (0, j.jsxs)(rq, {
+            className: (0, ec.default)(
+              "group",
+              "w-full text-token-text-primary",
+              (0, ec.default)(
+                !u &&
+                  "border-b border-black/10 gizmo:border-0 dark:border-gray-900/50 gizmo:dark:border-0",
+                P
+                  ? "bg-gray-50 gizmo:bg-transparent dark:bg-[#444654] gizmo:dark:bg-transparent"
+                  : "gizmo:bg-transparent dark:bg-gray-800 gizmo:dark:bg-transparent",
+              ),
+            ),
+            ref: D,
+            style: { "--avatar-color": f },
+            "data-testid": "conversation-turn-".concat(a),
+            children: [
+              en && (0, j.jsx)(rQ, { children: en }),
+              (0, j.jsxs)(rA, {
+                $isStaticSharedThread: g,
+                className: (0, ec.default)(u ? "ml-5" : "m-auto"),
+                children: [
+                  (0, j.jsx)(rU, {
+                    $isDesktopNavCollapsed: Z,
+                    children: ed
+                      ? (0, j.jsx)(rv, {})
+                      : (0, j.jsxs)(j.Fragment, {
+                          children: [
+                            (0, j.jsxs)(rz, {
+                              children: [
+                                (0, j.jsx)(eP, {
+                                  isCompletionRequestInProgress: G,
+                                  messages: w,
+                                  clientThreadId: s,
+                                  isCompletion: P,
+                                  avatarColor: f,
+                                  showInlineEmbeddedDisplay: u,
+                                }),
+                                ef &&
+                                  C &&
+                                  (0, j.jsx)(rT.h, {
+                                    currentPage: S,
+                                    onChangeIndex: ep,
+                                    length: y.length,
+                                    className: (0, ec.default)(
+                                      "absolute left-0 top-2 -ml-4 -translate-x-full",
+                                      y.length > 1
+                                        ? "group:hover-visible visible"
+                                        : "invisible",
+                                    ),
+                                  }),
+                              ],
+                            }),
+                            (0, j.jsxs)("div", {
+                              className: (0, ec.default)(
+                                "relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]",
+                              ),
+                              children: [
+                                (0, j.jsx)(
+                                  a8,
+                                  (0, x._)(
+                                    (0, p._)({ groupedMessages: ea }, e),
+                                    {
+                                      isEditing: _,
+                                      isCompletion: P,
+                                      isCompletionRequestInProgress: G,
+                                      isFinalTurn: i,
+                                      hasActiveRequest: $,
+                                      handleExitEdit: O,
+                                    },
+                                  ),
+                                ),
+                                eg &&
+                                  C &&
+                                  (0, j.jsx)(rV, { $hidden: $, children: ex }),
+                                eu && (0, j.jsx)(rM, { oauthMetadata: eu }),
+                                (em || ef) &&
+                                  (0, j.jsxs)("div", {
+                                    className: "flex justify-between lg:block",
+                                    children: [
+                                      !C &&
+                                        ef &&
+                                        (0, j.jsx)(rT.h, {
+                                          currentPage: S,
+                                          onChangeIndex: ep,
+                                          length: y.length,
+                                          className: (0, ec.default)(
+                                            "self-center pt-2",
+                                            y.length > 1
+                                              ? "visible"
+                                              : "!invisible",
+                                          ),
+                                        }),
+                                      eg &&
+                                        !C &&
+                                        (0, j.jsx)(rV, {
+                                          $hidden: G,
+                                          children: ex,
+                                        }),
+                                      em &&
+                                        (0, j.jsxs)(rV, {
+                                          $hidden: G,
+                                          children: [ev, eb],
+                                        }),
+                                      eo && ew,
+                                    ],
+                                  }),
+                              ],
+                            }),
+                          ],
+                        }),
+                  }),
+                  ed &&
+                    (0, j.jsx)(rO, {
+                      children: (0, j.jsx)(
+                        rb,
+                        (0, p._)(
+                          {
+                            variantIds: y,
+                            variantsInStreamInfo: k,
+                            conversationTurnMountTime: Q,
+                          },
+                          e,
+                        ),
+                      ),
+                    }),
+                ],
+              }),
+            ],
+          });
         }),
         rq = z.Z.div(rI()),
         rA = z.Z.div(rS(), function (e) {
@@ -7281,7 +7575,7 @@
           function () {
             "report" === r && _.pg.forceEnableSession();
           },
-          [r]
+          [r],
         );
         var v = (0, F.useRef)(0.5 > Math.random() ? "left" : "right"),
           w = null == h ? void 0 : h.getConversationTurns(a || "root"),
@@ -7301,7 +7595,7 @@
                 model: u,
               };
             },
-            [a, d, r, u]
+            [a, d, r, u],
           ),
           Z =
             null == w
@@ -7318,7 +7612,7 @@
                 null == B ? void 0 : B[(null == B ? void 0 : B.length) - 1];
               return "thumbsDown" === r && P && rK(e) && rK(k);
             },
-            [r, P, B, k]
+            [r, P, B, k],
           ),
           A = (0, F.useRef)(Date.now()),
           z = (0, F.useRef)(-1),
@@ -7333,7 +7627,7 @@
                 "thumbsDown" === r &&
                 N.o.logEvent(I.a.displayedThumbsDownFeedbackForm, R);
           },
-          [M]
+          [M],
         );
         var H = w.length - 2,
           G = B.length - 1,
@@ -7342,14 +7636,14 @@
             function () {
               return J && eh.Cv.getRequestIdFromConversationTurn(J);
             },
-            [J]
+            [J],
           ),
           K = (0, ei.Yk)($);
         (0, F.useMemo)(
           function () {
             K || (V.current = Date.now());
           },
-          [K]
+          [K],
         );
         var X = k.messages,
           et = X[X.length - 1],
@@ -7389,7 +7683,7 @@
                 (ey.current =
                   (null == t ? void 0 : t["feedback-other"].value) || "");
             },
-            [l]
+            [l],
           ),
           ek = (0, F.useCallback)(
             function () {
@@ -7399,7 +7693,7 @@
                   N.o.logEvent(I.a.submitThumbsDownFeedbackForm, R),
                 q ? T("compare") : i();
             },
-            [ej, s, r, q, R, i]
+            [ej, s, r, q, R, i],
           ),
           eC = (0, F.useCallback)(
             function (e, t) {
@@ -7417,13 +7711,13 @@
                   })
                   .catch(function () {
                     nT.m.danger(
-                      "Moderation NOT logged successfully! Please try again"
+                      "Moderation NOT logged successfully! Please try again",
                     );
                   }),
                   i();
               }
             },
-            [h, d, i]
+            [h, d, i],
           ),
           eM = (0, F.useCallback)(
             function () {
@@ -7431,7 +7725,7 @@
                 ew.current.push("moderation-reject"),
                 eC(ey.current, ew.current);
             },
-            [eC, ej]
+            [eC, ej],
           ),
           e_ = (0, F.useCallback)(
             function () {
@@ -7439,7 +7733,7 @@
                 ew.current.push("moderation-accept"),
                 eC(ey.current, ew.current);
             },
-            [eC, ej]
+            [eC, ej],
           ),
           eT =
             "moderate" === r
@@ -7460,7 +7754,7 @@
               : "critique" === M
               ? (0, j.jsx)(es.ZP.Button, {
                   title: g.formatMessage(
-                    "report" === r ? r$.submitReport : r$.submitFeedback
+                    "report" === r ? r$.submitReport : r$.submitFeedback,
                   ),
                   onClick: ek,
                 })
@@ -7488,7 +7782,7 @@
               if (
                 (N.o.logEvent(
                   I.a.submittedComparisonUIV0,
-                  Object.assign({}, R, { choice: t })
+                  Object.assign({}, R, { choice: t }),
                 ),
                 eB)
               ) {
@@ -7508,13 +7802,13 @@
                     W.current,
                     V.current,
                     ey.current,
-                    ew.current
+                    ew.current,
                   );
               }
               Y.tQ.setThreadCurrentLeafId(d, e === v.current ? ev.id : er.id),
                 i();
             },
-            [eS, eP, R, eB, d, ev.id, er.id, i, ea, ex, o, en, em, r]
+            [eS, eP, R, eB, d, ev.id, er.id, i, ea, ex, o, en, em, r],
           ),
           eE = !K && null != V.current && q,
           eq = (0, F.useCallback)(
@@ -7523,15 +7817,15 @@
                 "critique" === M
                   ? N.o.logEvent(
                       I.a.skippedThumbsDownFeedbackForm,
-                      Object.assign({}, R)
+                      Object.assign({}, R),
                     )
                   : "compare" === M &&
                     N.o.logEvent(
                       I.a.skippedComparisonUIV0,
-                      Object.assign({}, R)
+                      Object.assign({}, R),
                     );
             },
-            [i, R, M]
+            [i, R, M],
           ),
           eA = (0, b._)((0, F.useState)([]), 2),
           eU = eA[0],
@@ -7544,7 +7838,7 @@
                 eO(
                   Object.keys(t).map(function (e) {
                     return [e, t[e]];
-                  })
+                  }),
                 );
               });
           }, []),
@@ -7577,7 +7871,7 @@
                             ? g.formatMessage(r$.thumbsUpPlaceholder)
                             : "report" === r
                             ? g.formatMessage(
-                                r$.reportContentExplanationPlaceholder
+                                r$.reportContentExplanationPlaceholder,
                               )
                             : g.formatMessage(r$.thumbsDownPlaceholder),
                         rows: 3,
@@ -7626,7 +7920,7 @@
                                     (0, j.jsx)(ep.Z, {
                                       id: "feedback-harmful-offensive",
                                       label: g.formatMessage(
-                                        r$.harmfulOffensive
+                                        r$.harmfulOffensive,
                                       ),
                                     }),
                                     (0, j.jsx)(ep.Z, {
@@ -7642,13 +7936,16 @@
                                       var t = (0, b._)(e, 2),
                                         n = t[0],
                                         a = t[1];
-                                      return (0,
-                                      j.jsx)(ep.Z, { id: "feedback-" + n, label: a }, n);
+                                      return (0, j.jsx)(
+                                        ep.Z,
+                                        { id: "feedback-" + n, label: a },
+                                        n,
+                                      );
                                     }),
                                     (0, j.jsx)(ep.Z, {
                                       id: "feedback-copyright",
                                       label: g.formatMessage(
-                                        r$.copyrightContent
+                                        r$.copyrightContent,
                                       ),
                                     }),
                                   ],
@@ -7672,7 +7969,7 @@
                         className: (0, ec.default)("mb-7 mt-3"),
                         children: (0, j.jsx)(
                           U.Z,
-                          (0, p._)({}, r$.continueWithChosenAnswer)
+                          (0, p._)({}, r$.continueWithChosenAnswer),
                         ),
                       }),
                       (0, j.jsx)(r2, {
@@ -7697,7 +7994,7 @@
                         children: [
                           (0, j.jsxs)("div", {
                             className: (0, ec.default)(
-                              "mb-2 grid w-full grid-cols-2 gap-5"
+                              "mb-2 grid w-full grid-cols-2 gap-5",
                             ),
                             children: [
                               (0, j.jsx)("div", {
@@ -7716,7 +8013,7 @@
                           }),
                           (0, j.jsxs)("div", {
                             className: (0, ec.default)(
-                              "mb-5 grid w-full grid-cols-2 gap-5"
+                              "mb-5 grid w-full grid-cols-2 gap-5",
                             ),
                             children: [
                               (0, j.jsxs)(r1, {
@@ -7785,7 +8082,7 @@
                                 (0, j.jsx)(es.ZP.Button, {
                                   disabled: !eE,
                                   title: g.formatMessage(
-                                    r$.neitherAnswerBetter
+                                    r$.neitherAnswerBetter,
                                   ),
                                   color: "primary",
                                   onClick: function () {
@@ -7809,7 +8106,7 @@
                 (0, j.jsx)(es.ZP.Actions, { primaryButton: eT }),
               ],
             },
-            "RatingModal-".concat(a)
+            "RatingModal-".concat(a),
           )
         );
       }
@@ -7863,7 +8160,7 @@
                     });
               }
             },
-            [d, u, n, c, r]
+            [d, u, n, c, r],
           ),
           T = (0, F.useCallback)(
             function (e, t) {
@@ -7886,7 +8183,7 @@
                   M(!0);
               }
             },
-            [m, n, c, r, d, M]
+            [m, n, c, r, d, M],
           ),
           S = (0, F.useCallback)(
             ((t = (0, h._)(function (e, t, a, r, i, s, o, l, d, u, c) {
@@ -7923,7 +8220,7 @@
             function (e, n, a, r, i, s, o, l, d, u, c) {
               return t.apply(this, arguments);
             }),
-            [n]
+            [n],
           );
         return null != d
           ? (0, j.jsx)(rX, {
@@ -8023,14 +8320,14 @@
             function () {
               N.o.logEvent(I.a.closeAccountPaymentModal), a();
             },
-            [a]
+            [a],
           ),
           i = (0, ek.a)(
             ["referralInvites"],
             function () {
               return Q.ZP.getEligibleReferralInvites();
             },
-            { enabled: n }
+            { enabled: n },
           ),
           s = i.data,
           o = i.isLoading,
@@ -8047,7 +8344,7 @@
               (eO.m9.logEvent("chatgpt_referral_invite_modal_opened"),
               N.o.logEvent(I.a.chatgptReferralInviteModalOpened));
           },
-          [n]
+          [n],
         ),
         l)
           ? (0, j.jsxs)(r9.x, {
@@ -8064,7 +8361,7 @@
                         U.Z,
                         (0, x._)((0, p._)({}, ii.modalTitle), {
                           values: { remainingInviteCount: d },
-                        })
+                        }),
                       ),
                     }),
                     (0, j.jsx)("button", {
@@ -8095,14 +8392,14 @@
                               className: "text-xl font-semibold leading-6",
                               children: (0, j.jsx)(
                                 U.Z,
-                                (0, p._)({}, ii.inviteDescription)
+                                (0, p._)({}, ii.inviteDescription),
                               ),
                             }),
                             (0, j.jsx)("p", {
                               className: "max-w-sm text-xs text-gray-500",
                               children: (0, j.jsx)(
                                 U.Z,
-                                (0, p._)({}, ii.inviteDescriptionFollowUp)
+                                (0, p._)({}, ii.inviteDescriptionFollowUp),
                               ),
                             }),
                           ],
@@ -8118,7 +8415,7 @@
                                     "block text-sm font-medium text-gray-900",
                                   children: (0, j.jsx)(
                                     U.Z,
-                                    (0, p._)({}, ii.referralCodeLabel)
+                                    (0, p._)({}, ii.referralCodeLabel),
                                   ),
                                 }),
                                 (0, j.jsx)("label", {
@@ -8127,7 +8424,7 @@
                                     U.Z,
                                     (0, x._)((0, p._)({}, ii.inviteRemaining), {
                                       values: { remainingInviteCount: d },
-                                    })
+                                    }),
                                   ),
                                 }),
                               ],
@@ -8172,7 +8469,7 @@
                     {
                       "h-44 overflow-y-scroll": t.length > 4,
                       "overflow-hidden": t.length <= 4,
-                    }
+                    },
                   ),
                   children: (0, j.jsx)("table", {
                     className: "min-w-full",
@@ -8200,8 +8497,11 @@
                             : 0;
                         })
                         .map(function (e) {
-                          return (0,
-                          j.jsx)(ir, { tableRef: n, referralCode: e }, e.id);
+                          return (0, j.jsx)(
+                            ir,
+                            { tableRef: n, referralCode: e },
+                            e.id,
+                          );
                         }),
                     }),
                   }),
@@ -8249,7 +8549,7 @@
                     r.formatMessage(ii.copiedReferralToastMessage, {
                       referralInviteCode: s,
                     }),
-                    { duration: 3, hasCloseButton: !0 }
+                    { duration: 3, hasCloseButton: !0 },
                   ),
                   null === (n = a.current) || void 0 === n || n.scrollTo(0, 0);
               },
@@ -8275,7 +8575,7 @@
                       return (
                         l(!0),
                         eO.m9.logEvent(
-                          "chatgpt_referral_invite_link_activated"
+                          "chatgpt_referral_invite_link_activated",
                         ),
                         N.o.logEvent(I.a.chatgptReferralInviteLinkActivated),
                         [4, f()]
@@ -8288,15 +8588,17 @@
                         N.o.logEvent(I.a.chatgptReferralInviteLinkCopied),
                         navigator.clipboard.writeText(
                           it(
-                            null !== (t = e.code_token) && void 0 !== t ? t : ""
-                          )
+                            null !== (t = e.code_token) && void 0 !== t
+                              ? t
+                              : "",
+                          ),
                         ),
                         c(!0),
                         nT.m.success(
                           r.formatMessage(ii.copiedReferralToastMessage, {
                             referralInviteCode: e.code_token,
                           }),
-                          { duration: 3, hasCloseButton: !0 }
+                          { duration: 3, hasCloseButton: !0 },
                         ),
                         [3, 7]
                       );
@@ -8530,7 +8832,7 @@
                 (0, iu.dT)(
                   e.map(function (e) {
                     return e.id;
-                  })
+                  }),
                 );
               },
               pluginsWeCantUse: i,
@@ -8543,7 +8845,7 @@
             function () {
               l();
             },
-            [l]
+            [l],
           );
         return 0 === d.length
           ? null
@@ -8564,8 +8866,14 @@
               children: (0, j.jsx)("div", {
                 className: "flex flex-col gap-2 py-4",
                 children: d.map(function (e) {
-                  return (0,
-                  j.jsx)("div", { className: "w-full", children: (0, j.jsx)(id.Z, { plugin: e }) }, e.id);
+                  return (0, j.jsx)(
+                    "div",
+                    {
+                      className: "w-full",
+                      children: (0, j.jsx)(id.Z, { plugin: e }),
+                    },
+                    e.id,
+                  );
                 }),
               }),
             });
@@ -8604,7 +8912,7 @@
             function () {
               N.o.logEvent(I.a.closeAccountPaymentModal), n();
             },
-            [n]
+            [n],
           ),
           l = (0, F.useCallback)(
             (0, h._)(function () {
@@ -8627,7 +8935,7 @@
                       t.sent(),
                       nT.m.warning(
                         "The account management page encountered an error. Please try again. If the problem continues, please visit help.openai.com.",
-                        { hasCloseButton: !0 }
+                        { hasCloseButton: !0 },
                       ),
                       [3, 5]
                     );
@@ -8638,7 +8946,7 @@
                 }
               });
             }),
-            [s, i]
+            [s, i],
           ),
           d = (0, F.useCallback)(function () {
             N.o.logEvent(I.a.clickAccountPaymentGetHelp);
@@ -8685,11 +8993,11 @@
                           className: "font-semibold text-gray-500",
                           children: (0, j.jsx)(
                             U.Z,
-                            (0, p._)({}, ix.S.plus.costInDollars)
+                            (0, p._)({}, ix.S.plus.costInDollars),
                           ),
                         }),
                       },
-                      "row-plus-plan-name"
+                      "row-plus-plan-name",
                     ),
                     (0, j.jsx)(
                       ip.hi,
@@ -8698,22 +9006,22 @@
                         variant: "primary-disabled",
                         text: ix.S.plus.callToAction.active,
                       },
-                      "row-plus-plan-button"
+                      "row-plus-plan-button",
                     ),
                     (0, j.jsx)(
                       ip.G,
                       { text: ix.S.plus.demandAccess },
-                      "row-plus-plan-demand"
+                      "row-plus-plan-demand",
                     ),
                     (0, j.jsx)(
                       ip.G,
                       { text: ix.S.plus.responseSpeed },
-                      "row-plus-plan-speed"
+                      "row-plus-plan-speed",
                     ),
                     (0, j.jsx)(
                       ip.G,
                       { className: "sm:pb-1", text: ix.S.plus.modelFeatures },
-                      "row-plus-plan-feathers"
+                      "row-plus-plan-feathers",
                     ),
                     (null == m ? void 0 : m.purchase_origin_platform) ===
                       ih._4.MOBILE_IOS &&
@@ -8730,7 +9038,7 @@
                             onClick: u,
                           }),
                         },
-                        "row-plus-plan-manage-ios"
+                        "row-plus-plan-manage-ios",
                       ),
                     (null == m ? void 0 : m.purchase_origin_platform) ===
                       ih._4.MOBILE_ANDROID &&
@@ -8747,7 +9055,7 @@
                             onClick: c,
                           }),
                         },
-                        "row-plus-plan-manage-android"
+                        "row-plus-plan-manage-android",
                       ),
                     (!m ||
                       m.purchase_origin_platform === ih._4.WEBAPP ||
@@ -8761,7 +9069,7 @@
                           text: ix.S.manageSubscriptionWeb.callToAction,
                           onClick: l,
                         },
-                        "row-plus-plan-manage"
+                        "row-plus-plan-manage",
                       ),
                     (0, j.jsx)(
                       D(),
@@ -8778,10 +9086,10 @@
                             text: ix.S.getHelp.callToAction,
                             onClick: d,
                           },
-                          "row-plus-plan-help"
+                          "row-plus-plan-help",
                         ),
                       },
-                      "row-plus-plan-help-link"
+                      "row-plus-plan-help-link",
                     ),
                   ],
                 }),
@@ -8805,7 +9113,7 @@
             function () {
               N.o.logEvent(I.a.closeAccountPaymentModal), n();
             },
-            [n]
+            [n],
           );
         return (0, j.jsx)(es.ZP.Root, {
           isOpen: t,
@@ -8832,7 +9140,7 @@
                             className: "text-base font-semibold sm:text-base",
                             children: (0, j.jsx)(
                               U.Z,
-                              (0, p._)({}, ij.modalTitle)
+                              (0, p._)({}, ij.modalTitle),
                             ),
                           }),
                           (0, j.jsx)("button", {
@@ -8912,7 +9220,7 @@
               "bg-yellow-300 text-[#756B5C]": "yellow" === a,
               "bg-gray-50 text-gray-800 dark:bg-[#444654] dark:text-gray-100":
                 "gray" === a,
-            }
+            },
           ),
           children: [
             null != r &&
@@ -9168,7 +9476,7 @@
             function () {
               n(t);
             },
-            [t, n]
+            [t, n],
           );
         return (0, j.jsxs)(iX, { onClick: a, children: ['"', t, '" →'] });
       }
@@ -9231,19 +9539,19 @@
                         (0, j.jsx)(iK, {
                           children: (0, j.jsx)(
                             U.Z,
-                            (0, p._)({}, i2.remembersEarlierConversation)
+                            (0, p._)({}, i2.remembersEarlierConversation),
                           ),
                         }),
                         (0, j.jsx)(iK, {
                           children: (0, j.jsx)(
                             U.Z,
-                            (0, p._)({}, i2.allowsFollowUpCorrections)
+                            (0, p._)({}, i2.allowsFollowUpCorrections),
                           ),
                         }),
                         (0, j.jsx)(iK, {
                           children: (0, j.jsx)(
                             U.Z,
-                            (0, p._)({}, i2.declinesInappropriateRequests)
+                            (0, p._)({}, i2.declinesInappropriateRequests),
                           ),
                         }),
                       ],
@@ -9263,19 +9571,19 @@
                         (0, j.jsx)(iK, {
                           children: (0, j.jsx)(
                             U.Z,
-                            (0, p._)({}, i2.mayGenerateIncorrectInfo)
+                            (0, p._)({}, i2.mayGenerateIncorrectInfo),
                           ),
                         }),
                         (0, j.jsx)(iK, {
                           children: (0, j.jsx)(
                             U.Z,
-                            (0, p._)({}, i2.mayProduceHarmfulInstructions)
+                            (0, p._)({}, i2.mayProduceHarmfulInstructions),
                           ),
                         }),
                         (0, j.jsx)(iK, {
                           children: (0, j.jsx)(
                             U.Z,
-                            (0, p._)({}, i2.limitedKnowledgeAfter2021)
+                            (0, p._)({}, i2.limitedKnowledgeAfter2021),
                           ),
                         }),
                       ],
@@ -9398,7 +9706,7 @@
                 null == r || r(t);
               } else a(e);
             },
-            [a, r]
+            [a, r],
           );
         return (0, j.jsx)(i8.R, {
           value: t.map(function (e) {
@@ -9419,8 +9727,8 @@
                   onClose: s,
                   multiple: !0,
                 },
-                l
-              )
+                l,
+              ),
             );
           },
         });
@@ -9459,7 +9767,7 @@
               },
             };
           },
-          [r]
+          [r],
         );
         var x = l
           ? d ||
@@ -9498,7 +9806,7 @@
                                     (0, j.jsxs)("span", {
                                       className: (0, ec.default)(
                                         n && !o && "font-semibold",
-                                        "flex h-6 items-center gap-1 text-gray-800 dark:text-gray-100"
+                                        "flex h-6 items-center gap-1 text-gray-800 dark:text-gray-100",
                                       ),
                                       children: [
                                         e.title,
@@ -9530,13 +9838,13 @@
                                       option: e,
                                       dropdownRef: h,
                                     }),
-                                    document.body
+                                    document.body,
                                   ),
                               ],
                             });
                           },
                         },
-                        t
+                        t,
                       );
                     }),
                     null == s
@@ -9560,15 +9868,58 @@
                                 });
                               },
                             },
-                            t
+                            t,
                           );
                         }),
                   ],
                 }),
               ],
             });
-        return (0,
-        j.jsxs)("div", { className: "relative w-full md:w-1/2 lg:w-1/3 xl:w-1/4", children: [(0, j.jsxs)(i8.R.Button, { ref: g, onClick: r ? m : c, className: (0, ec.default)("relative flex cursor-pointer flex-col bg-white py-2 pr-10 text-left dark:bg-gray-800 sm:text-sm", "mini" === f ? "mx-auto w-auto rounded-lg border border-transparent pl-4 pr-7 hover:border-black/10 dark:hover:border-white/10" : "w-full rounded-md border border-black/10 pl-3 focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600 dark:border-white/20"), children: ["mini" !== f && (0, j.jsx)(i8.R.Label, { className: "block text-xs text-gray-700 dark:text-gray-500", children: n }), (0, j.jsx)("span", { className: "inline-flex w-full truncate", children: (0, j.jsx)("span", { className: "flex h-6 items-center gap-1 truncate", children: a }) }), (0, j.jsx)("span", { className: "pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2", children: (0, j.jsx)(E.bTu, { className: "icon-sm text-gray-400", "aria-hidden": "true" }) })] }), (0, j.jsx)(i9.u, { show: r, as: F.Fragment, leave: "transition ease-in duration-100", leaveFrom: "opacity-100", leaveTo: "opacity-0", children: (0, j.jsx)(sb, { ref: h, children: x }) })] });
+        return (0, j.jsxs)("div", {
+          className: "relative w-full md:w-1/2 lg:w-1/3 xl:w-1/4",
+          children: [
+            (0, j.jsxs)(i8.R.Button, {
+              ref: g,
+              onClick: r ? m : c,
+              className: (0, ec.default)(
+                "relative flex cursor-pointer flex-col bg-white py-2 pr-10 text-left dark:bg-gray-800 sm:text-sm",
+                "mini" === f
+                  ? "mx-auto w-auto rounded-lg border border-transparent pl-4 pr-7 hover:border-black/10 dark:hover:border-white/10"
+                  : "w-full rounded-md border border-black/10 pl-3 focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600 dark:border-white/20",
+              ),
+              children: [
+                "mini" !== f &&
+                  (0, j.jsx)(i8.R.Label, {
+                    className: "block text-xs text-gray-700 dark:text-gray-500",
+                    children: n,
+                  }),
+                (0, j.jsx)("span", {
+                  className: "inline-flex w-full truncate",
+                  children: (0, j.jsx)("span", {
+                    className: "flex h-6 items-center gap-1 truncate",
+                    children: a,
+                  }),
+                }),
+                (0, j.jsx)("span", {
+                  className:
+                    "pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2",
+                  children: (0, j.jsx)(E.bTu, {
+                    className: "icon-sm text-gray-400",
+                    "aria-hidden": "true",
+                  }),
+                }),
+              ],
+            }),
+            (0, j.jsx)(i9.u, {
+              show: r,
+              as: F.Fragment,
+              leave: "transition ease-in duration-100",
+              leaveFrom: "opacity-100",
+              leaveTo: "opacity-0",
+              children: (0, j.jsx)(sb, { ref: h, children: x }),
+            }),
+          ],
+        });
       });
       function sm(e) {
         var t = e.value,
@@ -9582,7 +9933,7 @@
               "mini" === r ? sy : sj,
               t && !n ? "bg-gray-100 dark:bg-gray-700" : "text-gray-900",
               n &&
-                "cursor-auto bg-gray-50 text-gray-400 dark:bg-gray-700 dark:text-gray-100"
+                "cursor-auto bg-gray-50 text-gray-400 dark:bg-gray-700 dark:text-gray-100",
             );
           },
           value: t,
@@ -9606,7 +9957,7 @@
         if ("mini" === e.theme) {
           var a = (0, ec.default)(
             "h-5 w-5 text-blue-600",
-            t ? "stroke-[2.5]" : "stroke-2"
+            t ? "stroke-[2.5]" : "stroke-2",
           );
           return (0, j.jsxs)(sM, {
             children: [
@@ -9617,7 +9968,7 @@
                 (0, j.jsx)(eW.nQ, {
                   className: (0, ec.default)(
                     "icon-md absolute text-blue-600 opacity-0 transition-opacity",
-                    !n && "group-hover:opacity-100"
+                    !n && "group-hover:opacity-100",
                   ),
                 }),
             ],
@@ -9629,7 +9980,7 @@
               "flex h-6 w-6 items-center justify-center rounded-full border transition-colors",
               t
                 ? "border-transparent bg-green-600 text-white"
-                : "border-black/5 dark:border-white/20"
+                : "border-black/5 dark:border-white/20",
             ),
             "aria-hidden": "true",
             children: (0, j.jsx)(E.UgA, {
@@ -9637,7 +9988,7 @@
                 "h-3 w-3 transition-opacity",
                 t && "opacity-100",
                 !t && "opacity-0",
-                !t && !n && "group-hover:opacity-50"
+                !t && !n && "group-hover:opacity-50",
               ),
               strokeWidth: t ? 2.5 : 2,
             }),
@@ -9688,7 +10039,7 @@
               }
             );
           },
-          [n]
+          [n],
         ),
         r)
           ? (0, j.jsxs)(sw, {
@@ -9739,11 +10090,11 @@
                   "py-0.25 rounded px-1 text-[10px] font-semibold uppercase",
                   "confidential" === e && "bg-red-200 text-red-800",
                   "alpha" === e && "bg-blue-200 text-blue-500",
-                  "plus" === e && "bg-yellow-200 text-yellow-900"
+                  "plus" === e && "bg-yellow-200 text-yellow-900",
                 ),
                 children: e,
               },
-              e
+              e,
             )
           );
         },
@@ -10001,7 +10352,7 @@
                       onError: function (e) {
                         return f(
                           (null == e ? void 0 : e.message) ||
-                            "Couldn't find manifest."
+                            "Couldn't find manifest.",
                         );
                       },
                     }),
@@ -10009,7 +10360,7 @@
                   : (f(a.formatMessage(sP.domainInputPlaceholder)), [2]);
               });
             }),
-            [k, t, d, s, a]
+            [k, t, d, s, a],
           );
         return (0, j.jsx)(eo.Z, {
           isOpen: !0,
@@ -10052,7 +10403,7 @@
                         });
                       },
                     },
-                  })
+                  }),
                 ),
               }),
               (0, j.jsx)(sT.Z, {
@@ -10076,7 +10427,7 @@
                         (0, j.jsx)("div", {
                           children: (0, j.jsx)(
                             U.Z,
-                            (0, p._)({}, sP.authenticationFileText)
+                            (0, p._)({}, sP.authenticationFileText),
                           ),
                         }),
                         s
@@ -10093,7 +10444,7 @@
                               (0, j.jsx)("div", {
                                 children: (0, j.jsx)(
                                   U.Z,
-                                  (0, p._)({}, sP.authenticationTypeText)
+                                  (0, p._)({}, sP.authenticationTypeText),
                                 ),
                               }),
                               (0, j.jsxs)("div", {
@@ -10121,7 +10472,7 @@
                               (0, j.jsx)("div", {
                                 children: (0, j.jsx)(
                                   U.Z,
-                                  (0, p._)({}, sP.accessTokenText)
+                                  (0, p._)({}, sP.accessTokenText),
                                 ),
                               }),
                               (0, j.jsx)(sT.Z, {
@@ -10209,7 +10560,7 @@
                         onError: function (e) {
                           return v(
                             (null == e ? void 0 : e.message) ||
-                              "Couldn't find manifest."
+                              "Couldn't find manifest.",
                           );
                         },
                       }),
@@ -10295,7 +10646,7 @@
                 }
               });
             }),
-            [Z, L, m, l, d, D, R, P, I, n, a, r, i, s]
+            [Z, L, m, l, d, D, R, P, I, n, a, r, i, s],
           );
         return (0, j.jsx)(eo.Z, {
           isOpen: !0,
@@ -10332,7 +10683,7 @@
                       className: "text-sm",
                       children: (0, j.jsx)(
                         U.Z,
-                        (0, p._)({}, sP.enterServiceAccessTokenLabel)
+                        (0, p._)({}, sP.enterServiceAccessTokenLabel),
                       ),
                     }),
                     (0, j.jsx)("div", {
@@ -10356,7 +10707,7 @@
                       className: "text-sm",
                       children: (0, j.jsx)(
                         U.Z,
-                        (0, p._)({}, sP.enterOAuthCredentialsLabel)
+                        (0, p._)({}, sP.enterOAuthCredentialsLabel),
                       ),
                     }),
                     (0, j.jsx)("div", {
@@ -10431,8 +10782,8 @@
                             d(
                               'Please add the "'.concat(
                                 o,
-                                '" token to your manifest file.'
-                              )
+                                '" token to your manifest file.',
+                              ),
                             ),
                             [2]
                           );
@@ -10448,7 +10799,7 @@
                 }
               });
             }),
-            [t, n, a, r]
+            [t, n, a, r],
           );
         return (0, j.jsx)(eo.Z, {
           isOpen: !0,
@@ -10473,7 +10824,7 @@
                 className: "text-sm",
                 children: (0, j.jsx)(
                   U.Z,
-                  (0, p._)({}, sP.addVerificationTokensText)
+                  (0, p._)({}, sP.addVerificationTokensText),
                 ),
               }),
               (0, j.jsx)("pre", {
@@ -10494,7 +10845,7 @@
             function () {
               n(t);
             },
-            [t, n]
+            [t, n],
           );
         return (0, j.jsx)(eo.Z, {
           isOpen: !0,
@@ -10537,7 +10888,7 @@
                       });
                     },
                   },
-                })
+                }),
               ),
             }),
           }),
@@ -10571,13 +10922,13 @@
             function () {
               a(Math.max(t - 1, 0));
             },
-            [t, a]
+            [t, a],
           ),
           o = (0, F.useCallback)(
             function () {
               a(Math.min(t + 1, n - 1));
             },
-            [t, n, a]
+            [t, n, a],
           ),
           l = [],
           d = !0,
@@ -10621,8 +10972,8 @@
                         className: "flex h-5 w-5 items-center justify-center",
                         children: "…",
                       },
-                      "ellipsis-".concat(e)
-                    )
+                      "ellipsis-".concat(e),
+                    ),
                   )
                 : l.push(
                     (0, j.jsx)(
@@ -10632,15 +10983,15 @@
                         className: (0, ec.default)(
                           "flex h-5 w-5 items-center justify-center",
                           e === t &&
-                            "text-blue-600 hover:text-blue-600 dark:text-blue-600 dark:hover:text-blue-600"
+                            "text-blue-600 hover:text-blue-600 dark:text-blue-600 dark:hover:text-blue-600",
                         ),
                         onClick: function () {
                           return a(e);
                         },
                         children: e + 1,
                       },
-                      e
-                    )
+                      e,
+                    ),
                   );
             })();
         } catch (e) {
@@ -10660,7 +11011,7 @@
               role: "button",
               className: (0, ec.default)(
                 "flex items-center",
-                !r && "opacity-50"
+                !r && "opacity-50",
               ),
               onClick: s,
               $disabled: !r,
@@ -10674,7 +11025,7 @@
               role: "button",
               className: (0, ec.default)(
                 "flex items-center",
-                !i && "opacity-50"
+                !i && "opacity-50",
               ),
               onClick: o,
               $disabled: !i,
@@ -10866,13 +11217,13 @@
               return e.id === d;
             }) || u(s$);
           },
-          [d, v]
+          [d, v],
         );
         var w = (0, F.useCallback)(
           sA()(function (e) {
             x(e);
           }, 300),
-          []
+          [],
         );
         return (0, j.jsx)(eo.Z, {
           isOpen: !0,
@@ -10899,7 +11250,7 @@
                           },
                           children: e.title,
                         },
-                        e.id
+                        e.id,
                       );
                     }),
                     (0, j.jsxs)("div", {
@@ -10942,7 +11293,7 @@
                             onClick: n,
                             children: (0, j.jsx)(
                               U.Z,
-                              (0, p._)({}, sJ.installUnverifiedPlugin)
+                              (0, p._)({}, sJ.installUnverifiedPlugin),
                             ),
                           }),
                           (0, j.jsx)(s6, {}),
@@ -10950,7 +11301,7 @@
                             onClick: a,
                             children: (0, j.jsx)(
                               U.Z,
-                              (0, p._)({}, sJ.developPlugin)
+                              (0, p._)({}, sJ.developPlugin),
                             ),
                           }),
                           (0, j.jsx)(s6, {}),
@@ -10984,7 +11335,7 @@
           function () {
             l(0);
           },
-          [t, n]
+          [t, n],
         );
         var f = (0, b._)((0, F.useState)(!1), 2),
           g = f[0],
@@ -11034,7 +11385,7 @@
           className: (0, ec.default)(
             "focus:ring-0",
             t && "hover:bg-gray-200",
-            !t && "text-black/50"
+            !t && "text-black/50",
           ),
           onClick: n,
           children: a,
@@ -11058,7 +11409,7 @@
                   U.Z,
                   (0, x._)((0, p._)({}, sJ.noSearchResultsTitle), {
                     values: { query: s },
-                  })
+                  }),
                 ),
               }),
               (0, j.jsx)("div", {
@@ -11074,8 +11425,11 @@
                 return (0, j.jsx)(s5, {}, t);
               })
           : t.map(function (e) {
-              return (0,
-              j.jsx)(s2, { plugin: e, onInstallWithAuthRequired: r, onRequestMfa: i }, e.id);
+              return (0, j.jsx)(
+                s2,
+                { plugin: e, onInstallWithAuthRequired: r, onRequestMfa: i },
+                e.id,
+              );
             });
         return (0, j.jsx)("div", {
           className:
@@ -11102,7 +11456,7 @@
             onError: function (e) {
               console.error(e),
                 nT.m.danger(
-                  "Error installing ".concat(a.manifest.name_for_human, ".")
+                  "Error installing ".concat(a.manifest.name_for_human, "."),
                 );
             },
             onSettled: function () {
@@ -11114,7 +11468,7 @@
             onError: function (e) {
               console.error(e),
                 nT.m.danger(
-                  "Error uninstalling ".concat(a.manifest.name_for_human, ".")
+                  "Error uninstalling ".concat(a.manifest.name_for_human, "."),
                 );
             },
             onSettled: function () {
@@ -11153,18 +11507,18 @@
                   : nT.m.danger(
                       "Missing plugin configuration for ".concat(
                         a.manifest.name_for_human,
-                        "."
-                      )
+                        ".",
+                      ),
                     );
               } else "user_http" === t ? r(a) : (l(!0), m(a.id));
             },
-            [a, m, r, i, v, g, h]
+            [a, m, r, i, v, g, h],
           ),
           y = (0, F.useCallback)(
             function () {
               c(!0), f(a.id);
             },
-            [a, f]
+            [a, f],
           );
         return (
           (n =
@@ -11387,7 +11741,7 @@
                   icon: "\uD83C\uDF10",
                   children: (0, j.jsx)(
                     U.Z,
-                    (0, p._)({}, s7.externalAppsWarning)
+                    (0, p._)({}, s7.externalAppsWarning),
                   ),
                 }),
                 (0, j.jsx)(sN.Z, {
@@ -11437,19 +11791,19 @@
             function (e) {
               (0, iu.wu)(e.id), n(), t(e);
             },
-            [t, n]
+            [t, n],
           ),
           _ = (0, F.useCallback)(
             function () {
               g(void 0), c(!1), n();
             },
-            [n]
+            [n],
           ),
           N = (0, F.useCallback)(
             function () {
               x(!1), n();
             },
-            [n]
+            [n],
           );
         return !r || o
           ? (0, j.jsx)(s8, { allowClose: !r, onConfirm: v, onClose: n })
@@ -11520,14 +11874,14 @@
                           void 0 !== i
                           ? i
                           : "plugin",
-                        "."
-                      )
+                        ".",
+                      ),
                     ),
                   u.replace({ pathname: u.pathname, query: a });
               }
             }
           },
-          [u, m, f]
+          [u, m, f],
         );
         var w = (0, F.useCallback)(function () {
             var e;
@@ -11580,8 +11934,8 @@
                                 .concat(r.manifest.name_for_human, " while ")
                                 .concat(
                                   n.manifest.name_for_human,
-                                  " is enabled."
-                                )
+                                  " is enabled.",
+                                ),
                             ),
                             { v: void 0 }
                           );
@@ -11601,11 +11955,11 @@
                 (0, iu.dT)(
                   e.map(function (e) {
                     return e.id;
-                  })
+                  }),
                 );
               }
             },
-            [g]
+            [g],
           ),
           T = (0, F.useCallback)(function (e) {
             var t;
@@ -11619,7 +11973,7 @@
                   num_enabled_plugins: "".concat(g.length),
                 });
             },
-            [g]
+            [g],
           ),
           I = (0, F.useCallback)(
             function () {
@@ -11680,7 +12034,7 @@
                 }
               }
             },
-            [g, C]
+            [g, C],
           ),
           S = m.map(function (e) {
             return {
@@ -11705,12 +12059,19 @@
             U.Z,
             (0, x._)((0, p._)({}, or.pluginsEnabled), {
               values: { count: g.length },
-            })
+            }),
           );
         if (g.length > 0 && g.length < 6) {
           var Z = g.map(function (e, t) {
-            return (0,
-            j.jsx)(ao.Z, { url: e.manifest.logo_url, name: e.manifest.name_for_human, size: 24 }, t);
+            return (0, j.jsx)(
+              ao.Z,
+              {
+                url: e.manifest.logo_url,
+                name: e.manifest.name_for_human,
+                size: 24,
+              },
+              t,
+            );
           });
           R = (0, j.jsx)("div", { className: "flex gap-2", children: Z });
         }
@@ -11719,13 +12080,13 @@
           (t = (0, j.jsx)(oa, {
             className: (0, ec.default)(
               "transition-colors duration-300",
-              l && "bg-red-200 text-red-800 dark:bg-red-200 dark:text-red-800"
+              l && "bg-red-200 text-red-800 dark:bg-red-200 dark:text-red-800",
             ),
             children: (0, j.jsx)(
               U.Z,
               (0, x._)((0, p._)({}, or.enabledPluginsLimit), {
                 values: { enabledPlugins: g.length, maxEnabledPlugins: iu.hZ },
-              })
+              }),
             ),
           }));
         var D = (0, j.jsxs)(j.Fragment, {
@@ -12178,7 +12539,7 @@
                 return [22179];
               },
             },
-          }
+          },
         ),
         oC = [0, 60],
         oM = function (e) {
@@ -12259,18 +12620,18 @@
                 J.vm.showThreadHeader();
                 var n = Math.max(
                   oC[0],
-                  a.get() - Math.abs(i.current - r.current)
+                  a.get() - Math.abs(i.current - r.current),
                 );
                 n !== a.get() && a.set(n);
               } else {
                 var s = Math.min(
                   oC[1],
-                  a.get() + Math.abs(i.current - r.current)
+                  a.get() + Math.abs(i.current - r.current),
                 );
                 s !== a.get() && a.set(s);
               }
             },
-            [a]
+            [a],
           ),
           l = (0, e1.H)(a, oC, ["0%", "-100%"]),
           d = (0, b._)((0, F.useState)(l.get()), 2),
@@ -12328,7 +12689,7 @@
                 "aria-label": o.formatMessage(oS.openDebug),
                 children: (0, j.jsx)(E.cDN, { className: "icon-sm" }),
               }),
-            })
+            }),
           ),
           m.push((0, j.jsx)(oM, { clientThreadId: i }));
         var f = (0, Y.Qi)(i),
@@ -12352,8 +12713,15 @@
           y = eN(i);
         if (y.length > 0) {
           var k = y.map(function (e, t) {
-            return (0,
-            j.jsx)(ao.Z, { url: e.manifest.logo_url, name: e.manifest.name_for_human, size: 16 }, t);
+            return (0, j.jsx)(
+              ao.Z,
+              {
+                url: e.manifest.logo_url,
+                name: e.manifest.name_for_human,
+                size: 16,
+              },
+              t,
+            );
           });
           a = (0, j.jsxs)(j.Fragment, {
             children: [
@@ -12381,7 +12749,7 @@
             function () {
               x && (0, og.Ub)(i, N);
             },
-            [i, x, N]
+            [i, x, N],
           );
         return (0, j.jsxs)(j.Fragment, {
           children: [
@@ -12436,7 +12804,7 @@
                           (0, j.jsx)("span", {
                             children: (0, j.jsx)(
                               U.Z,
-                              (0, p._)({}, oS.sharedChat)
+                              (0, p._)({}, oS.sharedChat),
                             ),
                           }),
                           (0, j.jsx)("span", {
@@ -12471,7 +12839,7 @@
                           (0, j.jsx)("strong", {
                             children: (0, j.jsx)(
                               U.Z,
-                              (0, p._)({}, oS.moderationView)
+                              (0, p._)({}, oS.moderationView),
                             ),
                           }),
                         ],
@@ -12519,7 +12887,7 @@
                                   "font-medium text-gray-600 dark:text-gray-200",
                                 children: (0, j.jsx)(
                                   U.Z,
-                                  (0, p._)({}, oy.sY.aboutYouHelpText)
+                                  (0, p._)({}, oy.sY.aboutYouHelpText),
                                 ),
                               }),
                               (0, j.jsx)("div", {
@@ -12538,7 +12906,7 @@
                                   "font-medium text-gray-600 dark:text-gray-200",
                                 children: (0, j.jsx)(
                                   U.Z,
-                                  (0, p._)({}, oy.sY.modelHelpText)
+                                  (0, p._)({}, oy.sY.modelHelpText),
                                 ),
                               }),
                               (0, j.jsx)("div", {
@@ -12553,7 +12921,7 @@
                   ? a
                   : null;
               },
-              [n]
+              [n],
             );
           return null === n
             ? null
@@ -12573,7 +12941,7 @@
                             "flex flex-row items-center gap-2 text-gray-500",
                           children: (0, j.jsx)(
                             U.Z,
-                            (0, p._)({}, oS.chatPreferencesNote)
+                            (0, p._)({}, oS.chatPreferencesNote),
                           ),
                         }),
                       }),
@@ -12590,7 +12958,7 @@
                       (0, j.jsx)(om.T, {
                         children: (0, j.jsx)(
                           U.Z,
-                          (0, p._)({}, oS.chatPreferencesInfoLabel)
+                          (0, p._)({}, oS.chatPreferencesInfoLabel),
                         ),
                       }),
                     ],
@@ -12722,7 +13090,7 @@
             function () {
               return iS(s);
             },
-            [s]
+            [s],
           ),
           l = (0, Y.aS)(t);
         return (0, j.jsxs)("div", {
@@ -12770,8 +13138,8 @@
                   U.Z,
                   (0, p._)(
                     {},
-                    oD.userContextCustomProfileAndAdvancedDataAnalysisSupportDisclaimer
-                  )
+                    oD.userContextCustomProfileAndAdvancedDataAnalysisSupportDisclaimer,
+                  ),
                 ),
               }),
             })
@@ -12785,7 +13153,7 @@
                       color: "gray",
                       children: (0, j.jsx)(
                         U.Z,
-                        (0, p._)({}, oD.advancedDataAnalysisSupportDisclaimer)
+                        (0, p._)({}, oD.advancedDataAnalysisSupportDisclaimer),
                       ),
                     }),
                   }),
@@ -12797,7 +13165,7 @@
                       color: "gray",
                       children: (0, j.jsx)(
                         U.Z,
-                        (0, p._)({}, oD.userContextCustomProfileDisclaimer)
+                        (0, p._)({}, oD.userContextCustomProfileDisclaimer),
                       ),
                     }),
                   }),
@@ -12846,12 +13214,28 @@
             }
             I(!1);
           },
-          [x]
+          [x],
         );
         var R = o && !v,
           Z = (0, eu._)(Array(P).keys()).map(function (e) {
-            return (0,
-            j.jsx)(rE, { isFinalTurn: e === P - 1, turnIndex: e, clientThreadId: i, conversationLeafId: s, onChangeItemInView: t, onChangeRating: a, onRequestMoreCompletions: n, onRequestCompletion: r, currentModelId: k.id, showInlineEmbeddedDisplay: d, initiallyHighlightedMessageId: u, avatarColor: null == S ? void 0 : S.backgroundColor }, e);
+            return (0, j.jsx)(
+              rE,
+              {
+                isFinalTurn: e === P - 1,
+                turnIndex: e,
+                clientThreadId: i,
+                conversationLeafId: s,
+                onChangeItemInView: t,
+                onChangeRating: a,
+                onRequestMoreCompletions: n,
+                onRequestCompletion: r,
+                currentModelId: k.id,
+                showInlineEmbeddedDisplay: d,
+                initiallyHighlightedMessageId: u,
+                avatarColor: null == S ? void 0 : S.backgroundColor,
+              },
+              e,
+            );
           });
         return (0, j.jsxs)(oq, {
           $shouldShowThreadSettings: R,
@@ -13116,7 +13500,7 @@
                 };
               });
             }),
-            1
+            1,
           )[0],
           r = !(0, ei.B$)() && "root" !== n,
           i = (0, F.useRef)(!1);
@@ -13151,13 +13535,13 @@
                     e instanceof iI.Q0 && "string" == typeof e.message
                       ? a.setState({ linkError: e.message })
                       : (nT.m.danger(
-                          "Failed to copy link to clipboard - could not create link"
+                          "Failed to copy link to clipboard - could not create link",
                         ),
                         J.vm.closeSharingModal());
                   });
               }
             },
-            [r]
+            [r],
           ),
           (0, j.jsx)(iT.Provider, {
             value: a,
@@ -13237,7 +13621,7 @@
           function () {
             D && ((G.current = N), ($.current = P));
           },
-          [D]
+          [D],
         );
         var ee = (0, _.kP)().session,
           et = (0, Y.JI)(s, null != Z ? Z : H),
@@ -13245,7 +13629,7 @@
             function () {
               return iS(et);
             },
-            [et]
+            [et],
           ),
           ea = (0, Y.aS)(s),
           ei =
@@ -13293,7 +13677,7 @@
                       setTimeout(function () {
                         J.vm.closeSharingModal(),
                           nT.m.success(
-                            d.formatMessage(oY.copiedSharedConversationURL)
+                            d.formatMessage(oY.copiedSharedConversationURL),
                           );
                       }, 500),
                       [3, 5]
@@ -13347,13 +13731,13 @@
                 }),
                 f(!1);
             },
-            [T]
+            [T],
           ),
           em = (0, F.useCallback)(
             function (e) {
               "Enter" === e.key && eu();
             },
-            [eu]
+            [eu],
           ),
           eg =
             ((n = (0, h._)(function () {
@@ -13367,7 +13751,7 @@
                       })
                         .catch(function (e) {
                           nT.m.danger(
-                            d.formatMessage(oY.failedToDeleteSharedLink)
+                            d.formatMessage(oY.failedToDeleteSharedLink),
                           );
                         })
                         .then(function () {
@@ -13465,7 +13849,7 @@
                               : null === (i = ee.user) || void 0 === i
                               ? void 0
                               : i.name,
-                            " \xb7 "
+                            " \xb7 ",
                           ),
                         }),
                       (0, j.jsx)(A.Ji, {
@@ -13511,7 +13895,7 @@
                                   (0, j.jsx)("div", {
                                     children: (0, j.jsx)(
                                       U.Z,
-                                      (0, p._)({}, oY.shareYourName)
+                                      (0, p._)({}, oY.shareYourName),
                                     ),
                                   }),
                                 ],
@@ -13532,7 +13916,7 @@
                                   (0, j.jsx)("div", {
                                     children: (0, j.jsx)(
                                       U.Z,
-                                      (0, p._)({}, oY.shareAnonymously)
+                                      (0, p._)({}, oY.shareAnonymously),
                                     ),
                                   }),
                                 ],
@@ -13553,7 +13937,7 @@
                                   (0, j.jsx)("div", {
                                     children: (0, j.jsx)(
                                       U.Z,
-                                      (0, p._)({}, oY.deleteLink)
+                                      (0, p._)({}, oY.deleteLink),
                                     ),
                                   }),
                                 ],
@@ -13618,7 +14002,7 @@
                                 onClick: function (e) {
                                   e.preventDefault(),
                                     window.confirm(
-                                      d.formatMessage(oY.confirmDeleteLink)
+                                      d.formatMessage(oY.confirmDeleteLink),
                                     ) && eg();
                                 },
                                 className: "underline",
@@ -13626,7 +14010,7 @@
                               });
                             },
                           },
-                        })
+                        }),
                       )
                     : (0, j.jsx)(
                         U.Z,
@@ -13634,8 +14018,8 @@
                           {},
                           V
                             ? oY.sharingModalBizDescription
-                            : oY.sharingModalDescription
-                        )
+                            : oY.sharingModalDescription,
+                        ),
                       ),
                 }),
               }),
@@ -13715,8 +14099,8 @@
                   U.Z,
                   (0, p._)(
                     {},
-                    oY.userContextCustomProfileAndAdvancedDataAnalysisSupportDisclaimer
-                  )
+                    oY.userContextCustomProfileAndAdvancedDataAnalysisSupportDisclaimer,
+                  ),
                 ),
               })
             : (0, j.jsxs)(j.Fragment, {
@@ -13726,7 +14110,7 @@
                       icon: E.H33,
                       children: (0, j.jsx)(
                         U.Z,
-                        (0, p._)({}, oY.advancedDataAnalysisSupportDisclaimer)
+                        (0, p._)({}, oY.advancedDataAnalysisSupportDisclaimer),
                       ),
                     }),
                   n &&
@@ -13738,7 +14122,7 @@
                         }),
                         (0, j.jsx)(
                           U.Z,
-                          (0, p._)({}, oY.userContextCustomProfileDisclaimer)
+                          (0, p._)({}, oY.userContextCustomProfileDisclaimer),
                         ),
                       ],
                     }),
@@ -13830,7 +14214,7 @@
                   className: "mb-3 text-center text-xs",
                   children: (0, j.jsx)(
                     U.Z,
-                    (0, p._)({}, lo.errorGeneratingResponse)
+                    (0, p._)({}, lo.errorGeneratingResponse),
                   ),
                 }),
                 (0, j.jsx)("div", {
@@ -13846,7 +14230,7 @@
                       (0, j.jsx)(E.Qxo, {
                         className: (0, ec.default)(
                           "flex-shrink-0",
-                          i ? "icon-xs" : "icon-sm"
+                          i ? "icon-xs" : "icon-sm",
                         ),
                       }),
                       (0, j.jsx)(U.Z, (0, p._)({}, lo.regenerateResponse)),
@@ -13896,17 +14280,17 @@
                   ? (0, x._)((0, p._)({}, t), { intent: "comparison_implicit" })
                   : t,
                 !0,
-                r ? "comparison_implicit" : "none"
+                r ? "comparison_implicit" : "none",
               );
             },
-            [m, l]
+            [m, l],
           ),
           _ = (0, F.useCallback)(
             function (e) {
               N.o.logEvent(I.a.continueCompletion),
                 c(V.Os.Continue, e, { eventSource: "mouse" }, !1);
             },
-            [c]
+            [c],
           ),
           T = (0, F.useContext)(X.QL).historyDisabled,
           S = (0, F.useCallback)(
@@ -13929,7 +14313,7 @@
                     });
                   });
             },
-            [f, T, l]
+            [f, T, l],
           ),
           P = (0, F.useCallback)(
             function (e, t, n) {
@@ -13946,7 +14330,7 @@
                 : a.id) != null &&
                 Y.tQ.setConversationTemplateIdForNewThread(
                   l,
-                  s.conversationTemplate.id
+                  s.conversationTemplate.id,
                 );
               var d = i.length > 0 ? { attachments: i } : {};
               Y.tQ.updateTree(l, function (t) {
@@ -13954,7 +14338,7 @@
               }),
                 c(V.Os.Next, e, n, !0, void 0, void 0, s);
             },
-            [l, c]
+            [l, c],
           ),
           R = (0, Y.lA)(l, v),
           Z = (0, Y.dz)(l, v),
@@ -13964,7 +14348,7 @@
             function () {
               return !!D.has("allow_continue") && !L && !R && Z;
             },
-            [R, Z, L, D]
+            [R, Z, L, D],
           ),
           E = (0, Y.Kt)(l),
           q =
@@ -13974,7 +14358,7 @@
               function () {
                 return Q.ZP.getSampledPromptStarter(4);
               },
-              { enabled: t.has(H.Zz) && u && !E }
+              { enabled: t.has(H.Zz) && u && !E },
             )).data),
             (r = n.isLoading),
             (i = n.isSuccess),
@@ -14047,7 +14431,7 @@
             playgroundTemplateConfig: g,
             ref: h,
           },
-          l
+          l,
         );
       }
       var lo = (0, A.vU)({
@@ -14088,7 +14472,7 @@
                       return (function (e, t, n) {
                         return lc.apply(this, arguments);
                       })(e, n.action, t);
-                    })
+                    }),
                   ),
                 ];
               case 1:
@@ -14115,7 +14499,7 @@
               };
               var s = (0, x._)(
                 (0, p._)({ action: "browse", id: t.conversationId }, e),
-                { channel: r.name }
+                { channel: r.name },
               );
               window.postMessage(s, "*");
             });
@@ -14267,15 +14651,15 @@
                 null,
                 {
                   completion_duration_ms: "".concat(
-                    a.completionEndTime - a.completionStartTime
+                    a.completionEndTime - a.completionStartTime,
                   ),
                   blur_time_ms: "".concat(
-                    a.blurDuringCompletionTime - a.completionStartTime
+                    a.blurDuringCompletionTime - a.completionStartTime,
                   ),
                   refocus_time_ms: "".concat(
-                    a.refocusTime - a.completionStartTime
+                    a.refocusTime - a.completionStartTime,
                   ),
-                }
+                },
               );
             }),
             (this.onWindowBlur = function () {
@@ -14304,10 +14688,10 @@
                   ((a.completionEndTime = Date.now()),
                   eO.m9.logEvent("chatgpt_blur_during_completion", null, {
                     completion_duration_ms: "".concat(
-                      a.completionEndTime - a.completionStartTime
+                      a.completionEndTime - a.completionStartTime,
                     ),
                     blur_time_ms: "".concat(
-                      a.blurDuringCompletionTime - a.completionStartTime
+                      a.blurDuringCompletionTime - a.completionStartTime,
                     ),
                   }),
                   void 0 !== a.refocusTime &&
@@ -14470,7 +14854,7 @@
                           e.kernel_started &&
                           nT.m.warning(
                             "This advanced data analysis (beta) chat has timed out. You may continue the conversation, but previous files, links, and code blocks below may not work as expected.",
-                            { hasCloseButton: !0, duration: 0 }
+                            { hasCloseButton: !0, duration: 0 },
                           ),
                         e
                       );
@@ -14494,7 +14878,7 @@
             },
           },
           ssr: !1,
-        }
+        },
       );
       function lk(e) {
         var t = e.children;
@@ -14536,7 +14920,7 @@
               },
             },
             ssr: !1,
-          }
+          },
         ),
         lT = P()(
           function () {
@@ -14553,7 +14937,7 @@
                 return [95624];
               },
             },
-          }
+          },
         ),
         lN = P()(
           function () {
@@ -14569,7 +14953,7 @@
                 return [61621];
               },
             },
-          }
+          },
         ),
         lI = (0, A.vU)({
           contentPolicyViolation: {
@@ -14696,7 +15080,7 @@
               },
               children: (0, j.jsx)(
                 U.Z,
-                (0, p._)({}, lI.reportSharedConversation)
+                (0, p._)({}, lI.reportSharedConversation),
               ),
             }),
             (0, j.jsx)("span", { children: "|" }),
@@ -14772,7 +15156,7 @@
                         });
                       },
                     },
-                  })
+                  }),
                 ),
               ],
             });
@@ -14801,13 +15185,13 @@
                       U.Z,
                       (0, x._)((0, p._)({}, lI.businessDisclaimer), {
                         values: { link: r, workspaceName: n },
-                      })
+                      }),
                     )
                   : (0, j.jsx)(
                       U.Z,
                       (0, x._)((0, p._)({}, lI.businessDisclaimerNoName), {
                         values: { link: r },
-                      })
+                      }),
                     ),
             })
           : a
@@ -14816,7 +15200,7 @@
                 U.Z,
                 (0, x._)((0, p._)({}, lI.mayProduceInaccurateInformation), {
                   values: { link: r },
-                })
+                }),
               ),
             })
           : (0, j.jsx)("span", {
@@ -14824,7 +15208,7 @@
                 U.Z,
                 (0, x._)((0, p._)({}, lI.freeResearchPreview), {
                   values: { link: r },
-                })
+                }),
               ),
             });
       }
@@ -14921,7 +15305,7 @@
                         content: e,
                       });
                   },
-                  [ej]
+                  [ej],
                 ),
               }).exempt),
               (s = r.onRestrictedTermFound),
@@ -14940,7 +15324,7 @@
                       ? (d(!0), null == s || s(t), !0)
                       : (d(!1), !1);
                   },
-                  [i, s]
+                  [i, s],
                 ),
               }),
             e8 = e7.hasRestrictedTerms,
@@ -14965,7 +15349,7 @@
               function () {
                 tm(), N.o.logEvent(I.a.newThread);
               },
-              [tm]
+              [tm],
             ),
             tg = Y.tQ.getTitle(ej),
             th = (0, F.useCallback)(
@@ -14992,7 +15376,7 @@
                       eL.push((0, en.ZV)(e), void 0, { shallow: !0 });
                 }
               },
-              [eR, td, tm, eL, e_]
+              [eR, td, tm, eL, e_],
             );
           (0, F.useEffect)(function () {
             (0, la.sb)();
@@ -15009,7 +15393,7 @@
                   (0, et.lD)(n) || (0, et.JD)(n) || (0, la.yu)(e, n.id, td);
                 }
               },
-              [eR, td, eZ.displayingSideBySideFeedback]
+              [eR, td, eZ.displayingSideBySideFeedback],
             ),
             tx = (0, Y.Uy)(ej),
             tv = null != (0, ea.DT)(ej),
@@ -15094,7 +15478,7 @@
                           (T = {});
                       },
                       50,
-                      { leading: !0, maxWait: 50 }
+                      { leading: !0, maxWait: 50 },
                     );
                   return (
                     (s = (0, h._)(function (a) {
@@ -15161,8 +15545,8 @@
                                   (null == s ? void 0 : s.clearsIn) &&
                                   (f(
                                     new Date(
-                                      Date.now() + 1e3 * s.clearsIn
-                                    ).toISOString()
+                                      Date.now() + 1e3 * s.clearsIn,
+                                    ).toISOString(),
                                   ),
                                   setTimeout(function () {
                                     g();
@@ -15189,8 +15573,8 @@
                                           {
                                             completionSampleFinishTime:
                                               Date.now(),
-                                          }
-                                        )
+                                          },
+                                        ),
                                       );
                                   }),
                                   N.o.logEvent(
@@ -15201,7 +15585,7 @@
                                       : W
                                       ? I.a.promptBlockedByModeration
                                       : I.a.promptFlaggedByModeration,
-                                    { threadId: U, id: A }
+                                    { threadId: U, id: A },
                                   ))),
                               "num_variants_in_stream" === a.type)
                             )
@@ -15233,7 +15617,7 @@
                                       : J.continuingFromSharedConversationId) !=
                                     null),
                                   Y.tQ.removeContinuingFromSharedConversationId(
-                                    ej
+                                    ej,
                                   ),
                                   (C = !1),
                                   (M = !b.hasReceivedServerCompletion || $),
@@ -15299,8 +15683,8 @@
                                       if (null == ec)
                                         throw Error(
                                           "Received a message with no parentId: ".concat(
-                                            JSON.stringify(H)
-                                          )
+                                            JSON.stringify(H),
+                                          ),
                                         );
                                       e.addNode(H.id, H, ec, V.uU.Assistant);
                                     })),
@@ -15402,7 +15786,7 @@
                     }
                   );
                 },
-                [P, R, L, ej]
+                [P, R, L, ej],
               )),
               (z = (0, F.useCallback)(
                 ((A = (0, h._)(function (e) {
@@ -15525,7 +15909,7 @@
                 function (e) {
                   return A.apply(this, arguments);
                 }),
-                [m, ej, tx, ty, q, w]
+                [m, ej, tx, ty, q, w],
               ))),
             tk = (0, F.useCallback)(
               function () {
@@ -15535,11 +15919,11 @@
                   ei.hx.abortRequests(
                     t.map(function (e) {
                       return e.id;
-                    })
+                    }),
                   );
                 }
               },
-              [ej]
+              [ej],
             ),
             tC = eI.has(H.PL),
             tM = eI.has(H.rX),
@@ -15606,7 +15990,7 @@
               function (e, t, n, a) {
                 return el.apply(this, arguments);
               }),
-              [ej, e9, tl, td, tu, tC, tM, tj, tk, t_.forceParagen]
+              [ej, e9, tl, td, tu, tC, tM, tj, tk, t_.forceParagen],
             ),
             tN = (0, F.useCallback)(
               function (e, t, n, a) {
@@ -15614,7 +15998,7 @@
                   r.addNode(e, n, t, V.uU.User, void 0, a);
                 });
               },
-              [ej]
+              [ej],
             ),
             tI = (0, F.useCallback)(
               ((eu = (0, h._)(function (e, t, n) {
@@ -15631,7 +16015,7 @@
                         .conversationTemplate &&
                       Y.tQ.setConversationTemplateIdForNewThread(
                         ej,
-                        i.conversationTemplate.id
+                        i.conversationTemplate.id,
                       ),
                     tN(e, eF, a, r.length > 0 ? { attachments: r } : {}),
                     tT(V.Os.Next, e, n, !0, void 0, void 0, i),
@@ -15642,7 +16026,7 @@
               function (e, t, n) {
                 return eu.apply(this, arguments);
               }),
-              [ej, tN, tT, eF]
+              [ej, tN, tT, eF],
             ),
             tS = (0, F.useRef)(!1),
             tP = (0, rN.B8)(),
@@ -15669,7 +16053,7 @@
                     tI(
                       r,
                       { content: e, attachments: [] },
-                      { eventSource: "url" }
+                      { eventSource: "url" },
                     ),
                     eL.replace({ pathname: eL.pathname, query: a }, void 0, {
                       shallow: !0,
@@ -15677,7 +16061,7 @@
                 }
               }
             },
-            [tc, eL, tI, tR, tP, eI, ej]
+            [tc, eL, tI, tR, tP, eI, ej],
           ),
             (0, ea.dB)(ej);
           var tZ = (0, F.useCallback)(
@@ -15694,14 +16078,14 @@
                   i = Y.tQ.getTree(ej).getParentPromptNode(e).id;
                 tT(V.Os.Variant, i, t, !1, n, r, { variantPurpose: a });
               },
-              [tT, ej]
+              [tT, ej],
             ),
             tL = (0, F.useCallback)(
               function (e) {
                 var t = Y.tQ.getTree(ej).getLeafFromNode(e);
                 Y.tQ.setThreadCurrentLeafId(ej, t.id);
               },
-              [ej]
+              [ej],
             ),
             tD = (0, F.useCallback)(
               function (e, t, n) {
@@ -15733,11 +16117,11 @@
                       e,
                       { eventSource: "mouse", intent: "comparison" },
                       !1,
-                      "comparison"
+                      "comparison",
                     );
                 }
               },
-              [ej, td, eP, tZ]
+              [ej, td, eP, tZ],
             ),
             tB = (0, F.useCallback)(function () {
               J.vm.closeModal(J.B.AccountPortal);
@@ -15763,19 +16147,19 @@
               function () {
                 tq(!1);
               },
-              [tq]
+              [tq],
             ),
             tW = (0, F.useCallback)(
               function () {
                 tU(!1);
               },
-              [tU]
+              [tU],
             ),
             tV = (0, F.useCallback)(
               function () {
                 tO(!1);
               },
-              [tO]
+              [tO],
             ),
             tQ = (0, F.useCallback)(function () {
               tn(!0), T.m.setItem("oai/librarian/hasSeenWarning", "true");
@@ -15823,7 +16207,7 @@
                           (0, j.jsx)(
                             "meta",
                             { name: "robots", content: "noindex,nofollow" },
-                            "robots"
+                            "robots",
                           ),
                           (0, j.jsx)(
                             "meta",
@@ -15832,7 +16216,7 @@
                               content:
                                 null != tg ? tg : "Shared Chat on ChatGPT",
                             },
-                            "og:title"
+                            "og:title",
                           ),
                           (0, j.jsx)(
                             "meta",
@@ -15843,7 +16227,7 @@
                                 (null != eq ? "by ".concat(eq, " ") : "") +
                                 "via ChatGPT",
                             },
-                            "og:description"
+                            "og:description",
                           ),
                           (0, j.jsx)(
                             "meta",
@@ -15851,7 +16235,7 @@
                               property: "og:image",
                               content: "/images/chatgpt-share-og.png",
                             },
-                            "og:image"
+                            "og:image",
                           ),
                         ],
                       }),
@@ -15872,7 +16256,7 @@
                       }),
                       type: "danger",
                     },
-                    "OnboardingModal"
+                    "OnboardingModal",
                   ),
                 e8 &&
                   e3 &&
@@ -15889,7 +16273,7 @@
                       }),
                       type: "danger",
                     },
-                    "RestrictedTerms"
+                    "RestrictedTerms",
                   ),
                 t$ &&
                   null != tJ &&
@@ -15926,7 +16310,7 @@
                                 promptTextareaRef: tG,
                                 conversationLeafId: eF,
                               },
-                              ej
+                              ej,
                             )),
                             eT
                               ? (0, j.jsx)("div", {
@@ -15947,7 +16331,7 @@
                                       as: "link",
                                       to: eM,
                                       children: eN.formatMessage(
-                                        lI.sharedConversationContinueConversation
+                                        lI.sharedConversationContinueConversation,
                                       ),
                                     }),
                                     eD &&
@@ -15956,7 +16340,7 @@
                                           eV(!0);
                                         },
                                         children: eN.formatMessage(
-                                          lI.sharedConversationModerateConversation
+                                          lI.sharedConversationModerateConversation,
                                         ),
                                       }),
                                   ],
@@ -16010,7 +16394,7 @@
                               className: "text-xs",
                               children: (0, j.jsx)(
                                 U.Z,
-                                (0, p._)({}, lI.latencyButton)
+                                (0, p._)({}, lI.latencyButton),
                               ),
                             }),
                           ],
@@ -16086,7 +16470,7 @@
                               className: "text-xs",
                               children: (0, j.jsx)(
                                 U.Z,
-                                (0, p._)({}, lI.helpAndFaq)
+                                (0, p._)({}, lI.helpAndFaq),
                               ),
                             }),
                           ],
@@ -16101,7 +16485,7 @@
                               className: "text-xs",
                               children: (0, j.jsx)(
                                 U.Z,
-                                (0, p._)({}, lI.keyboardShortcutsMenu)
+                                (0, p._)({}, lI.keyboardShortcutsMenu),
                               ),
                             }),
                           ],
@@ -16153,7 +16537,7 @@
             return {
               activeRequests: (0, i._)(
                 (0, r._)({}, n.activeRequests),
-                (0, a._)({}, e, { id: e, abortController: t })
+                (0, a._)({}, e, { id: e, abortController: t }),
               ),
             };
           });
@@ -16461,7 +16845,7 @@
                   if ((0, b.NB)(n))
                     return (
                       C(
-                        'To add a localhost plugin, please go to "Develop your own plugin."'
+                        'To add a localhost plugin, please go to "Develop your own plugin."',
                       ),
                       [2]
                     );
@@ -16486,7 +16870,7 @@
               }
             });
           }),
-          [t, w, C]
+          [t, w, C],
         );
         return (0, l.jsx)(u.Z, {
           isOpen: !0,
@@ -16602,7 +16986,7 @@
                 }
               });
             }),
-            [P, t, R, L, Z, S]
+            [P, t, R, L, Z, S],
           );
         return (0, l.jsx)(u.Z, {
           isOpen: !0,
@@ -16658,7 +17042,7 @@
                           children: R,
                         }),
                       },
-                    })
+                    }),
                   ),
                 }),
               k && (0, l.jsx)(y.L, { children: k }),
@@ -16760,7 +17144,7 @@
                 return e.id !== i.Installed || n.length > 0;
               });
             },
-            [n]
+            [n],
           ),
           isLoading: t,
         };
@@ -16841,11 +17225,11 @@
                     })
                 : f.sort(function (e, t) {
                     return e.manifest.name_for_human.localeCompare(
-                      t.manifest.name_for_human
+                      t.manifest.name_for_human,
                     );
                   });
             },
-            [f, n]
+            [f, n],
           );
         if (t === i.Installed) {
           var p,

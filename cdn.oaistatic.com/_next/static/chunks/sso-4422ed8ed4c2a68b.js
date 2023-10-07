@@ -198,9 +198,9 @@
           (0, l._)((0, s._)({ color: "neutral", size: "small" }, e), {
             className: (0, h.default)(
               "h-10 rounded-lg border border-[rgba(0,0,0,.15)] bg-white px-3 py-2 shadow-[0_1px_1px_0_rgba(0,0,0,0.08)]",
-              e.className
+              e.className,
             ),
-          })
+          }),
         );
         return null != e.label
           ? (0, i.jsx)(u.u, {
@@ -311,7 +311,7 @@
                           }),
                         ],
                       },
-                      e.id
+                      e.id,
                     );
                   }),
               }),
@@ -367,7 +367,7 @@
                               return t(
                                 n.filter(function (n) {
                                   return n !== e.id;
-                                })
+                                }),
                               );
                             },
                             className:
@@ -380,7 +380,7 @@
                           }),
                         ],
                       },
-                      e.id
+                      e.id,
                     );
                   }),
                 })
@@ -422,7 +422,7 @@
         return (0, x.jsxs)("div", {
           className: (0, Z.default)(
             "flex items-center gap-2",
-            s ? "opacity-50" : ""
+            s ? "opacity-50" : "",
           ),
           children: [
             (0, x.jsx)(G.ck, {
@@ -504,7 +504,7 @@
               })(t, o)) && void 0 !== n
               ? n
               : [a.GPT_4, i.Default],
-            2
+            2,
           ),
           g = m[0],
           f = m[1];
@@ -593,7 +593,7 @@
             "flex items-center gap-2 rounded-lg p-2 text-sm",
             i
               ? "bg-gray-100 dark:bg-gray-700"
-              : "hover:bg-gray-50 dark:hover:bg-gray-700"
+              : "hover:bg-gray-50 dark:hover:bg-gray-700",
           ),
           children: [
             null != s
@@ -632,8 +632,11 @@
                 null == t
                   ? void 0
                   : t.items.map(function (e) {
-                      return (0,
-                      x.jsx)(Y, { workspaceId: n, conversationTemplate: e }, e.id);
+                      return (0, x.jsx)(
+                        Y,
+                        { workspaceId: n, conversationTemplate: e },
+                        e.id,
+                      );
                     }),
               ],
             }),
@@ -822,9 +825,9 @@
             (0, S.useState)(
               null !== (t = null == f ? void 0 : f.name) && void 0 !== t
                 ? t
-                : ""
+                : "",
             ),
-            2
+            2,
           ),
           F = M[0],
           O = M[1],
@@ -832,9 +835,9 @@
             (0, S.useState)(
               null !== (s = null == f ? void 0 : f.icon) && void 0 !== s
                 ? s
-                : g.bj.Box
+                : g.bj.Box,
             ),
-            2
+            2,
           ),
           B = U[0];
         U[1];
@@ -842,9 +845,9 @@
             (0, S.useState)(
               null !== (l = null == f ? void 0 : f.color) && void 0 !== l
                 ? l
-                : (0, g.yq)()
+                : (0, g.yq)(),
             ),
-            2
+            2,
           ),
           L = E[0];
         E[1];
@@ -853,9 +856,9 @@
               null !== (a = null == f ? void 0 : f.config.context_message) &&
                 void 0 !== a
                 ? a
-                : ""
+                : "",
             ),
-            2
+            2,
           ),
           q = R[0],
           J = R[1],
@@ -865,9 +868,9 @@
                 (i = null == f ? void 0 : f.config.assistant_welcome_message) &&
                 void 0 !== i
                 ? i
-                : ""
+                : "",
             ),
-            2
+            2,
           ),
           Y = V[0],
           H = V[1],
@@ -876,9 +879,9 @@
               null !== (o = null == f ? void 0 : f.config.model_slug) &&
                 void 0 !== o
                 ? o
-                : N.S0
+                : N.S0,
             ),
-            2
+            2,
           ),
           Q = K[0],
           X = K[1],
@@ -887,9 +890,9 @@
               null !== (d = null == f ? void 0 : f.config.plugin_ids) &&
                 void 0 !== d
                 ? d
-                : []
+                : [],
             ),
-            2
+            2,
           ),
           es = en[0],
           ea = en[1],
@@ -897,9 +900,9 @@
             (0, S.useState)(
               (null == f ? void 0 : f.published_at) != null
                 ? g.Ou.Published
-                : g.Ou.Private
+                : g.Ou.Private,
             ),
-            2
+            2,
           ),
           eo = er[0],
           ed = er[1],
@@ -907,9 +910,9 @@
             (0, S.useState)(
               null !== (u = null == f ? void 0 : f.description) && void 0 !== u
                 ? u
-                : ""
+                : "",
             ),
-            2
+            2,
           ),
           eu = ec[0],
           ex = ec[1],
@@ -965,23 +968,23 @@
                             D.push(
                               "/?".concat(g.t9, "=").concat(f.id),
                               void 0,
-                              { shallow: !0 }
+                              { shallow: !0 },
                             ),
                               n
                                 ? k.m.success(
                                     eg
                                       ? "Template saved and published. Changes only apply to new chats. Try it out here."
                                       : "Template saved. Changes only apply to new chats. Try it out here.",
-                                    { duration: 3 }
+                                    { duration: 3 },
                                   )
                                 : k.m.success(
                                     eg
                                       ? "Template saved and published."
                                       : "Template saved.",
-                                    { duration: 3 }
+                                    { duration: 3 },
                                   );
                           },
-                        }
+                        },
                       ),
                     ]
                   );
@@ -1001,10 +1004,10 @@
                               eg
                                 ? "Template created and published. Try it out here."
                                 : "Template created. Try it out here.",
-                              { duration: 3 }
+                              { duration: 3 },
                             );
                         },
-                      }
+                      },
                     ),
                   ];
                 case 3:
@@ -1229,7 +1232,7 @@
               (0, S.useState)(function () {
                 return (0, _.OX)();
               }),
-              2
+              2,
             ),
             o = r[0],
             d = r[1],
@@ -1238,9 +1241,9 @@
                 null !== (n = null == i ? void 0 : i.config.context_message) &&
                   void 0 !== n
                   ? n
-                  : ""
+                  : "",
               ),
-              2
+              2,
             ),
             m = u[0],
             g = u[1],
@@ -1254,9 +1257,9 @@
                     null == i ? void 0 : i.config.assistant_welcome_message) &&
                   void 0 !== t
                   ? t
-                  : ""
+                  : "",
               ),
-              2
+              2,
             ),
             w = j[0],
             k = j[1],
@@ -1265,9 +1268,9 @@
                 null !== (s = null == i ? void 0 : i.config.model_slug) &&
                   void 0 !== s
                   ? s
-                  : N.S0
+                  : N.S0,
               ),
-              2
+              2,
             ),
             C = I[0],
             P = I[1],
@@ -1276,15 +1279,15 @@
                 null !== (l = null == i ? void 0 : i.config.plugin_ids) &&
                   void 0 !== l
                   ? l
-                  : []
+                  : [],
               ),
-              2
+              2,
             ),
             A = T[0],
             G = T[1],
             Z = (0, c._)(
               (0, S.useState)(null == i ? void 0 : i.profile_pic_id),
-              2
+              2,
             ),
             D = Z[0],
             M = Z[1],
@@ -1297,7 +1300,7 @@
                   plugin_ids: A,
                 };
               },
-              [m, w, C, A]
+              [m, w, C, A],
             ),
             O = (0, S.useCallback)(function () {
               b(!1);
@@ -1358,7 +1361,7 @@
                           clientThreadId: o,
                           onInitiated: O,
                         },
-                        o
+                        o,
                       ),
                       B
                         ? (0, x.jsxs)("div", {
@@ -1428,7 +1431,7 @@
             function () {
               s && void 0 !== l && !a && (0, f.O)(s.id);
             },
-            [a, l, s]
+            [a, l, s],
           ),
           null != s && a
             ? (0, x.jsx)(er, { workspace: n, conversationTemplate: s })
@@ -1471,7 +1474,7 @@
               children: (0, x.jsx)(
                 ec,
                 { conversationTemplateId: t, remixSourceTemplateId: s },
-                null != t ? t : "new"
+                null != t ? t : "new",
               ),
             }),
           ],
@@ -1502,7 +1505,7 @@
           g = new Set(
             x.installedPlugins.map(function (e) {
               return e.id;
-            })
+            }),
           ),
           f = n.filter(function (e) {
             return !g.has(e);
@@ -1516,7 +1519,7 @@
             function () {
               0 == f.length && t();
             },
-            [f.length, t]
+            [f.length, t],
           ),
           (0, l.jsxs)(l.Fragment, {
             children: [
@@ -1568,7 +1571,7 @@
                               }),
                             ],
                           },
-                          e.id
+                          e.id,
                         );
                       }),
                     }),
@@ -1649,7 +1652,7 @@
                 }),
             ],
           },
-          n.value
+          n.value,
         );
       }
       function q(e) {
@@ -1684,14 +1687,24 @@
                 children: [
                   null != l &&
                     l.options.map(function (e) {
-                      return (0,
-                      o.jsx)(R, { option: e, prefixNameWithGPT4: !0, isSelected: s === e.value }, e.value);
+                      return (0, o.jsx)(
+                        R,
+                        {
+                          option: e,
+                          prefixNameWithGPT4: !0,
+                          isSelected: s === e.value,
+                        },
+                        e.value,
+                      );
                     }),
                   (0, o.jsx)(W.Z0, {}),
                   null != a &&
                     a.options.map(function (e) {
-                      return (0,
-                      o.jsx)(R, { option: e, isSelected: s === e.value }, e.value);
+                      return (0, o.jsx)(
+                        R,
+                        { option: e, isSelected: s === e.value },
+                        e.value,
+                      );
                     }),
                 ],
               }),
@@ -1727,7 +1740,7 @@
                       return n.id === e;
                     });
               return null != n ? [n] : [];
-            })
+            }),
           ).concat(
             (0, r._)(
               "" !== d
@@ -1736,7 +1749,7 @@
                       ? g.items.filter(function (e) {
                           return null == e.published_at;
                         })
-                      : []
+                      : [],
                   )
                     .concat((0, r._)(null != x ? x.items : []))
                     .filter(function (e) {
@@ -1745,15 +1758,15 @@
                         null != e.config.assistant_welcome_message
                       );
                     })
-                : []
-            )
+                : [],
+            ),
           ),
           p = f
             ? []
             : (0, r._)(
                 h.map(function (e) {
                   return { kind: l.Agent, agent: e };
-                })
+                }),
               )
                 .concat([{ kind: l.Create }, { kind: l.Browse }])
                 .filter(function (e) {
@@ -1865,8 +1878,8 @@
                 multiple: !0,
                 maxSize: g.xC,
               },
-              (0, y.Z8)((0, y.Zp)(C))
-            )
+              (0, y.Z8)((0, y.Zp)(C)),
+            ),
           ),
           H = Y.getInputProps,
           K = Y.open;
@@ -1875,7 +1888,7 @@
             function () {
               j.Dw.reset();
             },
-            [C]
+            [C],
           ),
           B === v.A.ContextConnector
             ? (n = (0, o.jsx)(f.Z, {}))
@@ -1948,7 +1961,7 @@
                                 ? U
                                 : (0, T.ZP)(f),
                               void 0,
-                              { shallow: !0 }
+                              { shallow: !0 },
                             )
                           : W &&
                             null != C &&
@@ -2064,7 +2077,7 @@
           className: (0, S.default)(
             "flex items-center gap-3 rounded-xl p-4",
             r ? "bg-token-surface-secondary" : "",
-            x
+            x,
           ),
           children: [
             (0, o.jsx)(J.i1, {
@@ -2109,7 +2122,7 @@
                     ? "mt-4"
                     : "",
               },
-              e.kind === l.Agent ? e.agent.id : e.kind
+              e.kind === l.Agent ? e.agent.id : e.kind,
             );
           }),
         });
@@ -2155,7 +2168,7 @@
             "small" === s && "rounded-sm",
             "medium" === s && "rounded-md",
             "large" === s && "rounded-lg",
-            t
+            t,
           ),
           children: [
             n,
@@ -2164,7 +2177,7 @@
                 "absolute inset-0 shadow-[inset_0_0_1px_rgba(0,0,0,0.1)]",
                 "small" === s && "rounded-sm",
                 "medium" === s && "rounded-md",
-                "large" === s && "rounded-lg"
+                "large" === s && "rounded-lg",
               ),
             }),
           ],
@@ -2179,9 +2192,9 @@
           (0, l._)((0, s._)({}, e), {
             className: (0, o.default)(
               "flex gap-2 p-4 hover:bg-gray-100 dark:hover:bg-gray-800",
-              e.className
+              e.className,
             ),
-          })
+          }),
         );
       }
     },

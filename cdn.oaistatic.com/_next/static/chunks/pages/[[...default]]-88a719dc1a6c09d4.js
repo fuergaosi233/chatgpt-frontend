@@ -34,7 +34,7 @@
           function () {
             t === o.FB && u.replace("/", void 0, { shallow: !0 });
           },
-          [u, t]
+          [u, t],
         ),
         t === o.FB)
           ? null
@@ -51,7 +51,7 @@
       ],
       function () {
         return n((n.s = 85289));
-      }
+      },
     ),
       (_N_E = n.O());
   },

@@ -15,7 +15,7 @@
         function () {
           return Promise.resolve(o);
         },
-        { ssr: !1 }
+        { ssr: !1 },
       );
     },
     82277: function (e, r, n) {
@@ -159,8 +159,8 @@
               onClick: r,
               className: (0, c.default)(n, "flex-grow overflow-hidden"),
             },
-            o
-          )
+            o,
+          ),
         );
       }
       function C(e) {
@@ -168,7 +168,7 @@
           n = (0, i._)(e, ["onClick"]);
         return (0, a.jsx)(
           "button",
-          (0, t._)({ type: "button", className: "px-3", onClick: r }, n)
+          (0, t._)({ type: "button", className: "px-3", onClick: r }, n),
         );
       }
       function S() {
@@ -250,7 +250,7 @@
                                     className: "sr-only",
                                     children: (0, a.jsx)(
                                       m.Z,
-                                      (0, t._)({}, z.closeSidebar)
+                                      (0, t._)({}, z.closeSidebar),
                                     ),
                                   }),
                                   (0, a.jsx)(v.q5L, {
@@ -286,7 +286,7 @@
               function () {
                 "mobile-nav" === s && b.vm.setActiveSidebar(!1);
               },
-              [l]
+              [l],
             ),
             (0, a.jsxs)(a.Fragment, {
               children: [
@@ -304,7 +304,7 @@
                           className: "sr-only",
                           children: (0, a.jsx)(
                             m.Z,
-                            (0, t._)({}, z.openSidebar)
+                            (0, t._)({}, z.openSidebar),
                           ),
                         }),
                         (0, a.jsx)(v.cur, {
@@ -346,7 +346,7 @@
                 "flex-shrink-0 overflow-x-hidden",
                 o
                   ? "border-r border-gray-100 bg-gray-50 gizmo:bg-white dark:border-0 dark:bg-gray-900"
-                  : "dark bg-gray-900"
+                  : "dark bg-gray-900",
               ),
               ref: t,
               initial: !1,
@@ -533,7 +533,7 @@
               className: (0, o.default)(
                 a
                   ? "bg-gray-100 dark:bg-gray-800"
-                  : "hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "hover:bg-gray-100 dark:hover:bg-gray-800",
               ),
               children: s,
             });

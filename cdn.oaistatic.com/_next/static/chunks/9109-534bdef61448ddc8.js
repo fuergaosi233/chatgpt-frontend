@@ -85,7 +85,7 @@
                   x() && m(!1);
                 }, 2e3);
             },
-            [x, t]
+            [x, t],
           );
         return (0, i.jsxs)(i.Fragment, {
           children: [
@@ -171,7 +171,7 @@
           c = n.errors;
         return (0, i.jsx)(
           f,
-          (0, r._)({ name: "manifest", content: s, warnings: o, errors: c }, t)
+          (0, r._)({ name: "manifest", content: s, warnings: o, errors: c }, t),
         );
       }
       function u(e) {
@@ -184,8 +184,8 @@
           f,
           (0, r._)(
             { name: "OpenAPI spec", content: s, warnings: o, errors: c },
-            t
-          )
+            t,
+          ),
         );
       }
       function d(e) {
@@ -195,7 +195,7 @@
         return s
           ? (0, i.jsx)(
               m,
-              (0, r._)({ text: "Prompt for ChatGPT", content: s }, t)
+              (0, r._)({ text: "Prompt for ChatGPT", content: s }, t),
             )
           : null;
       }
@@ -222,8 +222,8 @@
             m,
             (0, r._)(
               { icon: h, text: f, content: t, warnings: s, errors: o },
-              l
-            )
+              l,
+            ),
           )
         );
       }
@@ -247,7 +247,7 @@
                     return !e;
                   });
             },
-            [x, d]
+            [x, d],
           );
         return (0, i.jsxs)("div", {
           className: "flex flex-col gap-2 text-sm",
@@ -275,13 +275,19 @@
                     children: [
                       l &&
                         l.map(function (e, n) {
-                          return (0,
-                          i.jsx)("div", { className: "text-red-500", children: e }, n);
+                          return (0, i.jsx)(
+                            "div",
+                            { className: "text-red-500", children: e },
+                            n,
+                          );
                         }),
                       a &&
                         a.map(function (e, n) {
-                          return (0,
-                          i.jsx)("div", { className: "text-yellow-500", children: e }, n);
+                          return (0, i.jsx)(
+                            "div",
+                            { className: "text-yellow-500", children: e },
+                            n,
+                          );
                         }),
                     ],
                   }),
@@ -353,7 +359,7 @@
               return n.has(e.id);
             });
           },
-          [n, e]
+          [n, e],
         );
       }
       function g(e) {
@@ -560,28 +566,53 @@
                         className:
                           "absolute bottom-0 left-0 -ml-2 flex -translate-x-full gap-2 pl-2",
                         children: d.map(function (e) {
-                          return (0,
-                          i.jsx)(P, { variantId: e, onChangeItemInView: h }, e);
+                          return (0, i.jsx)(
+                            P,
+                            { variantId: e, onChangeItemInView: h },
+                            e,
+                          );
                         }),
                       }),
                       (0, i.jsx)("div", {
                         className:
                           "absolute left-full top-0 ml-2 flex gap-2 pr-2",
                         children: f.map(function (e) {
-                          return (0,
-                          i.jsx)(P, { variantId: e, onChangeItemInView: h }, e);
+                          return (0, i.jsx)(
+                            P,
+                            { variantId: e, onChangeItemInView: h },
+                            e,
+                          );
                         }),
                       }),
                       (0, i.jsx)("div", {
                         className: "flex flex-col gap-2",
                         children: e.messages.map(function (e) {
-                          return (0,
-                          i.jsxs)("div", { className: "h-14 w-32 truncate bg-gray-200 p-1 text-black", children: [(0, i.jsx)("div", { className: "font-semibold", children: e.nodeId }), (0, i.jsx)("div", { className: "italic text-gray-600", children: e.message.author.role }), (0, i.jsx)("div", { children: (0, l.RR)(e.message) })] }, e.nodeId);
+                          return (0, i.jsxs)(
+                            "div",
+                            {
+                              className:
+                                "h-14 w-32 truncate bg-gray-200 p-1 text-black",
+                              children: [
+                                (0, i.jsx)("div", {
+                                  className: "font-semibold",
+                                  children: e.nodeId,
+                                }),
+                                (0, i.jsx)("div", {
+                                  className: "italic text-gray-600",
+                                  children: e.message.author.role,
+                                }),
+                                (0, i.jsx)("div", {
+                                  children: (0, l.RR)(e.message),
+                                }),
+                              ],
+                            },
+                            e.nodeId,
+                          );
                         }),
                       }),
                     ],
                   },
-                  t
+                  t,
                 );
               }),
             }),
@@ -604,7 +635,7 @@
               children: n,
             }),
           },
-          n
+          n,
         );
       }
       var T = t(51704);
@@ -666,7 +697,7 @@
                           className: "sr-only",
                           children: (0, i.jsx)(
                             m.Z,
-                            (0, r._)({}, z.closeSidebar)
+                            (0, r._)({}, z.closeSidebar),
                           ),
                         }),
                         (0, i.jsx)(f.q5L, {
@@ -721,7 +752,7 @@
                   }),
                 ],
               },
-              e.id
+              e.id,
             );
           });
         return (0, i.jsx)(L, { children: r });
@@ -761,7 +792,7 @@
               var e = o.tQ.getTree(n);
               (0, u.S)(e.getTextFromThread(m));
             },
-            [m, n]
+            [m, n],
           ),
           _ = (0, a._)((0, d.useState)(!1), 2),
           k = _[0],
@@ -816,7 +847,7 @@
                         children: JSON.stringify(x[g], null, 2),
                       }),
                     },
-                    "DebugMessageModal-".concat(g)
+                    "DebugMessageModal-".concat(g),
                   ),
                 k &&
                   (0, i.jsx)(
@@ -830,7 +861,7 @@
                       size: "fullscreen",
                       children: (0, i.jsx)(I, { clientThreadId: n }),
                     },
-                    "DebugTreeViewer"
+                    "DebugTreeViewer",
                   ),
               ],
             })
@@ -840,7 +871,7 @@
         var t = JSON.stringify(
             { conversation_id: o.tQ.getServerThreadId(e), messages: n },
             null,
-            2
+            2,
           ),
           r = new Blob([t], { type: "application/json" }),
           a = URL.createObjectURL(r),
@@ -857,7 +888,7 @@
             function () {
               D(n, t);
             },
-            [n, t]
+            [n, t],
           );
         return (0, i.jsxs)(g.z, {
           onClick: a,
@@ -970,7 +1001,7 @@
                 if (!f) throw Error("No session found, cannot enable MFA");
                 if ("mocked" === f.authProvider)
                   throw Error(
-                    "Mock users can't enable MFA! Please setup Auth0 following the instructions in the README"
+                    "Mock users can't enable MFA! Please setup Auth0 following the instructions in the README",
                   );
                 return (
                   (0, c.signIn)(
@@ -985,14 +1016,14 @@
                               idp: "openai",
                             }),
                           }
-                        : { oai_enforce_mfa: "true" }
-                    )
+                        : { oai_enforce_mfa: "true" },
+                    ),
                   ),
                   [2]
                 );
               });
             }),
-            [t.asPath, f, m]
+            [t.asPath, f, m],
           ),
           b = (0, u.useCallback)(
             (0, r._)(function () {
@@ -1002,12 +1033,12 @@
                   case 0:
                     if (!m)
                       throw Error(
-                        "Only username/password users can disable MFA"
+                        "Only username/password users can disable MFA",
                       );
                     if (!f) throw Error("No session found, cannot enable MFA");
                     if ("mocked" === f.authProvider)
                       throw Error(
-                        "Mock users can't enable MFA! Please setup Auth0 following the instructions in the README"
+                        "Mock users can't enable MFA! Please setup Auth0 following the instructions in the README",
                       );
                     return g(!0), [4, d.ZP.deleteMfa()];
                   case 1:
@@ -1018,7 +1049,7 @@
                         (0, c.signOut)({
                           redirect: !1,
                           callbackUrl: "/auth/login?next=".concat(
-                            encodeURIComponent(t.asPath)
+                            encodeURIComponent(t.asPath),
                           ),
                         }),
                       ]
@@ -1028,7 +1059,7 @@
                 }
               });
             }),
-            [m, t, f]
+            [m, t, f],
           );
         return {
           setupMfa: v,

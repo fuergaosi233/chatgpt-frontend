@@ -56,7 +56,7 @@
           function (n) {
             i({ pluginId: n, isInstalled: !0 });
           },
-          [i]
+          [i],
         );
       }
       function _(n) {
@@ -88,7 +88,7 @@
           function (n) {
             i({ pluginId: n, isInstalled: !1 });
           },
-          [i]
+          [i],
         );
       }
       function y(n, t) {
@@ -232,7 +232,7 @@
             function (t) {
               return n.apply(this, arguments);
             }),
-            []
+            [],
           ),
           isLoading: e,
         };
@@ -285,7 +285,7 @@
           if (n.author.role !== o.uU.Assistant) {
             console.error(
               "Refusing to make localhost plugin HTTP call from non-assistant message",
-              n
+              n,
             );
             return;
           }
@@ -329,14 +329,14 @@
           ) {
             console.error(
               "Refusing to make localhost plugin HTTP call with invalid metadata",
-              n
+              n,
             );
             return;
           }
           if (!/^https?:\/\/localhost:/.test(i.url)) {
             console.error(
               "Refusing to make localhost plugin HTTP call with non-localhost URL",
-              n
+              n,
             );
             return;
           }
@@ -367,7 +367,7 @@
                 return (
                   console.error(
                     "Error making localhost plugin HTTP call",
-                    (t = e.sent())
+                    (t = e.sent()),
                   ),
                   [
                     2,
@@ -379,7 +379,7 @@
                           content_type: o.PX.Text,
                           parts: [
                             "Error making localhost plugin HTTP call: ".concat(
-                              t
+                              t,
                             ),
                           ],
                         },
@@ -412,7 +412,7 @@
                   new Set(l).size !== l.length)
                 )
                   throw Error(
-                    "Refusing to make localhost plugin HTTP call with duplicate header keys"
+                    "Refusing to make localhost plugin HTTP call with duplicate header keys",
                   );
                 return (
                   (e = n.url),
@@ -487,7 +487,7 @@
                 return (
                   i.sent(),
                   l.m.danger(
-                    "Failed to fetch localhost manifest. Check to ensure your localhost is running and your localhost server has CORS enabled."
+                    "Failed to fetch localhost manifest. Check to ensure your localhost is running and your localhost server has CORS enabled.",
                   ),
                   [2]
                 );
@@ -503,7 +503,7 @@
                 )
                   return (
                     l.m.danger(
-                      "Localhost manifest is missing OpenAPI spec URL."
+                      "Localhost manifest is missing OpenAPI spec URL.",
                     ),
                     [2]
                   );
@@ -522,7 +522,7 @@
                 else if ("neither" === a)
                   return (
                     l.m.danger(
-                      "Localhost manifest OpenAPI spec URL is not a valid URL or path."
+                      "Localhost manifest OpenAPI spec URL is not a valid URL or path.",
                     ),
                     [2]
                   );
@@ -549,7 +549,7 @@
                 if (null == u)
                   return (
                     l.m.danger(
-                      "Failed to parse localhost OpenAPI spec as JSON or YAML."
+                      "Failed to parse localhost OpenAPI spec as JSON or YAML.",
                     ),
                     [2]
                   );
@@ -572,7 +572,7 @@
                 return (
                   i.sent(),
                   l.m.danger(
-                    "Failed to create or update localhost plugin at ".concat(n)
+                    "Failed to create or update localhost plugin at ".concat(n),
                   ),
                   [3, 13]
                 );
@@ -622,7 +622,7 @@
             onError: function (n) {
               console.error(n);
             },
-          }
+          },
         );
       }
     },

@@ -52,10 +52,10 @@
                     : Promise.resolve(
                         l(function () {
                           return null;
-                        })
+                        }),
                       );
                 },
-              })
+              }),
             )
           : (delete u.webpack, delete u.modules, a(n, u));
       }
@@ -167,7 +167,7 @@
                     loaded: this._res.loaded,
                     loading: this._res.loading,
                   }),
-                  e
+                  e,
                 )),
                   this._callbacks.forEach(function (e) {
                     return e();
@@ -230,7 +230,7 @@
               var n = l.default.useSyncExternalStore(
                 i.subscribe,
                 i.getCurrentValue,
-                i.getCurrentValue
+                i.getCurrentValue,
               );
               return (
                 l.default.useImperativeHandle(
@@ -238,7 +238,7 @@
                   function () {
                     return { retry: i.retry };
                   },
-                  []
+                  [],
                 ),
                 l.default.useMemo(
                   function () {
@@ -254,11 +254,11 @@
                       : n.loaded
                       ? l.default.createElement(
                           (t = n.loaded) && t.default ? t.default : t,
-                          e
+                          e,
                         )
                       : null;
                   },
-                  [e, n]
+                  [e, n],
                 )
               );
             },
@@ -271,7 +271,7 @@
                 webpack: null,
                 modules: null,
               },
-              t
+              t,
             ),
             i = null;
           if (!d) {
@@ -422,7 +422,7 @@
               (e) => {
                 !t || n.current || (n.current = e.target);
               },
-              !0
+              !0,
             ),
               x(() => {
                 t ||
@@ -441,12 +441,12 @@
                     });
                 }
               ),
-              []
+              [],
             );
           })({ ownerDocument: C }, !!(16 & m));
           let I = (function (
             { ownerDocument: e, container: t, initialFocus: n },
-            r
+            r,
           ) {
             let o = (0, a.useRef)(null),
               u = (0, w.t)();
@@ -471,7 +471,7 @@
                       ? (0, g.C5)(n.current)
                       : (0, g.jA)(i, g.TO.First) === g.fE.Error &&
                         console.warn(
-                          "There are no focusable elements inside the <FocusTrap />"
+                          "There are no focusable elements inside the <FocusTrap />",
                         ),
                       (o.current = null == e ? void 0 : e.activeElement);
                   });
@@ -486,7 +486,7 @@
               containers: n,
               previousActiveElement: r,
             },
-            o
+            o,
           ) {
             let u = (0, w.t)();
             P(
@@ -510,7 +510,7 @@
                     : (e.preventDefault(), e.stopPropagation(), (0, g.C5)(l))
                   : (0, g.C5)(r.current);
               },
-              !0
+              !0,
             );
           })(
             {
@@ -519,7 +519,7 @@
               containers: p,
               previousActiveElement: I,
             },
-            !!(8 & m)
+            !!(8 & m),
           );
           let F =
               ((o = (0, a.useRef)(0)),
@@ -568,10 +568,10 @@
                 type: "button",
                 onFocus: O,
                 features: h.A.Focusable,
-              })
+              }),
           );
         }),
-        { features: S }
+        { features: S },
       );
       var I = n(52327),
         F = n(98044);
@@ -601,7 +601,7 @@
               (0, d.h)((e) => {
                 n.current = e;
               }),
-              t
+              t,
             ),
             o = (0, T.i)(n),
             u = (function (e) {
@@ -675,7 +675,7 @@
                     defaultTag: j,
                     name: "Portal",
                   }),
-                  i
+                  i,
                 )
               : null
           );
@@ -694,7 +694,7 @@
                 theirProps: r,
                 defaultTag: V,
                 name: "Popover.Group",
-              })
+              }),
             );
           }),
         }),
@@ -704,7 +704,7 @@
               let t = (0, a.useContext)(U);
               if (null === t) {
                 let t = Error(
-                  "You used a <Description /> component, but it is not inside a relevant parent."
+                  "You used a <Description /> component, but it is not inside a relevant parent.",
                 );
                 throw (
                   (Error.captureStackTrace && Error.captureStackTrace(t, e), t)
@@ -716,8 +716,13 @@
             o = (0, d.T)(t);
           (0, F.e)(() => n.register(r), [r, n.register]);
           let u = { ref: o, ...n.props, id: r };
-          return (0,
-          c.sY)({ ourProps: u, theirProps: e, slot: n.slot || {}, defaultTag: "p", name: n.name || "Description" });
+          return (0, c.sY)({
+            ourProps: u,
+            theirProps: e,
+            slot: n.slot || {},
+            defaultTag: "p",
+            name: n.name || "Description",
+          });
         });
       var B = n(37068);
       let G = (0, a.createContext)(() => {});
@@ -797,23 +802,23 @@
             M = e.hasOwnProperty("onClose");
           if (!_ && !M)
             throw Error(
-              "You have to provide an `open` and an `onClose` prop to the `Dialog` component."
+              "You have to provide an `open` and an `onClose` prop to the `Dialog` component.",
             );
           if (!_)
             throw Error(
-              "You provided an `onClose` prop to the `Dialog`, but forgot an `open` prop."
+              "You provided an `onClose` prop to the `Dialog`, but forgot an `open` prop.",
             );
           if (!M)
             throw Error(
-              "You provided an `open` prop to the `Dialog`, but forgot an `onClose` prop."
+              "You provided an `open` prop to the `Dialog`, but forgot an `onClose` prop.",
             );
           if ("boolean" != typeof r)
             throw Error(
-              `You provided an \`open\` prop to the \`Dialog\`, but the value is not a boolean. Received: ${r}`
+              `You provided an \`open\` prop to the \`Dialog\`, but the value is not a boolean. Received: ${r}`,
             );
           if ("function" != typeof o)
             throw Error(
-              `You provided an \`onClose\` prop to the \`Dialog\`, but the value is not a function. Received: ${o}`
+              `You provided an \`onClose\` prop to the \`Dialog\`, but the value is not a function. Received: ${o}`,
             );
           let N = r ? 0 : 1,
             [j, H] = (0, a.useReducer)(en, {
@@ -874,23 +879,23 @@
                         null == S
                           ? void 0
                           : S.querySelectorAll(
-                              "body > *, [data-headlessui-portal]"
+                              "body > *, [data-headlessui-portal]",
                             ))
                       ? e
-                      : []
+                      : [],
                   ).filter(
                     (e) =>
                       !(
                         !(e instanceof HTMLElement) ||
                         e.contains(x.current) ||
                         (j.panelRef.current && e.contains(j.panelRef.current))
-                      )
+                      ),
                   ),
                   null != (t = j.panelRef.current) ? t : w.current,
                 ];
               },
               V,
-              $ && !G
+              $ && !G,
             ),
             P(null == S ? void 0 : S.defaultView, "keydown", (e) => {
               e.defaultPrevented ||
@@ -961,7 +966,7 @@
                                   r = n.indexOf(e);
                                 return -1 !== r && n.splice(r, 1), n;
                               })
-                          )
+                          ),
                         ),
                         r = (0, a.useMemo)(
                           () => ({
@@ -970,22 +975,22 @@
                             name: e.name,
                             props: e.props,
                           }),
-                          [n, e.slot, e.name, e.props]
+                          [n, e.slot, e.name, e.props],
                         );
                       return a.createElement(
                         U.Provider,
                         { value: r },
-                        e.children
+                        e.children,
                       );
                     },
-                  [t]
+                  [t],
                 ),
               ];
             })(),
             et = `headlessui-dialog-${(0, m.M)()}`,
             eo = (0, a.useMemo)(
               () => [{ dialogState: N, close: V, setTitleId: Y }, j],
-              [N, j, V, Y]
+              [N, j, V, Y],
             ),
             eu = (0, a.useMemo)(() => ({ open: 0 === N }), [N]),
             ei = {
@@ -1052,15 +1057,15 @@
                             features: er,
                             visible: 0 === N,
                             name: "Dialog",
-                          })
-                        )
-                      )
-                    )
-                  )
-                )
-              )
+                          }),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ),
-            a.createElement(h._, { features: h.A.Hidden, ref: x })
+            a.createElement(h._, { features: h.A.Hidden, ref: x }),
           );
         }),
         eu = (0, c.yV)(function (e, t) {
@@ -1074,8 +1079,13 @@
               }
             }),
             l = (0, a.useMemo)(() => ({ open: 0 === n }), [n]);
-          return (0,
-          c.sY)({ ourProps: { ref: o, id: u, "aria-hidden": !0, onClick: i }, theirProps: e, slot: l, defaultTag: "div", name: "Dialog.Overlay" });
+          return (0, c.sY)({
+            ourProps: { ref: o, id: u, "aria-hidden": !0, onClick: i },
+            theirProps: e,
+            slot: l,
+            defaultTag: "div",
+            name: "Dialog.Overlay",
+          });
         }),
         ei = Object.assign(eo, {
           Backdrop: (0, c.yV)(function (e, t) {
@@ -1085,7 +1095,7 @@
             (0, a.useEffect)(() => {
               if (null === r.panelRef.current)
                 throw Error(
-                  "A <Dialog.Backdrop /> component is being used, but a <Dialog.Panel /> component is missing."
+                  "A <Dialog.Backdrop /> component is being used, but a <Dialog.Panel /> component is missing.",
                 );
             }, [r.panelRef]);
             let i = (0, a.useMemo)(() => ({ open: 0 === n }), [n]);
@@ -1101,8 +1111,8 @@
                   slot: i,
                   defaultTag: "div",
                   name: "Dialog.Backdrop",
-                })
-              )
+                }),
+              ),
             );
           }),
           Panel: (0, c.yV)(function (e, t) {
@@ -1113,8 +1123,13 @@
               l = (0, b.z)((e) => {
                 e.stopPropagation();
               });
-            return (0,
-            c.sY)({ ourProps: { ref: o, id: u, onClick: l }, theirProps: e, slot: i, defaultTag: "div", name: "Dialog.Panel" });
+            return (0, c.sY)({
+              ourProps: { ref: o, id: u, onClick: l },
+              theirProps: e,
+              slot: i,
+              defaultTag: "div",
+              name: "Dialog.Panel",
+            });
           }),
           Overlay: eu,
           Title: (0, c.yV)(function (e, t) {
@@ -1123,8 +1138,13 @@
               u = (0, d.T)(t);
             (0, a.useEffect)(() => (r(o), () => r(null)), [o, r]);
             let i = (0, a.useMemo)(() => ({ open: 0 === n }), [n]);
-            return (0,
-            c.sY)({ ourProps: { ref: u, id: o }, theirProps: e, slot: i, defaultTag: "h2", name: "Dialog.Title" });
+            return (0, c.sY)({
+              ourProps: { ref: u, id: o },
+              theirProps: e,
+              slot: i,
+              defaultTag: "h2",
+              name: "Dialog.Title",
+            });
           }),
           Description: $,
         });
@@ -1203,7 +1223,7 @@
         let n = null !== e.activeItemIndex ? e.items[e.activeItemIndex] : null,
           r = (0, g.z2)(
             t(e.items.slice()),
-            (e) => e.dataRef.current.domRef.current
+            (e) => e.dataRef.current.domRef.current,
           ),
           o = n ? r.indexOf(n) : null;
         return -1 === o && (o = null), { items: r, activeItemIndex: o };
@@ -1308,7 +1328,7 @@
                 (0, g.sP)(t, g.tJ.Loose) ||
                   (e.preventDefault(), null == (n = u.current) || n.focus());
             },
-            0 === r
+            0 === r,
           );
           let d = (0, i.useMemo)(() => ({ open: 0 === r }), [r]);
           return i.createElement(
@@ -1323,8 +1343,8 @@
                 slot: d,
                 defaultTag: D,
                 name: "Menu",
-              })
-            )
+              }),
+            ),
           );
         }),
         _ = (0, a.yV)(function (e, t) {
@@ -1378,8 +1398,13 @@
               onKeyUp: g,
               onClick: b,
             };
-          return (0,
-          a.sY)({ ourProps: E, theirProps: e, slot: y, defaultTag: "button", name: "Menu.Button" });
+          return (0, a.sY)({
+            ourProps: E,
+            theirProps: e,
+            slot: y,
+            defaultTag: "button",
+            name: "Menu.Button",
+          });
         }),
         M = a.AN.RenderStrategy | a.AN.Static,
         L = (0, a.yV)(function (e, t) {
@@ -1496,7 +1521,7 @@
                     (0, s.k)().nextFrame(() => {
                       (0, g.EO)(
                         o.buttonRef.current,
-                        e.shiftKey ? g.TO.Previous : g.TO.Next
+                        e.shiftKey ? g.TO.Previous : g.TO.Next,
                       );
                     });
                   break;
@@ -1525,8 +1550,15 @@
               tabIndex: 0,
               ref: l,
             };
-          return (0,
-          a.sY)({ ourProps: F, theirProps: e, slot: I, defaultTag: "div", features: M, visible: x, name: "Menu.Items" });
+          return (0, a.sY)({
+            ourProps: F,
+            theirProps: e,
+            slot: I,
+            defaultTag: "div",
+            features: M,
+            visible: x,
+            name: "Menu.Items",
+          });
         }),
         N = i.Fragment,
         j = Object.assign(A, {
@@ -1569,7 +1601,7 @@
                 () => (
                   u({ type: 5, id: l, dataRef: b }), () => u({ type: 6, id: l })
                 ),
-                [b, l]
+                [b, l],
               );
             let y = (0, P.z)((e) => {
                 if (n) return e.preventDefault();
@@ -1588,8 +1620,26 @@
                 n || !c || u({ type: 2, focus: v.T.Nothing });
               }),
               R = (0, i.useMemo)(() => ({ active: c, disabled: n }), [c, n]);
-            return (0,
-            a.sY)({ ourProps: { id: l, ref: h, role: "menuitem", tabIndex: !0 === n ? void 0 : -1, "aria-disabled": !0 === n || void 0, disabled: void 0, onClick: y, onFocus: E, onPointerMove: w, onMouseMove: w, onPointerLeave: T, onMouseLeave: T }, theirProps: r, slot: R, defaultTag: N, name: "Menu.Item" });
+            return (0, a.sY)({
+              ourProps: {
+                id: l,
+                ref: h,
+                role: "menuitem",
+                tabIndex: !0 === n ? void 0 : -1,
+                "aria-disabled": !0 === n || void 0,
+                disabled: void 0,
+                onClick: y,
+                onFocus: E,
+                onPointerMove: w,
+                onMouseMove: w,
+                onPointerLeave: T,
+                onMouseLeave: T,
+              },
+              theirProps: r,
+              slot: R,
+              defaultTag: N,
+              name: "Menu.Item",
+            });
           }),
         });
     },
@@ -1672,7 +1722,7 @@
             p.current.splice(0),
               t &&
                 (t.chains.current[n] = t.chains.current[n].filter(
-                  ([t]) => t !== e
+                  ([t]) => t !== e,
                 )),
               null == t ||
                 t.chains.current[n].push([
@@ -1686,7 +1736,7 @@
                   e,
                   new Promise((e) => {
                     Promise.all(v.current[n].map(([e, t]) => t)).then(() =>
-                      e()
+                      e(),
                     );
                   }),
                 ]),
@@ -1714,7 +1764,7 @@
             wait: m,
             chains: v,
           }),
-          [f, c, r, h, g, v, m]
+          [f, c, r, h, g, v, m],
         );
       }
       function S() {}
@@ -1755,7 +1805,7 @@
               let e = (0, u.useContext)(w);
               if (null === e)
                 throw Error(
-                  "A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />."
+                  "A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.",
                 );
               return e;
             })(),
@@ -1764,7 +1814,7 @@
               let e = (0, u.useContext)(P);
               if (null === e)
                 throw Error(
-                  "A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />."
+                  "A <Transition.Child /> is used but it is missing a parent <Transition /> or <Transition.Root />.",
                 );
               return e;
             })(),
@@ -1805,7 +1855,7 @@
           (0, u.useEffect)(() => {
             if (K && "visible" === $ && null === j.current)
               throw Error(
-                "Did you forget to passthrough the `ref` to the actual DOM node?"
+                "Did you forget to passthrough the `ref` to the actual DOM node?",
               );
           }, [j, $, K]);
           let X = U && !z,
@@ -1815,14 +1865,14 @@
                 enter: () => J.current.beforeEnter(),
                 leave: () => J.current.beforeLeave(),
                 idle: () => {},
-              })
+              }),
             ),
             en = (0, y.z)((e) =>
               (0, a.E)(e, {
                 enter: () => J.current.afterEnter(),
                 leave: () => J.current.afterLeave(),
                 idle: () => {},
-              })
+              }),
             ),
             er = x(() => {
               B("hidden"), W(j);
@@ -1892,7 +1942,7 @@
                         ...d.leave,
                         ...d.leaveFrom,
                         ...d.leaveTo,
-                        ...d.entered
+                        ...d.entered,
                       ),
                       v(c, ...y, ...w),
                       i.nextFrame(() => {
@@ -1910,7 +1960,7 @@
                                   .map((e) =>
                                     e.includes("ms")
                                       ? parseFloat(e)
-                                      : 1e3 * parseFloat(e)
+                                      : 1e3 * parseFloat(e),
                                   )
                                   .sort((e, t) => t - e);
                                 return t;
@@ -1929,7 +1979,7 @@
                                           e.target === e.currentTarget &&
                                             (t("ended"),
                                             r.splice(0).forEach((e) => e()));
-                                        }
+                                        },
                                       ),
                                       n.addEventListener(
                                         e,
@@ -1938,10 +1988,10 @@
                                           e.target === e.currentTarget &&
                                             (t("cancelled"),
                                             r.splice(0).forEach((e) => e()));
-                                        }
-                                      )
+                                        },
+                                      ),
                                     ));
-                                })
+                                }),
                               );
                             } else t("ended");
                             n.add(() => t("cancelled")), n.dispose;
@@ -1950,10 +2000,10 @@
                             (e) => (
                               "ended" === e && (h(c, ...y), v(c, ...d.entered)),
                               b(e)
-                            )
+                            ),
                           );
                       }),
-                      i.dispose)
+                      i.dispose),
                     ),
                     t.dispose
                   );
@@ -1992,8 +2042,8 @@
                   features: F,
                   visible: "visible" === $,
                   name: "Transition.Child",
-                })
-              )
+                }),
+              ),
             )
           );
         }),
@@ -2010,7 +2060,7 @@
             ![!0, !1].includes(n))
           )
             throw Error(
-              "A <Transition /> is used but it is missing a `show={true | false}` prop."
+              "A <Transition /> is used but it is missing a `show={true | false}` prop.",
             );
           let [h, g] = (0, u.useState)(n ? "visible" : "hidden"),
             b = x(() => {
@@ -2025,7 +2075,7 @@
           }, [T, n]);
           let S = (0, u.useMemo)(
             () => ({ show: n, appear: r, initial: y }),
-            [n, r, y]
+            [n, r, y],
           );
           (0, u.useEffect)(() => {
             if (n) g("visible");
@@ -2058,8 +2108,8 @@
                 features: F,
                 visible: "visible" === h,
                 name: "Transition",
-              })
-            )
+              }),
+            ),
           );
         }),
         D = (0, i.yV)(function (e, t) {
@@ -2070,7 +2120,7 @@
             null,
             !n && r
               ? u.createElement(k, { ref: t, ...e })
-              : u.createElement(O, { ref: t, ...e })
+              : u.createElement(O, { ref: t, ...e }),
           );
         }),
         A = Object.assign(k, { Child: D, Root: k });
@@ -2151,7 +2201,7 @@
                 e.current = !1;
               }
             ),
-            []
+            [],
           ),
           e
         );
@@ -2245,14 +2295,14 @@
           (e) => {
             u.current && (a.current = e.target);
           },
-          !0
+          !0,
         ),
           i(
             "click",
             (e) => {
               a.current && (l(e, () => a.current), (a.current = null));
             },
-            !0
+            !0,
           ),
           i(
             "blur",
@@ -2260,9 +2310,9 @@
               l(e, () =>
                 window.document.activeElement instanceof HTMLIFrameElement
                   ? window.document.activeElement
-                  : null
+                  : null,
               ),
-            !0
+            !0,
           );
       }
     },
@@ -2401,8 +2451,13 @@
               ...((4 & n) == 4 && (2 & n) != 2 && { display: "none" }),
             },
           };
-        return (0,
-        o.sY)({ ourProps: u, theirProps: r, slot: {}, defaultTag: "div", name: "Hidden" });
+        return (0, o.sY)({
+          ourProps: u,
+          theirProps: r,
+          slot: {},
+          defaultTag: "div",
+          name: "Hidden",
+        });
       });
     },
     37068: function (e, t, n) {
@@ -2497,13 +2552,13 @@
                   .findIndex(
                     (e, n, r) =>
                       (-1 === o || !(r.length - n - 1 >= o)) &&
-                      !t.resolveDisabled(e)
+                      !t.resolveDisabled(e),
                   );
                 return -1 === e ? e : n.length - 1 - e;
               }
               case 2:
                 return n.findIndex(
-                  (e, n) => !(n <= o) && !t.resolveDisabled(e)
+                  (e, n) => !(n <= o) && !t.resolveDisabled(e),
                 );
               case 3: {
                 let e = n
@@ -2716,7 +2771,7 @@
             if (5 & t) return 1;
             if (10 & t) return -1;
             throw Error(
-              "Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last"
+              "Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last",
             );
           })(),
           c = (() => {
@@ -2725,7 +2780,7 @@
             if (4 & t) return Math.max(0, a.indexOf(r)) + 1;
             if (8 & t) return a.length - 1;
             throw Error(
-              "Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last"
+              "Missing Focus.First, Focus.Previous, Focus.Next or Focus.Last",
             );
           })(),
           d = 32 & t ? { preventScroll: !0 } : {},
@@ -2765,10 +2820,10 @@
         }
         let o = Error(
           `Tried to handle "${e}" but there is no handler defined. Only defined handlers are: ${Object.keys(
-            t
+            t,
           )
             .map((e) => `"${e}"`)
-            .join(", ")}.`
+            .join(", ")}.`,
         );
         throw (Error.captureStackTrace && Error.captureStackTrace(o, r), o);
       }
@@ -2788,7 +2843,7 @@
               .catch((e) =>
                 setTimeout(() => {
                   throw e;
-                })
+                }),
               );
       }
       n.d(t, {
@@ -2913,7 +2968,7 @@
                 ].map((e) => `  - ${e}`).join(`
 `),
               ].join(`
-`)
+`),
             );
           return (0, u.cloneElement)(
             c,
@@ -2932,8 +2987,8 @@
                             ("function" == typeof n ? n(t) : (n.current = t));
                       },
                 };
-              })(c.ref, s.ref)
-            )
+              })(c.ref, s.ref),
+            ),
           );
         }
         return (0, u.createElement)(
@@ -2942,9 +2997,9 @@
             {},
             m(a, ["ref"]),
             o !== u.Fragment && s,
-            o !== u.Fragment && f
+            o !== u.Fragment && f,
           ),
-          c
+          c,
         );
       }
       function d(...e) {
@@ -2960,7 +3015,7 @@
         if (t.disabled || t["aria-disabled"])
           return Object.assign(
             t,
-            Object.fromEntries(Object.keys(n).map((e) => [e, void 0]))
+            Object.fromEntries(Object.keys(n).map((e) => [e, void 0])),
           );
         for (let e in n)
           Object.assign(t, {
